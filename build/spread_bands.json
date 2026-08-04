@@ -1,0 +1,42 @@
+{
+ "source": "2022-2025, n=343, SBD totals x CFBD /records wins",
+ "overall": {
+  "floor_p10": -2.9,
+  "ceil_p90": 2.9,
+  "sd": 2.27,
+  "beat_pct": 0.49,
+  "mean": 0.1
+ },
+ "tiers": {
+  "le4.5": {
+   "n": 65,
+   "floor": -1.8,
+   "ceil": 4.3,
+   "mean": 1.0,
+   "beat": 0.58
+  },
+  "5-6.5": {
+   "n": 110,
+   "floor": -3.5,
+   "ceil": 3.5,
+   "mean": 0.33,
+   "beat": 0.54
+  },
+  "7-8.5": {
+   "n": 117,
+   "floor": -3.2,
+   "ceil": 2.0,
+   "mean": -0.51,
+   "beat": 0.38
+  },
+  "9+": {
+   "n": 51,
+   "floor": -3.0,
+   "ceil": 2.5,
+   "mean": -0.17,
+   "beat": 0.53
+  }
+ },
+ "sp_within_tier": "null \u2014 SP+ does not separate beat/miss within a total tier",
+ "caveat": "P4-heavy; G5/thin tiers underrepresented"
+}

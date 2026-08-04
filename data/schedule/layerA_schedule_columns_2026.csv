@@ -1,0 +1,139 @@
+Team,game_count,game_delta,bye_count,byes,home,road,max_road_streak,cupcakes,sos_proxy,anchor_on_anchor,pod_upside_status
+Air Force,12,0,1,3,7,5,1,1,5.7,,pending-pod
+Akron,12,0,1,9,6,6,2,1,5.9,,pending-pod
+Alabama,12,0,1,9,7,5,2,1,6.9,,pending-pod
+Appalachian State,12,0,1,5,6,6,1,1,5.8,,pending-pod
+Arizona,12,0,1,7,7,5,1,1,6.6,,pending-pod
+Arizona State,12,0,1,4,6,6,2,1,7.2,,pending-pod
+Arkansas,12,0,1,8,7,5,1,1,7.5,wk3 vs Georgia(9.5); wk5 @ Texas A&M(8.5); wk12 @ Texas(9.5); wk13 vs LSU(8.5),pod-loaded
+Arkansas State,12,0,1,9,6,6,2,1,5.6,,pod-loaded
+Army,12,0,2,3&11,7,5,2,1,6.5,,pending-pod
+Auburn,12,0,1,6,7,5,2,1,6.7,,pending-pod
+BYU,12,0,1,4,7,5,2,1,6.5,,pending-pod
+Ball State,12,0,1,9,5,7,2,1,5.9,,pending-pod
+Baylor,12,0,1,6,6,6,2,1,6.6,,pending-pod
+Boise State,13,+1,1,7,6,5,2,1,6.2,wk1 @ Oregon(10.5); wk2 vs Memphis(7.5); wk4 @ Western Michigan(7.5),pod-loaded
+Boston College,12,0,1,6,6,6,2,1,7.0,wk11 @ Notre Dame(11.5); wk13 @ Miami FL(10.5),pending-pod
+Bowling Green,12,0,1,10,6,6,2,1,5.6,,pending-pod
+Buffalo,12,0,1,9,6,6,2,2,5.9,,pending-pod
+California,12,0,1,10,7,5,3,1,6.6,,pending-pod
+Central Michigan,12,0,1,9,6,6,2,1,6.2,,pending-pod
+Charlotte,12,0,1,8,6,6,2,1,6.4,,pending-pod
+Cincinnati,12,0,1,6,7,5,2,1,7.0,,pending-pod
+Clemson,12,0,1,6,7,5,2,1,6.4,,pending-pod
+Coastal Carolina,12,0,1,8,6,6,2,1,6.6,,pod-loaded
+Colorado,12,0,1,6,6,6,2,1,7.1,,pending-pod
+Colorado State,13,+1,1,6,7,5,2,2,6.2,wk4 @ UTSA(7.5); wk10 vs Boise State(7.5),pod-loaded
+Delaware,12,0,1,6,6,6,2,1,6.0,,pending-pod
+Duke,12,0,1,5,6,6,2,1,6.5,,pending-pod
+East Carolina,12,0,1,5,6,6,2,1,6.0,,pending-pod
+Eastern Michigan,12,0,2,9&11,6,6,2,1,5.3,,pending-pod
+FIU,12,0,1,5,6,6,2,1,5.9,,pending-pod
+Florida,12,0,1,8,6,6,2,1,6.9,,pending-pod
+Florida Atlantic,12,0,1,6,6,6,1,1,6.4,,pending-pod
+Florida State,12,0,2,2&8,7,5,2,1,7.4,,pending-pod
+Fresno State,13,+1,1,8,6,6,2,1,5.3,wk6 vs Boise State(7.5),pod-loaded
+Georgia,12,0,1,8,8,4,1,1,6.7,,pending-pod
+Georgia Southern,12,0,1,8,6,6,2,1,6.7,,pod-loaded
+Georgia State,12,0,1,6,6,6,2,1,6.1,,pod-loaded
+Georgia Tech,12,0,1,5,7,5,1,1,6.3,,pending-pod
+Hawaii,12,0,2,3&9,6,6,2,0,5.0,,pending-pod
+Houston,12,0,1,9,6,6,2,1,6.4,,pending-pod
+Illinois,12,0,1,7,7,5,1,1,6.2,,pending-pod
+Indiana,12,0,1,10,8,4,2,1,6.6,,pending-pod
+Iowa,12,0,1,7,7,5,2,1,6.3,,pending-pod
+Iowa State,12,0,1,7,7,5,2,1,6.8,,pending-pod
+Jacksonville State,12,0,2,5&8,6,6,1,1,5.3,,pending-pod
+James Madison,12,0,1,12,6,6,2,1,5.9,wk1 vs Liberty(8.5); wk5 vs Marshall(7.5); wk9 vs Troy(6.5),pod-loaded
+Kansas,12,0,1,4,7,5,2,1,6.6,,pending-pod
+Kansas State,12,0,1,5,7,5,2,1,6.1,,pending-pod
+Kennesaw State,12,0,1,5,6,6,2,1,6.0,,pending-pod
+Kent State,12,0,1,10,5,7,2,1,6.2,,pending-pod
+Kentucky,12,0,1,9,7,5,1,1,7.3,,pending-pod
+LSU,12,0,1,9,7,5,2,1,6.8,,pending-pod
+Liberty,12,0,1,7,6,6,2,1,5.3,,pending-pod
+Louisiana,12,0,1,9,6,6,1,1,5.0,,pod-loaded
+Louisiana Tech,12,0,1,4,6,6,2,1,6.1,,pod-loaded
+Louisville,12,0,1,8,6,6,2,1,6.0,,pending-pod
+Marshall,12,0,1,7,6,6,2,1,5.5,wk5 @ James Madison(8.5); wk9 @ Old Dominion(7.5),pod-loaded
+Maryland,12,0,1,8,7,5,2,1,6.7,,pending-pod
+Memphis,12,0,2,4&10,6,6,2,1,6.5,,pending-pod
+Miami FL,12,0,1,6,7,5,2,1,6.2,,pending-pod
+Miami OH,12,0,1,9,6,6,2,1,5.4,,pending-pod
+Michigan,12,0,1,6,8,4,1,0,7.3,,pending-pod
+Michigan State,12,0,1,9,7,5,2,0,7.3,wk1 vs Toledo(7.5); wk3 @ Notre Dame(11.5); wk12 vs Oregon(10.5),pod-loaded
+Middle Tennessee,12,0,1,6,6,6,2,1,6.1,,pending-pod
+Minnesota,12,0,1,7,7,5,1,1,6.7,,pending-pod
+Mississippi State,12,0,1,6,7,5,2,1,7.0,,pending-pod
+Missouri,12,0,1,8,7,5,2,1,6.9,,pending-pod
+Missouri State,12,0,1,5,6,6,2,1,6.8,,pending-pod
+NC State,12,0,2,1&7,7,5,2,1,5.8,,pending-pod
+Navy,12,0,2,3&11,6,6,3,1,6.3,,pending-pod
+Nebraska,12,0,1,8,7,5,2,1,7.1,,pending-pod
+Nevada,12,0,1,5,6,6,2,1,5.8,,pending-pod
+New Mexico,12,0,1,6,6,6,2,1,5.9,,pending-pod
+New Mexico State,12,0,2,3&7,6,6,2,1,6.2,,pending-pod
+North Carolina,12,0,2,1&4,6,6,2,1,7.5,,pending-pod
+North Dakota State,12,0,2,4&10,6,6,2,1,5.8,,pending-pod
+North Texas,12,0,1,7,6,6,2,1,6.1,,pending-pod
+Northern Illinois,12,0,1,5,5,7,2,1,6.0,,pending-pod
+Northwestern,12,0,1,2,7,5,2,1,7.0,,pending-pod
+Notre Dame,12,0,1,8,7,5,2,0,5.8,wk9 @ Navy(7.5); wk10 vs Miami FL(10.5),pending-pod
+Ohio,12,0,1,9,6,6,2,1,5.7,,pending-pod
+Ohio State,12,0,1,8,7,5,2,0,7.3,,pending-pod
+Oklahoma,12,0,1,5,7,5,1,0,7.0,,pending-pod
+Oklahoma State,12,0,1,5,6,6,2,1,6.9,wk2 vs Oregon(10.5); wk11 vs Texas Tech(10.5),pod-loaded
+Old Dominion,12,0,1,11,6,6,2,1,5.8,wk3 vs East Carolina(7.5); wk4 @ James Madison(8.5); wk9 @ Marshall(7.5),pod-loaded
+Ole Miss,12,0,1,5,8,4,2,1,7.0,,pending-pod
+Oregon,12,0,1,5,7,5,1,1,7.1,,pending-pod
+Oregon State,13,+1,1,8,6,5,2,1,6.2,wk2 vs Texas Tech(10.5); wk11 @ Boise State(7.5),pod-loaded
+Penn State,12,0,1,8,7,5,1,0,6.3,,pending-pod
+Pittsburgh,12,0,1,10,7,5,2,1,6.4,,pending-pod
+Purdue,12,0,1,8,7,5,1,1,7.6,wk4 vs Notre Dame(11.5); wk13 @ Indiana(10.5),pod-loaded
+Rice,12,0,1,9,6,6,2,1,7.0,,pending-pod
+Rutgers,12,0,1,6,7,5,2,1,6.4,,pending-pod
+SMU,12,0,1,6,7,5,2,1,6.2,,pending-pod
+Sacramento State,12,0,2,5&12,6,6,2,1,5.4,,pending-pod
+Sam Houston,12,0,1,5,6,6,2,1,6.4,,pending-pod
+San Diego State,13,+1,1,10,6,5,1,1,6.0,wk3 vs James Madison(8.5); wk4 @ Toledo(7.5); wk12 @ Boise State(7.5),pod-loaded
+San Jose State,13,+1,1,4,7,6,2,1,6.1,,pending-pod
+South Alabama,12,0,1,7,6,6,2,1,5.9,,pod-loaded
+South Carolina,12,0,1,7,7,5,1,1,6.7,,pending-pod
+South Florida,12,0,1,8,7,5,1,1,6.0,,pending-pod
+Southern Miss,12,0,1,5,6,6,2,1,6.4,,pod-loaded
+Stanford,12,0,2,2&10,6,6,3,1,7.7,,pending-pod
+Syracuse,12,0,1,4,6,6,3,1,7.1,wk13 vs Notre Dame(11.5),pending-pod
+TCU,12,0,2,1&6,8,4,1,1,7.0,,pending-pod
+Temple,12,0,1,8,7,5,2,1,6.3,,pending-pod
+Tennessee,12,0,1,9,7,5,1,1,6.9,,pending-pod
+Texas,12,0,1,5,7,5,2,0,7.2,,pending-pod
+Texas A&M,12,0,1,9,7,5,2,1,6.8,,pending-pod
+Texas State,13,+1,1,6,7,4,2,1,6.0,wk1 @ Texas(9.5); wk2 vs UTSA(7.5); wk9 @ Boise State(7.5),pod-loaded
+Texas Tech,12,0,1,6,7,5,2,1,6.0,,pending-pod
+Toledo,12,0,1,9,7,5,1,1,5.1,,pending-pod
+Troy,12,0,1,5,6,6,2,1,5.4,,pod-loaded
+Tulane,12,0,1,5,6,6,1,0,5.9,,pending-pod
+Tulsa,12,0,1,9,6,6,2,1,5.6,,pending-pod
+UAB,12,0,1,8,6,6,1,1,6.4,,pending-pod
+UCF,12,0,1,7,7,5,2,1,6.3,,pending-pod
+UCLA,12,0,1,5,7,5,2,0,6.6,,pending-pod
+UConn,12,0,1,7,7,5,2,1,5.7,wk4 @ Miami OH(7.5); wk9 @ Air Force(7.5); wk11 vs James Madison(8.5); wk12 vs Old Dominion(7.5),pending-pod
+ULM,12,0,1,6,6,6,2,1,5.6,,pod-loaded
+UMass,12,0,1,9,6,6,2,2,5.3,,pending-pod
+UNLV,12,0,2,3&8,6,6,3,0,5.9,,pending-pod
+USC,12,0,2,7&10,7,5,2,0,7.3,,pending-pod
+UTEP,12,0,1,8,6,6,2,1,6.1,,pending-pod
+UTSA,12,0,1,9,6,6,2,1,6.0,,pending-pod
+Utah,12,0,1,5,7,5,2,1,6.0,,pending-pod
+Utah State,13,+1,1,7,6,6,2,2,6.2,wk5 @ Boise State(7.5),pod-loaded
+Vanderbilt,12,0,1,9,7,5,2,1,6.8,,pending-pod
+Virginia,12,0,2,1&10,8,4,1,1,6.1,,pending-pod
+Virginia Tech,12,0,1,9,6,6,2,1,6.8,,pending-pod
+Wake Forest,12,0,1,8,6,6,2,1,6.6,,pending-pod
+Washington,12,0,1,8,7,5,2,1,6.9,,pending-pod
+Washington State,13,+1,1,10,6,6,2,2,6.3,,pod-loaded
+West Virginia,12,0,1,9,7,5,2,1,6.9,,pending-pod
+Western Kentucky,12,0,1,8,5,7,3,1,6.3,,pending-pod
+Western Michigan,12,0,1,10,6,6,2,1,5.9,,pending-pod
+Wisconsin,12,0,1,6,6,6,2,1,6.6,,pending-pod
+Wyoming,12,0,1,9,6,6,2,1,5.7,,pending-pod

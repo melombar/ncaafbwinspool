@@ -1,0 +1,24 @@
+{
+ "purpose": "Multi-season CFBD refit of SP+ point-diff -> win-prob curve",
+ "n_games": 3476,
+ "seasons": "2020-2024",
+ "n_with_market": 2805,
+ "KEY_FINDINGS": {
+  "market_is_calibrated": "Opening lines predict actuals near-perfectly (10->12%, 50->50%, 90->89%). Market is the gold standard target.",
+  "curve_is_stable_year_to_year": "scale 14.0-14.4 across 2021-2024, stdev 0.14. Curve does NOT drift -> FIT ONCE, REUSE. No annual refit needed.",
+  "VINTAGE_CAVEAT": "This CFBD SP+ is SEASON-LEVEL (end-of-season), fits scale 14.2 vs opening market. Our 2026 model uses MARCH (preseason) SP+, fits scale 9.4. DIFFERENT VINTAGES \u2014 do NOT use 14.2 for the preseason model. The STABILITY finding transfers; the ABSOLUTE scale does not."
+ },
+ "season_level_fit": {
+  "scale_vs_market": 14.2,
+  "hfa_vs_market": 3.8,
+  "scale_vs_actual": 8.0,
+  "hfa_vs_actual": 2.8
+ },
+ "production_curve_2026": {
+  "scale": 9.4,
+  "hfa": 3.0,
+  "vintage": "March preseason SP+ vs opening lines",
+  "source": "sp_calibration_2026.json"
+ },
+ "to_close_the_loop": "Re-pull with PRESEASON SP+ (not season-level) to validate the 9.4 number on multi-season vintage-matched data."
+}

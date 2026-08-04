@@ -1,0 +1,8 @@
+{
+ "overlap_n": 116,
+ "sp_bias": -0.0,
+ "mae": 0.0249,
+ "shrink": 0.1,
+ "cbs_ml_games": 91,
+ "cbs_spread_games": 18
+}

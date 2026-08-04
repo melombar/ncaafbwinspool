@@ -1,0 +1,9 @@
+{
+ "scale": 19.8,
+ "hfa": 5.7,
+ "rmse": 0.1488,
+ "n_games": 1909,
+ "vintage": "FINAL preseason SP+ (ESPN) x CFBD opening lines",
+ "years": "2022-2024",
+ "note": "Vintage-MATCHED validation. Compare to 2026 fit (9.4) and season-level fit (14.2)."
+}

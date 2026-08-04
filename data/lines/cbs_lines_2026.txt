@@ -1,0 +1,112 @@
+1~North Carolina~7.5~235~TCU~-7~-285
+1~San Jose St.~38.5~null~USC~-38.5~null
+1~NC State~5.5~180~Virginia~-5.5~-205
+1~Jacksonville St.~7.5~260~N. Dakota St.~-7.5~-285
+1~Sacramento St.~8.5~260~E. Michigan~-8.5~-245
+1~New Mexico St.~30.5~3000~Florida State~-30.5~-1000
+1~Hawaii~4.5~165~Stanford~-4~-192
+1~Memphis~5.5~190~UNLV~-5.5~-198
+1~UMass~30.5~3000~Rutgers~-30.5~-1000
+1~Bethune-Cook.~38.5~8000~UCF~-38.5~-1000
+1~Akron~22.5~1300~Wake Forest~-22.5~-2778
+1~W. Georgia~23.5~1200~Kennesaw St.~-23.5~-3448
+1~Merrimack~28.5~2400~Delaware~-28.5~-1000
+1~UAlbany~26.5~2000~Buffalo~-26.5~-7143
+1~Colorado~7~220~Georgia Tech~-6.5~-258
+1~E. Illinois~45.5~null~Minnesota~-45.5~null
+1~Ark.-Pine Bluff~52.5~null~Missouri~-52.5~null
+1~Idaho~34.5~4000~Utah~-34.5~-3333
+1~UAB~27.5~2000~Illinois~-27.5~-6667
+1~San Jose St.~4.5~165~E. Michigan~-4~-192
+1~NC A&T~27.5~2000~Georgia St.~-27.5~-7143
+1~Indiana St.~36.5~7000~Purdue~-36.5~-1000
+1~LIU~40.5~null~Kansas~-40.5~null
+1~Toledo~11.5~360~Michigan St.~-11.5~-395
+1~UTEP~40.5~null~Oklahoma~-39.5~null
+1~Fresno St.~23.5~1280~USC~-23.5~-2381
+1~Miami (Fla.)~-22.5~-2778~Stanford~23.5~1300
+1~Bryant~38.5~8000~Army~-38.5~-1000
+1~Tarleton St.~2.5~112~Bowling Green~-2.5~-134
+1~Lafayette~17.5~720~UConn~-17.5~-1205
+1~North Texas~40.5~null~Indiana~-40.5~null
+1~Liberty~6.5~200~James Madison~-6.5~-230
+1~New Hamp.~32.5~3500~Syracuse~-32.5~-2000
+1~C. Carolina~21.5~1060~West Virginia~-21~-1587
+1~East Carolina~28.5~2200~Alabama~-28.5~-5000
+1~Oregon State~19.5~920~Houston~-19.5~-1205
+1~Ohio~24.5~1600~Nebraska~-23.5~-3333
+1~Miami-OH~16.5~610~Pittsburgh~-16.5~-800
+1~Ball St.~50.5~null~Ohio State~-50.5~null
+1~Kent St.~34.5~3000~South Carolina~-34.5~-1000
+1~Youngstown St.~23.5~1200~Kentucky~-23.5~-3030
+1~SE Missouri St.~30.5~2500~Iowa St.~-30.5~-1000
+1~Duquesne~28.5~2200~Air Force~-28.5~-7692
+1~Rhode Island~10.5~340~Temple~-10.5~-450
+1~Tennessee St.~45.5~null~Georgia~-45.5~null
+1~Boise St.~24.5~1500~Oregon~-24.5~-3333
+1~Texas St.~31.5~2500~Texas~-30.5~-9091
+1~Fordham~38.5~8000~N. Dakota St.~-38.5~-1000
+1~Furman~48.5~null~Tennessee~-48.5~null
+1~Marshall~25.5~1600~Penn State~-23.5~-3226
+1~Tulane~10.5~350~Duke~-10~-426
+1~Towson~31.5~3500~Navy~-31.5~-2000
+1~Boston College~7.5~225~Cincinnati~-7.5~-258
+1~The Citadel~12.5~400~Charlotte~-12.5~-549
+1~Baylor~7.5~240~Auburn~-7~-278
+1~Maine~18.5~760~App. St.~-18.5~-1299
+1~Oklahoma State~-12.5~-529~Tulsa~13.5~410
+1~N. Illinois~30.5~3500~Iowa~-30.5~-9091
+1~UT-Rio Grande Valley~29.5~2200~UTSA~-29.5~-1000
+1~Alcorn St.~22.5~1200~So. Miss~-22.5~-3030
+1~Norfolk St.~40.5~8000~Old Dominion~-40.5~-1000
+1~Wyoming~4~152~Colorado St.~-3.5~-180
+1~SE Louisiana~11.5~375~South Alabama~-11.5~-500
+1~Austin Peay~32.5~3500~Vanderbilt~-32.5~-2000
+1~Sam Houston~16.5~600~Troy~-15.5~-820
+1~Abil Christian~42.5~null~Texas Tech~-42.5~null
+1~Missouri St.~39.5~null~Texas A&M~-39.5~null
+1~Idaho State~16.5~610~Utah St.~-16.5~-952
+1~Houston Christian~24.5~1600~Rice~-24.5~-4545
+1~Murray St.~24.5~1400~Middle Tenn.~-24.5~-4000
+1~Arkansas St.~10.5~320~Memphis~-10.5~-400
+1~Nicholls St.~42.5~null~Kansas State~-42.5~null
+1~E. Kentucky~20.5~920~Jacksonville St.~-20.5~-1786
+1~FIU~12.5~400~South Florida~-12.5~-455
+1~Charleston So.~27.5~2000~Ga. Southern~-27.5~-7143
+1~W. Michigan~26.5~2000~Michigan~-26.5~-6667
+1~VMI~51.5~null~Virginia Tech~-51.5~null
+1~Clemson~10~315~LSU~-9.5~-375
+1~Northwestern St.~42.5~null~Louisiana Tech~-42.5~null
+1~UL-Monroe~29.5~2500~Miss. State~-29.5~-9091
+1~FAU~26.5~1600~Florida~-26.5~-3226
+1~S. Dakota St.~13.5~430~Northwestern~-13.5~-581
+1~Lamar~17.5~720~Louisiana~-17.5~-1205
+1~Hampton~45.5~null~Maryland~-45.5~null
+1~Mercyhurst~26.5~1600~New Mexico St.~-26.5~-4545
+1~N. Arizona~29.5~2200~Arizona~-29.5~-1000
+1~Portland St.~41.5~null~San Diego St.~-41.5~null
+1~C. Michigan~12.5~400~New Mexico~-12.5~-535
+1~Morgan St.~42.5~null~Arizona St.~-42.5~null
+1~UNLV~-1.5~-120~Hawaii~2.5~110
+1~UCLA~1.5~-105~California~1.5~100
+1~W. Kentucky~-3~-142~Nevada~3.5~126
+1~Washington St.~22.5~1200~Washington~-21.5~-1786
+1~Wisconsin~20.5~1100~Notre Dame~20.5~-2000
+1~Louisville~6.5~220~Ole Miss~-6.5~-250
+1~SMU~-1.5~-120~Florida State~2.5~117
+2~Missouri~-6.5~-235~Kansas~7~195
+2~Arizona St.~14.5~470~Texas A&M~-14.5~-649
+2~Oregon~-18.5~-1053~Oklahoma State~18.5~675
+2~Oklahoma~2.5~115~Michigan~-1.5~-126
+2~Oregon State~null~null~Ohio State~1.5~-102
+2~LSU~null~null~Iowa St.~11.5~470
+2~Air Force~null~null~Arkansas~9.5~295
+3~Houston~12.5~400~Texas Tech~-12.5~-549
+3~Florida State~15.5~470~Alabama~-15.5~-649
+3~SMU~1.5~-108~Louisville~-1.5~-112
+3~Florida~1.5~-110~Auburn~-1.5~-110
+3~LSU~2.5~108~Ole Miss~-1.5~-125
+4~Texas~-6.5~-258~Tennessee~6.5~210
+4~Oklahoma~10~310~Georgia~-10~-395
+4~Texas A&M~3~136~LSU~-3~-162
+4~Oregon~-5.5~-238~USC~5.5~195

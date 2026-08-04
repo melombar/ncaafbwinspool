@@ -1,0 +1,7 @@
+{
+ "sp_scale": 9.4,
+ "sp_hfa": 3.0,
+ "fit_mse": 0.00112,
+ "n_games": 55,
+ "note": "SP+ point-diff -> win prob curve, fit to CBS market moneylines wk1-4 2026"
+}

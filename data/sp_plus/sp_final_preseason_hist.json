@@ -1,0 +1,2710 @@
+{
+ "label": "ESPN final/August preseason SP+ ratings, pool-canonical names",
+ "vintage": "FINAL preseason (August, Connelly final release)",
+ "note": "2022-2024 = sp_final+rank only. 2025 also has avgw/sos_rk/off/def (pub 2025-08-13). 2026 final NOT YET RELEASED.",
+ "source": "ESPN Insider SP+ articles (2022 id34431935, 2023 id38196497, 2024 id40836337, 2025 pub 08-13)",
+ "years": {
+  "2022": {
+   "n": 131
+  },
+  "2023": {
+   "n": 133
+  },
+  "2024": {
+   "n": 134
+  },
+  "2025": {
+   "n": 136
+  }
+ },
+ "ratings": {
+  "2022": {
+   "Alabama": {
+    "sp_final": 32.2,
+    "sp_final_rank": 1
+   },
+   "Georgia": {
+    "sp_final": 30.5,
+    "sp_final_rank": 2
+   },
+   "Ohio State": {
+    "sp_final": 29.7,
+    "sp_final_rank": 3
+   },
+   "Oklahoma": {
+    "sp_final": 22.5,
+    "sp_final_rank": 4
+   },
+   "Clemson": {
+    "sp_final": 21.4,
+    "sp_final_rank": 5
+   },
+   "Michigan": {
+    "sp_final": 21.4,
+    "sp_final_rank": 6
+   },
+   "Notre Dame": {
+    "sp_final": 21.0,
+    "sp_final_rank": 7
+   },
+   "Texas A&M": {
+    "sp_final": 19.5,
+    "sp_final_rank": 8
+   },
+   "Ole Miss": {
+    "sp_final": 17.9,
+    "sp_final_rank": 9
+   },
+   "Tennessee": {
+    "sp_final": 17.3,
+    "sp_final_rank": 10
+   },
+   "Kentucky": {
+    "sp_final": 16.8,
+    "sp_final_rank": 11
+   },
+   "Utah": {
+    "sp_final": 16.5,
+    "sp_final_rank": 12
+   },
+   "Penn State": {
+    "sp_final": 16.5,
+    "sp_final_rank": 13
+   },
+   "Arkansas": {
+    "sp_final": 16.3,
+    "sp_final_rank": 14
+   },
+   "Michigan State": {
+    "sp_final": 16.1,
+    "sp_final_rank": 15
+   },
+   "Cincinnati": {
+    "sp_final": 16.1,
+    "sp_final_rank": 16
+   },
+   "Wisconsin": {
+    "sp_final": 15.6,
+    "sp_final_rank": 17
+   },
+   "NC State": {
+    "sp_final": 15.4,
+    "sp_final_rank": 18
+   },
+   "Oklahoma State": {
+    "sp_final": 14.9,
+    "sp_final_rank": 19
+   },
+   "Mississippi State": {
+    "sp_final": 14.7,
+    "sp_final_rank": 20
+   },
+   "Auburn": {
+    "sp_final": 14.4,
+    "sp_final_rank": 21
+   },
+   "Texas": {
+    "sp_final": 14.4,
+    "sp_final_rank": 22
+   },
+   "Pittsburgh": {
+    "sp_final": 14.4,
+    "sp_final_rank": 23
+   },
+   "Oregon": {
+    "sp_final": 14.3,
+    "sp_final_rank": 24
+   },
+   "BYU": {
+    "sp_final": 13.9,
+    "sp_final_rank": 25
+   },
+   "Florida": {
+    "sp_final": 13.8,
+    "sp_final_rank": 26
+   },
+   "Iowa": {
+    "sp_final": 13.3,
+    "sp_final_rank": 27
+   },
+   "LSU": {
+    "sp_final": 13.2,
+    "sp_final_rank": 28
+   },
+   "Miami FL": {
+    "sp_final": 13.2,
+    "sp_final_rank": 29
+   },
+   "Baylor": {
+    "sp_final": 12.9,
+    "sp_final_rank": 30
+   },
+   "Minnesota": {
+    "sp_final": 12.4,
+    "sp_final_rank": 31
+   },
+   "Houston": {
+    "sp_final": 10.3,
+    "sp_final_rank": 32
+   },
+   "Kansas State": {
+    "sp_final": 10.0,
+    "sp_final_rank": 33
+   },
+   "Purdue": {
+    "sp_final": 9.9,
+    "sp_final_rank": 34
+   },
+   "Boise State": {
+    "sp_final": 9.9,
+    "sp_final_rank": 35
+   },
+   "UCLA": {
+    "sp_final": 9.8,
+    "sp_final_rank": 36
+   },
+   "South Carolina": {
+    "sp_final": 9.4,
+    "sp_final_rank": 37
+   },
+   "North Carolina": {
+    "sp_final": 9.4,
+    "sp_final_rank": 38
+   },
+   "Louisville": {
+    "sp_final": 9.3,
+    "sp_final_rank": 39
+   },
+   "UCF": {
+    "sp_final": 8.5,
+    "sp_final_rank": 40
+   },
+   "TCU": {
+    "sp_final": 8.4,
+    "sp_final_rank": 41
+   },
+   "Florida State": {
+    "sp_final": 8.4,
+    "sp_final_rank": 42
+   },
+   "SMU": {
+    "sp_final": 8.4,
+    "sp_final_rank": 43
+   },
+   "Nebraska": {
+    "sp_final": 8.3,
+    "sp_final_rank": 44
+   },
+   "Fresno State": {
+    "sp_final": 7.9,
+    "sp_final_rank": 45
+   },
+   "USC": {
+    "sp_final": 7.2,
+    "sp_final_rank": 46
+   },
+   "Wake Forest": {
+    "sp_final": 7.0,
+    "sp_final_rank": 47
+   },
+   "Iowa State": {
+    "sp_final": 6.9,
+    "sp_final_rank": 48
+   },
+   "Texas Tech": {
+    "sp_final": 6.3,
+    "sp_final_rank": 49
+   },
+   "Missouri": {
+    "sp_final": 5.9,
+    "sp_final_rank": 50
+   },
+   "Arizona State": {
+    "sp_final": 5.8,
+    "sp_final_rank": 51
+   },
+   "UTSA": {
+    "sp_final": 5.8,
+    "sp_final_rank": 52
+   },
+   "Air Force": {
+    "sp_final": 4.9,
+    "sp_final_rank": 53
+   },
+   "Maryland": {
+    "sp_final": 4.1,
+    "sp_final_rank": 54
+   },
+   "Appalachian State": {
+    "sp_final": 4.1,
+    "sp_final_rank": 55
+   },
+   "Oregon State": {
+    "sp_final": 3.8,
+    "sp_final_rank": 56
+   },
+   "Washington": {
+    "sp_final": 3.6,
+    "sp_final_rank": 57
+   },
+   "West Virginia": {
+    "sp_final": 3.3,
+    "sp_final_rank": 58
+   },
+   "San Diego State": {
+    "sp_final": 3.3,
+    "sp_final_rank": 59
+   },
+   "UAB": {
+    "sp_final": 3.1,
+    "sp_final_rank": 60
+   },
+   "Virginia Tech": {
+    "sp_final": 2.6,
+    "sp_final_rank": 61
+   },
+   "Toledo": {
+    "sp_final": 2.5,
+    "sp_final_rank": 62
+   },
+   "Memphis": {
+    "sp_final": 1.8,
+    "sp_final_rank": 63
+   },
+   "Syracuse": {
+    "sp_final": 1.8,
+    "sp_final_rank": 64
+   },
+   "Virginia": {
+    "sp_final": 1.7,
+    "sp_final_rank": 65
+   },
+   "Western Kentucky": {
+    "sp_final": 1.3,
+    "sp_final_rank": 66
+   },
+   "Marshall": {
+    "sp_final": 1.0,
+    "sp_final_rank": 67
+   },
+   "Louisiana": {
+    "sp_final": 0.7,
+    "sp_final_rank": 68
+   },
+   "Washington State": {
+    "sp_final": 0.4,
+    "sp_final_rank": 69
+   },
+   "Boston College": {
+    "sp_final": 0.3,
+    "sp_final_rank": 70
+   },
+   "Coastal Carolina": {
+    "sp_final": -0.3,
+    "sp_final_rank": 71
+   },
+   "Army": {
+    "sp_final": -0.6,
+    "sp_final_rank": 72
+   },
+   "East Carolina": {
+    "sp_final": -0.7,
+    "sp_final_rank": 73
+   },
+   "Stanford": {
+    "sp_final": -1.0,
+    "sp_final_rank": 74
+   },
+   "Liberty": {
+    "sp_final": -1.1,
+    "sp_final_rank": 75
+   },
+   "Georgia State": {
+    "sp_final": -1.5,
+    "sp_final_rank": 76
+   },
+   "Utah State": {
+    "sp_final": -1.8,
+    "sp_final_rank": 77
+   },
+   "California": {
+    "sp_final": -2.0,
+    "sp_final_rank": 78
+   },
+   "Illinois": {
+    "sp_final": -2.4,
+    "sp_final_rank": 79
+   },
+   "Rutgers": {
+    "sp_final": -2.7,
+    "sp_final_rank": 80
+   },
+   "Tulane": {
+    "sp_final": -4.0,
+    "sp_final_rank": 81
+   },
+   "Central Michigan": {
+    "sp_final": -4.0,
+    "sp_final_rank": 82
+   },
+   "Tulsa": {
+    "sp_final": -4.3,
+    "sp_final_rank": 83
+   },
+   "Northern Illinois": {
+    "sp_final": -4.3,
+    "sp_final_rank": 84
+   },
+   "Miami OH": {
+    "sp_final": -4.4,
+    "sp_final_rank": 85
+   },
+   "Indiana": {
+    "sp_final": -5.0,
+    "sp_final_rank": 86
+   },
+   "Georgia Tech": {
+    "sp_final": -5.5,
+    "sp_final_rank": 87
+   },
+   "North Texas": {
+    "sp_final": -5.6,
+    "sp_final_rank": 88
+   },
+   "Northwestern": {
+    "sp_final": -5.6,
+    "sp_final_rank": 89
+   },
+   "South Florida": {
+    "sp_final": -5.7,
+    "sp_final_rank": 90
+   },
+   "Troy": {
+    "sp_final": -7.0,
+    "sp_final_rank": 91
+   },
+   "Colorado": {
+    "sp_final": -7.1,
+    "sp_final_rank": 92
+   },
+   "Old Dominion": {
+    "sp_final": -7.5,
+    "sp_final_rank": 93
+   },
+   "James Madison": {
+    "sp_final": -7.5,
+    "sp_final_rank": 94
+   },
+   "San Jose State": {
+    "sp_final": -7.6,
+    "sp_final_rank": 95
+   },
+   "Colorado State": {
+    "sp_final": -7.6,
+    "sp_final_rank": 96
+   },
+   "Western Michigan": {
+    "sp_final": -7.7,
+    "sp_final_rank": 97
+   },
+   "Eastern Michigan": {
+    "sp_final": -8.4,
+    "sp_final_rank": 98
+   },
+   "Florida Atlantic": {
+    "sp_final": -8.5,
+    "sp_final_rank": 99
+   },
+   "Middle Tennessee": {
+    "sp_final": -8.6,
+    "sp_final_rank": 100
+   },
+   "Southern Miss": {
+    "sp_final": -9.1,
+    "sp_final_rank": 101
+   },
+   "UTEP": {
+    "sp_final": -9.5,
+    "sp_final_rank": 102
+   },
+   "Kansas": {
+    "sp_final": -10.4,
+    "sp_final_rank": 103
+   },
+   "Arizona": {
+    "sp_final": -10.5,
+    "sp_final_rank": 104
+   },
+   "Navy": {
+    "sp_final": -10.8,
+    "sp_final_rank": 105
+   },
+   "Buffalo": {
+    "sp_final": -11.1,
+    "sp_final_rank": 106
+   },
+   "Kent State": {
+    "sp_final": -11.1,
+    "sp_final_rank": 107
+   },
+   "Vanderbilt": {
+    "sp_final": -11.3,
+    "sp_final_rank": 108
+   },
+   "South Alabama": {
+    "sp_final": -11.3,
+    "sp_final_rank": 109
+   },
+   "Ball State": {
+    "sp_final": -11.4,
+    "sp_final_rank": 110
+   },
+   "Wyoming": {
+    "sp_final": -11.7,
+    "sp_final_rank": 111
+   },
+   "Ohio": {
+    "sp_final": -12.4,
+    "sp_final_rank": 112
+   },
+   "Charlotte": {
+    "sp_final": -12.6,
+    "sp_final_rank": 113
+   },
+   "Bowling Green": {
+    "sp_final": -12.7,
+    "sp_final_rank": 114
+   },
+   "Louisiana Tech": {
+    "sp_final": -12.9,
+    "sp_final_rank": 115
+   },
+   "Nevada": {
+    "sp_final": -13.4,
+    "sp_final_rank": 116
+   },
+   "UNLV": {
+    "sp_final": -13.9,
+    "sp_final_rank": 117
+   },
+   "Georgia Southern": {
+    "sp_final": -14.0,
+    "sp_final_rank": 118
+   },
+   "Duke": {
+    "sp_final": -16.0,
+    "sp_final_rank": 119
+   },
+   "Rice": {
+    "sp_final": -16.7,
+    "sp_final_rank": 120
+   },
+   "Arkansas State": {
+    "sp_final": -17.0,
+    "sp_final_rank": 121
+   },
+   "Texas State": {
+    "sp_final": -18.8,
+    "sp_final_rank": 122
+   },
+   "Hawaii": {
+    "sp_final": -19.2,
+    "sp_final_rank": 123
+   },
+   "Temple": {
+    "sp_final": -19.4,
+    "sp_final_rank": 124
+   },
+   "New Mexico": {
+    "sp_final": -20.8,
+    "sp_final_rank": 125
+   },
+   "ULM": {
+    "sp_final": -21.3,
+    "sp_final_rank": 126
+   },
+   "Akron": {
+    "sp_final": -22.0,
+    "sp_final_rank": 127
+   },
+   "UConn": {
+    "sp_final": -24.9,
+    "sp_final_rank": 128
+   },
+   "FIU": {
+    "sp_final": -26.2,
+    "sp_final_rank": 129
+   },
+   "UMass": {
+    "sp_final": -26.5,
+    "sp_final_rank": 130
+   },
+   "New Mexico State": {
+    "sp_final": -27.4,
+    "sp_final_rank": 131
+   }
+  },
+  "2023": {
+   "Georgia": {
+    "sp_final": 29.2,
+    "sp_final_rank": 1
+   },
+   "Ohio State": {
+    "sp_final": 29.0,
+    "sp_final_rank": 2
+   },
+   "Michigan": {
+    "sp_final": 28.6,
+    "sp_final_rank": 3
+   },
+   "Alabama": {
+    "sp_final": 28.1,
+    "sp_final_rank": 4
+   },
+   "LSU": {
+    "sp_final": 23.3,
+    "sp_final_rank": 5
+   },
+   "Penn State": {
+    "sp_final": 23.2,
+    "sp_final_rank": 6
+   },
+   "Clemson": {
+    "sp_final": 22.9,
+    "sp_final_rank": 7
+   },
+   "Tennessee": {
+    "sp_final": 22.4,
+    "sp_final_rank": 8
+   },
+   "Texas": {
+    "sp_final": 22.2,
+    "sp_final_rank": 9
+   },
+   "USC": {
+    "sp_final": 20.9,
+    "sp_final_rank": 10
+   },
+   "Notre Dame": {
+    "sp_final": 19.9,
+    "sp_final_rank": 11
+   },
+   "Florida State": {
+    "sp_final": 19.1,
+    "sp_final_rank": 12
+   },
+   "Oregon": {
+    "sp_final": 19.0,
+    "sp_final_rank": 13
+   },
+   "Utah": {
+    "sp_final": 18.8,
+    "sp_final_rank": 14
+   },
+   "Oklahoma": {
+    "sp_final": 18.8,
+    "sp_final_rank": 15
+   },
+   "Texas A&M": {
+    "sp_final": 18.5,
+    "sp_final_rank": 16
+   },
+   "Washington": {
+    "sp_final": 17.2,
+    "sp_final_rank": 17
+   },
+   "Ole Miss": {
+    "sp_final": 17.1,
+    "sp_final_rank": 18
+   },
+   "Wisconsin": {
+    "sp_final": 16.1,
+    "sp_final_rank": 19
+   },
+   "Kansas State": {
+    "sp_final": 14.5,
+    "sp_final_rank": 20
+   },
+   "TCU": {
+    "sp_final": 14.5,
+    "sp_final_rank": 21
+   },
+   "Iowa": {
+    "sp_final": 14.0,
+    "sp_final_rank": 22
+   },
+   "Florida": {
+    "sp_final": 13.7,
+    "sp_final_rank": 23
+   },
+   "Kentucky": {
+    "sp_final": 13.4,
+    "sp_final_rank": 24
+   },
+   "North Carolina": {
+    "sp_final": 12.9,
+    "sp_final_rank": 25
+   },
+   "Auburn": {
+    "sp_final": 12.8,
+    "sp_final_rank": 26
+   },
+   "Minnesota": {
+    "sp_final": 12.8,
+    "sp_final_rank": 27
+   },
+   "UCLA": {
+    "sp_final": 12.5,
+    "sp_final_rank": 28
+   },
+   "Mississippi State": {
+    "sp_final": 12.4,
+    "sp_final_rank": 29
+   },
+   "Arkansas": {
+    "sp_final": 12.1,
+    "sp_final_rank": 30
+   },
+   "Oregon State": {
+    "sp_final": 11.8,
+    "sp_final_rank": 31
+   },
+   "Texas Tech": {
+    "sp_final": 11.5,
+    "sp_final_rank": 32
+   },
+   "South Carolina": {
+    "sp_final": 11.3,
+    "sp_final_rank": 33
+   },
+   "Baylor": {
+    "sp_final": 10.9,
+    "sp_final_rank": 34
+   },
+   "Missouri": {
+    "sp_final": 10.5,
+    "sp_final_rank": 35
+   },
+   "Pittsburgh": {
+    "sp_final": 10.3,
+    "sp_final_rank": 36
+   },
+   "Miami FL": {
+    "sp_final": 10.0,
+    "sp_final_rank": 37
+   },
+   "Oklahoma State": {
+    "sp_final": 9.8,
+    "sp_final_rank": 38
+   },
+   "UCF": {
+    "sp_final": 9.6,
+    "sp_final_rank": 39
+   },
+   "Louisville": {
+    "sp_final": 9.5,
+    "sp_final_rank": 40
+   },
+   "Maryland": {
+    "sp_final": 9.3,
+    "sp_final_rank": 41
+   },
+   "NC State": {
+    "sp_final": 9.2,
+    "sp_final_rank": 42
+   },
+   "Illinois": {
+    "sp_final": 9.0,
+    "sp_final_rank": 43
+   },
+   "Tulane": {
+    "sp_final": 7.3,
+    "sp_final_rank": 44
+   },
+   "Wake Forest": {
+    "sp_final": 6.8,
+    "sp_final_rank": 45
+   },
+   "Michigan State": {
+    "sp_final": 6.3,
+    "sp_final_rank": 46
+   },
+   "SMU": {
+    "sp_final": 6.0,
+    "sp_final_rank": 47
+   },
+   "Boise State": {
+    "sp_final": 5.8,
+    "sp_final_rank": 48
+   },
+   "Iowa State": {
+    "sp_final": 5.6,
+    "sp_final_rank": 49
+   },
+   "Duke": {
+    "sp_final": 5.6,
+    "sp_final_rank": 50
+   },
+   "BYU": {
+    "sp_final": 5.1,
+    "sp_final_rank": 51
+   },
+   "Memphis": {
+    "sp_final": 4.9,
+    "sp_final_rank": 52
+   },
+   "Cincinnati": {
+    "sp_final": 4.9,
+    "sp_final_rank": 53
+   },
+   "Washington State": {
+    "sp_final": 4.6,
+    "sp_final_rank": 54
+   },
+   "Syracuse": {
+    "sp_final": 4.3,
+    "sp_final_rank": 55
+   },
+   "UTSA": {
+    "sp_final": 4.3,
+    "sp_final_rank": 56
+   },
+   "Houston": {
+    "sp_final": 4.3,
+    "sp_final_rank": 57
+   },
+   "Purdue": {
+    "sp_final": 4.0,
+    "sp_final_rank": 58
+   },
+   "Nebraska": {
+    "sp_final": 3.7,
+    "sp_final_rank": 59
+   },
+   "West Virginia": {
+    "sp_final": 2.6,
+    "sp_final_rank": 60
+   },
+   "California": {
+    "sp_final": 1.9,
+    "sp_final_rank": 61
+   },
+   "Kansas": {
+    "sp_final": 1.9,
+    "sp_final_rank": 62
+   },
+   "Fresno State": {
+    "sp_final": 1.8,
+    "sp_final_rank": 63
+   },
+   "Troy": {
+    "sp_final": 1.3,
+    "sp_final_rank": 64
+   },
+   "South Alabama": {
+    "sp_final": 1.0,
+    "sp_final_rank": 65
+   },
+   "James Madison": {
+    "sp_final": 0.8,
+    "sp_final_rank": 66
+   },
+   "Arizona": {
+    "sp_final": -0.8,
+    "sp_final_rank": 67
+   },
+   "Coastal Carolina": {
+    "sp_final": -0.8,
+    "sp_final_rank": 68
+   },
+   "Arizona State": {
+    "sp_final": -1.0,
+    "sp_final_rank": 69
+   },
+   "Air Force": {
+    "sp_final": -1.6,
+    "sp_final_rank": 70
+   },
+   "Toledo": {
+    "sp_final": -1.6,
+    "sp_final_rank": 71
+   },
+   "Virginia Tech": {
+    "sp_final": -2.4,
+    "sp_final_rank": 72
+   },
+   "Marshall": {
+    "sp_final": -3.5,
+    "sp_final_rank": 73
+   },
+   "Appalachian State": {
+    "sp_final": -4.4,
+    "sp_final_rank": 74
+   },
+   "Georgia Tech": {
+    "sp_final": -5.4,
+    "sp_final_rank": 75
+   },
+   "Vanderbilt": {
+    "sp_final": -5.5,
+    "sp_final_rank": 76
+   },
+   "Rutgers": {
+    "sp_final": -5.7,
+    "sp_final_rank": 77
+   },
+   "Boston College": {
+    "sp_final": -5.7,
+    "sp_final_rank": 78
+   },
+   "Virginia": {
+    "sp_final": -5.8,
+    "sp_final_rank": 79
+   },
+   "San Diego State": {
+    "sp_final": -5.8,
+    "sp_final_rank": 80
+   },
+   "Louisiana": {
+    "sp_final": -6.1,
+    "sp_final_rank": 81
+   },
+   "Liberty": {
+    "sp_final": -6.1,
+    "sp_final_rank": 82
+   },
+   "Indiana": {
+    "sp_final": -6.2,
+    "sp_final_rank": 83
+   },
+   "Florida Atlantic": {
+    "sp_final": -6.2,
+    "sp_final_rank": 84
+   },
+   "Northwestern": {
+    "sp_final": -6.4,
+    "sp_final_rank": 85
+   },
+   "Western Kentucky": {
+    "sp_final": -6.8,
+    "sp_final_rank": 86
+   },
+   "East Carolina": {
+    "sp_final": -8.7,
+    "sp_final_rank": 87
+   },
+   "Colorado": {
+    "sp_final": -9.0,
+    "sp_final_rank": 88
+   },
+   "North Texas": {
+    "sp_final": -9.3,
+    "sp_final_rank": 89
+   },
+   "Wyoming": {
+    "sp_final": -9.5,
+    "sp_final_rank": 90
+   },
+   "Georgia State": {
+    "sp_final": -9.8,
+    "sp_final_rank": 91
+   },
+   "Stanford": {
+    "sp_final": -10.4,
+    "sp_final_rank": 92
+   },
+   "Ohio": {
+    "sp_final": -11.0,
+    "sp_final_rank": 93
+   },
+   "San Jose State": {
+    "sp_final": -11.1,
+    "sp_final_rank": 94
+   },
+   "Army": {
+    "sp_final": -11.1,
+    "sp_final_rank": 95
+   },
+   "Tulsa": {
+    "sp_final": -11.1,
+    "sp_final_rank": 96
+   },
+   "Buffalo": {
+    "sp_final": -11.3,
+    "sp_final_rank": 97
+   },
+   "Georgia Southern": {
+    "sp_final": -11.7,
+    "sp_final_rank": 98
+   },
+   "Southern Miss": {
+    "sp_final": -11.8,
+    "sp_final_rank": 99
+   },
+   "UAB": {
+    "sp_final": -11.9,
+    "sp_final_rank": 100
+   },
+   "Miami OH": {
+    "sp_final": -11.9,
+    "sp_final_rank": 101
+   },
+   "Navy": {
+    "sp_final": -12.3,
+    "sp_final_rank": 102
+   },
+   "Temple": {
+    "sp_final": -12.4,
+    "sp_final_rank": 103
+   },
+   "Middle Tennessee": {
+    "sp_final": -13.6,
+    "sp_final_rank": 104
+   },
+   "Eastern Michigan": {
+    "sp_final": -13.7,
+    "sp_final_rank": 105
+   },
+   "Nevada": {
+    "sp_final": -13.9,
+    "sp_final_rank": 106
+   },
+   "Ball State": {
+    "sp_final": -14.0,
+    "sp_final_rank": 107
+   },
+   "South Florida": {
+    "sp_final": -14.0,
+    "sp_final_rank": 108
+   },
+   "Central Michigan": {
+    "sp_final": -14.2,
+    "sp_final_rank": 109
+   },
+   "UNLV": {
+    "sp_final": -14.6,
+    "sp_final_rank": 110
+   },
+   "Arkansas State": {
+    "sp_final": -14.8,
+    "sp_final_rank": 111
+   },
+   "Louisiana Tech": {
+    "sp_final": -15.1,
+    "sp_final_rank": 112
+   },
+   "Utah State": {
+    "sp_final": -15.4,
+    "sp_final_rank": 113
+   },
+   "Colorado State": {
+    "sp_final": -16.0,
+    "sp_final_rank": 114
+   },
+   "Northern Illinois": {
+    "sp_final": -16.4,
+    "sp_final_rank": 115
+   },
+   "Rice": {
+    "sp_final": -16.5,
+    "sp_final_rank": 116
+   },
+   "Western Michigan": {
+    "sp_final": -16.5,
+    "sp_final_rank": 117
+   },
+   "UTEP": {
+    "sp_final": -16.6,
+    "sp_final_rank": 118
+   },
+   "Sam Houston": {
+    "sp_final": -17.1,
+    "sp_final_rank": 119
+   },
+   "Hawaii": {
+    "sp_final": -17.6,
+    "sp_final_rank": 120
+   },
+   "Old Dominion": {
+    "sp_final": -17.6,
+    "sp_final_rank": 121
+   },
+   "Texas State": {
+    "sp_final": -18.6,
+    "sp_final_rank": 122
+   },
+   "Jacksonville State": {
+    "sp_final": -18.8,
+    "sp_final_rank": 123
+   },
+   "ULM": {
+    "sp_final": -18.8,
+    "sp_final_rank": 124
+   },
+   "UConn": {
+    "sp_final": -18.9,
+    "sp_final_rank": 125
+   },
+   "New Mexico State": {
+    "sp_final": -19.6,
+    "sp_final_rank": 126
+   },
+   "New Mexico": {
+    "sp_final": -20.2,
+    "sp_final_rank": 127
+   },
+   "Akron": {
+    "sp_final": -20.4,
+    "sp_final_rank": 128
+   },
+   "Bowling Green": {
+    "sp_final": -20.4,
+    "sp_final_rank": 129
+   },
+   "FIU": {
+    "sp_final": -20.6,
+    "sp_final_rank": 130
+   },
+   "Charlotte": {
+    "sp_final": -21.5,
+    "sp_final_rank": 131
+   },
+   "Kent State": {
+    "sp_final": -22.6,
+    "sp_final_rank": 132
+   },
+   "UMass": {
+    "sp_final": -24.2,
+    "sp_final_rank": 133
+   }
+  },
+  "2024": {
+   "Georgia": {
+    "sp_final": 34.2,
+    "sp_final_rank": 1
+   },
+   "Ohio State": {
+    "sp_final": 30.8,
+    "sp_final_rank": 2
+   },
+   "Oregon": {
+    "sp_final": 29.0,
+    "sp_final_rank": 3
+   },
+   "Alabama": {
+    "sp_final": 27.8,
+    "sp_final_rank": 4
+   },
+   "Texas": {
+    "sp_final": 27.7,
+    "sp_final_rank": 5
+   },
+   "Penn State": {
+    "sp_final": 26.1,
+    "sp_final_rank": 6
+   },
+   "Michigan": {
+    "sp_final": 25.0,
+    "sp_final_rank": 7
+   },
+   "Ole Miss": {
+    "sp_final": 24.7,
+    "sp_final_rank": 8
+   },
+   "Notre Dame": {
+    "sp_final": 23.4,
+    "sp_final_rank": 9
+   },
+   "LSU": {
+    "sp_final": 23.1,
+    "sp_final_rank": 10
+   },
+   "Missouri": {
+    "sp_final": 22.2,
+    "sp_final_rank": 11
+   },
+   "Florida State": {
+    "sp_final": 19.9,
+    "sp_final_rank": 12
+   },
+   "Oklahoma": {
+    "sp_final": 19.8,
+    "sp_final_rank": 13
+   },
+   "Texas A&M": {
+    "sp_final": 19.2,
+    "sp_final_rank": 14
+   },
+   "Tennessee": {
+    "sp_final": 19.2,
+    "sp_final_rank": 15
+   },
+   "Clemson": {
+    "sp_final": 18.8,
+    "sp_final_rank": 16
+   },
+   "Kansas State": {
+    "sp_final": 16.4,
+    "sp_final_rank": 17
+   },
+   "Utah": {
+    "sp_final": 15.8,
+    "sp_final_rank": 18
+   },
+   "Miami FL": {
+    "sp_final": 15.5,
+    "sp_final_rank": 19
+   },
+   "Oklahoma State": {
+    "sp_final": 14.0,
+    "sp_final_rank": 20
+   },
+   "USC": {
+    "sp_final": 13.9,
+    "sp_final_rank": 21
+   },
+   "Kentucky": {
+    "sp_final": 13.8,
+    "sp_final_rank": 22
+   },
+   "Florida": {
+    "sp_final": 13.2,
+    "sp_final_rank": 23
+   },
+   "Iowa": {
+    "sp_final": 13.2,
+    "sp_final_rank": 24
+   },
+   "Auburn": {
+    "sp_final": 13.1,
+    "sp_final_rank": 25
+   },
+   "Wisconsin": {
+    "sp_final": 12.9,
+    "sp_final_rank": 26
+   },
+   "SMU": {
+    "sp_final": 12.7,
+    "sp_final_rank": 27
+   },
+   "Arizona": {
+    "sp_final": 12.4,
+    "sp_final_rank": 28
+   },
+   "NC State": {
+    "sp_final": 12.1,
+    "sp_final_rank": 29
+   },
+   "Iowa State": {
+    "sp_final": 11.5,
+    "sp_final_rank": 30
+   },
+   "Louisville": {
+    "sp_final": 11.3,
+    "sp_final_rank": 31
+   },
+   "Washington": {
+    "sp_final": 10.3,
+    "sp_final_rank": 32
+   },
+   "Kansas": {
+    "sp_final": 9.7,
+    "sp_final_rank": 33
+   },
+   "West Virginia": {
+    "sp_final": 9.7,
+    "sp_final_rank": 34
+   },
+   "South Carolina": {
+    "sp_final": 9.5,
+    "sp_final_rank": 35
+   },
+   "Virginia Tech": {
+    "sp_final": 9.4,
+    "sp_final_rank": 36
+   },
+   "UCLA": {
+    "sp_final": 8.8,
+    "sp_final_rank": 37
+   },
+   "TCU": {
+    "sp_final": 8.7,
+    "sp_final_rank": 38
+   },
+   "Boise State": {
+    "sp_final": 7.9,
+    "sp_final_rank": 39
+   },
+   "North Carolina": {
+    "sp_final": 7.9,
+    "sp_final_rank": 40
+   },
+   "Texas Tech": {
+    "sp_final": 7.4,
+    "sp_final_rank": 41
+   },
+   "Nebraska": {
+    "sp_final": 7.4,
+    "sp_final_rank": 42
+   },
+   "Memphis": {
+    "sp_final": 6.1,
+    "sp_final_rank": 43
+   },
+   "Arkansas": {
+    "sp_final": 6.1,
+    "sp_final_rank": 44
+   },
+   "UCF": {
+    "sp_final": 5.9,
+    "sp_final_rank": 45
+   },
+   "Maryland": {
+    "sp_final": 5.2,
+    "sp_final_rank": 46
+   },
+   "Minnesota": {
+    "sp_final": 4.2,
+    "sp_final_rank": 47
+   },
+   "Liberty": {
+    "sp_final": 3.9,
+    "sp_final_rank": 48
+   },
+   "Rutgers": {
+    "sp_final": 3.5,
+    "sp_final_rank": 49
+   },
+   "Oregon State": {
+    "sp_final": 3.2,
+    "sp_final_rank": 50
+   },
+   "Duke": {
+    "sp_final": 3.1,
+    "sp_final_rank": 51
+   },
+   "California": {
+    "sp_final": 2.8,
+    "sp_final_rank": 52
+   },
+   "Baylor": {
+    "sp_final": 2.2,
+    "sp_final_rank": 53
+   },
+   "UTSA": {
+    "sp_final": 1.2,
+    "sp_final_rank": 54
+   },
+   "Mississippi State": {
+    "sp_final": 1.1,
+    "sp_final_rank": 55
+   },
+   "James Madison": {
+    "sp_final": 0.7,
+    "sp_final_rank": 56
+   },
+   "Washington State": {
+    "sp_final": 0.6,
+    "sp_final_rank": 57
+   },
+   "Georgia Tech": {
+    "sp_final": 0.6,
+    "sp_final_rank": 58
+   },
+   "Appalachian State": {
+    "sp_final": 0.5,
+    "sp_final_rank": 59
+   },
+   "Colorado": {
+    "sp_final": 0.3,
+    "sp_final_rank": 60
+   },
+   "Illinois": {
+    "sp_final": 0.1,
+    "sp_final_rank": 61
+   },
+   "Cincinnati": {
+    "sp_final": -0.1,
+    "sp_final_rank": 62
+   },
+   "Fresno State": {
+    "sp_final": -0.1,
+    "sp_final_rank": 63
+   },
+   "Troy": {
+    "sp_final": -0.7,
+    "sp_final_rank": 64
+   },
+   "Tulane": {
+    "sp_final": -0.8,
+    "sp_final_rank": 65
+   },
+   "Pittsburgh": {
+    "sp_final": -0.8,
+    "sp_final_rank": 66
+   },
+   "Syracuse": {
+    "sp_final": -1.0,
+    "sp_final_rank": 67
+   },
+   "Purdue": {
+    "sp_final": -1.4,
+    "sp_final_rank": 68
+   },
+   "BYU": {
+    "sp_final": -1.5,
+    "sp_final_rank": 69
+   },
+   "Western Kentucky": {
+    "sp_final": -1.6,
+    "sp_final_rank": 70
+   },
+   "Michigan State": {
+    "sp_final": -2.4,
+    "sp_final_rank": 71
+   },
+   "Louisiana": {
+    "sp_final": -2.4,
+    "sp_final_rank": 72
+   },
+   "Boston College": {
+    "sp_final": -2.4,
+    "sp_final_rank": 73
+   },
+   "Wake Forest": {
+    "sp_final": -2.6,
+    "sp_final_rank": 74
+   },
+   "Northwestern": {
+    "sp_final": -2.8,
+    "sp_final_rank": 75
+   },
+   "Houston": {
+    "sp_final": -3.3,
+    "sp_final_rank": 76
+   },
+   "Stanford": {
+    "sp_final": -3.5,
+    "sp_final_rank": 77
+   },
+   "Virginia": {
+    "sp_final": -3.5,
+    "sp_final_rank": 78
+   },
+   "Arizona State": {
+    "sp_final": -4.0,
+    "sp_final_rank": 79
+   },
+   "Miami OH": {
+    "sp_final": -4.0,
+    "sp_final_rank": 80
+   },
+   "Indiana": {
+    "sp_final": -4.5,
+    "sp_final_rank": 81
+   },
+   "UNLV": {
+    "sp_final": -5.2,
+    "sp_final_rank": 82
+   },
+   "South Florida": {
+    "sp_final": -5.6,
+    "sp_final_rank": 83
+   },
+   "South Alabama": {
+    "sp_final": -6.4,
+    "sp_final_rank": 84
+   },
+   "Coastal Carolina": {
+    "sp_final": -6.5,
+    "sp_final_rank": 85
+   },
+   "Texas State": {
+    "sp_final": -6.5,
+    "sp_final_rank": 86
+   },
+   "Toledo": {
+    "sp_final": -7.0,
+    "sp_final_rank": 87
+   },
+   "Air Force": {
+    "sp_final": -7.1,
+    "sp_final_rank": 88
+   },
+   "Vanderbilt": {
+    "sp_final": -7.3,
+    "sp_final_rank": 89
+   },
+   "Wyoming": {
+    "sp_final": -8.0,
+    "sp_final_rank": 90
+   },
+   "San Diego State": {
+    "sp_final": -8.9,
+    "sp_final_rank": 91
+   },
+   "Rice": {
+    "sp_final": -9.0,
+    "sp_final_rank": 92
+   },
+   "Arkansas State": {
+    "sp_final": -9.1,
+    "sp_final_rank": 93
+   },
+   "East Carolina": {
+    "sp_final": -9.5,
+    "sp_final_rank": 94
+   },
+   "Marshall": {
+    "sp_final": -9.9,
+    "sp_final_rank": 95
+   },
+   "Jacksonville State": {
+    "sp_final": -9.9,
+    "sp_final_rank": 96
+   },
+   "Georgia Southern": {
+    "sp_final": -10.3,
+    "sp_final_rank": 97
+   },
+   "Northern Illinois": {
+    "sp_final": -10.6,
+    "sp_final_rank": 98
+   },
+   "UAB": {
+    "sp_final": -10.6,
+    "sp_final_rank": 99
+   },
+   "Colorado State": {
+    "sp_final": -10.6,
+    "sp_final_rank": 100
+   },
+   "San Jose State": {
+    "sp_final": -11.0,
+    "sp_final_rank": 101
+   },
+   "Utah State": {
+    "sp_final": -11.1,
+    "sp_final_rank": 102
+   },
+   "Army": {
+    "sp_final": -11.1,
+    "sp_final_rank": 103
+   },
+   "Bowling Green": {
+    "sp_final": -11.2,
+    "sp_final_rank": 104
+   },
+   "North Texas": {
+    "sp_final": -11.3,
+    "sp_final_rank": 105
+   },
+   "Georgia State": {
+    "sp_final": -11.3,
+    "sp_final_rank": 106
+   },
+   "Ohio": {
+    "sp_final": -12.0,
+    "sp_final_rank": 107
+   },
+   "Florida Atlantic": {
+    "sp_final": -12.2,
+    "sp_final_rank": 108
+   },
+   "Hawaii": {
+    "sp_final": -12.6,
+    "sp_final_rank": 109
+   },
+   "Western Michigan": {
+    "sp_final": -12.9,
+    "sp_final_rank": 110
+   },
+   "Old Dominion": {
+    "sp_final": -13.1,
+    "sp_final_rank": 111
+   },
+   "Tulsa": {
+    "sp_final": -13.2,
+    "sp_final_rank": 112
+   },
+   "Navy": {
+    "sp_final": -13.3,
+    "sp_final_rank": 113
+   },
+   "Middle Tennessee": {
+    "sp_final": -13.4,
+    "sp_final_rank": 114
+   },
+   "Sam Houston": {
+    "sp_final": -14.2,
+    "sp_final_rank": 115
+   },
+   "New Mexico State": {
+    "sp_final": -15.5,
+    "sp_final_rank": 116
+   },
+   "Central Michigan": {
+    "sp_final": -15.9,
+    "sp_final_rank": 117
+   },
+   "Eastern Michigan": {
+    "sp_final": -15.9,
+    "sp_final_rank": 118
+   },
+   "Southern Miss": {
+    "sp_final": -16.1,
+    "sp_final_rank": 119
+   },
+   "Louisiana Tech": {
+    "sp_final": -16.7,
+    "sp_final_rank": 120
+   },
+   "Nevada": {
+    "sp_final": -16.7,
+    "sp_final_rank": 121
+   },
+   "Ball State": {
+    "sp_final": -16.9,
+    "sp_final_rank": 122
+   },
+   "Buffalo": {
+    "sp_final": -17.0,
+    "sp_final_rank": 123
+   },
+   "UTEP": {
+    "sp_final": -17.8,
+    "sp_final_rank": 124
+   },
+   "UConn": {
+    "sp_final": -17.9,
+    "sp_final_rank": 125
+   },
+   "Charlotte": {
+    "sp_final": -18.1,
+    "sp_final_rank": 126
+   },
+   "FIU": {
+    "sp_final": -19.0,
+    "sp_final_rank": 127
+   },
+   "UMass": {
+    "sp_final": -20.1,
+    "sp_final_rank": 128
+   },
+   "New Mexico": {
+    "sp_final": -20.6,
+    "sp_final_rank": 129
+   },
+   "Kent State": {
+    "sp_final": -20.9,
+    "sp_final_rank": 130
+   },
+   "Kennesaw State": {
+    "sp_final": -20.9,
+    "sp_final_rank": 131
+   },
+   "Temple": {
+    "sp_final": -21.9,
+    "sp_final_rank": 132
+   },
+   "Akron": {
+    "sp_final": -22.2,
+    "sp_final_rank": 133
+   },
+   "ULM": {
+    "sp_final": -23.4,
+    "sp_final_rank": 134
+   }
+  },
+  "2025": {
+   "Ohio State": {
+    "sp_final": 26.1,
+    "sp_final_rank": 1,
+    "avgw": 10.0,
+    "sos_rk": 21,
+    "off": 38.0,
+    "def": 12.0
+   },
+   "Alabama": {
+    "sp_final": 25.5,
+    "sp_final_rank": 2,
+    "avgw": 9.4,
+    "sos_rk": 11,
+    "off": 39.3,
+    "def": 13.7
+   },
+   "Georgia": {
+    "sp_final": 24.2,
+    "sp_final_rank": 3,
+    "avgw": 9.3,
+    "sos_rk": 13,
+    "off": 37.7,
+    "def": 13.5
+   },
+   "Penn State": {
+    "sp_final": 24.2,
+    "sp_final_rank": 4,
+    "avgw": 10.0,
+    "sos_rk": 29,
+    "off": 38.8,
+    "def": 14.6
+   },
+   "Texas": {
+    "sp_final": 23.1,
+    "sp_final_rank": 5,
+    "avgw": 9.1,
+    "sos_rk": 12,
+    "off": 33.7,
+    "def": 10.7
+   },
+   "Notre Dame": {
+    "sp_final": 22.0,
+    "sp_final_rank": 6,
+    "avgw": 9.8,
+    "sos_rk": 44,
+    "off": 36.8,
+    "def": 14.8
+   },
+   "Oregon": {
+    "sp_final": 22.0,
+    "sp_final_rank": 7,
+    "avgw": 9.6,
+    "sos_rk": 32,
+    "off": 38.5,
+    "def": 16.6
+   },
+   "Michigan": {
+    "sp_final": 20.9,
+    "sp_final_rank": 8,
+    "avgw": 9.6,
+    "sos_rk": 38,
+    "off": 31.5,
+    "def": 10.6
+   },
+   "Ole Miss": {
+    "sp_final": 20.7,
+    "sp_final_rank": 9,
+    "avgw": 9.0,
+    "sos_rk": 23,
+    "off": 35.2,
+    "def": 14.5
+   },
+   "Clemson": {
+    "sp_final": 20.2,
+    "sp_final_rank": 10,
+    "avgw": 9.3,
+    "sos_rk": 34,
+    "off": 38.4,
+    "def": 18.2
+   },
+   "LSU": {
+    "sp_final": 20.1,
+    "sp_final_rank": 11,
+    "avgw": 8.1,
+    "sos_rk": 9,
+    "off": 39.7,
+    "def": 19.6
+   },
+   "Tennessee": {
+    "sp_final": 19.4,
+    "sp_final_rank": 12,
+    "avgw": 8.9,
+    "sos_rk": 24,
+    "off": 31.9,
+    "def": 12.5
+   },
+   "Texas A&M": {
+    "sp_final": 18.3,
+    "sp_final_rank": 13,
+    "avgw": 8.0,
+    "sos_rk": 10,
+    "off": 35.4,
+    "def": 17.1
+   },
+   "Miami FL": {
+    "sp_final": 18.1,
+    "sp_final_rank": 14,
+    "avgw": 9.0,
+    "sos_rk": 36,
+    "off": 42.7,
+    "def": 24.6
+   },
+   "Oklahoma": {
+    "sp_final": 17.5,
+    "sp_final_rank": 15,
+    "avgw": 7.2,
+    "sos_rk": 1,
+    "off": 33.8,
+    "def": 16.2
+   },
+   "Florida": {
+    "sp_final": 16.2,
+    "sp_final_rank": 16,
+    "avgw": 6.8,
+    "sos_rk": 2,
+    "off": 34.9,
+    "def": 18.7
+   },
+   "South Carolina": {
+    "sp_final": 16.0,
+    "sp_final_rank": 17,
+    "avgw": 7.1,
+    "sos_rk": 7,
+    "off": 33.2,
+    "def": 17.2
+   },
+   "Kansas State": {
+    "sp_final": 15.3,
+    "sp_final_rank": 18,
+    "avgw": 8.7,
+    "sos_rk": 57,
+    "off": 35.5,
+    "def": 20.2
+   },
+   "SMU": {
+    "sp_final": 14.6,
+    "sp_final_rank": 19,
+    "avgw": 8.6,
+    "sos_rk": 45,
+    "off": 38.0,
+    "def": 23.5
+   },
+   "Missouri": {
+    "sp_final": 14.0,
+    "sp_final_rank": 20,
+    "avgw": 7.8,
+    "sos_rk": 25,
+    "off": 31.5,
+    "def": 17.5
+   },
+   "USC": {
+    "sp_final": 13.2,
+    "sp_final_rank": 21,
+    "avgw": 7.7,
+    "sos_rk": 20,
+    "off": 37.3,
+    "def": 24.1
+   },
+   "Auburn": {
+    "sp_final": 13.1,
+    "sp_final_rank": 22,
+    "avgw": 7.0,
+    "sos_rk": 15,
+    "off": 30.1,
+    "def": 17.0
+   },
+   "Indiana": {
+    "sp_final": 12.5,
+    "sp_final_rank": 23,
+    "avgw": 8.2,
+    "sos_rk": 31,
+    "off": 32.2,
+    "def": 19.7
+   },
+   "Louisville": {
+    "sp_final": 12.3,
+    "sp_final_rank": 24,
+    "avgw": 8.1,
+    "sos_rk": 43,
+    "off": 36.7,
+    "def": 24.4
+   },
+   "Iowa": {
+    "sp_final": 12.1,
+    "sp_final_rank": 25,
+    "avgw": 7.1,
+    "sos_rk": 22,
+    "off": 27.2,
+    "def": 15.1
+   },
+   "Utah": {
+    "sp_final": 12.1,
+    "sp_final_rank": 26,
+    "avgw": 8.0,
+    "sos_rk": 55,
+    "off": 28.8,
+    "def": 16.7
+   },
+   "Illinois": {
+    "sp_final": 11.8,
+    "sp_final_rank": 27,
+    "avgw": 8.0,
+    "sos_rk": 40,
+    "off": 31.0,
+    "def": 19.2
+   },
+   "Texas Tech": {
+    "sp_final": 11.6,
+    "sp_final_rank": 28,
+    "avgw": 8.3,
+    "sos_rk": 62,
+    "off": 38.2,
+    "def": 26.6
+   },
+   "TCU": {
+    "sp_final": 11.7,
+    "sp_final_rank": 28,
+    "avgw": 7.5,
+    "sos_rk": 41,
+    "off": 35.1,
+    "def": 23.4
+   },
+   "Arizona State": {
+    "sp_final": 11.3,
+    "sp_final_rank": 30,
+    "avgw": 7.9,
+    "sos_rk": 61,
+    "off": 32.1,
+    "def": 20.8
+   },
+   "Iowa State": {
+    "sp_final": 10.6,
+    "sp_final_rank": 31,
+    "avgw": 7.5,
+    "sos_rk": 51,
+    "off": 31.3,
+    "def": 20.8
+   },
+   "Nebraska": {
+    "sp_final": 10.3,
+    "sp_final_rank": 32,
+    "avgw": 7.6,
+    "sos_rk": 35,
+    "off": 27.0,
+    "def": 16.7
+   },
+   "Boise State": {
+    "sp_final": 10.0,
+    "sp_final_rank": 33,
+    "avgw": 10.0,
+    "sos_rk": 84,
+    "off": 35.9,
+    "def": 25.9
+   },
+   "Arkansas": {
+    "sp_final": 9.7,
+    "sp_final_rank": 34,
+    "avgw": 5.6,
+    "sos_rk": 3,
+    "off": 32.4,
+    "def": 22.7
+   },
+   "Baylor": {
+    "sp_final": 9.4,
+    "sp_final_rank": 35,
+    "avgw": 6.9,
+    "sos_rk": 46,
+    "off": 35.5,
+    "def": 26.2
+   },
+   "BYU": {
+    "sp_final": 9.3,
+    "sp_final_rank": 36,
+    "avgw": 7.7,
+    "sos_rk": 64,
+    "off": 29.4,
+    "def": 20.1
+   },
+   "Washington": {
+    "sp_final": 9.0,
+    "sp_final_rank": 37,
+    "avgw": 6.9,
+    "sos_rk": 28,
+    "off": 30.1,
+    "def": 21.1
+   },
+   "Wisconsin": {
+    "sp_final": 8.9,
+    "sp_final_rank": 38,
+    "avgw": 5.6,
+    "sos_rk": 4,
+    "off": 27.4,
+    "def": 18.4
+   },
+   "Florida State": {
+    "sp_final": 8.7,
+    "sp_final_rank": 39,
+    "avgw": 7.0,
+    "sos_rk": 30,
+    "off": 28.5,
+    "def": 19.8
+   },
+   "Minnesota": {
+    "sp_final": 7.1,
+    "sp_final_rank": 40,
+    "avgw": 7.0,
+    "sos_rk": 27,
+    "off": 23.4,
+    "def": 16.3
+   },
+   "Georgia Tech": {
+    "sp_final": 7.1,
+    "sp_final_rank": 41,
+    "avgw": 6.9,
+    "sos_rk": 47,
+    "off": 33.6,
+    "def": 26.5
+   },
+   "Virginia Tech": {
+    "sp_final": 6.9,
+    "sp_final_rank": 42,
+    "avgw": 7.0,
+    "sos_rk": 54,
+    "off": 30.0,
+    "def": 23.1
+   },
+   "Duke": {
+    "sp_final": 6.6,
+    "sp_final_rank": 43,
+    "avgw": 7.0,
+    "sos_rk": 60,
+    "off": 27.8,
+    "def": 21.2
+   },
+   "Kentucky": {
+    "sp_final": 6.5,
+    "sp_final_rank": 44,
+    "avgw": 5.1,
+    "sos_rk": 8,
+    "off": 26.4,
+    "def": 19.9
+   },
+   "Tulane": {
+    "sp_final": 5.9,
+    "sp_final_rank": 45,
+    "avgw": 8.5,
+    "sos_rk": 73,
+    "off": 33.0,
+    "def": 27.0
+   },
+   "NC State": {
+    "sp_final": 5.7,
+    "sp_final_rank": 46,
+    "avgw": 6.6,
+    "sos_rk": 39,
+    "off": 31.7,
+    "def": 25.9
+   },
+   "Rutgers": {
+    "sp_final": 5.4,
+    "sp_final_rank": 47,
+    "avgw": 5.9,
+    "sos_rk": 16,
+    "off": 29.3,
+    "def": 23.9
+   },
+   "Kansas": {
+    "sp_final": 5.2,
+    "sp_final_rank": 48,
+    "avgw": 6.3,
+    "sos_rk": 50,
+    "off": 33.1,
+    "def": 27.9
+   },
+   "Colorado": {
+    "sp_final": 5.1,
+    "sp_final_rank": 49,
+    "avgw": 6.1,
+    "sos_rk": 49,
+    "off": 31.1,
+    "def": 26.0
+   },
+   "UCLA": {
+    "sp_final": 4.9,
+    "sp_final_rank": 50,
+    "avgw": 5.5,
+    "sos_rk": 19,
+    "off": 27.6,
+    "def": 22.6
+   },
+   "Pittsburgh": {
+    "sp_final": 4.7,
+    "sp_final_rank": 51,
+    "avgw": 6.2,
+    "sos_rk": 48,
+    "off": 30.6,
+    "def": 25.9
+   },
+   "Memphis": {
+    "sp_final": 4.2,
+    "sp_final_rank": 52,
+    "avgw": 9.0,
+    "sos_rk": 121,
+    "off": 34.9,
+    "def": 30.7
+   },
+   "North Carolina": {
+    "sp_final": 4.1,
+    "sp_final_rank": 53,
+    "avgw": 6.9,
+    "sos_rk": 68,
+    "off": 32.0,
+    "def": 27.9
+   },
+   "Vanderbilt": {
+    "sp_final": 3.8,
+    "sp_final_rank": 54,
+    "avgw": 5.0,
+    "sos_rk": 5,
+    "off": 28.4,
+    "def": 24.6
+   },
+   "Syracuse": {
+    "sp_final": 3.3,
+    "sp_final_rank": 55,
+    "avgw": 4.9,
+    "sos_rk": 14,
+    "off": 31.6,
+    "def": 28.3
+   },
+   "James Madison": {
+    "sp_final": 2.6,
+    "sp_final_rank": 56,
+    "avgw": 8.4,
+    "sos_rk": 104,
+    "off": 29.0,
+    "def": 26.4
+   },
+   "Oklahoma State": {
+    "sp_final": 2.3,
+    "sp_final_rank": 57,
+    "avgw": 5.5,
+    "sos_rk": 42,
+    "off": 31.6,
+    "def": 29.3
+   },
+   "UCF": {
+    "sp_final": 2.2,
+    "sp_final_rank": 58,
+    "avgw": 5.9,
+    "sos_rk": 58,
+    "off": 28.7,
+    "def": 26.4
+   },
+   "Cincinnati": {
+    "sp_final": 2.2,
+    "sp_final_rank": 59,
+    "avgw": 5.7,
+    "sos_rk": 59,
+    "off": 26.3,
+    "def": 24.1
+   },
+   "West Virginia": {
+    "sp_final": 2.0,
+    "sp_final_rank": 60,
+    "avgw": 5.3,
+    "sos_rk": 53,
+    "off": 30.4,
+    "def": 28.4
+   },
+   "Arizona": {
+    "sp_final": 1.8,
+    "sp_final_rank": 61,
+    "avgw": 5.5,
+    "sos_rk": 56,
+    "off": 29.4,
+    "def": 27.6
+   },
+   "Boston College": {
+    "sp_final": 1.6,
+    "sp_final_rank": 62,
+    "avgw": 5.3,
+    "sos_rk": 37,
+    "off": 27.5,
+    "def": 25.9
+   },
+   "Houston": {
+    "sp_final": 1.5,
+    "sp_final_rank": 63,
+    "avgw": 5.8,
+    "sos_rk": 67,
+    "off": 24.6,
+    "def": 23.1
+   },
+   "California": {
+    "sp_final": 1.2,
+    "sp_final_rank": 64,
+    "avgw": 6.0,
+    "sos_rk": 65,
+    "off": 26.5,
+    "def": 25.3
+   },
+   "Michigan State": {
+    "sp_final": 1.1,
+    "sp_final_rank": 65,
+    "avgw": 4.8,
+    "sos_rk": 26,
+    "off": 22.3,
+    "def": 21.1
+   },
+   "Mississippi State": {
+    "sp_final": 0.7,
+    "sp_final_rank": 66,
+    "avgw": 4.1,
+    "sos_rk": 6,
+    "off": 28.5,
+    "def": 27.9
+   },
+   "Maryland": {
+    "sp_final": 0.4,
+    "sp_final_rank": 67,
+    "avgw": 5.2,
+    "sos_rk": 52,
+    "off": 25.0,
+    "def": 24.6
+   },
+   "UTSA": {
+    "sp_final": 0.3,
+    "sp_final_rank": 68,
+    "avgw": 7.8,
+    "sos_rk": 90,
+    "off": 34.0,
+    "def": 33.7
+   },
+   "Army": {
+    "sp_final": -0.2,
+    "sp_final_rank": 69,
+    "avgw": 7.7,
+    "sos_rk": 94,
+    "off": 24.7,
+    "def": 24.9
+   },
+   "Navy": {
+    "sp_final": -0.2,
+    "sp_final_rank": 70,
+    "avgw": 8.1,
+    "sos_rk": 81,
+    "off": 28.1,
+    "def": 28.3
+   },
+   "Toledo": {
+    "sp_final": -1.2,
+    "sp_final_rank": 71,
+    "avgw": 9.0,
+    "sos_rk": 133,
+    "off": 26.3,
+    "def": 27.5
+   },
+   "Liberty": {
+    "sp_final": -1.3,
+    "sp_final_rank": 72,
+    "avgw": 9.4,
+    "sos_rk": 136,
+    "off": 27.3,
+    "def": 28.6
+   },
+   "UNLV": {
+    "sp_final": -1.8,
+    "sp_final_rank": 73,
+    "avgw": 8.2,
+    "sos_rk": 122,
+    "off": 28.2,
+    "def": 29.9
+   },
+   "Virginia": {
+    "sp_final": -2.2,
+    "sp_final_rank": 74,
+    "avgw": 5.4,
+    "sos_rk": 69,
+    "off": 25.4,
+    "def": 27.6
+   },
+   "Oregon State": {
+    "sp_final": -2.6,
+    "sp_final_rank": 75,
+    "avgw": 6.6,
+    "sos_rk": 71,
+    "off": 27.5,
+    "def": 30.1
+   },
+   "South Florida": {
+    "sp_final": -2.8,
+    "sp_final_rank": 76,
+    "avgw": 6.3,
+    "sos_rk": 63,
+    "off": 30.7,
+    "def": 33.5
+   },
+   "Louisiana": {
+    "sp_final": -3.1,
+    "sp_final_rank": 77,
+    "avgw": 7.6,
+    "sos_rk": 91,
+    "off": 26.8,
+    "def": 29.9
+   },
+   "South Alabama": {
+    "sp_final": -4.1,
+    "sp_final_rank": 78,
+    "avgw": 7.1,
+    "sos_rk": 108,
+    "off": 26.1,
+    "def": 30.2
+   },
+   "Wake Forest": {
+    "sp_final": -4.7,
+    "sp_final_rank": 79,
+    "avgw": 4.9,
+    "sos_rk": 72,
+    "off": 26.0,
+    "def": 30.7
+   },
+   "Georgia Southern": {
+    "sp_final": -4.7,
+    "sp_final_rank": 80,
+    "avgw": 7.2,
+    "sos_rk": 110,
+    "off": 27.0,
+    "def": 31.7
+   },
+   "UConn": {
+    "sp_final": -4.9,
+    "sp_final_rank": 81,
+    "avgw": 7.5,
+    "sos_rk": 124,
+    "off": 25.3,
+    "def": 30.3
+   },
+   "Stanford": {
+    "sp_final": -5.0,
+    "sp_final_rank": 82,
+    "avgw": 3.5,
+    "sos_rk": 33,
+    "off": 26.1,
+    "def": 31.2
+   },
+   "Ohio": {
+    "sp_final": -5.0,
+    "sp_final_rank": 83,
+    "avgw": 7.3,
+    "sos_rk": 70,
+    "off": 24.9,
+    "def": 29.9
+   },
+   "Washington State": {
+    "sp_final": -5.7,
+    "sp_final_rank": 84,
+    "avgw": 5.4,
+    "sos_rk": 74,
+    "off": 30.2,
+    "def": 35.9
+   },
+   "San Jose State": {
+    "sp_final": -5.8,
+    "sp_final_rank": 85,
+    "avgw": 7.3,
+    "sos_rk": 96,
+    "off": 25.4,
+    "def": 31.2
+   },
+   "Northwestern": {
+    "sp_final": -6.4,
+    "sp_final_rank": 86,
+    "avgw": 3.5,
+    "sos_rk": 18,
+    "off": 16.3,
+    "def": 22.7
+   },
+   "Texas State": {
+    "sp_final": -6.5,
+    "sp_final_rank": 87,
+    "avgw": 6.4,
+    "sos_rk": 105,
+    "off": 27.4,
+    "def": 33.9
+   },
+   "Fresno State": {
+    "sp_final": -6.5,
+    "sp_final_rank": 88,
+    "avgw": 6.5,
+    "sos_rk": 109,
+    "off": 22.8,
+    "def": 29.3
+   },
+   "Western Kentucky": {
+    "sp_final": -7.0,
+    "sp_final_rank": 89,
+    "avgw": 7.6,
+    "sos_rk": 101,
+    "off": 21.7,
+    "def": 28.7
+   },
+   "Troy": {
+    "sp_final": -7.1,
+    "sp_final_rank": 90,
+    "avgw": 6.4,
+    "sos_rk": 89,
+    "off": 23.2,
+    "def": 30.3
+   },
+   "East Carolina": {
+    "sp_final": -7.1,
+    "sp_final_rank": 91,
+    "avgw": 5.8,
+    "sos_rk": 98,
+    "off": 26.8,
+    "def": 33.8
+   },
+   "Miami OH": {
+    "sp_final": -7.8,
+    "sp_final_rank": 92,
+    "avgw": 6.4,
+    "sos_rk": 112,
+    "off": 14.8,
+    "def": 22.6
+   },
+   "Coastal Carolina": {
+    "sp_final": -7.8,
+    "sp_final_rank": 93,
+    "avgw": 5.9,
+    "sos_rk": 92,
+    "off": 27.8,
+    "def": 35.6
+   },
+   "Buffalo": {
+    "sp_final": -7.8,
+    "sp_final_rank": 94,
+    "avgw": 7.6,
+    "sos_rk": 130,
+    "off": 22.1,
+    "def": 29.9
+   },
+   "North Texas": {
+    "sp_final": -7.9,
+    "sp_final_rank": 95,
+    "avgw": 6.7,
+    "sos_rk": 131,
+    "off": 30.7,
+    "def": 38.6
+   },
+   "Colorado State": {
+    "sp_final": -8.4,
+    "sp_final_rank": 96,
+    "avgw": 5.9,
+    "sos_rk": 106,
+    "off": 24.2,
+    "def": 32.6
+   },
+   "Appalachian State": {
+    "sp_final": -9.0,
+    "sp_final_rank": 97,
+    "avgw": 6.3,
+    "sos_rk": 111,
+    "off": 24.0,
+    "def": 33.0
+   },
+   "Air Force": {
+    "sp_final": -9.0,
+    "sp_final_rank": 98,
+    "avgw": 5.7,
+    "sos_rk": 116,
+    "off": 19.1,
+    "def": 28.1
+   },
+   "Marshall": {
+    "sp_final": -9.8,
+    "sp_final_rank": 99,
+    "avgw": 5.7,
+    "sos_rk": 78,
+    "off": 25.0,
+    "def": 34.8
+   },
+   "Purdue": {
+    "sp_final": -10.3,
+    "sp_final_rank": 100,
+    "avgw": 2.8,
+    "sos_rk": 17,
+    "off": 20.4,
+    "def": 30.7
+   },
+   "Old Dominion": {
+    "sp_final": -10.6,
+    "sp_final_rank": 101,
+    "avgw": 4.8,
+    "sos_rk": 87,
+    "off": 22.6,
+    "def": 33.2
+   },
+   "Arkansas State": {
+    "sp_final": -10.7,
+    "sp_final_rank": 102,
+    "avgw": 5.1,
+    "sos_rk": 103,
+    "off": 26.5,
+    "def": 37.2
+   },
+   "San Diego State": {
+    "sp_final": -10.9,
+    "sp_final_rank": 103,
+    "avgw": 5.5,
+    "sos_rk": 128,
+    "off": 17.5,
+    "def": 28.4
+   },
+   "Jacksonville State": {
+    "sp_final": -11.2,
+    "sp_final_rank": 104,
+    "avgw": 6.5,
+    "sos_rk": 135,
+    "off": 21.6,
+    "def": 32.8
+   },
+   "Northern Illinois": {
+    "sp_final": -11.4,
+    "sp_final_rank": 105,
+    "avgw": 6.2,
+    "sos_rk": 129,
+    "off": 16.0,
+    "def": 27.5
+   },
+   "Hawaii": {
+    "sp_final": -11.6,
+    "sp_final_rank": 106,
+    "avgw": 5.6,
+    "sos_rk": 132,
+    "off": 19.5,
+    "def": 31.1
+   },
+   "Wyoming": {
+    "sp_final": -12.4,
+    "sp_final_rank": 107,
+    "avgw": 5.1,
+    "sos_rk": 119,
+    "off": 20.6,
+    "def": 33.0
+   },
+   "Louisiana Tech": {
+    "sp_final": -12.5,
+    "sp_final_rank": 108,
+    "avgw": 6.0,
+    "sos_rk": 100,
+    "off": 17.5,
+    "def": 30.0
+   },
+   "Sam Houston": {
+    "sp_final": -12.8,
+    "sp_final_rank": 109,
+    "avgw": 5.0,
+    "sos_rk": 86,
+    "off": 18.9,
+    "def": 31.6
+   },
+   "Florida Atlantic": {
+    "sp_final": -13.6,
+    "sp_final_rank": 110,
+    "avgw": 4.7,
+    "sos_rk": 118,
+    "off": 21.4,
+    "def": 35.0
+   },
+   "Georgia State": {
+    "sp_final": -14.2,
+    "sp_final_rank": 111,
+    "avgw": 3.8,
+    "sos_rk": 76,
+    "off": 24.3,
+    "def": 38.5
+   },
+   "Bowling Green": {
+    "sp_final": -14.4,
+    "sp_final_rank": 112,
+    "avgw": 5.3,
+    "sos_rk": 107,
+    "off": 22.5,
+    "def": 36.9
+   },
+   "UAB": {
+    "sp_final": -14.4,
+    "sp_final_rank": 113,
+    "avgw": 4.4,
+    "sos_rk": 83,
+    "off": 24.8,
+    "def": 39.2
+   },
+   "Delaware": {
+    "sp_final": -14.4,
+    "sp_final_rank": 114,
+    "avgw": 5.3,
+    "sos_rk": 127,
+    "off": 19.8,
+    "def": 34.2
+   },
+   "Eastern Michigan": {
+    "sp_final": -15.1,
+    "sp_final_rank": 115,
+    "avgw": 5.0,
+    "sos_rk": 123,
+    "off": 19.6,
+    "def": 34.7
+   },
+   "Rice": {
+    "sp_final": -15.4,
+    "sp_final_rank": 116,
+    "avgw": 4.2,
+    "sos_rk": 120,
+    "off": 17.2,
+    "def": 32.6
+   },
+   "ULM": {
+    "sp_final": -15.4,
+    "sp_final_rank": 117,
+    "avgw": 4.3,
+    "sos_rk": 75,
+    "off": 17.4,
+    "def": 32.8
+   },
+   "Western Michigan": {
+    "sp_final": -15.5,
+    "sp_final_rank": 118,
+    "avgw": 4.7,
+    "sos_rk": 117,
+    "off": 20.4,
+    "def": 35.8
+   },
+   "Utah State": {
+    "sp_final": -15.6,
+    "sp_final_rank": 119,
+    "avgw": 4.1,
+    "sos_rk": 82,
+    "off": 24.2,
+    "def": 39.8
+   },
+   "Central Michigan": {
+    "sp_final": -15.8,
+    "sp_final_rank": 120,
+    "avgw": 5.2,
+    "sos_rk": 97,
+    "off": 17.3,
+    "def": 33.1
+   },
+   "Tulsa": {
+    "sp_final": -16.8,
+    "sp_final_rank": 121,
+    "avgw": 3.6,
+    "sos_rk": 113,
+    "off": 21.7,
+    "def": 38.4
+   },
+   "Nevada": {
+    "sp_final": -16.8,
+    "sp_final_rank": 122,
+    "avgw": 4.1,
+    "sos_rk": 77,
+    "off": 20.0,
+    "def": 36.8
+   },
+   "UTEP": {
+    "sp_final": -16.8,
+    "sp_final_rank": 123,
+    "avgw": 4.9,
+    "sos_rk": 95,
+    "off": 18.6,
+    "def": 35.4
+   },
+   "Temple": {
+    "sp_final": -17.3,
+    "sp_final_rank": 124,
+    "avgw": 3.6,
+    "sos_rk": 99,
+    "off": 20.4,
+    "def": 37.7
+   },
+   "New Mexico State": {
+    "sp_final": -17.4,
+    "sp_final_rank": 125,
+    "avgw": 5.3,
+    "sos_rk": 93,
+    "off": 21.1,
+    "def": 38.5
+   },
+   "Middle Tennessee": {
+    "sp_final": -17.6,
+    "sp_final_rank": 126,
+    "avgw": 5.2,
+    "sos_rk": 134,
+    "off": 16.9,
+    "def": 34.5
+   },
+   "Southern Miss": {
+    "sp_final": -17.7,
+    "sp_final_rank": 127,
+    "avgw": 3.5,
+    "sos_rk": 125,
+    "off": 20.3,
+    "def": 38.0
+   },
+   "FIU": {
+    "sp_final": -18.3,
+    "sp_final_rank": 128,
+    "avgw": 4.6,
+    "sos_rk": 79,
+    "off": 17.8,
+    "def": 36.2
+   },
+   "Missouri St.": {
+    "sp_final": -18.4,
+    "sp_final_rank": 129,
+    "avgw": 3.9,
+    "sos_rk": 102,
+    "off": 25.8,
+    "def": 44.3
+   },
+   "New Mexico": {
+    "sp_final": -18.6,
+    "sp_final_rank": 130,
+    "avgw": 3.6,
+    "sos_rk": 80,
+    "off": 23.2,
+    "def": 41.8
+   },
+   "Akron": {
+    "sp_final": -19.8,
+    "sp_final_rank": 131,
+    "avgw": 4.5,
+    "sos_rk": 126,
+    "off": 16.7,
+    "def": 36.5
+   },
+   "Kennesaw State": {
+    "sp_final": -20.1,
+    "sp_final_rank": 132,
+    "avgw": 4.2,
+    "sos_rk": 114,
+    "off": 11.7,
+    "def": 31.7
+   },
+   "Charlotte": {
+    "sp_final": -20.1,
+    "sp_final_rank": 133,
+    "avgw": 2.7,
+    "sos_rk": 66,
+    "off": 18.7,
+    "def": 38.8
+   },
+   "Ball State": {
+    "sp_final": -21.9,
+    "sp_final_rank": 134,
+    "avgw": 3.3,
+    "sos_rk": 115,
+    "off": 17.8,
+    "def": 39.7
+   },
+   "UMass": {
+    "sp_final": -24.0,
+    "sp_final_rank": 135,
+    "avgw": 3.6,
+    "sos_rk": 85,
+    "off": 19.2,
+    "def": 43.3
+   },
+   "Kent State": {
+    "sp_final": -25.3,
+    "sp_final_rank": 136,
+    "avgw": 2.8,
+    "sos_rk": 88,
+    "off": 16.5,
+    "def": 41.8
+   }
+  }
+ }
+}

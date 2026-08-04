@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wins Pool 2026 — Draft Room</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2230; --line:#2a3140;
+    --ink:#e6edf3; --dim:#8b98a9; --faint:#5a6675;
+    --accent:#5eb6ff; --gold:#e3b341;
+    --r0:#c9424a; --r1:#d9744a; --r2:#d7b13a; --r3:#8bc34a; --r4:#3fae6b; /* red->green scale */
+    --grab:#c9424a; --punt:#3fae6b; --press:#d7b13a;
+    --mono:'SFMono-Regular',ui-monospace,'JetBrains Mono',Menlo,Consolas,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:13px;line-height:1.45}
+  .wrap{max-width:1400px;margin:0 auto;padding:18px 20px 80px}
+  header{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:6px;flex-wrap:wrap}
+  h1{font-size:18px;font-weight:700;letter-spacing:-.01em;margin:0}
+  h1 .yr{color:var(--gold);font-family:var(--mono)}
+  .sub{color:var(--dim);font-size:12px}
+  .status{;font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .status b{color:var(--accent)}
+  nav{display:flex;gap:2px;margin:14px 0 18px;flex-wrap:wrap}
+  nav button{background:var(--panel);color:var(--dim);border:1px solid var(--line);border-bottom:none;
+    padding:8px 14px;font-family:var(--sans);font-size:12px;font-weight:600;cursor:pointer;border-radius:6px 6px 0 0}
+  nav button.on{background:var(--panel2);color:var(--ink);border-color:var(--accent)}
+  nav button:hover{color:var(--ink)}
+  .view{display:none} .view.on{display:block}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:16px}
+  .panel h2{font-size:13px;font-weight:700;margin:0 0 4px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
+  .panel .note{color:var(--dim);font-size:11.5px;margin:0 0 14px;max-width:760px}
+  .legend{display:flex;gap:14px;align-items:center;font-size:11px;color:var(--dim);margin:10px 0 4px;flex-wrap:wrap}
+  .sw{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+
+  /* controls */
+  .controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+  .controls input,.controls select{background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+    padding:6px 9px;border-radius:6px;font-family:var(--mono);font-size:12px}
+  .controls input[type=text]{width:190px}
+  .btn{background:var(--panel2);border:1px solid var(--line);color:var(--ink);padding:6px 12px;border-radius:6px;
+    cursor:pointer;font-size:12px;font-weight:600}
+  .btn:hover{border-color:var(--accent)} .btn.warn:hover{border-color:var(--r0)}
+
+  /* enriched board */
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  thead th{position:sticky;top:0;background:var(--panel2);color:var(--dim);text-align:left;padding:7px 8px;
+    font-weight:600;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap}
+  thead th:hover{color:var(--ink)}
+  tbody td{padding:6px 8px;border-bottom:1px solid #1e2530;vertical-align:top}
+  tbody tr:hover{background:#1a2130}
+  tr.picked{opacity:.32}
+  tr.picked .team{text-decoration:line-through}
+  .team{font-weight:600;font-family:var(--mono)}
+  .num{font-family:var(--mono);text-align:right}
+  .conf-badge{font-family:var(--mono);font-size:10px;padding:1px 5px;border-radius:3px;background:#233042;color:var(--accent)}
+  .real{color:var(--faint);font-size:10px;font-family:var(--mono)}
+  .lean{font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px}
+  .lean.over{background:#12331f;color:#6ede9a} .lean.under{background:#331616;color:#f0868b}
+  .lean.no{background:#2a2f3a;color:var(--dim)}
+  .flags{font-family:var(--mono);font-size:10px;color:var(--gold)}
+  .notecell{color:var(--dim);font-size:11px;max-width:340px}
+  .pickbtn{cursor:pointer;font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:3px;border:1px solid var(--line);background:transparent;color:var(--dim)}
+  .pickbtn:hover{border-color:var(--accent);color:var(--ink)}
+  tr.picked .pickbtn{border-color:var(--punt);color:var(--punt)}
+
+  /* heat maps */
+  .heatgrid{display:grid;gap:3px;font-family:var(--mono)}
+  .hm1 .conf-row{display:grid;grid-template-columns:90px 44px 52px 1fr;gap:8px;align-items:center;margin-bottom:5px}
+  .hm1 .cceil{text-align:center;line-height:1.1}
+  .hm1 .ceilnum{font-size:13px;font-weight:700;font-family:var(--mono)}
+  .hm1 .ceillbl{display:block;font-size:8px;color:var(--faint);text-transform:uppercase;letter-spacing:.04em}
+  .hm1 .barwrap{display:flex;gap:2px;flex-wrap:wrap}
+  .hm1 .cell{width:22px;height:22px;border-radius:3px;display:flex;align-items:center;justify-content:center;
+    font-size:9px;color:#0d1117;font-weight:700;cursor:default}
+  .hm1 .cell.open{}
+  .hm1 .cell.gone{background:#1e2530 !important;color:var(--faint)}
+  .hm1 .clabel{font-weight:700;font-size:12px}
+  .hm1 .ccount{text-align:right;font-size:12px;font-weight:700}
+  .scalebox{font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;color:#0d1117;font-family:var(--mono)}
+
+  .needgrid{display:grid;gap:4px}
+  .need-cell{padding:9px 6px;border-radius:5px;text-align:center;font-family:var(--mono);font-size:11px;font-weight:700;
+    border:1px solid transparent;cursor:default}
+  .filled{background:#153726;color:#6ede9a;border-color:#2a6b45}
+  .needed{background:#3a1720;color:#f0868b;border-color:#7a2c3a}
+  .filled .who{color:#4a8f66;font-size:9px;display:block;font-weight:600}
+  .needed .who{color:#9a5560;font-size:9px;display:block;font-weight:600}
+
+  .matrix{overflow-x:auto}
+  .matrix table{font-family:var(--mono);font-size:11px}
+  .matrix th.pl{writing-mode:vertical-rl;transform:rotate(180deg);height:80px;padding:6px 2px;text-align:left;
+    background:var(--panel2);border-bottom:none;cursor:default;font-size:10px}
+  .matrix th.cf{background:var(--panel2);color:var(--ink);text-align:left;padding:6px 10px;cursor:default}
+  .matrix td.mc{width:44px;height:30px;text-align:center;padding:0;border:1px solid #1a2028}
+  .matrix td.me-col{box-shadow:inset 0 0 0 2px var(--accent)}
+  .mc.f{background:#1a4a30;color:#8bedb0} .mc.n{background:#4a1a26;color:#f5989e}
+  .mc.f::after{content:'●'} .mc.n::after{content:'○'}
+  .rowlab{font-weight:700;color:var(--ink);white-space:nowrap;padding-right:10px}
+  .mecol-lab{color:var(--accent)!important}
+
+  /* roster/setup */
+  .setup{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .slot{display:flex;align-items:center;gap:8px;background:var(--panel2);padding:6px 10px;border-radius:6px;border:1px solid var(--line)}
+  .slot .n{font-family:var(--mono);color:var(--faint);font-size:11px;width:20px}
+  .slot input{flex:1;background:transparent;border:none;color:var(--ink);font-family:var(--mono);font-size:12px;outline:none}
+  .slot.me{border-color:var(--accent)}
+  .pastebox{width:100%;height:90px;background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+    font-family:var(--mono);font-size:11px;border-radius:6px;padding:8px;resize:vertical}
+  small.hint{color:var(--faint);font-size:11px}
+  
+  .lbcell{font-size:10.5px;color:var(--dim);max-width:150px}
+  .qbtxt{color:var(--ink);font-family:var(--mono);font-size:10px}
+  .dimd{color:var(--faint)}
+  .sched{font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px}
+  .sched.s-favorable{background:#12331f;color:#6ede9a}
+  .sched.s-neutral{background:#2a2f3a;color:var(--dim)}
+  .sched.s-brutal{background:#331616;color:#f0868b}
+  .notecell{color:var(--dim);font-size:11px;max-width:360px}
+  .notecell .avoids{color:#c7b56a;margin-bottom:3px;font-size:10.5px}
+  .notecell .injury{color:#f0868b;margin-bottom:3px;font-size:10.5px}
+  .notecell .bnotes{color:var(--dim)}
+  .notecell b{color:var(--ink);font-weight:600}
+  table.op{width:100%;border-collapse:collapse;font-size:12px}
+  table.op th{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);color:var(--dim);font-weight:600;position:sticky;top:0;background:var(--panel)}
+  table.op td{padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.op tr.picked{opacity:.4}
+  table.op .team{font-weight:600;color:var(--ink)}
+  table.op .cf{color:var(--dim);font-size:10.5px}
+  table.op .num{text-align:center;font-variant-numeric:tabular-nums}
+  table.op .net-pos{color:#3fae6b;font-weight:700}
+  table.op .net-neg{color:#d9744a;font-weight:700}
+  table.op .net-zero{color:var(--dim)}
+  .twcell{max-width:360px;line-height:1.9}
+  .tw-up{display:inline-block;background:rgba(63,174,107,.16);color:#7fd3a0;border:1px solid rgba(63,174,107,.3);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:10.5px;cursor:help}
+  .tw-dn{display:inline-block;background:rgba(217,116,74,.16);color:#e39b78;border:1px solid rgba(217,116,74,.3);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:10.5px;cursor:help}
+  .pend{display:inline-block;background:rgba(150,150,150,.14);color:var(--dim);border-radius:4px;padding:0 6px;font-size:9.5px;margin-left:4px}
+  .twcell .faint{color:var(--faint)}
+  #hmU .conf-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .filled-tag{display:inline-block;background:rgba(63,174,107,.15);color:#7fd3a0;border-radius:3px;padding:0 5px;font-size:9px;margin-left:5px}
+  #hmU .cell.empty{background:transparent;color:var(--faint);border:1px dashed var(--line)}
+  #hmU .cell.soft{opacity:.45;font-style:italic}
+  #hmU .cell.strong{box-shadow:inset 0 0 0 1px rgba(63,174,107,.55);font-weight:700}
+  .hmleg{margin-top:6px;font-size:11px}
+  
+  .needstrip{display:flex;gap:5px;flex-wrap:wrap;align-items:center;padding:8px 0 10px;margin-bottom:2px;
+    border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:20}
+  .needstrip .lbl{font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em;margin-right:4px;font-weight:600}
+  .needstrip .chip{font-family:var(--mono);font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:4px;border:1px solid transparent;white-space:nowrap}
+  .needstrip .chip.filled{background:#153726;color:#6ede9a;border-color:#2a6b45}
+  .needstrip .chip.needed{background:#3a1720;color:#f0868b;border-color:#7a2c3a}
+  .needstrip .chip .t{opacity:.65;font-weight:400;margin-left:3px}
+  .needstrip .pace{margin-left:auto;font-family:var(--mono);font-size:11px;font-weight:700;padding:3px 10px;border-radius:5px;border:1px solid var(--line);white-space:nowrap}
+  .needstrip .pace b{font-size:13px}
+  .needstrip .pace .pacesub{font-weight:400;color:var(--dim);font-size:10px}
+  .needstrip .pace.ahead{border-color:#2a6b45;color:#6ede9a}
+  .needstrip .pace.behind{border-color:#7a2c3a;color:#f0868b}
+  .needstrip .pace.on{color:var(--gold);border-color:var(--line)}
+  @media(max-width:640px){.hm1 .conf-row{grid-template-columns:70px 40px 1fr}.notecell{max-width:200px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Wins Pool <span class="yr">2026</span> · Draft Room</h1>
+    <span class="sub">Layer A sourced · Pac-12 &amp; Sun Belt pods in</span>
+    <span class="status" id="loadstat" style="margin-left:auto;color:var(--gold)">init…</span> <button class="btn" id="refreshbtn" style="padding:3px 9px;font-size:11px">↻ refresh</button> <span class="status" id="status">— <b id="npicks">0</b> picks · <b id="myfilled">0</b>/10 mine filled</span>
+  </header>
+
+  <div class="needstrip" id="needstrip" title="My conference needs — green filled, red needed"></div>
+
+  <nav>
+    <button data-v="board" class="on">Enriched Board</button>
+    <button data-v="hm1">Anchor Availability</button>
+    <button data-v="hm3">Pool Needs</button>
+    <button data-v="overperform">Overperform Targets</button>
+    <button data-v="setup">Setup &amp; Picks</button>
+  </nav>
+
+  <!-- BOARD -->
+  <section class="view board on" id="v-board">
+    <div class="panel">
+      <div class="controls">
+        <input type="text" id="search" placeholder="filter team…">
+        <select id="fconf"><option value="">all conferences</option></select>
+        <label style="color:var(--dim);font-size:12px"><input type="checkbox" id="hidepicked"> hide picked</label>
+        <label style="color:var(--dim);font-size:12px"><input type="checkbox" id="onlyusable"> usable only (≥6.0)</label>
+        <span class="status" style="margin-left:auto" id="boardcount"></span>
+      </div>
+      <table id="board">
+        <thead><tr>
+          <th data-s="team">Team</th><th data-s="conf">Conf</th>
+          <th data-s="mkt" class="num">O/U</th><th data-s="sp_rank" class="num">SP+#</th>
+          <th data-s="ret" class="num">Ret%</th><th data-s="net_tarp" class="num">TARP</th>
+          <th data-s="qb">QB</th><th>Coaching</th><th data-s="sched">Sched</th>
+          <th data-s="lean">Lean</th><th>Flags</th><th>Notes</th><th></th>
+        </tr></thead>
+        <tbody id="boardbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- HEATMAP 1 -->
+  <section class="view" id="v-hm1">
+    <div class="panel">
+      <h2>Anchor Availability — point in time</h2>
+      <p class="note">Each cell is a usable team (market ≥ 6.0), brightest = highest O/U. Filled cells drain to grey as teams get picked. The count and its color show remaining usable supply per conference — <b>red = drying up (act)</b>, green = deep (defer). This is the depth-countdown the strategy runs on.</p>
+      <div class="legend">
+        <span><span class="sw" style="background:var(--r0)"></span>0–1 left · urgent</span>
+        <span><span class="sw" style="background:var(--r2)"></span>2–3 · watch</span>
+        <span><span class="sw" style="background:var(--r4)"></span>4+ · deep</span>
+        <span>ceil = best available anchor's O/U (your win ceiling there)</span><span style="margin-left:auto">cell brightness = O/U</span>
+      </div>
+      <div class="heatgrid hm1" id="hm1"></div>
+    </div>
+  </section>
+
+  <!-- HEATMAP 2 -->
+  <!-- HEATMAP 3 -->
+  <section class="view" id="v-hm3">
+    <div class="panel">
+      <h2>Pool Needs — every player × conference</h2>
+      <p class="note">The whole board's state. <span style="color:#8bedb0;font-weight:700">● filled</span> / <span style="color:#f5989e;font-weight:700">○ needed</span>. Your column is outlined. Reading down a column shows what a rival still needs; reading across a row shows how many anchors of that conference are already gone — the demand pressure behind the punt/grab call.</p>
+      <div class="matrix" id="hm3"></div>
+    </div>
+  </section>
+
+  <!-- SETUP -->
+  <section class="view" id="v-overperform">
+      <h2>Overperform Targets — pre-draftable tailwinds &amp; headwinds</h2>
+      <p class="note"><b>This is a COUNT of team-specific reasons, not a prediction and not a draft order.</b> Aggregate signals (SP+/TARP/RetProd) don't predict beating the number, so they're excluded — only structural + pod reasons you can see and overrule are counted. The market total stays the baseline; round, price, and scarcity still govern the pick. Hover a tag for the reason. Teams marked <span class="pend">pod pending</span> are schedule-only until their pod loads (Pac-12 &amp; Sun Belt loaded now).</p>
+      <h3 style="margin:18px 0 4px;font-size:13px;color:var(--ink)">Upside Availability — urgency to land an upside team</h3>
+      <p class="note">Parallel to Anchor Availability. <b>Count &amp; color</b> key on <b>strong (+2 or better)</b> upside teams still on the board per conference — those create real scarcity pressure. <b>Cells show every +1-or-better team</b>; soft (+1) ones are dimmed/italic so you don't lose them but can see where the strong leans sit. Color = <i>your</i> urgency: hot only for conferences you still need whose strong-upside supply is draining (filled and deep-refilling conferences stay cool). A thin strong-upside conference is also one rivals will target — so it doubles as a read on what others may grab.</p>
+      <div class="hm" id="hmU"></div>
+      <div class="hmleg"><span id="hmU-stat" class="faint"></span></div>
+      <h3 style="margin:22px 0 4px;font-size:13px;color:var(--ink)">Per-team tally</h3>
+      <div class="controls">
+        <input id="op-search" placeholder="search team…">
+        <select id="op-conf"><option value="">All conferences</option></select>
+        <label><input type="checkbox" id="op-hidepicked"> hide picked</label>
+        <span id="op-stat" class="faint"></span>
+      </div>
+      <table class="op">
+        <thead><tr><th>Team</th><th>O/U</th><th>Net</th><th>Tailwinds (+)</th><th>Headwinds (−)</th></tr></thead>
+        <tbody id="opbody"></tbody>
+      </table>
+  </section>
+  <section class="view" id="v-setup">
+    <div class="panel">
+      <h2>Roster &amp; Draft Order</h2>
+      <p class="note">Fill the 12 slots when Brad's roster finalizes. Set which one is you. Order + current round drive the snake math elsewhere; here they label the Pool Needs columns.</p>
+      <div class="controls">
+        <label style="color:var(--dim)">You are: <input type="text" id="myname" value="Mike" style="width:120px"></label>
+        <label style="color:var(--dim)">Round: <input type="text" id="round" value="1" style="width:50px"></label>
+      </div>
+      <div class="setup" id="slots"></div>
+    </div>
+    <div class="panel">
+      <h2>Picks</h2>
+      <p class="note">Click a team's ⊕ on the board to mark it picked (assigns to the player on the clock — set below). Or paste Brad's DraftTracker rows: <small class="hint">player &lt;tab&gt; conf &lt;tab&gt; team, one per line.</small></p>
+      <div class="controls">
+        <label style="color:var(--dim)">On the clock: <select id="clock"></select></label>
+        <button class="btn" id="applypaste">Apply pasted picks</button>
+        <button class="btn warn" id="clearpicks">Clear all picks</button>
+      </div>
+      <textarea class="pastebox" id="paste" placeholder="Mike&#9;Pac12&#9;Boise State&#10;Nick G.&#9;CUSA&#9;Notre Dame"></textarea>
+    </div>
+  </section>
+</div>
+
+<script>
+const PROXY="https://script.google.com/macros/s/AKfycbxiZ5T3QM80byIpOcgg2gBeGFpGKYfGUhstt4JWTbq7hUR9bB94TkIqwnwe5rTsgOwF/exec";
+const REAL={"Notre Dame":"Independent","UConn":"Independent","Boston College":"ACC","Syracuse":"ACC","Michigan State":"Big Ten","Purdue":"Big Ten","Oklahoma State":"Big 12","Arkansas":"SEC"};
+const num=v=>{if(v==null||v==="")return null;if(typeof v==="number")return v;const n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?null:n;};
+const str=v=>{if(v==null)return null;const s=String(v).trim();return(s===""||s==="None")?null:s;};
+
+let DATA=[];
+
+async function loadData(){
+  const setStat=t=>{const e=byId("loadstat"); if(e)e.textContent=t;};
+  setStat("loading…");
+  try{
+    const j=await fetch(PROXY).then(r=>r.json());
+    if(!j.ok) throw new Error("proxy returned not-ok");
+    const db=(j.dashboard&&j.dashboard.rows)||[];
+    const lb=(j.layerB&&j.layerB.rows)||[];
+    const la=(j.layerA&&j.layerA.rows)||[];
+    const lbBy={}; lb.forEach(r=>{ if(r.Team) lbBy[r.Team]=r; });
+    const laBy={}; la.forEach(r=>{ if(r.Team) laBy[r.Team]=r; });
+    DATA=db.filter(d=>d.Team).map(d=>{
+      const b=lbBy[d.Team]||{}; const a=laBy[d.Team]||{};
+      const conf=str(d["Pool Conf"])||"?";
+      return {
+        team:d.Team, conf:conf, real_conf:str(d["Real Conf"])||REAL[d.Team]||conf,
+        mkt:num(d["Mkt"]), sp_rank:num(d["SP+ Rk"]), sp:num(d["SP+ Rtg"]),
+        ret:num(d["RetProd%"]), net_tarp:num(d["TARP net"]), off_tarp:num(a["TARP off"]), def_tarp:num(a["TARP def"]),
+        collin:num(d["Collin"]), proj_minus_mkt:num(d["Proj−Mkt"]),
+        qb:str(d["QB status"]), lean:str(d["Host Lean"]), sched:str(d["Sched"]),
+        avoids:str(d["Key Avoids/Draws"]), notes:str(d["Notes"]),
+        hc:str(b["New HC"]), oc:str(b["New OC"]), dc:str(b["New DC"]),
+        coaching:str(d["Coaching"]),
+        dark_horse:(b["Dark Horse"]==="Y")||/DH/.test(d["Flags"]||""),
+        fade:(b["Fade"]==="Y")||/FADE/.test(d["Flags"]||""),
+        split:(b["Split"]==="Y")||/SPLIT/.test(d["Flags"]||""),
+        variance:(b["Variance"]==="Y")||/VAR/.test(d["Flags"]||""),
+        injury:str(b["Key Injury"]),
+        // schedule facts (Layer A — from schedule extraction pipeline)
+        game_count:num(a["game_count"]), game_delta:str(a["game_delta"]),
+        bye_count:num(a["bye_count"]), byes:str(a["byes"]),
+        s_home:num(a["home"]), s_road:num(a["road"]), max_road:num(a["max_road_streak"]),
+        cupcakes:num(a["cupcakes"]), sos_proxy:num(a["sos_proxy"]),
+        anchor_on_anchor:str(a["anchor_on_anchor"]), pod_status:str(a["pod_upside_status"])
+      };
+    });
+    // picks: Import_BradTracker rows (team -> player)
+    picks={};
+    ((j.picks&&j.picks.rows)||[]).forEach(p=>{
+      const tm=str(p.team), pl=str(p.player);
+      if(tm&&pl&&!/example/i.test(pl)) picks[tm]=pl;
+    });
+    // roster: Draft_Order — find slot/player pairs (Slot col numeric 1-12)
+    const rr=(j.roster&&j.roster.rows)||[];
+    const names=[];
+    rr.forEach(row=>{
+      const vals=Object.values(row);
+      for(let k=0;k<vals.length-1;k++){
+        const a=String(vals[k]).trim();
+        if(/^([1-9]|1[0-2])$/.test(a)){ const nm=String(vals[k+1]||"").trim(); if(nm) names[parseInt(a)-1]=nm; break; }
+      }
+    });
+    if(names.filter(Boolean).length) roster=Array.from({length:12},(_,i)=>names[i]||"");
+    setStat("live · "+DATA.length+" teams · "+new Date().toLocaleTimeString());
+    renderSetup(); refresh();
+  }catch(e){
+    setStat("load failed — "+e.message); console.error(e);
+  }
+}
+const CONFS = ["AAC","ACC","Big 12","Big Ten","CUSA","MAC","MWC","Pac12","SEC","Sun Belt"];
+const USABLE = 6.0;
+const WIN_TARGET = 80;  // median/most-common 1st-place total, 2015-2025 (mean 78.3)
+let picks = {};      // team -> player
+let roster = ["","","","","","","","","","","",""];
+let myname = "Mike";
+
+// ---------- helpers ----------
+const byId=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const teamsIn=c=>DATA.filter(t=>t.conf===c);
+const isPicked=t=>picks.hasOwnProperty(t);
+const openIn=c=>teamsIn(c).filter(t=>!isPicked(t.team));
+const usableOpen=c=>openIn(c).filter(t=>t.mkt!=null&&t.mkt>=USABLE);
+function ceilColor(w){ if(!w)return 'var(--faint)'; if(w>=9)return '#3fae6b'; if(w>=8)return '#8bc34a'; if(w>=7)return '#d7b13a'; return '#d9744a'; }
+function scaleColor(n){ if(n<=1)return'var(--r0)'; if(n===2)return'var(--r1)'; if(n===3)return'var(--r2)'; if(n<=5)return'var(--r3)'; return'var(--r4)'; }
+function ouShade(mkt){ // brightness by market within usable band ~6..12
+  if(mkt==null)return'#33404f';
+  const t=Math.max(0,Math.min(1,(mkt-6)/6));
+  // interpolate slate->bright green
+  const a=[46,74,60], b=[63,174,107];
+  const c=a.map((x,i)=>Math.round(x+(b[i]-x)*t));
+  return`rgb(${c[0]},${c[1]},${c[2]})`;
+}
+function playerConfs(pl){ // set of confs this player has drafted
+  const s=new Set(); for(const[tm,p]of Object.entries(picks)){ if(p===pl){const rec=DATA.find(d=>d.team===tm); if(rec)s.add(rec.conf);}} return s;
+}
+
+// ---------- board ----------
+function renderBoard(){
+  const q=byId('search').value.toLowerCase(), fc=byId('fconf').value,
+        hp=byId('hidepicked').checked, ou=byId('onlyusable').checked;
+  let rows=DATA.slice();
+  if(fc)rows=rows.filter(t=>t.conf===fc);
+  if(q)rows=rows.filter(t=>t.team.toLowerCase().includes(q));
+  if(ou)rows=rows.filter(t=>t.mkt!=null&&t.mkt>=USABLE);
+  if(hp)rows=rows.filter(t=>!isPicked(t.team));
+  if(SORT.k){ rows.sort((a,b)=>{let x=a[SORT.k],y=b[SORT.k];
+    if(x==null)x=SORT.k==='team'||SORT.k==='conf'?'':-999; if(y==null)y=SORT.k==='team'||SORT.k==='conf'?'':-999;
+    if(typeof x==='string')return SORT.d*x.localeCompare(y); return SORT.d*(x-y);}); }
+  const tb=byId('boardbody'); tb.innerHTML='';
+  for(const t of rows){
+    const tr=document.createElement('tr'); if(isPicked(t.team))tr.className='picked';
+    const leanCls=t.lean?(/Over/i.test(t.lean)?'over':/Under/i.test(t.lean)?'under':'no'):'no';
+    const flags=[t.dark_horse&&'DH',t.fade&&'FADE',t.split&&'SPLIT',t.variance&&'VAR'].filter(Boolean).join(' ');
+    const coach=t.coaching?esc(t.coaching).replace(/ \| /g,'<br>'):[t.hc&&`HC ${esc(t.hc)}`,t.oc&&`OC ${esc(t.oc)}`,t.dc&&`DC ${esc(t.dc)}`].filter(Boolean).join('<br>');
+    let noteHtml='';
+    if(t.avoids)noteHtml+=`<div class="avoids"><b>Sched:</b> ${esc(t.avoids)}</div>`;
+    if(t.injury)noteHtml+=`<div class="injury"><b>Injury:</b> ${esc(t.injury)}</div>`;
+    if(t.notes)noteHtml+=`<div class="bnotes">${esc(t.notes)}</div>`;
+    const real=t.real_conf&&t.real_conf!==t.conf?`<span class="real"> ↩${t.real_conf}</span>`:'';
+    tr.innerHTML=`
+      <td><span class="team">${t.team}</span>${real}</td>
+      <td><span class="conf-badge">${t.conf}</span></td>
+      <td class="num">${t.mkt??'—'}</td>
+      <td class="num">${t.sp_rank??'—'}</td>
+      <td class="num">${t.ret??'—'}</td>
+      <td class="num">${t.net_tarp??'—'}</td>
+      <td class="lbcell">${t.qb?`<span class="qbtxt">${esc(t.qb)}</span>`:'<span class="dimd">—</span>'}</td>
+      <td class="lbcell">${coach||'<span class="dimd">—</span>'}</td>
+      <td>${t.sched?`<span class="sched s-${(t.sched||'').toLowerCase()}">${t.sched}</span>`:'<span class="dimd">—</span>'}</td>
+      <td>${t.lean?`<span class="lean ${leanCls}">${t.lean}</span>`:'<span class="lean no">—</span>'}</td>
+      <td class="flags">${flags||''}</td>
+      <td class="notecell">${noteHtml}</td>
+      <td><button class="pickbtn" data-t="${t.team.replace(/"/g,'&quot;')}">${isPicked(t.team)?'undo':'⊕ pick'}</button></td>`;
+    tb.appendChild(tr);
+  }
+  byId('boardcount').textContent=`${rows.length} shown`;
+  tb.querySelectorAll('.pickbtn').forEach(b=>b.onclick=()=>togglePick(b.dataset.t));
+}
+let SORT={k:'conf',d:1};
+document.querySelectorAll('#board thead th[data-s]').forEach(th=>{
+  th.onclick=()=>{const k=th.dataset.s; SORT.d=(SORT.k===k)?-SORT.d:1; SORT.k=k; renderBoard();};
+});
+
+// ---------- pick handling ----------
+function togglePick(team){
+  if(isPicked(team)){delete picks[team];}
+  else{const pl=byId('clock').value||myname; picks[team]=pl;}
+  refresh();
+}
+function applyPaste(){
+  const lines=byId('paste').value.split(/\n/).map(l=>l.trim()).filter(Boolean);
+  for(const ln of lines){ const parts=ln.split(/\t|,|\s{2,}/).map(s=>s.trim()).filter(Boolean);
+    if(parts.length>=3){ const pl=parts[0], team=parts[parts.length-1];
+      const rec=DATA.find(d=>d.team.toLowerCase()===team.toLowerCase());
+      if(rec)picks[rec.team]=pl; }
+    else if(parts.length===1){ const rec=DATA.find(d=>d.team.toLowerCase()===parts[0].toLowerCase()); if(rec)picks[rec.team]=byId('clock').value||myname; }
+  }
+  refresh();
+}
+
+// ---------- heatmap 1 ----------
+function renderHM1(){
+  const box=byId('hm1'); box.innerHTML='';
+  const order=CONFS.slice().sort((a,b)=>usableOpen(a).length-usableOpen(b).length);
+  for(const c of order){
+    const open=openIn(c).filter(t=>t.mkt!=null&&t.mkt>=USABLE).sort((a,b)=>b.mkt-a.mkt);
+    const all=teamsIn(c).filter(t=>t.mkt!=null&&t.mkt>=USABLE).sort((a,b)=>b.mkt-a.mkt);
+    const n=open.length;
+    const ceil=open.length?open[0].mkt:0;               // best AVAILABLE win total = the ceiling
+    const ceilTeam=open.length?open[0].team:'—';
+    const row=document.createElement('div'); row.className='conf-row';
+    let cells='';
+    for(const t of all){
+      const gone=isPicked(t.team);
+      cells+=`<div class="cell ${gone?'gone':'open'}" title="${t.team} · O/U ${t.mkt}${gone?' (picked)':''}" style="${gone?'':'background:'+ouShade(t.mkt)}">${t.mkt}</div>`;
+    }
+    row.innerHTML=`<div class="clabel">${c}</div>
+      <div class="ccount"><span class="scalebox" style="background:${scaleColor(n)}">${n}</span></div>
+      <div class="cceil" title="Best available anchor: ${ceilTeam}"><span class="ceilnum" style="color:${ceilColor(ceil)}">${ceil?ceil.toFixed(1):'—'}</span><span class="ceillbl">ceil</span></div>
+      <div class="barwrap">${cells}</div>`;
+    box.appendChild(row);
+  }
+}
+
+// ---------- heatmap 2 ----------
+function renderNeedStrip(){
+  const box=byId('needstrip'); if(!box)return;
+  const mine=playerConfs(myname);
+  let filled=0, proj=0, html='<span class="lbl">My needs</span>';
+  for(const c of CONFS){
+    const isF=mine.has(c);
+    if(isF){filled++;
+      const team=(Object.entries(picks).find(([tm,p])=>p===myname&&(DATA.find(d=>d.team===tm)||{}).conf===c)||[])[0];
+      const rec=DATA.find(d=>d.team===team);
+      if(rec&&rec.mkt!=null)proj+=rec.mkt;
+      html+=`<span class="chip filled" title="${c} — ${team} (O/U ${rec?rec.mkt:'?'})">${c}<span class="t">${esc(team).split(' ')[0]}</span></span>`;
+    } else {
+      html+=`<span class="chip needed" title="${c} — needed">${c}</span>`;
+    }
+  }
+  // pace: expected total at 80 pace given filled picks = 80*filled/10; are we ahead/behind?
+  const expectedNow = WIN_TARGET*filled/10;
+  const remaining = 10-filled;
+  const needPerRemaining = filled<10 ? (WIN_TARGET-proj)/Math.max(remaining,1) : 0;
+  let paceCls='on', paceTxt='';
+  if(filled>0){
+    if(proj>expectedNow+1.5)paceCls='ahead';
+    else if(proj<expectedNow-1.5)paceCls='behind';
+    paceTxt = filled<10
+      ? `need ${needPerRemaining.toFixed(1)}/pick on the last ${remaining}`
+      : (proj>=WIN_TARGET?'target hit':`${(WIN_TARGET-proj).toFixed(1)} short`);
+  } else {
+    paceTxt='target '+WIN_TARGET;
+  }
+  html+=`<span class="pace ${paceCls}" title="Sum of your anchors' market win totals vs the ${WIN_TARGET}-win target (median 1st place, 2015-2025)">`
+      + `<b>${proj.toFixed(1)}</b>/${WIN_TARGET}<span class="pacesub"> · ${filled}/10 · ${paceTxt}</span></span>`;
+  box.innerHTML=html;
+}
+
+// ---------- heatmap 3 ----------
+function renderHM3(){
+  const players=roster.map((r,i)=>r||`P${i+1}`);
+  let h='<table><thead><tr><th class="cf">Conf ╲ Player</th>';
+  players.forEach((p,i)=>{const me=(roster[i]===myname); h+=`<th class="pl ${me?'mecol-lab':''}">${p}</th>`;});
+  h+='</tr></thead><tbody>';
+  for(const c of CONFS){
+    h+=`<tr><td class="cf rowlab">${c}</td>`;
+    players.forEach((p,i)=>{
+      const realp=roster[i]; const has=realp?playerConfs(realp).has(c):false;
+      const me=(realp===myname);
+      h+=`<td class="mc ${has?'f':'n'} ${me?'me-col':''}" title="${p} · ${c} · ${has?'filled':'needed'}"></td>`;
+    });
+    h+='</tr>';
+  }
+  h+='</tbody></table>';
+  byId('hm3').innerHTML=h;
+}
+
+// ---------- setup ----------
+// ---------- Overperform Tally (transparent count of pre-draftable reasons; NOT a prediction) ----------
+// Governed by Pre_Pick_Doctrine: excludes aggregate edge signals (SP+/TARP/RetProd) which DON'T predict beats.
+// Counts only team-specific structural + pod reasons. See Overperform_Tally_Spec.md.
+function computeTally(t){
+  const up=[], dn=[];
+  // --- schedule tailwinds ---
+  if(t.game_count===13) up.push({k:'13 games', why:'extra win opportunity'});
+  if(t.bye_count===2) up.push({k:'2 byes', why:'extra rest across season'});
+  if(t.cupcakes!=null && t.cupcakes>=2) up.push({k:'soft non-con', why:t.cupcakes+' cupcakes = padding'});
+  if(t.s_home!=null && t.s_road!=null && (t.s_home-t.s_road)>=2) up.push({k:'home-leaning', why:t.s_home+'H/'+t.s_road+'R'});
+  // --- schedule headwinds ---
+  if(t.max_road!=null && t.max_road>=3) dn.push({k:'road-heavy', why:t.max_road+' straight road'});
+  if(t.s_road!=null && t.s_road>=7) dn.push({k:'road-loaded', why:t.s_road+' road games'});
+  if(t.cupcakes===0) dn.push({k:'no padding', why:'0 cupcakes, all FBS'});
+  const aoaList=t.anchor_on_anchor?t.anchor_on_anchor.split(';').map(x=>x.trim()).filter(Boolean):[];
+  const aoaN=aoaList.length;
+  if(aoaN>=3) dn.push({k:'anchor gauntlet', why:aoaN+' anchor-on-anchor games'});
+  // tough CONFERENCE schedule (pool-relative draw, not raw SOS): brutal pod tag OR >=2 anchor draws
+  // fires on the 2-anchor case the gauntlet (>=3) misses; conf-draw is the signal, not overall difficulty
+  const brutalPod=/brutal|gauntlet/i.test(t.sched||'');
+  if((aoaN>=2 && aoaN<3) || brutalPod) dn.push({k:'tough conf draw', why: brutalPod?('pod: '+t.sched):(aoaN+' anchor draws')});
+  // --- pod tailwinds/headwinds (only where pod loaded) ---
+  const podLoaded = t.pod_status==='pod-loaded' || (t.sched && t.sched!=='');
+  if(podLoaded){
+    if(/favorab/i.test(t.sched||'')) up.push({k:'favorable draw', why:'pod: '+t.sched});
+    if(/upgrade|returning|veteran|proven/i.test(t.qb||'')) up.push({k:'QB tailwind', why:'pod: '+t.qb});
+    if(/downgrade|lost|unproven|new starter|question/i.test(t.qb||'')) dn.push({k:'QB headwind', why:'pod: '+t.qb});
+    if(t.dark_horse) up.push({k:'dark horse', why:'pod flag'});
+    if(t.fade) dn.push({k:'fade', why:'pod flag'});
+  }
+  return {up, dn, net:up.length-dn.length, podLoaded};
+}
+// ---------- Upside Availability heatmap (parallels Anchor Availability) ----------
+// A = upside supply count per conf; B = need-filtered URGENCY (only confs I still need, draining toward empty).
+// Governed by #24/#25: urgency = scarcity of remaining STRONG upside supply FILTERED by what I still need.
+const UPSIDE_STRONG = 2; // net >= +2 = strong lean → drives URGENCY (fewer qualify, real scarcity pressure)
+const UPSIDE_SOFT   = 1; // net >= +1 = soft lean → still SHOWN (not discarded), tagged distinctly
+function tallyNet(t){ return computeTally(t).net; }
+function isStrongUpside(t){ return tallyNet(t)>=UPSIDE_STRONG; }
+function isSoftUpside(t){ return tallyNet(t)>=UPSIDE_SOFT; }
+function strongOpen(c){ return openIn(c).filter(isStrongUpside).sort((a,b)=>tallyNet(b)-tallyNet(a)||(b.mkt||0)-(a.mkt||0)); }
+function softOpen(c){ return openIn(c).filter(isSoftUpside).sort((a,b)=>tallyNet(b)-tallyNet(a)||(b.mkt||0)-(a.mkt||0)); }
+function iNeed(c){ return !playerConfs(myname).has(c); }
+function renderHMupside(){
+  const box=byId('hmU'); if(!box)return; box.innerHTML='';
+  const order=CONFS.slice().sort((a,b)=>{
+    const na=iNeed(a)?0:1, nb=iNeed(b)?0:1;
+    if(na!==nb)return na-nb;
+    return strongOpen(a).length-strongOpen(b).length;   // urgency ordering keys on STRONG
+  });
+  for(const c of order){
+    const strong=strongOpen(c);      // drives urgency
+    const soft=softOpen(c);          // shown (includes strong)
+    const allUp=teamsIn(c).filter(isSoftUpside).sort((a,b)=>tallyNet(b)-tallyNet(a));
+    const nS=strong.length, nAll=soft.length;
+    const need=iNeed(c);
+    let urgency; // keyed on STRONG (+2) supply
+    if(!need) urgency=0;
+    else if(nS<=1) urgency=3; else if(nS<=2) urgency=2; else if(nS<=4) urgency=1; else urgency=0;
+    const uColor=['#2b3a4a','#d7b13a','#e08a3c','#d94a4a'][urgency];
+    const best=soft.length?soft[0]:null; const bestNet=best?tallyNet(best):0;
+    const podPend=teamsIn(c).some(t=>!(t.pod_status==='pod-loaded'||(t.sched&&t.sched!=='')));
+    const row=document.createElement('div'); row.className='conf-row';
+    let cells='';
+    for(const t of allUp){
+      const gone=isPicked(t.team); const net=tallyNet(t); const strongCls=net>=UPSIDE_STRONG?' strong':' soft';
+      cells+=`<div class="cell${strongCls} ${gone?'gone':'open'}" title="${esc(t.team)} · O/U ${t.mkt} · tally +${net}${net>=UPSIDE_STRONG?' (strong)':' (soft +1)'}${gone?' · picked':''}" style="${gone?'':'background:'+ouShade(t.mkt)}">+${net}</div>`;
+    }
+    if(!allUp.length) cells='<div class="cell empty" title="no net-positive upside teams">—</div>';
+    row.innerHTML=`<div class="clabel">${c}${need?'':'<span class="filled-tag">filled</span>'}${podPend?'<span class="pend">pod?</span>':''}</div>
+      <div class="ccount"><span class="scalebox" style="background:${uColor}" title="${need?('urgency '+urgency+' — '+nS+' strong(+2) upside left, '+nAll+' incl soft(+1)'):'already filled'}">${nS}</span></div>
+      <div class="cceil" title="Best available upside: ${best?esc(best.team):'—'}"><span class="ceilnum" style="color:${bestNet>0?'#3fae6b':'var(--dim)'}">${best?('+'+bestNet):'—'}</span><span class="ceillbl">top</span></div>
+      <div class="barwrap">${cells}</div>`;
+    box.appendChild(row);
+  }
+  const st=byId('hmU-stat'); if(st)st.textContent='count = STRONG (+2) upside left · color = your urgency (need + draining) · cells show all +1\u2191, soft ones dimmed';
+}
+function renderOverperform(){
+  const q=(byId('op-search')?byId('op-search').value.toLowerCase():'');
+  const fc=(byId('op-conf')?byId('op-conf').value:'');
+  const hp=(byId('op-hidepicked')&&byId('op-hidepicked').checked);
+  let rows=DATA.map(t=>({t, ...computeTally(t)}));
+  if(fc)rows=rows.filter(r=>r.t.conf===fc);
+  if(q)rows=rows.filter(r=>r.t.team.toLowerCase().includes(q));
+  if(hp)rows=rows.filter(r=>!isPicked(r.t.team));
+  rows.sort((a,b)=> b.net-a.net || (b.up.length-a.up.length) || ((b.t.mkt||0)-(a.t.mkt||0)));
+  const tb=byId('opbody'); if(!tb)return; tb.innerHTML='';
+  for(const r of rows){
+    const t=r.t; const tr=document.createElement('tr'); if(isPicked(t.team))tr.className='picked';
+    const upHtml=r.up.map(x=>`<span class="tw-up" title="${esc(x.why)}">+${esc(x.k)}</span>`).join(' ')||'<span class="faint">—</span>';
+    const dnHtml=r.dn.map(x=>`<span class="tw-dn" title="${esc(x.why)}">−${esc(x.k)}</span>`).join(' ')||'<span class="faint">—</span>';
+    const netCls=r.net>0?'net-pos':(r.net<0?'net-neg':'net-zero');
+    const pend=r.podLoaded?'':'<span class="pend" title="pod not yet loaded — schedule-only tally">pod pending</span>';
+    tr.innerHTML=`
+      <td><span class="team">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span> ${pend}</td>
+      <td class="num">${t.mkt!=null?t.mkt:'—'}</td>
+      <td class="num ${netCls}">${r.net>0?'+':''}${r.net}</td>
+      <td class="twcell">${upHtml}</td>
+      <td class="twcell">${dnHtml}</td>`;
+    tb.appendChild(tr);
+  }
+  const st=byId('op-stat'); if(st)st.textContent=rows.length+' teams · tally = count of reasons, NOT a prediction · judgment governs the pick';
+}
+function renderSetup(){
+  const box=byId('slots'); box.innerHTML='';
+  roster.forEach((r,i)=>{
+    const d=document.createElement('div'); d.className='slot'+(r===myname?' me':'');
+    d.innerHTML=`<span class="n">${i+1}</span><input value="${r.replace(/"/g,'&quot;')}" data-i="${i}" placeholder="player…">`;
+    box.appendChild(d);
+  });
+  box.querySelectorAll('input').forEach(inp=>inp.oninput=()=>{roster[inp.dataset.i]=inp.value; syncClock(); refresh();});
+  syncClock();
+}
+function syncClock(){
+  const sel=byId('clock'); const cur=sel.value;
+  const opts=roster.map((r,i)=>r||`P${i+1}`);
+  sel.innerHTML=opts.map(o=>`<option ${o===cur?'selected':''}>${o}</option>`).join('');
+}
+
+// ---------- refresh all ----------
+function refresh(){
+  myname=byId('myname').value||'Mike';
+  byId('npicks').textContent=Object.keys(picks).length;
+  byId('myfilled').textContent=playerConfs(myname).size;
+  renderBoard(); renderHM1(); renderHM3(); renderNeedStrip(); renderHMupside(); renderOverperform();
+}
+
+// ---------- init ----------
+(function init(){
+  const fc=byId('fconf'); CONFS.forEach(c=>fc.innerHTML+=`<option>${c}</option>`);
+  const opc=byId('op-conf'); if(opc)CONFS.forEach(c=>opc.innerHTML+=`<option>${c}</option>`);
+  ['search','fconf','hidepicked','onlyusable'].forEach(id=>byId(id).addEventListener('input',renderBoard));
+  ['op-search','op-conf','op-hidepicked'].forEach(id=>{const e=byId(id); if(e)e.addEventListener('input',renderOverperform);});
+  byId('myname').addEventListener('input',()=>{renderSetup();refresh();});
+  byId('applypaste').onclick=applyPaste;
+  const rb=byId('refreshbtn'); if(rb)rb.onclick=loadData;
+  byId('clearpicks').onclick=()=>{if(confirm('Clear all picks?')){picks={};refresh();}};
+  document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
+    document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.view').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); byId('v-'+b.dataset.v).classList.add('on');
+  });
+  roster[0]='Mike';
+  renderSetup(); refresh();
+  loadData();
+  setInterval(loadData, 60000); // auto-refresh every 60s
+})();
+</script>
+</body>
+</html>
