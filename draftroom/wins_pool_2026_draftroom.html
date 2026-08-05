@@ -265,13 +265,13 @@
   </section>
   <section class="view" id="v-schedule">
       <h2>Schedule Win% — weekly SP+ projections</h2>
-      <p class="note">Per-game win probability from SP+ margins (home-field +2.5, single-game σ 13.5); FCS opponents ≈ automatic. <b>○ = home, □ = away.</b> A <b>dark + gold outline</b> means a REAL line exists (a de-vigged moneyline drives that %, not SP+). Pick a conference, then click teams to add them to the comparison (mix conferences freely). Precomputed in the <i>Schedule Probs</i> tab — not rendered live.</p>
-      <div class="controls">
-        <select id="sch-conf"><option value="">Conference…</option></select>
-        <button id="sch-clear" class="ghost">clear selection</button>
+      <p class="note">Per-game win probability from SP+ margins (home-field +2.5, single-game σ 13.5); FCS opponents ≈ automatic. <b>○ = home, □ = away.</b> A <b>dark + gold outline</b> means a REAL line exists (a de-vigged moneyline drives that %, not SP+). <b>All teams show by default.</b> Filter with the Conferences multi-select, or pick specific Teams to compare (⌘/Ctrl-click for multiple; mix conferences freely). Precomputed in the <i>Schedule Probs</i> tab — not rendered live.</p>
+      <div class="controls" style="align-items:flex-start">
+        <label style="color:var(--dim)">Conferences<br><select id="sch-conf" multiple size="4" style="min-width:120px"></select></label>
+        <label style="color:var(--dim)">Teams<br><select id="sch-team" multiple size="8" style="min-width:170px"></select></label>
+        <button id="sch-clear" class="ghost">show all (clear)</button>
         <span id="sch-stat" class="faint"></span>
       </div>
-      <div id="sch-chips" class="sch-chips"></div>
       <div id="sch-grid" class="sch-grid"></div>
   </section>
   <section class="view" id="v-setup">
@@ -483,20 +483,25 @@ function applyPaste(){
 }
 
 // ---------- heatmap 1 ----------
+// shared red->amber->green gradient, t in 0..1 (used for per-team bubbles in both heatmaps)
+function rg(t){ t=Math.max(0,Math.min(1,t)); let r,g;
+  if(t<.5){ r=214; g=Math.round(70+(t/.5)*(180-70)); } else { r=Math.round(214-((t-.5)/.5)*(214-70)); g=182; }
+  return `rgb(${r},${g},92)`; }
 function renderHM1(){
   const box=byId('hm1'); box.innerHTML='';
   const order=CONFS.slice().sort((a,b)=>usableOpen(a).length-usableOpen(b).length);
   for(const c of order){
     const open=openIn(c).filter(t=>t.mkt!=null&&t.mkt>=USABLE).sort((a,b)=>b.mkt-a.mkt);
-    const all=teamsIn(c).filter(t=>t.mkt!=null&&t.mkt>=USABLE).sort((a,b)=>b.mkt-a.mkt);
+    const all=teamsIn(c).slice().sort((a,b)=>(b.mkt??-1)-(a.mkt??-1));  // ALL teams, desc by market
     const n=open.length;
     const ceil=open.length?open[0].mkt:0;               // best AVAILABLE win total = the ceiling
     const ceilTeam=open.length?open[0].team:'—';
     const row=document.createElement('div'); row.className='conf-row';
     let cells='';
     for(const t of all){
-      const gone=isPicked(t.team);
-      cells+=`<div class="cell ${gone?'gone':'open'}" title="${t.team} · O/U ${t.mkt}${gone?' (picked)':''}" style="${gone?'':'background:'+ouShade(t.mkt)}">${t.mkt}</div>`;
+      const gone=isPicked(t.team); const anch=t.mkt!=null&&t.mkt>=USABLE;
+      const col=t.mkt==null?'#33404f':rg(0.5+(t.mkt-USABLE)/10);   // anchor(≥6) green -> non-anchor red
+      cells+=`<div class="cell ${gone?'gone':'open'}" title="${t.team} · O/U ${t.mkt??'—'} · ${anch?'anchor':'non-anchor'}${gone?' (picked)':''}" style="${gone?'':'background:'+col}">${t.mkt??'—'}</div>`;
     }
     row.innerHTML=`<div class="clabel">${c}</div>
       <div class="ccount"><span class="scalebox" style="background:${scaleColor(n)}">${n}</span></div>
@@ -614,7 +619,7 @@ function renderHMupside(){
   for(const c of order){
     const strong=strongOpen(c);      // drives urgency
     const soft=softOpen(c);          // shown (includes strong)
-    const allUp=teamsIn(c).filter(isSoftUpside).sort((a,b)=>tallyNet(b)-tallyNet(a));
+    const allUp=teamsIn(c).slice().sort((a,b)=>(b.mkt??-1)-(a.mkt??-1));  // ALL teams, desc by market
     const nS=strong.length, nAll=soft.length;
     const need=iNeed(c);
     let urgency; // keyed on STRONG (+2) supply
@@ -626,17 +631,18 @@ function renderHMupside(){
     const row=document.createElement('div'); row.className='conf-row';
     let cells='';
     for(const t of allUp){
-      const gone=isPicked(t.team); const net=tallyNet(t); const strongCls=net>=UPSIDE_STRONG?' strong':' soft';
-      cells+=`<div class="cell${strongCls} ${gone?'gone':'open'}" title="${esc(t.team)} · O/U ${t.mkt} · tally +${net}${net>=UPSIDE_STRONG?' (strong)':' (soft +1)'}${gone?' · picked':''}" style="${gone?'':'background:'+ouShade(t.mkt)}">+${net}</div>`;
+      const gone=isPicked(t.team); const net=tallyNet(t);
+      const col=rg(0.5+net/8);   // priority (green, tailwinds) -> avoid (red, headwinds/fade)
+      cells+=`<div class="cell ${gone?'gone':'open'}" title="${esc(t.team)} · O/U ${t.mkt??'—'} · tally ${net>0?'+':''}${net} (${net>0?'priority':net<0?'avoid':'neutral'})${gone?' · picked':''}" style="${gone?'':'background:'+col}">${net>0?'+':''}${net}</div>`;
     }
-    if(!allUp.length) cells='<div class="cell empty" title="no net-positive upside teams">—</div>';
+    if(!allUp.length) cells='<div class="cell empty" title="no teams">—</div>';
     row.innerHTML=`<div class="clabel">${c}${need?'':'<span class="filled-tag">filled</span>'}${podPend?'<span class="pend">pod?</span>':''}</div>
       <div class="ccount"><span class="scalebox" style="background:${uColor}" title="${need?('urgency '+urgency+' — '+nS+' strong(+2) upside left, '+nAll+' incl soft(+1)'):'already filled'}">${nS}</span></div>
       <div class="cceil" title="Best available upside: ${best?esc(best.team):'—'}"><span class="ceilnum" style="color:${bestNet>0?'#3fae6b':'var(--dim)'}">${best?('+'+bestNet):'—'}</span><span class="ceillbl">top</span></div>
       <div class="barwrap">${cells}</div>`;
     box.appendChild(row);
   }
-  const st=byId('hmU-stat'); if(st)st.textContent='count = STRONG (+2) upside left · color = your urgency (need + draining) · cells show all +1\u2191, soft ones dimmed';
+  const st=byId('hmU-stat'); if(st)st.textContent='count = STRONG (+2) upside left · color = your urgency (need + draining) · cells = ALL teams desc by market, green = priority (tailwinds), red = avoid (fade)';
 }
 let OPSORT={k:'proj',d:-1};   // -1 desc; default = projected wins
 function opSort(k){ if(OPSORT.k===k) OPSORT.d*=-1; else {OPSORT.k=k; OPSORT.d=-1;} renderOverperform(); }
@@ -674,32 +680,40 @@ function renderOverperform(){
   }
   const st=byId('op-stat'); if(st)st.textContent=rows.length+' teams · sorted by PROJECTED WINS (market line) desc · red ▼ = underperform target · tally = reasons, not a prediction';
 }
-// ---------- Schedule Win% tab ----------
-let SCHED={}, SCHEDSEL=new Set(), SCHWEEKS=[];
+// ---------- Schedule Win% tab (multi-select; all teams by default) ----------
+let SCHED={}, SCHWEEKS=[];
 function wpColor(wp){ // red(low) -> amber(50) -> green(high)
   wp=Math.max(0,Math.min(100,wp==null?50:wp));
   let r,g; if(wp<50){ r=214; g=Math.round(70+(wp/50)*(180-70)); } else { r=Math.round(214-((wp-50)/50)*(214-70)); g=182; }
   return `rgb(${r},${g},92)`;
 }
+function selVals(id){ const s=byId(id); return s?[...s.selectedOptions].map(o=>o.value):[]; }
+function fillSchedTeamOptions(){
+  const tt=byId('sch-team'); if(!tt)return;
+  const confs=selVals('sch-conf'), keep=new Set(selVals('sch-team'));
+  const teams=Object.keys(SCHED).filter(t=>{ if(!confs.length)return true; const r=DATA.find(d=>d.team===t); return r&&confs.includes(r.conf); }).sort();
+  tt.innerHTML=teams.map(t=>`<option value="${esc(t)}"${keep.has(t)?' selected':''}>${esc(t)}</option>`).join('');
+}
 function renderSchedControls(){
-  const cs=byId('sch-conf'); if(!cs)return;
-  if(cs.options.length<=1){ CONFS.forEach(c=>cs.innerHTML+=`<option>${c}</option>`); cs.onchange=renderSchedChips; }
-  const cl=byId('sch-clear'); if(cl)cl.onclick=()=>{ SCHEDSEL.clear(); renderSchedChips(); renderSchedule(); };
+  const cc=byId('sch-conf');
+  if(cc && cc.options.length===0){ CONFS.forEach(c=>cc.innerHTML+=`<option value="${c}">${c}</option>`); cc.onchange=()=>{ fillSchedTeamOptions(); renderSchedule(); }; }
+  const tt=byId('sch-team'); if(tt) tt.onchange=renderSchedule;
+  const cl=byId('sch-clear'); if(cl) cl.onclick=()=>{ if(cc)[...cc.options].forEach(o=>o.selected=false); fillSchedTeamOptions(); renderSchedule(); };
+  fillSchedTeamOptions();
 }
-function renderSchedChips(){
-  const box=byId('sch-chips'); if(!box)return; const c=byId('sch-conf')?byId('sch-conf').value:'';
-  const teams=Object.keys(SCHED).filter(t=>{ if(!c)return true; const rec=DATA.find(d=>d.team===t); return rec&&rec.conf===c; }).sort();
-  box.innerHTML = teams.length ? teams.map(t=>`<span class="sch-chip${SCHEDSEL.has(t)?' sel':''}" onclick="toggleSched(${JSON.stringify(t)})">${esc(t)}</span>`).join('') : '<span class="faint">no schedule rows loaded — is the Schedule Probs tab populated + proxy redeployed?</span>';
-}
-function toggleSched(t){ if(SCHEDSEL.has(t))SCHEDSEL.delete(t); else SCHEDSEL.add(t); renderSchedChips(); renderSchedule(); }
 function renderSchedule(){
   const box=byId('sch-grid'); if(!box)return;
-  const sel=[...SCHEDSEL];
-  const st=byId('sch-stat'); if(st)st.textContent = sel.length? `${sel.length} team(s) · ○ home · □ away · outline = real line` : 'pick a conference, then click teams to compare';
-  if(!sel.length){ box.innerHTML=''; return; }
+  const confs=selVals('sch-conf'), teamsSel=selVals('sch-team');
+  let show;
+  if(teamsSel.length) show=teamsSel;                                                            // explicit teams
+  else if(confs.length) show=Object.keys(SCHED).filter(t=>{const r=DATA.find(d=>d.team===t);return r&&confs.includes(r.conf);}); // by conference
+  else show=Object.keys(SCHED);                                                                 // default: ALL teams
+  show=show.sort();
+  const st=byId('sch-stat'); if(st)st.textContent=`${show.length} team(s) · ○ home · □ away · gold outline = real line`;
+  if(!show.length){ box.innerHTML='<span class="faint">no schedule rows — is the Schedule Probs tab populated + the proxy redeployed?</span>'; return; }
   const weeks=SCHWEEKS.length?SCHWEEKS:[...Array(14).keys()];
   let html=`<div class="sch-row"><div class="sch-team"></div>`+weeks.map(w=>`<div class="sch-wk">W${w}</div>`).join('')+`</div>`;
-  for(const t of sel){
+  for(const t of show){
     const byW={}; (SCHED[t]||[]).forEach(g=>byW[g.wk]=g);
     html+=`<div class="sch-row"><div class="sch-team">${esc(t)}</div>`;
     for(const w of weeks){ const g=byW[w];
@@ -733,7 +747,7 @@ function refresh(){
   byId('npicks').textContent=Object.keys(picks).length;
   byId('myfilled').textContent=playerConfs(myname).size;
   renderBoard(); renderHM1(); renderHM3(); renderNeedStrip(); renderHMupside(); renderOverperform();
-  renderSchedChips(); renderSchedule();
+  renderSchedule();
 }
 
 // ---------- init ----------
