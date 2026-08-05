@@ -233,7 +233,7 @@
   <!-- SETUP -->
   <section class="view" id="v-overperform">
       <h2>Overperform Targets — pre-draftable tailwinds &amp; headwinds</h2>
-      <p class="note"><b>This is a COUNT of team-specific reasons, not a prediction and not a draft order.</b> Aggregate signals (SP+/TARP/RetProd) don't predict beating the number, so they're excluded — only structural + pod reasons you can see and overrule are counted. The market total stays the baseline; round, price, and scarcity still govern the pick. Hover a tag for the reason. Teams marked <span class="pend">pod pending</span> are schedule-only until their pod loads (Pac-12 &amp; Sun Belt loaded now).</p>
+      <p class="note"><b>This is a COUNT of team-specific reasons, not a prediction and not a draft order.</b> Aggregate signals (SP+/TARP/RetProd) don't predict beating the number, so they're excluded — only structural + pod reasons you can see and overrule are counted. The market total stays the baseline; round, price, and scarcity still govern the pick. Hover a tag for the reason. Teams marked <span class="pend">pod pending</span> are schedule-only until their pod loads (Pac-12, Sun Belt &amp; Mountain West loaded). <b>The per-team tally is ordered by projected wins (the market line)</b> so it reads as a pecking order — scan down to count how many teams sit in front of a target. <b>Underperform targets</b> (headwinds outweigh tailwinds, or a fade) are flagged <span style="color:#e06b6b;font-weight:600">red ▼</span>. Where a pod cited a moved line, the O/U shows <span style="color:#3fae6b;font-weight:600">→X▲</span>.</p>
       <h3 style="margin:18px 0 4px;font-size:13px;color:var(--ink)">Upside Availability — urgency to land an upside team</h3>
       <p class="note">Parallel to Anchor Availability. <b>Count &amp; color</b> key on <b>strong (+2 or better)</b> upside teams still on the board per conference — those create real scarcity pressure. <b>Cells show every +1-or-better team</b>; soft (+1) ones are dimmed/italic so you don't lose them but can see where the strong leans sit. Color = <i>your</i> urgency: hot only for conferences you still need whose strong-upside supply is draining (filled and deep-refilling conferences stay cool). A thin strong-upside conference is also one rivals will target — so it doubles as a read on what others may grab.</p>
       <div class="hm heatgrid hm1" id="hmU"></div>
@@ -299,7 +299,7 @@ async function loadData(){
         team:d.Team, conf:conf, real_conf:str(d["Real Conf"])||REAL[d.Team]||conf,
         mkt:num(d["Mkt"]), sp_rank:num(d["SP+ Rk"]), sp:num(d["SP+ Rtg"]),
         ret:num(d["RetProd%"]), net_tarp:num(d["TARP net"]), off_tarp:num(a["TARP off"]), def_tarp:num(a["TARP def"]),
-        collin:num(d["Collin"]), proj_minus_mkt:num(d["Proj−Mkt"]),
+        collin:num(d["Collin"]), proj_minus_mkt:num(d["Proj−Mkt"]), mkt_pod:num(b["mkt_pod"]),
         qb:str(d["QB status"]), lean:str(d["Host Lean"]), sched:str(d["Sched"]),
         avoids:str(d["Key Avoids/Draws"]), notes:str(d["Notes"]),
         hc:str(b["New HC"]), oc:str(b["New OC"]), dc:str(b["New DC"]),
@@ -369,6 +369,18 @@ function playerConfs(pl){ // set of confs this player has drafted
 }
 
 // ---------- board ----------
+// O/U cell: shows the Layer A sourced line, and where a pod cited a DIFFERENT/newer line, appends "→X▲/▼".
+// Layer A stays the anchor for bands/scarcity; the pod line is surfaced so it isn't lost (never overwrites Layer A).
+function ouCell(t){
+  if(t.mkt==null && t.mkt_pod==null) return '—';
+  if(t.mkt_pod!=null && t.mkt_pod!==t.mkt){
+    const up=(t.mkt==null)||(t.mkt_pod>t.mkt);
+    const base=(t.mkt==null)?'—':t.mkt;
+    const col=up?'#3fae6b':'#e06b6b';
+    return `<span title="Layer A line ${t.mkt==null?'(none — pod fills)':t.mkt} → pod-cited ${t.mkt_pod}">${base}<span style="color:${col};font-size:10px;font-weight:600"> →${t.mkt_pod}${up?'▲':'▼'}</span></span>`;
+  }
+  return t.mkt!=null?String(t.mkt):'—';
+}
 const WIDENED={"Air Force":[4,10],"Akron":[2,8],"Alabama":[5,11],"Appalachian State":[3,9],"Arizona":[4,10],"Arizona State":[3,10],"Arkansas":[2,8],"Arkansas State":[3,9],"Army":[4,11],"Auburn":[3,10],"BYU":[5,11],"Ball State":[1,6],"Baylor":[3,10],"Boise State":[4,10],"Boston College":[1,7],"Bowling Green":[2,7],"Buffalo":[3,9],"California":[3,10],"Central Michigan":[3,9],"Charlotte":[1,5],"Cincinnati":[2,9],"Clemson":[4,10],"Coastal Carolina":[2,8],"Colorado":[2,8],"Colorado State":[1,6],"Delaware":[3,9],"Duke":[2,9],"East Carolina":[4,10],"Eastern Michigan":[2,9],"FIU":[3,10],"Florida":[4,10],"Florida Atlantic":[3,9],"Florida State":[3,10],"Fresno State":[3,9],"Georgia":[6,12],"Georgia Southern":[2,8],"Georgia State":[2,8],"Georgia Tech":[3,10],"Hawaii":[4,10],"Houston":[5,11],"Illinois":[4,10],"Indiana":[8,12],"Iowa":[4,10],"Iowa State":[2,8],"Jacksonville State":[4,10],"James Madison":[5,11],"Kansas":[3,9],"Kansas State":[5,11],"Kennesaw State":[3,9],"Kent State":[1,6],"Kentucky":[2,8],"LSU":[5,11],"Liberty":[5,11],"Louisiana":[4,10],"Louisiana Tech":[3,9],"Louisville":[5,11],"Marshall":[4,10],"Maryland":[2,9],"Memphis":[4,10],"Miami FL":[8,12],"Miami OH":[4,10],"Michigan":[6,11],"Michigan State":[2,8],"Middle Tennessee":[1,7],"Minnesota":[3,9],"Mississippi State":[2,8],"Missouri":[3,10],"Missouri State":[2,8],"NC State":[4,10],"Navy":[4,10],"Nebraska":[4,9],"Nevada":[2,8],"New Mexico":[4,10],"New Mexico State":[2,8],"North Carolina":[2,8],"North Dakota State":[5,11],"North Texas":[3,8],"Northern Illinois":[1,6],"Northwestern":[3,8],"Notre Dame":[10,12],"Ohio":[3,9],"Ohio State":[6,12],"Oklahoma":[4,10],"Oklahoma State":[3,10],"Old Dominion":[4,10],"Ole Miss":[4,10],"Oregon":[8,12],"Oregon State":[2,7],"Penn State":[5,11],"Pittsburgh":[4,10],"Purdue":[1,7],"Rice":[1,7],"Rutgers":[2,8],"SMU":[5,11],"Sacramento State":[2,8],"Sam Houston":[1,7],"San Diego State":[3,9],"San Jose State":[2,8],"South Alabama":[3,9],"South Carolina":[3,10],"South Florida":[5,11],"Southern Miss":[1,7],"Stanford":[1,7],"Syracuse":[2,8],"TCU":[3,10],"Temple":[3,8],"Tennessee":[4,10],"Texas":[7,12],"Texas A&M":[5,11],"Texas State":[4,9],"Texas Tech":[8,12],"Toledo":[4,10],"Troy":[3,9],"Tulane":[4,10],"Tulsa":[3,8],"UAB":[1,6],"UCF":[3,9],"UCLA":[3,9],"UConn":[3,9],"ULM":[1,7],"UMass":[1,5],"UNLV":[4,10],"USC":[6,11],"UTEP":[1,6],"UTSA":[4,10],"Utah":[5,11],"Utah State":[2,8],"Vanderbilt":[3,9],"Virginia":[4,10],"Virginia Tech":[3,10],"Wake Forest":[3,9],"Washington":[4,10],"Washington State":[2,8],"West Virginia":[3,9],"Western Kentucky":[3,9],"Western Michigan":[4,10],"Wisconsin":[3,9],"Wyoming":[2,9]};
 function empBands(m){ if(m==null)return null; let fo,co;
   if(m<=4.5){fo=-2.5;co=3.5} else if(m<=6.5){fo=-2.5;co=2.5} else if(m<=8.5){fo=-3.5;co=2.5} else {fo=-2.5;co=2.5}
@@ -398,7 +410,7 @@ function renderBoard(){
     tr.innerHTML=`
       <td><span class="team">${t.team}</span>${real}</td>
       <td><span class="conf-badge">${t.conf}</span></td>
-      <td class="num">${t.mkt??'—'}</td>
+      <td class="num">${ouCell(t)}</td>
       <td class="num fc">${(()=>{const e=empBands(t.mkt),w=WIDENED[t.team];return e?`<b>${e[0]}\u2013${e[1]}</b>`+(w?`<br><span style="color:var(--faint);font-size:10px">${w[0]}\u2013${w[1]}</span>`:''):'\u2014';})()}</td>
       <td class="num">${t.sp_rank??'—'}</td>
       <td class="num">${t.ret??'—'}</td>
@@ -601,23 +613,30 @@ function renderOverperform(){
   if(fc)rows=rows.filter(r=>r.t.conf===fc);
   if(q)rows=rows.filter(r=>r.t.team.toLowerCase().includes(q));
   if(hp)rows=rows.filter(r=>!isPicked(r.t.team));
-  rows.sort((a,b)=> b.net-a.net || (b.up.length-a.up.length) || ((b.t.mkt||0)-(a.t.mkt||0)));
+  // SORT: descending by PROJECTED WINS (current market line: pod-cited line where it moved, else Layer A, else Collin).
+  // This makes the list a draft pecking-order — scan down to count how many teams sit in front of a target —
+  // NOT a tailwind ranking (tailwinds were misleading as an order). Tie-break by net tally, then name.
+  const projWins=r=> (r.t.mkt_pod!=null?r.t.mkt_pod : (r.t.mkt!=null?r.t.mkt : (r.t.collin!=null?r.t.collin : -1)));
+  rows.sort((a,b)=> projWins(b)-projWins(a) || (b.net-a.net) || a.t.team.localeCompare(b.t.team));
   const tb=byId('opbody'); if(!tb)return; tb.innerHTML='';
+  let rank=0;
   for(const r of rows){
-    const t=r.t; const tr=document.createElement('tr'); if(isPicked(t.team))tr.className='picked';
+    const t=r.t; const under=r.net<0||t.fade; rank++;
+    const tr=document.createElement('tr'); if(isPicked(t.team))tr.className='picked'; if(under)tr.style.borderLeft='2px solid #e06b6b';
     const upHtml=r.up.map(x=>`<span class="tw-up" title="${esc(x.why)}">+${esc(x.k)}</span>`).join(' ')||'<span class="faint">—</span>';
     const dnHtml=r.dn.map(x=>`<span class="tw-dn" title="${esc(x.why)}">−${esc(x.k)}</span>`).join(' ')||'<span class="faint">—</span>';
     const netCls=r.net>0?'net-pos':(r.net<0?'net-neg':'net-zero');
     const pend=r.podLoaded?'':'<span class="pend" title="pod not yet loaded — schedule-only tally">pod pending</span>';
+    const teamStyle=under?'color:#e06b6b;font-weight:600':'';
     tr.innerHTML=`
-      <td><span class="team">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span> ${pend}</td>
-      <td class="num">${t.mkt!=null?t.mkt:'—'}</td>
+      <td><span style="color:#8aa0b4;font-size:11px">${rank}.</span> <span class="team" style="${teamStyle}">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span>${under?' <span style="color:#e06b6b" title="underperform target — headwinds outweigh tailwinds / fade">▼</span>':''} ${pend}</td>
+      <td class="num">${ouCell(t)}</td>
       <td class="num ${netCls}">${r.net>0?'+':''}${r.net}</td>
       <td class="twcell">${upHtml}</td>
       <td class="twcell">${dnHtml}</td>`;
     tb.appendChild(tr);
   }
-  const st=byId('op-stat'); if(st)st.textContent=rows.length+' teams · tally = count of reasons, NOT a prediction · judgment governs the pick';
+  const st=byId('op-stat'); if(st)st.textContent=rows.length+' teams · sorted by PROJECTED WINS (market line) desc · red ▼ = underperform target · tally = reasons, not a prediction';
 }
 function renderSetup(){
   const box=byId('slots'); box.innerHTML='';
