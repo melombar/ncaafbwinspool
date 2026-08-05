@@ -138,7 +138,10 @@
   .tw-dn{display:inline-block;background:rgba(217,116,74,.16);color:#e39b78;border:1px solid rgba(217,116,74,.3);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:10.5px;cursor:help}
   .pend{display:inline-block;background:rgba(150,150,150,.14);color:var(--dim);border-radius:4px;padding:0 6px;font-size:9.5px;margin-left:4px}
   .twcell .faint{color:var(--faint)}
-  #hmU .conf-row{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  #hmU .conf-row{display:grid;grid-template-columns:120px 40px 52px 1fr;gap:8px;align-items:center;margin-bottom:5px}
+  #hmU .clabel{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+  #hmU .cell.soft{opacity:.5;font-style:italic}
+  #hmU .cell.empty{background:transparent;color:var(--faint)}
   .filled-tag{display:inline-block;background:rgba(63,174,107,.15);color:#7fd3a0;border-radius:3px;padding:0 5px;font-size:9px;margin-left:5px}
   #hmU .cell.empty{background:transparent;color:var(--faint);border:1px dashed var(--line)}
   #hmU .cell.soft{opacity:.45;font-style:italic}
@@ -233,7 +236,7 @@
       <p class="note"><b>This is a COUNT of team-specific reasons, not a prediction and not a draft order.</b> Aggregate signals (SP+/TARP/RetProd) don't predict beating the number, so they're excluded — only structural + pod reasons you can see and overrule are counted. The market total stays the baseline; round, price, and scarcity still govern the pick. Hover a tag for the reason. Teams marked <span class="pend">pod pending</span> are schedule-only until their pod loads (Pac-12 &amp; Sun Belt loaded now).</p>
       <h3 style="margin:18px 0 4px;font-size:13px;color:var(--ink)">Upside Availability — urgency to land an upside team</h3>
       <p class="note">Parallel to Anchor Availability. <b>Count &amp; color</b> key on <b>strong (+2 or better)</b> upside teams still on the board per conference — those create real scarcity pressure. <b>Cells show every +1-or-better team</b>; soft (+1) ones are dimmed/italic so you don't lose them but can see where the strong leans sit. Color = <i>your</i> urgency: hot only for conferences you still need whose strong-upside supply is draining (filled and deep-refilling conferences stay cool). A thin strong-upside conference is also one rivals will target — so it doubles as a read on what others may grab.</p>
-      <div class="hm" id="hmU"></div>
+      <div class="hm heatgrid hm1" id="hmU"></div>
       <div class="hmleg"><span id="hmU-stat" class="faint"></span></div>
       <h3 style="margin:22px 0 4px;font-size:13px;color:var(--ink)">Per-team tally</h3>
       <div class="controls">
