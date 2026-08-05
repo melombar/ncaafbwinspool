@@ -26,8 +26,9 @@ This is the standing spec for turning a Big Bets on Campus conference preview in
 | real_conf | text | ref | real-world conference |
 | **adj_conf** | text | derived | BLANK if pool==real; else `Pool (real: X)` e.g. `Pac12 (real: Mountain West)`. Fires for reassigned/holdover teams. |
 | **games** | text/num | schedule | # regular-season games. Flag 13-game teams (Hawaii rule) and Pac-12 11-vs-12 flex ambiguity. |
-| mkt_win_total | num | Layer A | market line |
-| sp_mar / sp_rank | num | Layer A | Connelly March SP+ |
+| mkt_win_total | num | Layer A | market line (our sourced, dated snapshot — canonical anchor) |
+| **mkt_pod** | num | **pod** | market win total AS CITED ON THE POD when it differs from Layer A — a later line move. Capture it; the DIFFERENCE vs `mkt_win_total` is the signal. `—` if not cited or same. |
+| sp_mar / sp_rank | num | Layer A | Connelly March SP+ (our sourced, dated snapshot — canonical anchor) |
 | **sp_pod** | num | **pod** | SP+ as cited on the pod — often a LATER refresh than March; the DIFFERENCE is the update-direction beat/miss signal |
 | ret_prod | num | Layer A | ESPN returning production % |
 | net_tarp / off_tarp / def_tarp | num | Layer A | always carry all THREE |
@@ -46,6 +47,15 @@ This is the standing spec for turning a Big Bets on Campus conference preview in
 | miles | num | Layer A | from xMiles Traveled tab |
 | key_injury | text | pod | notable injury/health flag |
 | bboc_notes | rich text | pod | paragraph-style qualitative take |
+
+## Pod-cited lines (SP+ and market) — never ignore, never overwrite
+
+Pods routinely cite a NEWER SP+ refresh or a MOVED market line than our Layer A snapshot. Capture both — do not drop the pod number, do not overwrite Layer A with it.
+
+- Put the pod's number in `sp_pod` / `mkt_pod`; keep our sourced, dated Layer A values (`sp_mar`/`sp_rank`, `mkt_win_total`) as the canonical anchor and join key.
+- Do NOT overwrite Layer A with a pod number — Layer A is a full-FBS, primary-sourced, dated snapshot; the pod is a single-book, per-team mention. Mixing them corrupts the join and the vintage.
+- The DELTA is the signal: pod line above ours = market moved up since our pull (roster news / money on the over); an updated pod SP+ above ours = the model beat its preseason vintage. Record the delta direction in `bboc_notes`.
+- A genuinely new full-FBS release (Connelly refresh, new market page) is a Layer A RE-CAPTURE from the primary source — never a pod copy.
 
 ## QB-status capture (enum + battle detail) — 2026 forward
 
