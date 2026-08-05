@@ -33,7 +33,7 @@ the governing strategy docs, and the year-by-year almanacs. Nothing here is ephe
 ## Key locked findings (so we never re-derive or re-pull)
 - **Market is efficient.** Opening lines predict actual wins near-perfectly across all bands. It's the baseline; nothing beats it.
 - **SP+ does NOT predict wins beyond the market** (residual corr ~0; blend weight 0). SP+ is a **shape** tool (within sum-to-market), never a level tool, and not a within-tier win tiebreaker. (Confirmed on clean 4-yr data.)
-- **SP+→win-prob curve = scale ~14, HFA ~3.5**, fit on **August** SP+ (1909 games, stable). The old 9.4 (March, 55 games) is **retired**.
+- **SP+→win-prob curve = OUTCOME-CALIBRATED empirical buckets** (favorite win-rate by SP+ margin: 0.534/0.679/0.859/0.959, cfbd 3476 games), HFA 3.0. Predicts *outcomes* (the model builds a win distribution). The single-logistic scales are **retired**: ~14/19.8 mimic the market (wrong target; the model is already sum-constrained to market), ~9.4 was a market-fit single logistic. See `specs/SP_Curve_Calibration.md`.
 - **Empirical spread bands** (`specs/Spread_Bands_Spec.md`): actual wins land ~±3 of market total (sd 2.27). **Tier asymmetry**: cheap ≤4.5 teams beat 58% w/ fat upside (+4.3 ceiling); **7-8.5 is a trap** (beat 38%, capped +2.0); elite 9+ hold. Upside grows as price falls.
 - **CAUTION — circular metrics:** postseason SP+ and SP+ preseason→postseason *movement* correlate with beat/miss but are measured AFTER the season — **unusable at draft time.**
 - **Vintage trap:** CFBD historical `/ratings/sp` is SEASON-LEVEL, not preseason. Don't mix vintages.

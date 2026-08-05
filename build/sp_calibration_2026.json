@@ -1,7 +1,10 @@
 {
- "sp_scale": 9.4,
+ "sp_scale": null,
  "sp_hfa": 3.0,
  "fit_mse": 0.00112,
  "n_games": 55,
- "note": "SP+ point-diff -> win prob curve, fit to CBS market moneylines wk1-4 2026"
+ "note": "Single-logistic scale RETIRED. Curve is now outcome-calibrated empirical buckets (cfbd_curve_data 3476g). ~14 was market-mimic (wrong target); ~9.4 market-fit single logistic. HFA still 3.0. See specs/SP_Curve_Calibration.md.",
+ "sp_scale_retired": 9.4,
+ "method": "SUPERSEDED by empirical bucket curve in build_predictions.py (SP_CURVE). This single-scale file is retained only for HFA and historical record.",
+ "sp_scale_retired_14": 14.0
 }

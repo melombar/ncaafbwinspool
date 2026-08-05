@@ -4,13 +4,13 @@ import json, csv, math, datetime
 from collections import defaultdict
 PROJ='/mnt/project/'
 
-d=json.load(open(PROJ+'claude_data_2026.json')); teams=d.get('teams',d)
+d=json.load(open('data/data_2026.json')); teams=d.get('teams',d)
 teams=teams if isinstance(teams,list) else list(teams.values())
 SP={t['team']:t.get('sp_mar') for t in teams}
 MKT={t['team']:t.get('mkt_win_total') for t in teams}
-SPCAL=json.load(open('sp_calibration_2026.json'))
+SPCAL=json.load(open('build/sp_calibration_2026.json'))
 SP_SCALE=SPCAL['sp_scale']; SP_HFA=SPCAL['sp_hfa']
-grid=list(csv.DictReader(open(PROJ+'pool_schedule_grid_2026.csv')))
+grid=list(csv.DictReader(open('data/schedule/pool_schedule_grid_2026.csv')))
 POOL={r['Team'] for r in grid}
 CONF_G={r['Team']:r['Conf'] for r in grid}
 
@@ -49,7 +49,7 @@ def devig(p_home,p_away):
 # --- load CBS lines: key by (pool_home, pool_away) -> home_winprob ---
 LINE_WP={}   # (home,away) -> P(home win)
 SPREAD={}    # (home,away) -> home spread
-for line in open('cbs_lines_2026.txt'):
+for line in open('data/lines/cbs_lines_2026.txt'):
     p=line.strip().split('~')
     if len(p)<7: continue
     wk,a,asp,aml,h,hsp,hml=p
@@ -69,11 +69,28 @@ for line in open('cbs_lines_2026.txt'):
 
 print(f"CBS lines loaded: {len(LINE_WP)} moneyline games, {len(SPREAD)} spread-only games")
 
-HFA=SP_HFA; SHRINK=0.10  # shrink now small — curve is market-calibrated (scale 9.4)
+HFA=SP_HFA; SHRINK=0.10  # shrink small — curve is OUTCOME-calibrated (empirical buckets)
+# OUTCOME-calibrated empirical SP+ curve: favorite win-rate by SP+ margin, from
+# data/lines/cfbd_curve_data.csv (3476 games). Control points = (mean |margin|,
+# empirical P(favorite wins)); monotonic piecewise-linear. Replaces the single-logistic
+# scale. ~14 was market-mimic (wrong target for a distribution model); this predicts
+# ACTUAL outcomes. VINTAGE: control games are season-level SP+; model uses preseason SP+,
+# so exact values shift, but the ~8-9 outcome regime is correct either way (see SP_Curve_Calibration.md).
+SP_CURVE=[(0.0,0.500),(1.5,0.534),(6.4,0.679),(14.7,0.859),(27.6,0.959),(45.0,0.990)]
+def _curve(d):
+    a=abs(d)
+    if a>=SP_CURVE[-1][0]: p=SP_CURVE[-1][1]
+    else:
+        p=SP_CURVE[-1][1]
+        for i in range(1,len(SP_CURVE)):
+            if a<=SP_CURVE[i][0]:
+                (x0,y0),(x1,y1)=SP_CURVE[i-1],SP_CURVE[i]
+                p=y0+(y1-y0)*(a-x0)/(x1-x0); break
+    return p if d>=0 else 1.0-p
 def spread_to_wp(sp): return 1.0/(1.0+math.exp(sp/6.5))
 def sp_to_wp(rt,ro,home):
     if rt is None or ro is None: return None
-    diff=rt-ro+(HFA if home else -HFA); return 1.0/(1.0+math.exp(-diff/SP_SCALE))
+    diff=rt-ro+(HFA if home else -HFA); return _curve(diff)
 
 WK=['W0','W1','W2','W3','W4','W5','W6','W7','W8','W9','W10','W11','W12','W13','W15']
 def opp_of(cell):
@@ -116,7 +133,7 @@ for team in games_by_team:
 if overlap:
     n=len(overlap); bias=sum(a-b for a,b in overlap)/n; mae=sum(abs(a-b) for a,b in overlap)/n
     print(f"CALIBRATION: {n} overlap games · SP+ bias {bias:+.3f} · MAE {mae:.3f}")
-json.dump({'overlap_n':len(overlap),'sp_bias':round(bias,4) if overlap else None,'mae':round(mae,4) if overlap else None,'shrink':SHRINK,'cbs_ml_games':len(LINE_WP),'cbs_spread_games':len(SPREAD)},open('calibration_2026.json','w'),indent=1)
+json.dump({'overlap_n':len(overlap),'sp_bias':round(bias,4) if overlap else None,'mae':round(mae,4) if overlap else None,'shrink':SHRINK,'cbs_ml_games':len(LINE_WP),'cbs_spread_games':len(SPREAD)},open('build/calibration_2026.json','w'),indent=1)
 
 def poisson_binomial(probs):
     dist=[1.0]
@@ -156,8 +173,8 @@ for team in sorted(games_by_team):
         'floor_p10':p10,'ceiling_p90':p90,'n_line_games':sum(1 for c in covs if c['src'] in('ml','spread')),
         'per_game':[{**covs[i],'wp':round(adj[i],3)} for i in range(len(adj))]}
 
-meta={'model':'stage1 v3 — CBS moneylines(wk1-4) + MARKET-CALIBRATED SP+ curve (scale 9.4, hfa 3.0, fit to lines) + tier default, sum-to-market','built':datetime.datetime.now().isoformat(),
-      'frozen':False,'calibration':json.load(open('calibration_2026.json')),'source_counts':dict(src_counts),
+meta={'model':'stage1 v4 — CBS moneylines(wk1-4) + OUTCOME-CALIBRATED empirical SP+ bucket curve (cfbd 3476g, ~8-9 regime; scale 14 retired) + tier default, sum-to-market','built':datetime.datetime.now().isoformat(),
+      'frozen':False,'calibration':json.load(open('build/calibration_2026.json')),'source_counts':dict(src_counts),
       'note':'P(>=N) re-expresses market as threshold probs. market=level, SP+=shape, real lines override. Not market-beating. FREEZE at draft.'}
-json.dump({'meta':meta,'predictions':preds},open('predictions_2026.json','w'),indent=1)
+json.dump({'meta':meta,'predictions':preds},open('build/predictions_2026.json','w'),indent=1)
 print("source counts:",dict(src_counts)); print("teams:",len(preds))
