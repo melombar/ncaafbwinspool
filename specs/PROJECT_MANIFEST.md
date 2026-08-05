@@ -2,6 +2,9 @@
 
 The **repo is the system of record** (everything, permanent). The **Claude Project holds only the active working set** — the few files Claude must read in full every session. Claude Projects flip to fragment-retrieval (RAG) around ~13 files, losing cross-doc reasoning, so the project is kept deliberately small (~6-8 files). Everything else lives here in the repo and is pulled into the project temporarily only when working on that specific piece.
 
+## Start here (every session)
+Before any substantive analysis, extraction, or build: **`load specs/PREFLIGHT.md and apply it`** — the standing 0–15 operating checklist (REPO-CHECK, no-fabrication, year-partition, auto-push, etc.). It binds only the session that reads it, so reference it each run rather than re-pasting.
+
 ## Rule of thumb
 - **In the project** if Claude needs it to answer a typical draft-prep question *without being told where to look*.
 - **In the repo only** if it's reference-for-a-specific-task (pull it in when that task comes up).
@@ -19,7 +22,7 @@ The **repo is the system of record** (everything, permanent). The **Claude Proje
 
 **Optional (only if you want the full spec one glance away — otherwise covered by memory):**
 - `Spread_Bands_Spec.md` (specs/) — empirical floor/ceiling + tier asymmetry
-- `SP_Curve_Calibration.md` (specs/) — curve = ~14 August vintage; 9.4 retired
+- `SP_Curve_Calibration.md` (specs/) — preseason curve = **19.8** (vintage-matched, 1,909 games); 14.2 is the SEASON-LEVEL scale (wrong for a preseason model); 9.4 retired
 
 ## REMOVE from the project (now lives in repo)
 - All workbooks (`workbooks/NCAA_Wins_Pool_*.xlsx`) — archive
