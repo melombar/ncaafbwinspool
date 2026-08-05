@@ -246,7 +246,7 @@
         <span id="op-stat" class="faint"></span>
       </div>
       <table class="op">
-        <thead><tr><th>Team</th><th>O/U</th><th>Net</th><th>Tailwinds (+)</th><th>Headwinds (−)</th></tr></thead>
+        <thead><tr><th>Team</th><th class="opsort" onclick="opSort('proj')" style="cursor:pointer" title="sort by projected wins (default)">O/U&nbsp;↕</th><th class="opsort" onclick="opSort('net')" style="cursor:pointer" title="sort by tailwind net — the head/tailwind ranking">Net&nbsp;↕</th><th>Tailwinds (+)</th><th>Headwinds (−)</th></tr></thead>
         <tbody id="opbody"></tbody>
       </table>
   </section>
@@ -605,6 +605,8 @@ function renderHMupside(){
   }
   const st=byId('hmU-stat'); if(st)st.textContent='count = STRONG (+2) upside left · color = your urgency (need + draining) · cells show all +1\u2191, soft ones dimmed';
 }
+let OPSORT={k:'proj',d:-1};   // -1 desc; default = projected wins
+function opSort(k){ if(OPSORT.k===k) OPSORT.d*=-1; else {OPSORT.k=k; OPSORT.d=-1;} renderOverperform(); }
 function renderOverperform(){
   const q=(byId('op-search')?byId('op-search').value.toLowerCase():'');
   const fc=(byId('op-conf')?byId('op-conf').value:'');
@@ -617,7 +619,8 @@ function renderOverperform(){
   // This makes the list a draft pecking-order — scan down to count how many teams sit in front of a target —
   // NOT a tailwind ranking (tailwinds were misleading as an order). Tie-break by net tally, then name.
   const projWins=r=> (r.t.mkt_pod!=null?r.t.mkt_pod : (r.t.mkt!=null?r.t.mkt : (r.t.collin!=null?r.t.collin : -1)));
-  rows.sort((a,b)=> projWins(b)-projWins(a) || (b.net-a.net) || a.t.team.localeCompare(b.t.team));
+  const keyf = OPSORT.k==='net' ? (r=>r.net) : projWins;   // default proj; click Net for the head/tailwind ranking
+  rows.sort((a,b)=> (keyf(a)-keyf(b))*OPSORT.d || projWins(b)-projWins(a) || a.t.team.localeCompare(b.t.team));
   const tb=byId('opbody'); if(!tb)return; tb.innerHTML='';
   let rank=0;
   for(const r of rows){
