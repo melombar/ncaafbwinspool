@@ -189,9 +189,10 @@
   <nav>
     <button data-v="board" class="on">Enriched Board</button>
     <button data-v="hm1">Anchor Availability</button>
-    <button data-v="hm3">Pool Needs</button>
     <button data-v="overperform">Overperform Targets</button>
     <button data-v="schedule">Schedule Win%</button>
+    <button data-v="rosters">Rosters &amp; Needs</button>
+    <button data-v="hm3">Pool Needs</button>
     <button data-v="setup">Setup &amp; Picks</button>
   </nav>
 
@@ -234,6 +235,13 @@
   </section>
 
   <!-- HEATMAP 2 -->
+  <section class="view" id="v-rosters">
+      <h2>Rosters &amp; Conferences Needed</h2>
+      <p class="note">Live from picks: each player's drafted anchors with market O/U, plus their running market total and best-case (ceiling) sum. Below, the live <i>Conferences_Needed</i> tab from the sheet.</p>
+      <div id="rosters-box"></div>
+      <h3 style="margin:22px 0 6px;font-size:13px;color:var(--ink)">Conferences Needed — live from the sheet</h3>
+      <div id="confneeded-box" style="overflow-x:auto"></div>
+  </section>
   <!-- HEATMAP 3 -->
   <section class="view" id="v-hm3">
     <div class="panel">
@@ -357,6 +365,7 @@ async function loadData(){
       (SCHED[t]=SCHED[t]||[]).push(g); });
     SCHWEEKS=[...wkset].sort((a,b)=>a-b);
     renderSchedControls();
+    CONFNEEDED = j.confNeeded || {header:[],rows:[]};
     const rr=(j.roster&&j.roster.rows)||[];
     const names=[];
     rr.forEach(row=>{
@@ -375,7 +384,8 @@ async function loadData(){
 }
 const CONFS = ["AAC","ACC","Big 12","Big Ten","CUSA","MAC","MWC","Pac12","SEC","Sun Belt"];
 const USABLE = 6.0;
-const WIN_TARGET = 80;  // median/most-common 1st-place total, 2015-2025 (mean 78.3)
+const WIN_TARGET = 80;      // median 1st-place ACTUAL total, 2015-2025 (the finish line, after overperformance)
+const MARKET_TARGET = 68;   // champion DRAFT-DAY market sum (10 anchors × ~6.8 mean projected); ~80 = +~12 eruption
 let picks = {};      // team -> player
 let roster = ["","","","","","","","","","","",""];
 let myname = "Mike";
@@ -515,34 +525,30 @@ function renderHM1(){
 function renderNeedStrip(){
   const box=byId('needstrip'); if(!box)return;
   const mine=playerConfs(myname);
-  let filled=0, proj=0, html='<span class="lbl">My needs</span>';
+  let filled=0, proj=0, bestcase=0, html='<span class="lbl">My needs</span>';
   for(const c of CONFS){
     const isF=mine.has(c);
     if(isF){filled++;
       const team=(Object.entries(picks).find(([tm,p])=>p===myname&&(DATA.find(d=>d.team===tm)||{}).conf===c)||[])[0];
       const rec=DATA.find(d=>d.team===team);
-      if(rec&&rec.mkt!=null)proj+=rec.mkt;
+      if(rec&&rec.mkt!=null){ proj+=rec.mkt; const b=empBands(rec.mkt); if(b)bestcase+=b[1]; }
       html+=`<span class="chip filled" title="${c} — ${team} (O/U ${rec?rec.mkt:'?'})">${c}<span class="t">${esc(team).split(' ')[0]}</span></span>`;
     } else {
       html+=`<span class="chip needed" title="${c} — needed">${c}</span>`;
     }
   }
-  // pace: expected total at 80 pace given filled picks = 80*filled/10; are we ahead/behind?
-  const expectedNow = WIN_TARGET*filled/10;
+  // Benchmark against the champion DRAFT-DAY market sum (~68), not the 80 finish line.
+  // Winners project ~68 market (10 × ~6.8) then erupt +~12 to the ~80 actual. Ceiling sum = the path to 80.
+  const expNow = MARKET_TARGET*filled/10;
   const remaining = 10-filled;
-  const needPerRemaining = filled<10 ? (WIN_TARGET-proj)/Math.max(remaining,1) : 0;
-  let paceCls='on', paceTxt='';
-  if(filled>0){
-    if(proj>expectedNow+1.5)paceCls='ahead';
-    else if(proj<expectedNow-1.5)paceCls='behind';
-    paceTxt = filled<10
-      ? `need ${needPerRemaining.toFixed(1)}/pick on the last ${remaining}`
-      : (proj>=WIN_TARGET?'target hit':`${(WIN_TARGET-proj).toFixed(1)} short`);
-  } else {
-    paceTxt='target '+WIN_TARGET;
-  }
-  html+=`<span class="pace ${paceCls}" title="Sum of your anchors' market win totals vs the ${WIN_TARGET}-win target (median 1st place, 2015-2025)">`
-      + `<b>${proj.toFixed(1)}</b>/${WIN_TARGET}<span class="pacesub"> · ${filled}/10 · ${paceTxt}</span></span>`;
+  let paceCls='on';
+  if(filled>0){ if(proj>expNow+1.5)paceCls='ahead'; else if(proj<expNow-1.5)paceCls='behind'; }
+  const perPick = remaining>0 ? (MARKET_TARGET-proj)/remaining : 0;
+  const sub = filled===0 ? 'draft to ~68 mkt' :
+              filled<10 ? `${filled}/10 · ${perPick.toFixed(1)}/pick to ~68` :
+              (proj>=MARKET_TARGET?'at champ draft pace':`${(MARKET_TARGET-proj).toFixed(1)} under champ pace`);
+  html+=`<span class="pace ${paceCls}" title="MARKET = sum of your anchors' market win totals vs ~68 (the champion DRAFT-DAY market sum: 10 anchors × ~6.8). BEST-CASE = sum of empirical ceilings — the realistic path to the ~80 that actually wins (champions overperform market by ~+12).">`
+      + `<b>${proj.toFixed(1)}</b><span class="pacesub">/~68 mkt</span> · <b style="color:var(--gold)">${bestcase.toFixed(0)}</b><span class="pacesub"> best-case → win@~80 · ${sub}</span></span>`;
   box.innerHTML=html;
 }
 
@@ -566,6 +572,33 @@ function renderHM3(){
 }
 
 // ---------- setup ----------
+// ---------- Rosters & Conferences Needed ----------
+let CONFNEEDED={header:[],rows:[]};
+function renderRosters(){
+  const box=byId('rosters-box'); if(!box)return;
+  const players=[...new Set([...roster.filter(Boolean), ...Object.values(picks)])];
+  if(!players.length){ box.innerHTML='<span class="faint">No players/picks yet — set the roster in Setup &amp; Picks and import Brad’s tracker.</span>'; return; }
+  let html='<div style="display:flex;flex-wrap:wrap;gap:14px">';
+  for(const pl of players){
+    const teams=Object.entries(picks).filter(([tm,p])=>p===pl).map(([tm])=>DATA.find(d=>d.team===tm)||{team:tm}).sort((a,b)=>(b.mkt??-1)-(a.mkt??-1));
+    let mkt=0,bc=0;
+    const trs=teams.map(t=>{ const m=t.mkt; if(m!=null){mkt+=m; const b=empBands(m); if(b)bc+=b[1];}
+      return `<tr><td style="padding:1px 8px 1px 0">${esc(t.team)}</td><td class="num" style="color:var(--dim)">${esc(t.conf||'')}</td><td class="num">${m==null?'—':m}</td></tr>`; }).join('');
+    const meBorder = pl===myname?'border:1px solid #2a6b45':'';
+    html+=`<div class="panel" style="${meBorder}"><div style="font-weight:700;margin-bottom:4px">${esc(pl)}${pl===myname?' <span class="faint">(you)</span>':''} <span class="faint">${teams.length}/10</span></div>`
+      +`<table style="font-size:12px"><thead><tr><th style="text-align:left">Team</th><th>Conf</th><th>O/U</th></tr></thead><tbody>${trs||'<tr><td class="faint">—</td></tr>'}</tbody></table>`
+      +`<div style="margin-top:5px;font-family:var(--mono);font-size:11px">mkt <b>${mkt.toFixed(1)}</b> · best-case <b style="color:var(--gold)">${bc.toFixed(0)}</b></div></div>`;
+  }
+  box.innerHTML=html+'</div>';
+}
+function renderConfNeeded(){
+  const box=byId('confneeded-box'); if(!box)return;
+  const h=CONFNEEDED.header||[], rows=CONFNEEDED.rows||[];
+  if(!rows.length){ box.innerHTML='<span class="faint">Conferences_Needed not loaded — add <code>confNeeded: tab(‘Conferences_Needed’)</code> to the proxy + redeploy, and confirm the tab name.</span>'; return; }
+  let html='<table style="font-size:12px"><thead><tr>'+h.map(x=>`<th style="text-align:left;padding:2px 12px 4px 0">${esc(x)}</th>`).join('')+'</tr></thead><tbody>';
+  for(const r of rows){ html+='<tr>'+h.map(k=>`<td style="padding:2px 12px 2px 0">${esc(r[k]==null?'':r[k])}</td>`).join('')+'</tr>'; }
+  box.innerHTML=html+'</tbody></table>';
+}
 // ---------- Overperform Tally (transparent count of pre-draftable reasons; NOT a prediction) ----------
 // Governed by Pre_Pick_Doctrine: excludes aggregate edge signals (SP+/TARP/RetProd) which DON'T predict beats.
 // Counts only team-specific structural + pod reasons. See Overperform_Tally_Spec.md.
@@ -747,7 +780,7 @@ function refresh(){
   byId('npicks').textContent=Object.keys(picks).length;
   byId('myfilled').textContent=playerConfs(myname).size;
   renderBoard(); renderHM1(); renderHM3(); renderNeedStrip(); renderHMupside(); renderOverperform();
-  renderSchedule();
+  renderSchedule(); renderRosters(); renderConfNeeded();
 }
 
 // ---------- init ----------
