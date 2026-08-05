@@ -31,6 +31,7 @@ function doGet() {
     dashboard: tab('Dashboard (A+B join)'),
     layerA:    tab('Layer A — raw data (SOURCED)'),
     layerB:    tab('Layer B — pod writeups'),
+    sched:     tab('Schedule Probs'),
     picks:     tab('Import_BradTracker'),
     roster:    tab('Draft_Order')
   };

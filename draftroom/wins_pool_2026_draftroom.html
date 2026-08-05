@@ -29,6 +29,18 @@
   nav button.on{background:var(--panel2);color:var(--ink);border-color:var(--accent)}
   nav button:hover{color:var(--ink)}
   .view{display:none} .view.on{display:block}
+  .sch-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .sch-chip{padding:3px 9px;border:1px solid #33404f;border-radius:12px;cursor:pointer;font-size:12px;color:var(--dim);user-select:none}
+  .sch-chip.sel{background:#2d6cdf;color:#fff;border-color:#2d6cdf}
+  .sch-grid{overflow-x:auto;padding-bottom:8px}
+  .sch-row{display:flex;align-items:center;gap:4px;margin:4px 0;width:max-content}
+  .sch-team{width:150px;flex:none;font-size:12px;font-weight:600;color:var(--ink)}
+  .sch-wk{width:38px;flex:none;text-align:center;font-size:10px;color:var(--faint)}
+  .sch-cell{width:38px;height:38px;flex:none;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#0d1520}
+  .sch-home{border-radius:50%}
+  .sch-away{border-radius:5px}
+  .sch-real{box-shadow:0 0 0 2px #0d1520, 0 0 0 3px #ffd24a}
+  .sch-bye{width:38px;height:38px;flex:none;border:1px dashed #2b3644;border-radius:5px;opacity:.4}
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:16px}
   .panel h2{font-size:13px;font-weight:700;margin:0 0 4px;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
   .panel .note{color:var(--dim);font-size:11.5px;margin:0 0 14px;max-width:760px}
@@ -179,6 +191,7 @@
     <button data-v="hm1">Anchor Availability</button>
     <button data-v="hm3">Pool Needs</button>
     <button data-v="overperform">Overperform Targets</button>
+    <button data-v="schedule">Schedule Win%</button>
     <button data-v="setup">Setup &amp; Picks</button>
   </nav>
 
@@ -250,6 +263,17 @@
         <tbody id="opbody"></tbody>
       </table>
   </section>
+  <section class="view" id="v-schedule">
+      <h2>Schedule Win% — weekly SP+ projections</h2>
+      <p class="note">Per-game win probability from SP+ margins (home-field +2.5, single-game σ 13.5); FCS opponents ≈ automatic. <b>○ = home, □ = away.</b> A <b>dark + gold outline</b> means a REAL line exists (a de-vigged moneyline drives that %, not SP+). Pick a conference, then click teams to add them to the comparison (mix conferences freely). Precomputed in the <i>Schedule Probs</i> tab — not rendered live.</p>
+      <div class="controls">
+        <select id="sch-conf"><option value="">Conference…</option></select>
+        <button id="sch-clear" class="ghost">clear selection</button>
+        <span id="sch-stat" class="faint"></span>
+      </div>
+      <div id="sch-chips" class="sch-chips"></div>
+      <div id="sch-grid" class="sch-grid"></div>
+  </section>
   <section class="view" id="v-setup">
     <div class="panel">
       <h2>Roster &amp; Draft Order</h2>
@@ -274,7 +298,7 @@
 </div>
 
 <script>
-const PROXY="https://script.google.com/macros/s/AKfycbxiZ5T3QM80byIpOcgg2gBeGFpGKYfGUhstt4JWTbq7hUR9bB94TkIqwnwe5rTsgOwF/exec";
+const PROXY="https://script.google.com/macros/s/AKfycbw0pt96oEnLUAa-8teNIgP-oY7RGH0CIuk3v03_QbmTqFDAMlXvM8IBezB9Hpds2m12/exec";
 const REAL={"Notre Dame":"Independent","UConn":"Independent","Boston College":"ACC","Syracuse":"ACC","Michigan State":"Big Ten","Purdue":"Big Ten","Oklahoma State":"Big 12","Arkansas":"SEC"};
 const num=v=>{if(v==null||v==="")return null;if(typeof v==="number")return v;const n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?null:n;};
 const str=v=>{if(v==null)return null;const s=String(v).trim();return(s===""||s==="None")?null:s;};
@@ -324,6 +348,15 @@ async function loadData(){
       if(tm&&pl&&!/example/i.test(pl)) picks[tm]=pl;
     });
     // roster: Draft_Order — find slot/player pairs (Slot col numeric 1-12)
+    // ---- Schedule Probs (precomputed weekly win% from SP+ / real lines) ----
+    const sc=(j.sched&&j.sched.rows)||[];
+    SCHED={}; const wkset=new Set();
+    sc.forEach(r=>{ const t=str(r.Team); if(!t)return;
+      const g={wk:num(r.Week),opp:str(r.Opp),home:num(r.Home)===1,wp:num(r.WinPct),fcs:num(r.FCS)===1,real:num(r.RealLine)===1};
+      if(g.wk!=null)wkset.add(g.wk);
+      (SCHED[t]=SCHED[t]||[]).push(g); });
+    SCHWEEKS=[...wkset].sort((a,b)=>a-b);
+    renderSchedControls();
     const rr=(j.roster&&j.roster.rows)||[];
     const names=[];
     rr.forEach(row=>{
@@ -641,6 +674,43 @@ function renderOverperform(){
   }
   const st=byId('op-stat'); if(st)st.textContent=rows.length+' teams · sorted by PROJECTED WINS (market line) desc · red ▼ = underperform target · tally = reasons, not a prediction';
 }
+// ---------- Schedule Win% tab ----------
+let SCHED={}, SCHEDSEL=new Set(), SCHWEEKS=[];
+function wpColor(wp){ // red(low) -> amber(50) -> green(high)
+  wp=Math.max(0,Math.min(100,wp==null?50:wp));
+  let r,g; if(wp<50){ r=214; g=Math.round(70+(wp/50)*(180-70)); } else { r=Math.round(214-((wp-50)/50)*(214-70)); g=182; }
+  return `rgb(${r},${g},92)`;
+}
+function renderSchedControls(){
+  const cs=byId('sch-conf'); if(!cs)return;
+  if(cs.options.length<=1){ CONFS.forEach(c=>cs.innerHTML+=`<option>${c}</option>`); cs.onchange=renderSchedChips; }
+  const cl=byId('sch-clear'); if(cl)cl.onclick=()=>{ SCHEDSEL.clear(); renderSchedChips(); renderSchedule(); };
+}
+function renderSchedChips(){
+  const box=byId('sch-chips'); if(!box)return; const c=byId('sch-conf')?byId('sch-conf').value:'';
+  const teams=Object.keys(SCHED).filter(t=>{ if(!c)return true; const rec=DATA.find(d=>d.team===t); return rec&&rec.conf===c; }).sort();
+  box.innerHTML = teams.length ? teams.map(t=>`<span class="sch-chip${SCHEDSEL.has(t)?' sel':''}" onclick="toggleSched(${JSON.stringify(t)})">${esc(t)}</span>`).join('') : '<span class="faint">no schedule rows loaded — is the Schedule Probs tab populated + proxy redeployed?</span>';
+}
+function toggleSched(t){ if(SCHEDSEL.has(t))SCHEDSEL.delete(t); else SCHEDSEL.add(t); renderSchedChips(); renderSchedule(); }
+function renderSchedule(){
+  const box=byId('sch-grid'); if(!box)return;
+  const sel=[...SCHEDSEL];
+  const st=byId('sch-stat'); if(st)st.textContent = sel.length? `${sel.length} team(s) · ○ home · □ away · outline = real line` : 'pick a conference, then click teams to compare';
+  if(!sel.length){ box.innerHTML=''; return; }
+  const weeks=SCHWEEKS.length?SCHWEEKS:[...Array(14).keys()];
+  let html=`<div class="sch-row"><div class="sch-team"></div>`+weeks.map(w=>`<div class="sch-wk">W${w}</div>`).join('')+`</div>`;
+  for(const t of sel){
+    const byW={}; (SCHED[t]||[]).forEach(g=>byW[g.wk]=g);
+    html+=`<div class="sch-row"><div class="sch-team">${esc(t)}</div>`;
+    for(const w of weeks){ const g=byW[w];
+      if(!g){ html+=`<div class="sch-bye" title="bye"></div>`; continue; }
+      const shape=g.home?'sch-home':'sch-away', real=g.real?' sch-real':'';
+      html+=`<div class="sch-cell ${shape}${real}" style="background:${wpColor(g.wp)}" title="${g.home?'vs':'@'} ${esc(g.opp)} · ${g.wp==null?'—':g.wp+'%'}${g.real?' · REAL line':''}${g.fcs?' · FCS':''}">${g.wp==null?'':g.wp}</div>`;
+    }
+    html+=`</div>`;
+  }
+  box.innerHTML=html;
+}
 function renderSetup(){
   const box=byId('slots'); box.innerHTML='';
   roster.forEach((r,i)=>{
@@ -663,6 +733,7 @@ function refresh(){
   byId('npicks').textContent=Object.keys(picks).length;
   byId('myfilled').textContent=playerConfs(myname).size;
   renderBoard(); renderHM1(); renderHM3(); renderNeedStrip(); renderHMupside(); renderOverperform();
+  renderSchedChips(); renderSchedule();
 }
 
 // ---------- init ----------

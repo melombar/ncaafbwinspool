@@ -1,0 +1,1654 @@
+Team,Conf,Week,Opp,Home,WinPct,FCS,RealLine
+Army,AAC,1,Bryant,1,100,1,0
+Army,AAC,2,South Florida,1,57,0,0
+Army,AAC,4,Temple,0,59,0,0
+Army,AAC,5,Louisiana Tech,0,58,0,0
+Army,AAC,6,Tulane,1,64,0,0
+Army,AAC,7,Florida Atlantic,1,69,0,0
+Army,AAC,8,Tulsa,0,56,0,0
+Army,AAC,9,Memphis,0,37,0,0
+Army,AAC,10,Air Force,1,56,0,0
+Army,AAC,12,East Carolina,1,54,0,0
+Army,AAC,13,Rice,0,75,0,0
+Army,AAC,15,Navy,1,45,0,0
+Charlotte,AAC,1,The Citadel,1,77,1,0
+Charlotte,AAC,2,Ole Miss,0,0,0,0
+Charlotte,AAC,3,Appalachian State,0,5,0,0
+Charlotte,AAC,4,Louisiana,1,6,0,0
+Charlotte,AAC,5,Memphis,1,2,0,0
+Charlotte,AAC,6,North Texas,0,4,0,0
+Charlotte,AAC,7,Temple,0,3,0,0
+Charlotte,AAC,9,Tulane,1,4,0,0
+Charlotte,AAC,10,UAB,0,11,0,0
+Charlotte,AAC,11,East Carolina,1,2,0,0
+Charlotte,AAC,12,Tulsa,0,2,0,0
+Charlotte,AAC,13,Navy,1,1,0,0
+East Carolina,AAC,1,Alabama,0,5,0,0
+East Carolina,AAC,2,Appalachian State,1,82,0,0
+East Carolina,AAC,3,Old Dominion,0,54,0,0
+East Carolina,AAC,4,North Carolina Central,1,100,1,0
+East Carolina,AAC,6,Rice,1,87,0,0
+East Carolina,AAC,7,UAB,0,84,0,0
+East Carolina,AAC,8,Memphis,0,40,0,0
+East Carolina,AAC,9,Temple,1,75,0,0
+East Carolina,AAC,10,South Florida,1,60,0,0
+East Carolina,AAC,11,Charlotte,0,98,0,0
+East Carolina,AAC,12,Army,0,46,0,0
+East Carolina,AAC,13,Florida Atlantic,1,71,0,0
+Florida Atlantic,AAC,1,Florida,0,3,0,0
+Florida Atlantic,AAC,2,Navy,1,34,0,0
+Florida Atlantic,AAC,3,FIU,1,75,0,0
+Florida Atlantic,AAC,4,ULM,0,86,0,0
+Florida Atlantic,AAC,5,Texas Southern,1,100,1,0
+Florida Atlantic,AAC,7,Army,0,31,0,0
+Florida Atlantic,AAC,8,Rice,1,77,0,0
+Florida Atlantic,AAC,9,North Texas,0,56,0,0
+Florida Atlantic,AAC,10,UTSA,1,41,0,0
+Florida Atlantic,AAC,11,Tulsa,0,44,0,0
+Florida Atlantic,AAC,12,South Florida,1,45,0,0
+Florida Atlantic,AAC,13,East Carolina,0,29,0,0
+Memphis,AAC,0,UNLV,0,32,0,0
+Memphis,AAC,1,Arkansas State,1,77,0,0
+Memphis,AAC,2,Boise State,0,22,0,0
+Memphis,AAC,3,UT Martin,1,100,1,0
+Memphis,AAC,5,Charlotte,0,98,0,0
+Memphis,AAC,6,UAB,1,93,0,0
+Memphis,AAC,7,Tulane,0,56,0,0
+Memphis,AAC,8,East Carolina,1,60,0,0
+Memphis,AAC,9,Army,1,63,0,0
+Memphis,AAC,11,South Florida,0,48,0,0
+Memphis,AAC,12,Navy,0,36,0,0
+Memphis,AAC,13,Temple,1,77,0,0
+Navy,AAC,1,Towson,1,100,1,0
+Navy,AAC,2,Florida Atlantic,0,66,0,0
+Navy,AAC,4,UAB,0,89,0,0
+Navy,AAC,5,Air Force,0,53,0,0
+Navy,AAC,6,Tulsa,1,80,0,0
+Navy,AAC,7,UTSA,0,50,0,0
+Navy,AAC,8,North Texas,1,87,0,0
+Navy,AAC,9,Notre Dame,1,5,0,0
+Navy,AAC,10,Temple,1,82,0,0
+Navy,AAC,12,Memphis,1,64,0,0
+Navy,AAC,13,Charlotte,0,99,0,0
+Navy,AAC,15,Army,0,55,0,0
+North Texas,AAC,1,Indiana,0,0,0,0
+North Texas,AAC,2,UNLV,1,19,0,0
+North Texas,AAC,3,Texas State,0,27,0,0
+North Texas,AAC,4,Houston Christian,1,99,1,0
+North Texas,AAC,5,Tulsa,0,31,0,0
+North Texas,AAC,6,Charlotte,1,96,0,0
+North Texas,AAC,8,Navy,0,13,0,0
+North Texas,AAC,9,Florida Atlantic,1,44,0,0
+North Texas,AAC,10,Rice,1,66,0,0
+North Texas,AAC,11,UTSA,0,17,0,0
+North Texas,AAC,12,Tulane,0,26,0,0
+North Texas,AAC,13,UAB,1,74,0,0
+Rice,AAC,1,Houston Christian,1,98,1,0
+Rice,AAC,2,Notre Dame,0,0,0,0
+Rice,AAC,3,Western Michigan,1,36,0,0
+Rice,AAC,4,Fresno State,0,13,0,0
+Rice,AAC,5,UTSA,1,21,0,0
+Rice,AAC,6,East Carolina,0,13,0,0
+Rice,AAC,7,Tulsa,1,37,0,0
+Rice,AAC,8,Florida Atlantic,0,23,0,0
+Rice,AAC,10,North Texas,0,34,0,0
+Rice,AAC,11,Tulane,1,31,0,0
+Rice,AAC,12,Temple,0,26,0,0
+Rice,AAC,13,Army,1,25,0,0
+South Florida,AAC,1,FIU,1,80,0,1
+South Florida,AAC,2,Army,0,43,0,0
+South Florida,AAC,3,Delaware State,1,100,1,0
+South Florida,AAC,4,Bowling Green,0,72,0,0
+South Florida,AAC,5,Temple,1,73,0,0
+South Florida,AAC,6,UTSA,0,39,0,0
+South Florida,AAC,7,Kent State,1,93,0,0
+South Florida,AAC,9,UAB,1,91,0,0
+South Florida,AAC,10,East Carolina,0,40,0,0
+South Florida,AAC,11,Memphis,1,52,0,0
+South Florida,AAC,12,Florida Atlantic,0,55,0,0
+South Florida,AAC,13,Tulane,1,65,0,0
+Temple,AAC,1,Rhode Island,1,99,1,0
+Temple,AAC,2,Penn State,1,5,0,0
+Temple,AAC,3,Toledo,0,51,0,0
+Temple,AAC,4,Army,1,41,0,0
+Temple,AAC,5,South Florida,0,27,0,0
+Temple,AAC,6,UConn,1,64,0,0
+Temple,AAC,7,Charlotte,1,97,0,0
+Temple,AAC,9,East Carolina,0,25,0,0
+Temple,AAC,10,Navy,0,18,0,0
+Temple,AAC,11,UAB,1,81,0,0
+Temple,AAC,12,Rice,1,74,0,0
+Temple,AAC,13,Memphis,0,23,0,0
+Tulane,AAC,1,Duke,0,16,0,0
+Tulane,AAC,2,South Alabama,1,78,0,0
+Tulane,AAC,3,Kansas State,0,9,0,0
+Tulane,AAC,4,Southern Miss,1,93,0,0
+Tulane,AAC,6,Army,0,36,0,0
+Tulane,AAC,7,Memphis,1,44,0,0
+Tulane,AAC,8,UTSA,1,46,0,0
+Tulane,AAC,9,Charlotte,0,96,0,0
+Tulane,AAC,10,Tulsa,1,63,0,0
+Tulane,AAC,11,Rice,0,69,0,0
+Tulane,AAC,12,North Texas,1,74,0,0
+Tulane,AAC,13,South Florida,0,35,0,0
+Tulsa,AAC,1,Oklahoma State,1,18,0,0
+Tulsa,AAC,2,Sam Houston,0,88,0,0
+Tulsa,AAC,3,East Texas A&M,1,100,1,0
+Tulsa,AAC,4,Arkansas,0,13,0,0
+Tulsa,AAC,5,North Texas,1,69,0,0
+Tulsa,AAC,6,Navy,0,20,0,0
+Tulsa,AAC,7,Rice,0,63,0,0
+Tulsa,AAC,8,Army,1,44,0,0
+Tulsa,AAC,10,Tulane,0,37,0,0
+Tulsa,AAC,11,Florida Atlantic,1,56,0,0
+Tulsa,AAC,12,Charlotte,1,98,0,0
+Tulsa,AAC,13,UTSA,0,26,0,0
+UAB,AAC,1,Illinois,0,1,0,0
+UAB,AAC,2,ULM,1,74,0,0
+UAB,AAC,3,Louisiana,0,20,0,0
+UAB,AAC,4,Navy,1,11,0,0
+UAB,AAC,5,Samford,1,96,1,0
+UAB,AAC,6,Memphis,0,7,0,0
+UAB,AAC,7,East Carolina,1,16,0,0
+UAB,AAC,9,South Florida,0,9,0,0
+UAB,AAC,10,Charlotte,1,89,0,0
+UAB,AAC,11,Temple,0,19,0,0
+UAB,AAC,12,UTSA,1,15,0,0
+UAB,AAC,13,North Texas,0,26,0,0
+UTSA,AAC,1,UT Rio Grande Valley,1,100,1,0
+UTSA,AAC,2,Texas State,0,56,0,0
+UTSA,AAC,3,Texas,0,2,0,0
+UTSA,AAC,4,Colorado State,1,75,0,0
+UTSA,AAC,5,Rice,0,79,0,0
+UTSA,AAC,6,South Florida,1,61,0,0
+UTSA,AAC,7,Navy,1,50,0,0
+UTSA,AAC,8,Tulane,0,54,0,0
+UTSA,AAC,10,Florida Atlantic,0,59,0,0
+UTSA,AAC,11,North Texas,1,83,0,0
+UTSA,AAC,12,UAB,0,85,0,0
+UTSA,AAC,13,Tulsa,1,74,0,0
+California,ACC,1,UCLA,1,53,0,0
+California,ACC,2,Syracuse,0,56,0,0
+California,ACC,3,Wagner,1,100,1,0
+California,ACC,4,Clemson,1,31,0,0
+California,ACC,5,UNLV,0,45,0,0
+California,ACC,6,Virginia Tech,1,41,0,0
+California,ACC,7,Wake Forest,1,58,0,0
+California,ACC,8,SMU,0,24,0,0
+California,ACC,9,NC State,0,39,0,0
+California,ACC,11,Virginia,0,34,0,0
+California,ACC,12,Stanford,1,73,0,0
+California,ACC,13,Pittsburgh,1,49,0,0
+Clemson,ACC,1,LSU,0,23,0,0
+Clemson,ACC,2,Georgia Southern,1,96,0,0
+Clemson,ACC,3,North Carolina,1,80,0,0
+Clemson,ACC,4,California,0,69,0,0
+Clemson,ACC,5,Miami FL,1,34,0,0
+Clemson,ACC,7,Charleston Southern,1,100,1,0
+Clemson,ACC,8,Virginia Tech,1,67,0,0
+Clemson,ACC,9,Florida State,0,54,0,0
+Clemson,ACC,10,Syracuse,0,79,0,0
+Clemson,ACC,11,Georgia Tech,1,75,0,0
+Clemson,ACC,12,Duke,0,63,0,0
+Clemson,ACC,13,South Carolina,1,59,0,0
+Duke,ACC,1,Tulane,1,84,0,0
+Duke,ACC,2,Illinois,0,33,0,0
+Duke,ACC,3,Stanford,1,77,0,0
+Duke,ACC,4,William & Mary,1,100,1,0
+Duke,ACC,6,Georgia Tech,0,42,0,0
+Duke,ACC,7,North Carolina,1,63,0,0
+Duke,ACC,8,Virginia,0,40,0,0
+Duke,ACC,9,Boston College,1,76,0,0
+Duke,ACC,10,NC State,0,45,0,0
+Duke,ACC,11,Miami FL,0,9,0,0
+Duke,ACC,12,Clemson,1,37,0,0
+Duke,ACC,13,Wake Forest,0,49,0,0
+Florida State,ACC,0,New Mexico State,1,98,0,0
+Florida State,ACC,1,SMU,1,51,0,0
+Florida State,ACC,3,Alabama,0,19,0,0
+Florida State,ACC,4,Central Arkansas,1,100,1,0
+Florida State,ACC,5,Virginia,1,64,0,0
+Florida State,ACC,6,Louisville,0,36,0,0
+Florida State,ACC,7,Miami FL,0,14,0,0
+Florida State,ACC,9,Clemson,1,46,0,0
+Florida State,ACC,10,Boston College,0,72,0,0
+Florida State,ACC,11,Pittsburgh,0,49,0,0
+Florida State,ACC,12,NC State,1,68,0,0
+Florida State,ACC,13,Florida,1,39,0,0
+Georgia Tech,ACC,1,Colorado,1,71,0,0
+Georgia Tech,ACC,2,Tennessee,1,29,0,0
+Georgia Tech,ACC,3,Mercer,1,100,1,0
+Georgia Tech,ACC,4,Stanford,0,66,0,0
+Georgia Tech,ACC,6,Duke,1,58,0,0
+Georgia Tech,ACC,7,Virginia Tech,0,33,0,0
+Georgia Tech,ACC,8,Boston College,1,77,0,0
+Georgia Tech,ACC,9,Pittsburgh,0,41,0,0
+Georgia Tech,ACC,10,Louisville,1,43,0,0
+Georgia Tech,ACC,11,Clemson,0,25,0,0
+Georgia Tech,ACC,12,Wake Forest,1,64,0,0
+Georgia Tech,ACC,13,Georgia,0,5,0,0
+Louisville,ACC,1,Ole Miss,0,29,0,0
+Louisville,ACC,2,Villanova,1,100,1,0
+Louisville,ACC,3,SMU,1,58,0,0
+Louisville,ACC,4,Wake Forest,1,77,0,0
+Louisville,ACC,5,NC State,0,61,0,0
+Louisville,ACC,6,Florida State,1,64,0,0
+Louisville,ACC,7,Syracuse,0,75,0,0
+Louisville,ACC,9,Stanford,1,87,0,0
+Louisville,ACC,10,Georgia Tech,0,57,0,0
+Louisville,ACC,11,North Carolina,0,64,0,0
+Louisville,ACC,12,Pittsburgh,1,70,0,0
+Louisville,ACC,13,Kentucky,0,64,0,0
+Miami FL,ACC,1,Stanford,0,93,0,0
+Miami FL,ACC,2,Florida A&M,1,100,1,0
+Miami FL,ACC,3,Wake Forest,0,87,0,0
+Miami FL,ACC,4,Central Michigan,1,100,0,0
+Miami FL,ACC,5,Clemson,0,66,0,0
+Miami FL,ACC,7,Florida State,1,86,0,0
+Miami FL,ACC,8,Pittsburgh,1,90,0,0
+Miami FL,ACC,9,North Carolina,0,86,0,0
+Miami FL,ACC,10,Notre Dame,0,29,0,0
+Miami FL,ACC,11,Duke,1,91,0,0
+Miami FL,ACC,12,Virginia Tech,1,85,0,0
+Miami FL,ACC,13,Boston College,1,97,0,0
+NC State,ACC,0,Virginia,0,38,0,0
+NC State,ACC,2,Richmond,1,100,1,0
+NC State,ACC,3,Vanderbilt,0,29,0,0
+NC State,ACC,4,Appalachian State,1,93,0,0
+NC State,ACC,5,Louisville,1,39,0,0
+NC State,ACC,6,Wake Forest,1,61,0,0
+NC State,ACC,8,Stanford,0,62,0,0
+NC State,ACC,9,California,1,61,0,0
+NC State,ACC,10,Duke,1,55,0,0
+NC State,ACC,11,Syracuse,1,73,0,0
+NC State,ACC,12,Florida State,0,32,0,0
+NC State,ACC,13,North Carolina,0,46,0,0
+North Carolina,ACC,0,TCU,0,28,0,0
+North Carolina,ACC,2,East Tennessee State,1,100,1,0
+North Carolina,ACC,3,Clemson,0,20,0,0
+North Carolina,ACC,5,Notre Dame,1,7,0,0
+North Carolina,ACC,6,Pittsburgh,0,35,0,0
+North Carolina,ACC,7,Duke,0,37,0,0
+North Carolina,ACC,8,Syracuse,1,70,0,0
+North Carolina,ACC,9,Miami FL,1,14,0,0
+North Carolina,ACC,10,UConn,0,82,0,0
+North Carolina,ACC,11,Louisville,1,36,0,0
+North Carolina,ACC,12,Virginia,0,35,0,0
+North Carolina,ACC,13,NC State,1,54,0,0
+Pittsburgh,ACC,1,Miami OH,1,81,0,0
+Pittsburgh,ACC,2,UCF,1,69,0,0
+Pittsburgh,ACC,3,Syracuse,1,76,0,0
+Pittsburgh,ACC,4,Bucknell,1,100,1,0
+Pittsburgh,ACC,5,Virginia Tech,0,34,0,0
+Pittsburgh,ACC,6,North Carolina,1,65,0,0
+Pittsburgh,ACC,7,Boston College,0,66,0,0
+Pittsburgh,ACC,8,Miami FL,0,10,0,0
+Pittsburgh,ACC,9,Georgia Tech,1,59,0,0
+Pittsburgh,ACC,11,Florida State,1,51,0,0
+Pittsburgh,ACC,12,Louisville,0,30,0,0
+Pittsburgh,ACC,13,California,0,51,0,0
+SMU,ACC,1,Florida State,0,49,0,0
+SMU,ACC,2,UC Davis,1,100,1,0
+SMU,ACC,3,Louisville,0,42,0,0
+SMU,ACC,4,Missouri State,1,99,0,0
+SMU,ACC,5,Boston College,1,87,0,0
+SMU,ACC,7,Virginia,1,69,0,0
+SMU,ACC,8,California,1,76,0,0
+SMU,ACC,9,Syracuse,0,75,0,0
+SMU,ACC,10,Virginia Tech,1,62,0,0
+SMU,ACC,11,Wake Forest,1,77,0,0
+SMU,ACC,12,Notre Dame,0,10,0,0
+SMU,ACC,13,Stanford,0,78,0,0
+Stanford,ACC,0,Hawaii,1,63,0,0
+Stanford,ACC,1,Miami FL,1,7,0,0
+Stanford,ACC,3,Duke,0,23,0,0
+Stanford,ACC,4,Georgia Tech,1,34,0,0
+Stanford,ACC,5,Wake Forest,0,28,0,0
+Stanford,ACC,6,Notre Dame,0,1,0,0
+Stanford,ACC,7,Elon,1,100,1,0
+Stanford,ACC,8,NC State,1,38,0,0
+Stanford,ACC,9,Louisville,0,13,0,0
+Stanford,ACC,11,Virginia Tech,0,15,0,0
+Stanford,ACC,12,California,0,27,0,0
+Stanford,ACC,13,SMU,1,22,0,0
+Virginia,ACC,0,NC State,1,62,0,0
+Virginia,ACC,2,Norfolk State,1,100,1,0
+Virginia,ACC,3,West Virginia,1,73,0,0
+Virginia,ACC,4,Delaware,1,95,0,0
+Virginia,ACC,5,Florida State,0,36,0,0
+Virginia,ACC,6,Syracuse,1,77,0,0
+Virginia,ACC,7,SMU,0,31,0,0
+Virginia,ACC,8,Duke,1,60,0,0
+Virginia,ACC,9,Wake Forest,0,51,0,0
+Virginia,ACC,11,California,1,66,0,0
+Virginia,ACC,12,North Carolina,1,65,0,0
+Virginia,ACC,13,Virginia Tech,0,35,0,0
+Virginia Tech,ACC,1,VMI,1,100,1,0
+Virginia Tech,ACC,2,Old Dominion,1,91,0,0
+Virginia Tech,ACC,3,Maryland,0,59,0,0
+Virginia Tech,ACC,4,Boston College,0,73,0,0
+Virginia Tech,ACC,5,Pittsburgh,1,66,0,0
+Virginia Tech,ACC,6,California,0,59,0,0
+Virginia Tech,ACC,7,Georgia Tech,1,67,0,0
+Virginia Tech,ACC,8,Clemson,0,33,0,0
+Virginia Tech,ACC,10,SMU,0,38,0,0
+Virginia Tech,ACC,11,Stanford,1,85,0,0
+Virginia Tech,ACC,12,Miami FL,0,15,0,0
+Virginia Tech,ACC,13,Virginia,1,65,0,0
+Wake Forest,ACC,1,Akron,1,97,0,0
+Wake Forest,ACC,2,Purdue,0,62,0,0
+Wake Forest,ACC,3,Miami FL,1,13,0,0
+Wake Forest,ACC,4,Louisville,0,23,0,0
+Wake Forest,ACC,5,Stanford,1,72,0,0
+Wake Forest,ACC,6,NC State,0,39,0,0
+Wake Forest,ACC,7,California,0,42,0,0
+Wake Forest,ACC,9,Virginia,1,49,0,0
+Wake Forest,ACC,10,Merrimack,1,100,1,0
+Wake Forest,ACC,11,SMU,0,23,0,0
+Wake Forest,ACC,12,Georgia Tech,0,36,0,0
+Wake Forest,ACC,13,Duke,1,51,0,0
+Arizona,Big 12,1,Northern Arizona,1,100,1,0
+Arizona,Big 12,2,BYU,0,28,0,0
+Arizona,Big 12,3,Northern Illinois,1,99,0,0
+Arizona,Big 12,4,Washington State,0,83,0,0
+Arizona,Big 12,5,Cincinnati,1,73,0,0
+Arizona,Big 12,6,West Virginia,0,70,0,0
+Arizona,Big 12,8,Iowa State,1,81,0,0
+Arizona,Big 12,9,Texas Tech,0,13,0,0
+Arizona,Big 12,10,TCU,1,61,0,0
+Arizona,Big 12,11,Utah,1,52,0,0
+Arizona,Big 12,12,Kansas State,0,42,0,0
+Arizona,Big 12,13,Arizona State,1,68,0,0
+Arizona State,Big 12,1,Morgan State,1,100,1,0
+Arizona State,Big 12,2,Texas A&M,0,11,0,0
+Arizona State,Big 12,3,Kansas,0,51,0,0
+Arizona State,Big 12,5,Baylor,1,63,0,0
+Arizona State,Big 12,6,Hawaii,1,83,0,0
+Arizona State,Big 12,7,Texas Tech,0,8,0,0
+Arizona State,Big 12,8,Kansas State,1,46,0,0
+Arizona State,Big 12,9,BYU,0,20,0,0
+Arizona State,Big 12,10,Colorado,1,72,0,0
+Arizona State,Big 12,11,UCF,0,55,0,0
+Arizona State,Big 12,12,Oklahoma State,1,55,0,0
+Arizona State,Big 12,13,Arizona,0,32,0,0
+Baylor,Big 12,1,Auburn,0,25,0,0
+Baylor,Big 12,2,Prairie View A&M,1,100,1,0
+Baylor,Big 12,3,Louisiana Tech,1,87,0,0
+Baylor,Big 12,4,Colorado,1,67,0,0
+Baylor,Big 12,5,Arizona State,0,37,0,0
+Baylor,Big 12,7,TCU,1,44,0,0
+Baylor,Big 12,8,Kansas,0,45,0,0
+Baylor,Big 12,9,UCF,0,49,0,0
+Baylor,Big 12,10,Iowa State,1,67,0,0
+Baylor,Big 12,11,BYU,0,16,0,0
+Baylor,Big 12,12,Texas Tech,1,12,0,0
+Baylor,Big 12,13,Houston,0,32,0,0
+BYU,Big 12,1,Utah Tech,1,100,1,0
+BYU,Big 12,2,Arizona,1,72,0,0
+BYU,Big 12,3,Colorado State,0,94,0,0
+BYU,Big 12,5,TCU,0,61,0,0
+BYU,Big 12,6,Iowa State,1,90,0,0
+BYU,Big 12,7,Notre Dame,1,28,0,0
+BYU,Big 12,8,UCF,0,79,0,0
+BYU,Big 12,9,Arizona State,1,80,0,0
+BYU,Big 12,10,Utah,0,53,0,0
+BYU,Big 12,11,Baylor,1,84,0,0
+BYU,Big 12,12,Kansas,0,75,0,0
+BYU,Big 12,13,Cincinnati,1,84,0,0
+Cincinnati,Big 12,1,Boston College,1,74,0,0
+Cincinnati,Big 12,2,Western Carolina,1,100,1,0
+Cincinnati,Big 12,3,Miami OH,1,77,0,0
+Cincinnati,Big 12,4,Kansas State,1,40,0,0
+Cincinnati,Big 12,5,Arizona,0,27,0,0
+Cincinnati,Big 12,7,West Virginia,0,54,0,0
+Cincinnati,Big 12,8,Texas Tech,1,12,0,0
+Cincinnati,Big 12,9,Utah,1,36,0,0
+Cincinnati,Big 12,10,Houston,0,32,0,0
+Cincinnati,Big 12,11,Iowa State,0,53,0,0
+Cincinnati,Big 12,12,Colorado,1,67,0,0
+Cincinnati,Big 12,13,BYU,0,16,0,0
+Colorado,Big 12,1,Georgia Tech,0,29,0,0
+Colorado,Big 12,2,Weber State,1,100,1,0
+Colorado,Big 12,3,Northwestern,0,32,0,0
+Colorado,Big 12,4,Baylor,0,33,0,0
+Colorado,Big 12,5,Texas Tech,1,7,0,0
+Colorado,Big 12,7,Utah,1,26,0,0
+Colorado,Big 12,8,Oklahoma State,0,26,0,0
+Colorado,Big 12,9,Kansas State,1,30,0,0
+Colorado,Big 12,10,Arizona State,0,28,0,0
+Colorado,Big 12,11,Houston,1,36,0,0
+Colorado,Big 12,12,Cincinnati,0,33,0,0
+Colorado,Big 12,13,UCF,1,53,0,0
+Houston,Big 12,1,Oregon State,1,90,0,0
+Houston,Big 12,2,Southern,1,100,1,0
+Houston,Big 12,3,Texas Tech,0,10,0,0
+Houston,Big 12,4,Georgia Southern,0,86,0,0
+Houston,Big 12,5,UCF,1,73,0,0
+Houston,Big 12,6,Kansas State,0,36,0,0
+Houston,Big 12,7,Oklahoma State,1,61,0,0
+Houston,Big 12,8,Utah,0,32,0,0
+Houston,Big 12,10,Cincinnati,1,68,0,0
+Houston,Big 12,11,Colorado,0,64,0,0
+Houston,Big 12,12,West Virginia,0,64,0,0
+Houston,Big 12,13,Baylor,1,68,0,0
+Iowa State,Big 12,1,Southeast Missouri State,1,100,1,0
+Iowa State,Big 12,2,Iowa,0,13,0,0
+Iowa State,Big 12,3,Bowling Green,1,89,0,0
+Iowa State,Big 12,4,Utah,1,27,0,0
+Iowa State,Big 12,5,West Virginia,1,58,0,0
+Iowa State,Big 12,6,BYU,0,10,0,0
+Iowa State,Big 12,8,Arizona,0,19,0,0
+Iowa State,Big 12,9,Oklahoma State,1,39,0,0
+Iowa State,Big 12,10,Baylor,0,33,0,0
+Iowa State,Big 12,11,Cincinnati,1,47,0,0
+Iowa State,Big 12,12,UCF,0,39,0,0
+Iowa State,Big 12,13,Kansas State,1,30,0,0
+Kansas,Big 12,1,Long Island University,1,100,1,0
+Kansas,Big 12,2,Missouri,1,26,0,0
+Kansas,Big 12,3,Arizona State,1,49,0,0
+Kansas,Big 12,5,Middle Tennessee,1,99,0,0
+Kansas,Big 12,6,Utah,0,21,0,0
+Kansas,Big 12,7,Kansas State,0,25,0,0
+Kansas,Big 12,8,Baylor,1,55,0,0
+Kansas,Big 12,9,TCU,0,28,0,0
+Kansas,Big 12,10,UCF,1,61,0,0
+Kansas,Big 12,11,West Virginia,0,51,0,0
+Kansas,Big 12,12,BYU,1,25,0,0
+Kansas,Big 12,13,Oklahoma State,0,33,0,0
+Kansas State,Big 12,1,Nicholls,1,100,1,0
+Kansas State,Big 12,2,Washington State,1,91,0,0
+Kansas State,Big 12,3,Tulane,1,91,0,0
+Kansas State,Big 12,4,Cincinnati,0,60,0,0
+Kansas State,Big 12,6,Houston,1,64,0,0
+Kansas State,Big 12,7,Kansas,1,75,0,0
+Kansas State,Big 12,8,Arizona State,0,54,0,0
+Kansas State,Big 12,9,Colorado,0,70,0,0
+Kansas State,Big 12,10,Oklahoma State,1,67,0,0
+Kansas State,Big 12,11,TCU,0,46,0,0
+Kansas State,Big 12,12,Arizona,1,58,0,0
+Kansas State,Big 12,13,Iowa State,0,70,0,0
+TCU,Big 12,0,North Carolina,1,72,0,0
+TCU,Big 12,2,Grambling,1,100,1,0
+TCU,Big 12,3,Arkansas State,1,93,0,0
+TCU,Big 12,4,UCF,0,62,0,0
+TCU,Big 12,5,BYU,1,39,0,0
+TCU,Big 12,7,Baylor,0,56,0,0
+TCU,Big 12,8,West Virginia,1,79,0,0
+TCU,Big 12,9,Kansas,1,72,0,0
+TCU,Big 12,10,Arizona,0,39,0,0
+TCU,Big 12,11,Kansas State,1,54,0,0
+TCU,Big 12,12,Utah,1,49,0,0
+TCU,Big 12,13,Texas Tech,0,11,0,0
+Texas Tech,Big 12,1,Abilene Christian,1,100,1,0
+Texas Tech,Big 12,2,Oregon State,0,98,0,0
+Texas Tech,Big 12,3,Houston,1,90,0,0
+Texas Tech,Big 12,4,Sam Houston,1,100,0,0
+Texas Tech,Big 12,5,Colorado,0,93,0,0
+Texas Tech,Big 12,7,Arizona State,1,92,0,0
+Texas Tech,Big 12,8,Cincinnati,0,88,0,0
+Texas Tech,Big 12,9,Arizona,1,87,0,0
+Texas Tech,Big 12,10,West Virginia,1,97,0,0
+Texas Tech,Big 12,11,Oklahoma State,0,84,0,0
+Texas Tech,Big 12,12,Baylor,0,88,0,0
+Texas Tech,Big 12,13,TCU,1,89,0,0
+UCF,Big 12,1,Bethune-Cookman,1,100,1,0
+UCF,Big 12,2,Pittsburgh,0,31,0,0
+UCF,Big 12,3,Georgia State,1,99,0,0
+UCF,Big 12,4,TCU,1,38,0,0
+UCF,Big 12,5,Houston,0,27,0,0
+UCF,Big 12,6,Oklahoma State,0,29,0,0
+UCF,Big 12,8,BYU,1,21,0,0
+UCF,Big 12,9,Baylor,1,51,0,0
+UCF,Big 12,10,Kansas,0,39,0,0
+UCF,Big 12,11,Arizona State,1,45,0,0
+UCF,Big 12,12,Iowa State,1,61,0,0
+UCF,Big 12,13,Colorado,0,47,0,0
+Utah,Big 12,1,Idaho,1,100,1,0
+Utah,Big 12,2,Arkansas,1,76,0,0
+Utah,Big 12,3,Utah State,1,95,0,0
+Utah,Big 12,4,Iowa State,0,73,0,0
+Utah,Big 12,6,Kansas,1,79,0,0
+Utah,Big 12,7,Colorado,0,74,0,0
+Utah,Big 12,8,Houston,1,68,0,0
+Utah,Big 12,9,Cincinnati,0,64,0,0
+Utah,Big 12,10,BYU,1,47,0,0
+Utah,Big 12,11,Arizona,0,48,0,0
+Utah,Big 12,12,TCU,0,51,0,0
+Utah,Big 12,13,West Virginia,1,84,0,0
+West Virginia,Big 12,1,Coastal Carolina,1,90,0,0
+West Virginia,Big 12,2,UT Martin,1,100,1,0
+West Virginia,Big 12,3,Virginia,0,27,0,0
+West Virginia,Big 12,4,Oklahoma State,1,39,0,0
+West Virginia,Big 12,5,Iowa State,0,42,0,0
+West Virginia,Big 12,6,Arizona,1,30,0,0
+West Virginia,Big 12,7,Cincinnati,1,46,0,0
+West Virginia,Big 12,8,TCU,0,21,0,0
+West Virginia,Big 12,10,Texas Tech,0,3,0,0
+West Virginia,Big 12,11,Kansas,1,49,0,0
+West Virginia,Big 12,12,Houston,1,36,0,0
+West Virginia,Big 12,13,Utah,0,16,0,0
+Illinois,Big Ten,1,UAB,1,99,0,0
+Illinois,Big Ten,2,Duke,1,67,0,0
+Illinois,Big Ten,3,Southern Illinois,1,100,1,0
+Illinois,Big Ten,4,Ohio State,0,3,0,0
+Illinois,Big Ten,5,Purdue,1,86,0,0
+Illinois,Big Ten,6,Michigan State,0,68,0,0
+Illinois,Big Ten,8,Oregon,1,11,0,0
+Illinois,Big Ten,9,Maryland,0,59,0,0
+Illinois,Big Ten,10,Nebraska,1,62,0,0
+Illinois,Big Ten,11,UCLA,0,55,0,0
+Illinois,Big Ten,12,Iowa,1,45,0,0
+Illinois,Big Ten,13,Northwestern,0,56,0,0
+Indiana,Big Ten,1,North Texas,1,100,0,0
+Indiana,Big Ten,2,Howard,1,100,1,0
+Indiana,Big Ten,3,Western Kentucky,1,99,0,0
+Indiana,Big Ten,4,Northwestern,1,95,0,0
+Indiana,Big Ten,5,Rutgers,0,93,0,0
+Indiana,Big Ten,6,Nebraska,0,86,0,0
+Indiana,Big Ten,7,Ohio State,1,36,0,0
+Indiana,Big Ten,8,Michigan,0,67,0,0
+Indiana,Big Ten,9,Minnesota,1,95,0,0
+Indiana,Big Ten,11,USC,1,78,0,0
+Indiana,Big Ten,12,Washington,0,71,0,0
+Indiana,Big Ten,13,Purdue,1,99,0,0
+Iowa,Big Ten,1,Northern Illinois,1,99,0,0
+Iowa,Big Ten,2,Iowa State,1,87,0,0
+Iowa,Big Ten,3,Northern Iowa,1,100,1,0
+Iowa,Big Ten,4,Michigan,0,36,0,0
+Iowa,Big Ten,5,Ohio State,1,12,0,0
+Iowa,Big Ten,6,Washington,0,40,0,0
+Iowa,Big Ten,8,Minnesota,0,67,0,0
+Iowa,Big Ten,9,Wisconsin,1,86,0,0
+Iowa,Big Ten,10,Northwestern,0,68,0,0
+Iowa,Big Ten,11,Purdue,1,92,0,0
+Iowa,Big Ten,12,Illinois,0,55,0,0
+Iowa,Big Ten,13,Nebraska,1,73,0,0
+Maryland,Big Ten,1,Hampton,1,100,1,0
+Maryland,Big Ten,2,UConn,0,82,0,0
+Maryland,Big Ten,3,Virginia Tech,1,41,0,0
+Maryland,Big Ten,4,UCLA,1,54,0,0
+Maryland,Big Ten,5,Nebraska,0,32,0,0
+Maryland,Big Ten,6,Ohio State,0,1,0,0
+Maryland,Big Ten,7,Rutgers,1,63,0,0
+Maryland,Big Ten,9,Illinois,1,41,0,0
+Maryland,Big Ten,10,Purdue,0,62,0,0
+Maryland,Big Ten,11,Wisconsin,1,63,0,0
+Maryland,Big Ten,12,USC,0,13,0,0
+Maryland,Big Ten,13,Penn State,1,24,0,0
+Michigan,Big Ten,1,Western Michigan,1,97,0,0
+Michigan,Big Ten,2,Oklahoma,1,54,0,0
+Michigan,Big Ten,3,UTEP,1,100,0,0
+Michigan,Big Ten,4,Iowa,1,64,0,0
+Michigan,Big Ten,5,Minnesota,0,73,0,0
+Michigan,Big Ten,7,Penn State,1,59,0,0
+Michigan,Big Ten,8,Indiana,1,33,0,0
+Michigan,Big Ten,9,Rutgers,0,81,0,0
+Michigan,Big Ten,10,Michigan State,1,91,0,0
+Michigan,Big Ten,11,Oregon,0,14,0,0
+Michigan,Big Ten,12,UCLA,1,84,0,0
+Michigan,Big Ten,13,Ohio State,0,9,0,0
+Minnesota,Big Ten,1,Eastern Illinois,1,100,1,0
+Minnesota,Big Ten,2,Mississippi State,1,61,0,0
+Minnesota,Big Ten,3,Akron,1,98,0,0
+Minnesota,Big Ten,4,Washington,0,19,0,0
+Minnesota,Big Ten,5,Michigan,1,27,0,0
+Minnesota,Big Ten,6,Purdue,0,66,0,0
+Minnesota,Big Ten,8,Iowa,1,33,0,0
+Minnesota,Big Ten,9,Indiana,0,5,0,0
+Minnesota,Big Ten,10,UCLA,1,58,0,0
+Minnesota,Big Ten,11,Penn State,0,17,0,0
+Minnesota,Big Ten,12,Northwestern,1,59,0,0
+Minnesota,Big Ten,13,Wisconsin,0,53,0,0
+Nebraska,Big Ten,1,Ohio,1,96,0,0
+Nebraska,Big Ten,2,Bowling Green,1,96,0,0
+Nebraska,Big Ten,3,North Dakota,1,100,1,0
+Nebraska,Big Ten,4,Michigan State,0,64,0,0
+Nebraska,Big Ten,5,Maryland,1,68,0,0
+Nebraska,Big Ten,6,Indiana,1,14,0,0
+Nebraska,Big Ten,7,Oregon,0,4,0,0
+Nebraska,Big Ten,9,Washington,1,38,0,0
+Nebraska,Big Ten,10,Illinois,0,38,0,0
+Nebraska,Big Ten,11,Rutgers,0,60,0,0
+Nebraska,Big Ten,12,Ohio State,1,5,0,0
+Nebraska,Big Ten,13,Iowa,0,27,0,0
+Northwestern,Big Ten,1,South Dakota State,1,100,1,0
+Northwestern,Big Ten,3,Colorado,1,68,0,0
+Northwestern,Big Ten,4,Indiana,0,5,0,0
+Northwestern,Big Ten,5,Penn State,1,26,0,0
+Northwestern,Big Ten,6,Ball State,1,99,0,0
+Northwestern,Big Ten,7,Michigan State,0,55,0,0
+Northwestern,Big Ten,8,Rutgers,1,65,0,0
+Northwestern,Big Ten,9,Oregon,0,3,0,0
+Northwestern,Big Ten,10,Iowa,1,32,0,0
+Northwestern,Big Ten,11,Ohio State,0,1,0,0
+Northwestern,Big Ten,12,Minnesota,0,41,0,0
+Northwestern,Big Ten,13,Illinois,1,44,0,0
+Ohio State,Big Ten,1,Ball State,1,100,0,0
+Ohio State,Big Ten,2,Texas,0,66,0,0
+Ohio State,Big Ten,3,Kent State,1,100,0,0
+Ohio State,Big Ten,4,Illinois,1,97,0,0
+Ohio State,Big Ten,5,Iowa,0,88,0,0
+Ohio State,Big Ten,6,Maryland,1,99,0,0
+Ohio State,Big Ten,7,Indiana,0,64,0,0
+Ohio State,Big Ten,9,USC,0,82,0,0
+Ohio State,Big Ten,10,Oregon,1,67,0,0
+Ohio State,Big Ten,11,Northwestern,1,99,0,0
+Ohio State,Big Ten,12,Nebraska,0,95,0,0
+Ohio State,Big Ten,13,Michigan,1,91,0,0
+Oregon,Big Ten,1,Boise State,1,96,0,0
+Oregon,Big Ten,2,Oklahoma State,0,92,0,0
+Oregon,Big Ten,3,Portland State,1,100,1,0
+Oregon,Big Ten,4,USC,0,75,0,0
+Oregon,Big Ten,6,UCLA,1,97,0,0
+Oregon,Big Ten,7,Nebraska,1,96,0,0
+Oregon,Big Ten,8,Illinois,0,89,0,0
+Oregon,Big Ten,9,Northwestern,1,97,0,0
+Oregon,Big Ten,10,Ohio State,0,33,0,0
+Oregon,Big Ten,11,Michigan,1,86,0,0
+Oregon,Big Ten,12,Michigan State,0,97,0,0
+Oregon,Big Ten,13,Washington,1,89,0,0
+Penn State,Big Ten,1,Marshall,1,97,0,0
+Penn State,Big Ten,2,Temple,0,95,0,0
+Penn State,Big Ten,3,Buffalo,1,99,0,0
+Penn State,Big Ten,4,Wisconsin,1,89,0,0
+Penn State,Big Ten,5,Northwestern,0,74,0,0
+Penn State,Big Ten,6,USC,1,54,0,0
+Penn State,Big Ten,7,Michigan,0,41,0,0
+Penn State,Big Ten,9,Purdue,1,94,0,0
+Penn State,Big Ten,10,Washington,0,46,0,0
+Penn State,Big Ten,11,Minnesota,1,83,0,0
+Penn State,Big Ten,12,Rutgers,1,89,0,0
+Penn State,Big Ten,13,Maryland,0,76,0,0
+Rutgers,Big Ten,1,UMass,1,100,0,0
+Rutgers,Big Ten,2,Boston College,0,52,0,0
+Rutgers,Big Ten,3,USC,1,18,0,0
+Rutgers,Big Ten,4,Howard,1,100,1,0
+Rutgers,Big Ten,5,Indiana,1,7,0,0
+Rutgers,Big Ten,7,Maryland,0,37,0,0
+Rutgers,Big Ten,8,Northwestern,0,35,0,0
+Rutgers,Big Ten,9,Michigan,1,19,0,0
+Rutgers,Big Ten,10,Wisconsin,0,43,0,0
+Rutgers,Big Ten,11,Nebraska,1,40,0,0
+Rutgers,Big Ten,12,Penn State,0,11,0,0
+Rutgers,Big Ten,13,Michigan State,1,61,0,0
+UCLA,Big Ten,1,California,0,47,0,0
+UCLA,Big Ten,2,San Diego State,1,75,0,0
+UCLA,Big Ten,3,Purdue,1,78,0,0
+UCLA,Big Ten,4,Maryland,0,46,0,0
+UCLA,Big Ten,6,Oregon,0,3,0,0
+UCLA,Big Ten,7,Wisconsin,1,67,0,0
+UCLA,Big Ten,8,Michigan State,1,70,0,0
+UCLA,Big Ten,9,Nevada,1,93,0,0
+UCLA,Big Ten,10,Minnesota,0,42,0,0
+UCLA,Big Ten,11,Illinois,1,45,0,0
+UCLA,Big Ten,12,Michigan,0,16,0,0
+UCLA,Big Ten,13,USC,1,25,0,0
+USC,Big Ten,0,San Jose State,1,100,0,0
+USC,Big Ten,1,Fresno State,1,95,0,0
+USC,Big Ten,2,Louisiana,1,98,0,0
+USC,Big Ten,3,Rutgers,0,82,0,0
+USC,Big Ten,4,Oregon,1,25,0,0
+USC,Big Ten,5,Washington,1,64,0,0
+USC,Big Ten,6,Penn State,0,46,0,0
+USC,Big Ten,8,Wisconsin,0,82,0,0
+USC,Big Ten,9,Ohio State,1,18,0,0
+USC,Big Ten,11,Indiana,0,22,0,0
+USC,Big Ten,12,Maryland,1,87,0,0
+USC,Big Ten,13,UCLA,0,75,0,0
+Washington,Big Ten,1,Washington State,1,95,0,0
+Washington,Big Ten,2,Utah State,1,97,0,0
+Washington,Big Ten,3,Eastern Washington,1,100,1,0
+Washington,Big Ten,4,Minnesota,1,81,0,0
+Washington,Big Ten,5,USC,0,36,0,0
+Washington,Big Ten,6,Iowa,1,60,0,0
+Washington,Big Ten,7,Purdue,0,87,0,0
+Washington,Big Ten,9,Nebraska,0,62,0,0
+Washington,Big Ten,10,Penn State,1,54,0,0
+Washington,Big Ten,11,Michigan State,0,80,0,0
+Washington,Big Ten,12,Indiana,1,29,0,0
+Washington,Big Ten,13,Oregon,0,11,0,0
+Wisconsin,Big Ten,1,Notre Dame,0,2,0,0
+Wisconsin,Big Ten,2,Western Illinois,1,100,1,0
+Wisconsin,Big Ten,3,Eastern Michigan,1,92,0,0
+Wisconsin,Big Ten,4,Penn State,0,11,0,0
+Wisconsin,Big Ten,5,Michigan State,1,61,0,0
+Wisconsin,Big Ten,7,UCLA,0,33,0,0
+Wisconsin,Big Ten,8,USC,1,18,0,0
+Wisconsin,Big Ten,9,Iowa,0,14,0,0
+Wisconsin,Big Ten,10,Rutgers,1,57,0,0
+Wisconsin,Big Ten,11,Maryland,0,37,0,0
+Wisconsin,Big Ten,12,Purdue,0,56,0,0
+Wisconsin,Big Ten,13,Minnesota,1,47,0,0
+Delaware,CUSA,1,Merrimack,1,99,1,0
+Delaware,CUSA,2,Vanderbilt,0,3,0,0
+Delaware,CUSA,3,Coastal Carolina,1,60,0,0
+Delaware,CUSA,4,Virginia,0,5,0,0
+Delaware,CUSA,5,Liberty,1,38,0,0
+Delaware,CUSA,7,Middle Tennessee,0,78,0,0
+Delaware,CUSA,8,Missouri State,1,73,0,0
+Delaware,CUSA,9,Western Kentucky,0,22,0,0
+Delaware,CUSA,10,Kennesaw State,0,32,0,0
+Delaware,CUSA,11,FIU,1,59,0,0
+Delaware,CUSA,12,New Mexico State,0,53,0,0
+Delaware,CUSA,13,Jacksonville State,1,42,0,0
+FIU,CUSA,1,South Florida,0,20,0,1
+FIU,CUSA,2,Buffalo,1,52,0,0
+FIU,CUSA,3,Florida Atlantic,0,25,0,0
+FIU,CUSA,4,Long Island University,1,98,1,0
+FIU,CUSA,6,New Mexico State,1,65,0,0
+FIU,CUSA,7,Jacksonville State,0,26,0,0
+FIU,CUSA,8,Middle Tennessee,1,86,0,0
+FIU,CUSA,9,Liberty,0,23,0,0
+FIU,CUSA,10,Missouri State,1,71,0,0
+FIU,CUSA,11,Delaware,0,41,0,0
+FIU,CUSA,12,Kennesaw State,0,30,0,0
+FIU,CUSA,13,Sam Houston,1,87,0,0
+Jacksonville State,CUSA,0,North Dakota State,0,26,0,0
+Jacksonville State,CUSA,1,Eastern Kentucky,1,100,1,0
+Jacksonville State,CUSA,2,Ohio,0,60,0,0
+Jacksonville State,CUSA,3,Georgia Southern,1,61,0,0
+Jacksonville State,CUSA,4,Middle Tennessee,1,94,0,0
+Jacksonville State,CUSA,6,Kennesaw State,0,47,0,0
+Jacksonville State,CUSA,7,FIU,1,74,0,0
+Jacksonville State,CUSA,9,New Mexico State,0,68,0,0
+Jacksonville State,CUSA,10,Sam Houston,1,94,0,0
+Jacksonville State,CUSA,11,Western Kentucky,0,36,0,0
+Jacksonville State,CUSA,12,Missouri State,1,84,0,0
+Jacksonville State,CUSA,13,Delaware,0,58,0,0
+Kennesaw State,CUSA,1,West Georgia,1,99,1,0
+Kennesaw State,CUSA,2,Georgia State,1,91,0,0
+Kennesaw State,CUSA,3,Tennessee,0,2,0,0
+Kennesaw State,CUSA,4,Arkansas State,0,40,0,0
+Kennesaw State,CUSA,6,Jacksonville State,1,53,0,0
+Kennesaw State,CUSA,7,Missouri State,0,70,0,0
+Kennesaw State,CUSA,8,Liberty,1,49,0,0
+Kennesaw State,CUSA,9,Middle Tennessee,0,85,0,0
+Kennesaw State,CUSA,10,Delaware,1,68,0,0
+Kennesaw State,CUSA,11,Sam Houston,0,86,0,0
+Kennesaw State,CUSA,12,FIU,1,70,0,0
+Kennesaw State,CUSA,13,Western Kentucky,0,32,0,0
+Liberty,CUSA,1,James Madison,0,31,0,0
+Liberty,CUSA,2,Gardner-Webb,1,100,1,0
+Liberty,CUSA,3,Ball State,1,94,0,0
+Liberty,CUSA,4,Coastal Carolina,0,64,0,0
+Liberty,CUSA,5,Delaware,0,62,0,0
+Liberty,CUSA,6,Sam Houston,1,95,0,0
+Liberty,CUSA,8,Kennesaw State,0,51,0,0
+Liberty,CUSA,9,FIU,1,77,0,0
+Liberty,CUSA,10,New Mexico State,0,71,0,0
+Liberty,CUSA,11,Middle Tennessee,1,95,0,0
+Liberty,CUSA,12,Western Kentucky,1,54,0,0
+Liberty,CUSA,13,Missouri State,0,77,0,0
+Middle Tennessee,CUSA,1,Murray State,1,89,1,0
+Middle Tennessee,CUSA,2,Marshall,0,5,0,0
+Middle Tennessee,CUSA,3,Nevada,1,20,0,0
+Middle Tennessee,CUSA,4,Jacksonville State,0,6,0,0
+Middle Tennessee,CUSA,5,Kansas,0,1,0,0
+Middle Tennessee,CUSA,7,Delaware,1,22,0,0
+Middle Tennessee,CUSA,8,FIU,0,14,0,0
+Middle Tennessee,CUSA,9,Kennesaw State,1,15,0,0
+Middle Tennessee,CUSA,10,Western Kentucky,1,9,0,0
+Middle Tennessee,CUSA,11,Liberty,0,5,0,0
+Middle Tennessee,CUSA,12,Sam Houston,0,44,0,0
+Middle Tennessee,CUSA,13,New Mexico State,1,30,0,0
+Missouri State,CUSA,1,Texas A&M,0,0,0,0
+Missouri State,CUSA,2,Lindenwood,1,96,1,0
+Missouri State,CUSA,3,Marshall,1,23,0,0
+Missouri State,CUSA,4,SMU,0,1,0,0
+Missouri State,CUSA,6,Western Kentucky,0,12,0,0
+Missouri State,CUSA,7,Kennesaw State,1,30,0,0
+Missouri State,CUSA,8,Delaware,0,27,0,0
+Missouri State,CUSA,9,Sam Houston,1,77,0,0
+Missouri State,CUSA,10,FIU,0,29,0,0
+Missouri State,CUSA,11,New Mexico State,1,51,0,0
+Missouri State,CUSA,12,Jacksonville State,0,16,0,0
+Missouri State,CUSA,13,Liberty,1,23,0,0
+New Mexico State,CUSA,0,Florida State,0,2,0,0
+New Mexico State,CUSA,1,Mercyhurst,1,97,1,0
+New Mexico State,CUSA,2,Hawaii,0,13,0,0
+New Mexico State,CUSA,4,New Mexico,1,16,0,0
+New Mexico State,CUSA,5,Western Kentucky,1,26,0,0
+New Mexico State,CUSA,6,FIU,0,35,0,0
+New Mexico State,CUSA,8,Sam Houston,0,71,0,0
+New Mexico State,CUSA,9,Jacksonville State,1,32,0,0
+New Mexico State,CUSA,10,Liberty,1,29,0,0
+New Mexico State,CUSA,11,Missouri State,0,49,0,0
+New Mexico State,CUSA,12,Delaware,1,47,0,0
+New Mexico State,CUSA,13,Middle Tennessee,0,70,0,0
+Notre Dame,CUSA,1,Wisconsin,1,98,0,0
+Notre Dame,CUSA,2,Rice,1,100,0,0
+Notre Dame,CUSA,3,Michigan State,1,98,0,0
+Notre Dame,CUSA,4,Purdue,0,97,0,0
+Notre Dame,CUSA,5,North Carolina,0,93,0,0
+Notre Dame,CUSA,6,Stanford,1,99,0,0
+Notre Dame,CUSA,7,BYU,0,72,0,0
+Notre Dame,CUSA,9,Navy,0,95,0,0
+Notre Dame,CUSA,10,Miami FL,1,71,0,0
+Notre Dame,CUSA,11,Boston College,1,99,0,0
+Notre Dame,CUSA,12,SMU,1,90,0,0
+Notre Dame,CUSA,13,Syracuse,0,96,0,0
+Sam Houston,CUSA,1,Troy,0,5,0,0
+Sam Houston,CUSA,2,Tulsa,1,12,0,0
+Sam Houston,CUSA,3,Nicholls,1,88,1,0
+Sam Houston,CUSA,4,Texas Tech,0,0,0,0
+Sam Houston,CUSA,6,Liberty,0,5,0,0
+Sam Houston,CUSA,7,Western Kentucky,1,9,0,0
+Sam Houston,CUSA,8,New Mexico State,1,29,0,0
+Sam Houston,CUSA,9,Missouri State,0,23,0,0
+Sam Houston,CUSA,10,Jacksonville State,0,6,0,0
+Sam Houston,CUSA,11,Kennesaw State,1,14,0,0
+Sam Houston,CUSA,12,Middle Tennessee,1,56,0,0
+Sam Houston,CUSA,13,FIU,0,13,0,0
+UConn,CUSA,1,Lafayette,1,99,1,0
+UConn,CUSA,2,Maryland,1,18,0,0
+UConn,CUSA,3,Southern Miss,0,76,0,0
+UConn,CUSA,4,Miami OH,0,21,0,0
+UConn,CUSA,5,Syracuse,1,28,0,0
+UConn,CUSA,6,Temple,0,36,0,0
+UConn,CUSA,8,UMass,1,95,0,0
+UConn,CUSA,9,Air Force,0,20,0,0
+UConn,CUSA,10,North Carolina,1,18,0,0
+UConn,CUSA,11,James Madison,1,31,0,0
+UConn,CUSA,12,Old Dominion,1,41,0,0
+UConn,CUSA,13,Wyoming,0,38,0,0
+Western Kentucky,CUSA,1,Nevada,0,63,0,0
+Western Kentucky,CUSA,2,Georgia,0,1,0,0
+Western Kentucky,CUSA,3,Indiana,0,1,0,0
+Western Kentucky,CUSA,4,Mercyhurst,1,100,1,0
+Western Kentucky,CUSA,5,New Mexico State,0,74,0,0
+Western Kentucky,CUSA,6,Missouri State,1,88,0,0
+Western Kentucky,CUSA,7,Sam Houston,0,91,0,0
+Western Kentucky,CUSA,9,Delaware,1,78,0,0
+Western Kentucky,CUSA,10,Middle Tennessee,0,91,0,0
+Western Kentucky,CUSA,11,Jacksonville State,1,64,0,0
+Western Kentucky,CUSA,12,Liberty,0,46,0,0
+Western Kentucky,CUSA,13,Kennesaw State,1,68,0,0
+Akron,MAC,1,Wake Forest,0,3,0,0
+Akron,MAC,2,Robert Morris,1,96,1,0
+Akron,MAC,3,Minnesota,0,2,0,0
+Akron,MAC,4,UNLV,1,7,0,0
+Akron,MAC,5,Central Michigan,0,24,0,0
+Akron,MAC,6,Eastern Michigan,1,44,0,0
+Akron,MAC,7,Miami OH,0,8,0,0
+Akron,MAC,8,Kent State,0,44,0,0
+Akron,MAC,10,Ohio,1,40,0,0
+Akron,MAC,11,Western Michigan,1,23,0,0
+Akron,MAC,12,UMass,0,75,0,0
+Akron,MAC,13,Buffalo,1,35,0,0
+Ball State,MAC,1,Ohio State,0,0,0,0
+Ball State,MAC,2,Stony Brook,1,90,1,0
+Ball State,MAC,3,Liberty,0,6,0,0
+Ball State,MAC,4,Kent State,0,29,0,0
+Ball State,MAC,5,Toledo,1,20,0,0
+Ball State,MAC,6,Northwestern,0,1,0,0
+Ball State,MAC,7,Bowling Green,0,14,0,0
+Ball State,MAC,8,Sacramento State,1,50,0,0
+Ball State,MAC,10,UMass,0,59,0,0
+Ball State,MAC,11,Buffalo,1,21,0,0
+Ball State,MAC,12,Ohio,0,15,0,0
+Ball State,MAC,13,Central Michigan,1,22,0,0
+Bowling Green,MAC,1,Tarleton State,1,98,1,0
+Bowling Green,MAC,2,Nebraska,0,4,0,0
+Bowling Green,MAC,3,Iowa State,0,11,0,0
+Bowling Green,MAC,4,South Florida,1,28,0,0
+Bowling Green,MAC,5,Miami OH,0,17,0,0
+Bowling Green,MAC,6,Sacramento State,1,81,0,0
+Bowling Green,MAC,7,Ball State,1,86,0,0
+Bowling Green,MAC,8,Buffalo,0,39,0,0
+Bowling Green,MAC,9,Western Michigan,0,26,0,0
+Bowling Green,MAC,11,Kent State,1,75,0,0
+Bowling Green,MAC,12,Toledo,0,38,0,0
+Bowling Green,MAC,13,UMass,1,93,0,0
+Buffalo,MAC,1,UAlbany,1,99,1,0
+Buffalo,MAC,2,FIU,0,48,0,0
+Buffalo,MAC,3,Penn State,0,1,0,0
+Buffalo,MAC,4,Robert Morris,1,99,1,0
+Buffalo,MAC,5,Western Michigan,1,44,0,0
+Buffalo,MAC,6,Toledo,0,41,0,0
+Buffalo,MAC,7,UMass,1,94,0,0
+Buffalo,MAC,8,Bowling Green,1,61,0,0
+Buffalo,MAC,10,Miami OH,0,20,0,0
+Buffalo,MAC,11,Ball State,0,79,0,0
+Buffalo,MAC,12,Central Michigan,1,59,0,0
+Buffalo,MAC,13,Akron,0,65,0,0
+Central Michigan,MAC,1,New Mexico,0,14,0,0
+Central Michigan,MAC,2,Colgate,1,99,1,0
+Central Michigan,MAC,3,Wyoming,1,49,0,0
+Central Michigan,MAC,4,Miami FL,0,0,0,0
+Central Michigan,MAC,5,Akron,1,76,0,0
+Central Michigan,MAC,6,Ohio,0,46,0,0
+Central Michigan,MAC,7,Western Michigan,1,42,0,0
+Central Michigan,MAC,8,Miami OH,1,30,0,0
+Central Michigan,MAC,10,Eastern Michigan,0,50,0,0
+Central Michigan,MAC,11,Sacramento State,1,83,0,0
+Central Michigan,MAC,12,Buffalo,0,41,0,0
+Central Michigan,MAC,13,Ball State,0,78,0,0
+Eastern Michigan,MAC,0,Sacramento State,1,78,0,0
+Eastern Michigan,MAC,1,San Jose State,1,59,0,0
+Eastern Michigan,MAC,2,Michigan State,0,9,0,0
+Eastern Michigan,MAC,3,Wisconsin,0,8,0,0
+Eastern Michigan,MAC,4,Lindenwood,1,98,1,0
+Eastern Michigan,MAC,5,UMass,0,84,0,0
+Eastern Michigan,MAC,6,Akron,0,56,0,0
+Eastern Michigan,MAC,7,Toledo,1,47,0,0
+Eastern Michigan,MAC,8,Ohio,0,39,0,0
+Eastern Michigan,MAC,10,Central Michigan,1,50,0,0
+Eastern Michigan,MAC,12,Western Michigan,0,22,0,0
+Eastern Michigan,MAC,13,Kent State,1,71,0,0
+Kent State,MAC,1,South Carolina,0,1,0,0
+Kent State,MAC,2,Wofford,1,95,1,0
+Kent State,MAC,3,Ohio State,0,0,0,0
+Kent State,MAC,4,Ball State,1,71,0,0
+Kent State,MAC,5,Ohio,1,38,0,0
+Kent State,MAC,6,Western Michigan,0,13,0,0
+Kent State,MAC,7,South Florida,0,7,0,0
+Kent State,MAC,8,Akron,1,56,0,0
+Kent State,MAC,9,Sacramento State,0,50,0,0
+Kent State,MAC,11,Bowling Green,0,25,0,0
+Kent State,MAC,12,Miami OH,1,14,0,0
+Kent State,MAC,13,Eastern Michigan,0,29,0,0
+Miami OH,MAC,1,Pittsburgh,0,19,0,0
+Miami OH,MAC,2,Holy Cross,1,100,1,0
+Miami OH,MAC,3,Cincinnati,0,23,0,0
+Miami OH,MAC,4,UConn,1,79,0,0
+Miami OH,MAC,5,Bowling Green,1,83,0,0
+Miami OH,MAC,6,UMass,0,97,0,0
+Miami OH,MAC,7,Akron,1,92,0,0
+Miami OH,MAC,8,Central Michigan,0,70,0,0
+Miami OH,MAC,10,Buffalo,1,80,0,0
+Miami OH,MAC,11,Ohio,1,84,0,0
+Miami OH,MAC,12,Kent State,0,86,0,0
+Miami OH,MAC,13,Western Michigan,0,55,0,0
+Ohio,MAC,1,Nebraska,0,4,0,0
+Ohio,MAC,2,Jacksonville State,1,40,0,0
+Ohio,MAC,3,South Alabama,0,42,0,0
+Ohio,MAC,4,Stonehill,1,98,1,0
+Ohio,MAC,5,Kent State,0,62,0,0
+Ohio,MAC,6,Central Michigan,1,54,0,0
+Ohio,MAC,7,Sacramento State,0,69,0,0
+Ohio,MAC,8,Eastern Michigan,1,61,0,0
+Ohio,MAC,10,Akron,0,60,0,0
+Ohio,MAC,11,Miami OH,0,16,0,0
+Ohio,MAC,12,Ball State,1,85,0,0
+Ohio,MAC,13,Toledo,1,51,0,0
+Sacramento State,MAC,0,Eastern Michigan,0,22,0,0
+Sacramento State,MAC,1,Mississippi Valley State,1,93,1,0
+Sacramento State,MAC,2,Fresno State,0,4,0,0
+Sacramento State,MAC,3,North Dakota State,1,8,0,0
+Sacramento State,MAC,4,UMass,1,79,0,0
+Sacramento State,MAC,6,Bowling Green,0,19,0,0
+Sacramento State,MAC,7,Ohio,1,31,0,0
+Sacramento State,MAC,8,Ball State,0,50,0,0
+Sacramento State,MAC,9,Kent State,1,50,0,0
+Sacramento State,MAC,10,Toledo,1,26,0,0
+Sacramento State,MAC,11,Central Michigan,0,17,0,0
+Sacramento State,MAC,13,Hawaii,0,6,0,0
+Toledo,MAC,1,Michigan State,0,14,0,0
+Toledo,MAC,2,Central Connecticut,1,99,1,0
+Toledo,MAC,3,Temple,1,49,0,0
+Toledo,MAC,4,San Diego State,1,28,0,0
+Toledo,MAC,5,Ball State,0,80,0,0
+Toledo,MAC,6,Buffalo,1,59,0,0
+Toledo,MAC,7,Eastern Michigan,0,53,0,0
+Toledo,MAC,8,Western Michigan,1,45,0,0
+Toledo,MAC,10,Sacramento State,0,74,0,0
+Toledo,MAC,11,UMass,1,95,0,0
+Toledo,MAC,12,Bowling Green,1,62,0,0
+Toledo,MAC,13,Ohio,0,49,0,0
+UMass,MAC,1,Rutgers,0,0,0,0
+UMass,MAC,2,Sacred Heart,1,80,1,0
+UMass,MAC,3,Stonehill,1,80,1,0
+UMass,MAC,4,Sacramento State,0,21,0,0
+UMass,MAC,5,Eastern Michigan,1,16,0,0
+UMass,MAC,6,Miami OH,1,3,0,0
+UMass,MAC,7,Buffalo,0,6,0,0
+UMass,MAC,8,UConn,0,5,0,0
+UMass,MAC,10,Ball State,1,41,0,0
+UMass,MAC,11,Toledo,0,5,0,0
+UMass,MAC,12,Akron,1,25,0,0
+UMass,MAC,13,Bowling Green,0,7,0,0
+Western Michigan,MAC,1,Michigan,0,3,0,0
+Western Michigan,MAC,2,Monmouth,1,100,1,0
+Western Michigan,MAC,3,Rice,0,64,0,0
+Western Michigan,MAC,4,Boise State,1,20,0,0
+Western Michigan,MAC,5,Buffalo,0,56,0,0
+Western Michigan,MAC,6,Kent State,1,87,0,0
+Western Michigan,MAC,7,Central Michigan,0,58,0,0
+Western Michigan,MAC,8,Toledo,0,55,0,0
+Western Michigan,MAC,9,Bowling Green,1,74,0,0
+Western Michigan,MAC,11,Akron,0,77,0,0
+Western Michigan,MAC,12,Eastern Michigan,1,78,0,0
+Western Michigan,MAC,13,Miami OH,1,45,0,0
+Air Force,MWC,1,Duquesne,1,100,1,0
+Air Force,MWC,2,North Dakota State,1,54,0,0
+Air Force,MWC,4,Nevada,0,71,0,0
+Air Force,MWC,5,Navy,1,47,0,0
+Air Force,MWC,6,Northern Illinois,0,84,0,0
+Air Force,MWC,7,UNLV,1,42,0,0
+Air Force,MWC,8,Wyoming,0,64,0,0
+Air Force,MWC,9,UConn,1,80,0,0
+Air Force,MWC,10,Army,0,44,0,0
+Air Force,MWC,11,San Jose State,1,88,0,0
+Air Force,MWC,12,UTEP,1,94,0,0
+Air Force,MWC,13,New Mexico,0,37,0,0
+Boston College,MWC,1,Cincinnati,0,26,0,0
+Boston College,MWC,2,Rutgers,1,48,0,0
+Boston College,MWC,3,Maine,1,100,1,0
+Boston College,MWC,4,Virginia Tech,1,27,0,0
+Boston College,MWC,5,SMU,0,13,0,0
+Boston College,MWC,7,Pittsburgh,1,34,0,0
+Boston College,MWC,8,Georgia Tech,0,23,0,0
+Boston College,MWC,9,Duke,0,24,0,0
+Boston College,MWC,10,Florida State,1,28,0,0
+Boston College,MWC,11,Notre Dame,0,1,0,0
+Boston College,MWC,12,Syracuse,1,55,0,0
+Boston College,MWC,13,Miami FL,0,3,0,0
+Hawaii,MWC,0,Stanford,0,37,0,0
+Hawaii,MWC,1,UNLV,1,38,0,0
+Hawaii,MWC,2,New Mexico State,1,87,0,0
+Hawaii,MWC,4,Wyoming,0,59,0,0
+Hawaii,MWC,5,San Jose State,1,85,0,0
+Hawaii,MWC,6,Arizona State,0,17,0,0
+Hawaii,MWC,7,New Mexico,1,47,0,0
+Hawaii,MWC,8,Northern Illinois,0,81,0,0
+Hawaii,MWC,10,UTEP,0,85,0,0
+Hawaii,MWC,11,North Dakota State,1,50,0,0
+Hawaii,MWC,12,Nevada,0,67,0,0
+Hawaii,MWC,13,Sacramento State,1,94,0,0
+Nevada,MWC,1,Western Kentucky,1,37,0,0
+Nevada,MWC,2,Montana State,1,99,1,0
+Nevada,MWC,3,Middle Tennessee,0,80,0,0
+Nevada,MWC,4,Air Force,1,29,0,0
+Nevada,MWC,6,UTEP,0,67,0,0
+Nevada,MWC,7,North Dakota State,0,16,0,0
+Nevada,MWC,8,San Jose State,1,67,0,0
+Nevada,MWC,9,UCLA,0,7,0,0
+Nevada,MWC,10,New Mexico,1,25,0,0
+Nevada,MWC,11,Northern Illinois,0,60,0,0
+Nevada,MWC,12,Hawaii,1,33,0,0
+Nevada,MWC,13,UNLV,0,10,0,0
+New Mexico,MWC,1,Central Michigan,1,86,0,0
+New Mexico,MWC,2,Mercyhurst,1,100,1,0
+New Mexico,MWC,3,Oklahoma,0,7,0,0
+New Mexico,MWC,4,New Mexico State,0,84,0,0
+New Mexico,MWC,5,UTEP,1,95,0,0
+New Mexico,MWC,7,Hawaii,0,53,0,0
+New Mexico,MWC,8,North Dakota State,1,60,0,0
+New Mexico,MWC,9,San Jose State,0,82,0,0
+New Mexico,MWC,10,Nevada,0,75,0,0
+New Mexico,MWC,11,UNLV,1,48,0,0
+New Mexico,MWC,12,Wyoming,0,69,0,0
+New Mexico,MWC,13,Air Force,1,63,0,0
+North Dakota State,MWC,0,Jacksonville State,1,74,0,0
+North Dakota State,MWC,1,Fordham,1,100,1,0
+North Dakota State,MWC,2,Air Force,0,46,0,0
+North Dakota State,MWC,3,Sacramento State,0,92,0,0
+North Dakota State,MWC,5,Wyoming,1,79,0,0
+North Dakota State,MWC,6,UNLV,0,31,0,0
+North Dakota State,MWC,7,Nevada,1,84,0,0
+North Dakota State,MWC,8,New Mexico,0,40,0,0
+North Dakota State,MWC,9,UTEP,1,95,0,0
+North Dakota State,MWC,11,Hawaii,0,50,0,0
+North Dakota State,MWC,12,Northern Illinois,1,92,0,0
+North Dakota State,MWC,13,San Jose State,0,80,0,0
+Northern Illinois,MWC,1,Iowa,0,1,0,0
+Northern Illinois,MWC,2,Illinois State,1,96,1,0
+Northern Illinois,MWC,3,Arizona,0,1,0,0
+Northern Illinois,MWC,4,Georgia State,0,63,0,0
+Northern Illinois,MWC,6,Air Force,1,16,0,0
+Northern Illinois,MWC,7,Wyoming,0,21,0,0
+Northern Illinois,MWC,8,Hawaii,1,19,0,0
+Northern Illinois,MWC,9,UNLV,0,4,0,0
+Northern Illinois,MWC,10,San Jose State,0,35,0,0
+Northern Illinois,MWC,11,Nevada,1,40,0,0
+Northern Illinois,MWC,12,North Dakota State,0,8,0,0
+Northern Illinois,MWC,13,UTEP,1,64,0,0
+San Jose State,MWC,0,USC,0,0,0,0
+San Jose State,MWC,1,Eastern Michigan,0,41,0,0
+San Jose State,MWC,2,Cal Poly,1,98,1,0
+San Jose State,MWC,3,Fresno State,1,21,0,0
+San Jose State,MWC,5,Hawaii,0,15,0,0
+San Jose State,MWC,6,Wyoming,1,40,0,0
+San Jose State,MWC,7,UTEP,0,57,0,0
+San Jose State,MWC,8,Nevada,0,33,0,0
+San Jose State,MWC,9,New Mexico,1,18,0,0
+San Jose State,MWC,10,Northern Illinois,1,65,0,0
+San Jose State,MWC,11,Air Force,0,12,0,0
+San Jose State,MWC,12,UNLV,1,12,0,0
+San Jose State,MWC,13,North Dakota State,1,20,0,0
+Syracuse,MWC,1,New Hampshire,1,100,1,0
+Syracuse,MWC,2,California,1,44,0,0
+Syracuse,MWC,3,Pittsburgh,0,24,0,0
+Syracuse,MWC,5,UConn,0,72,0,0
+Syracuse,MWC,6,Virginia,0,23,0,0
+Syracuse,MWC,7,Louisville,1,25,0,0
+Syracuse,MWC,8,North Carolina,0,30,0,0
+Syracuse,MWC,9,SMU,1,25,0,0
+Syracuse,MWC,10,Clemson,1,21,0,0
+Syracuse,MWC,11,NC State,0,27,0,0
+Syracuse,MWC,12,Boston College,0,45,0,0
+Syracuse,MWC,13,Notre Dame,1,4,0,0
+UNLV,MWC,0,Memphis,1,68,0,0
+UNLV,MWC,1,Hawaii,0,62,0,0
+UNLV,MWC,2,North Texas,0,81,0,0
+UNLV,MWC,4,Akron,0,93,0,0
+UNLV,MWC,5,California,1,55,0,0
+UNLV,MWC,6,North Dakota State,1,69,0,0
+UNLV,MWC,7,Air Force,0,58,0,0
+UNLV,MWC,9,Northern Illinois,1,96,0,0
+UNLV,MWC,10,Wyoming,1,87,0,0
+UNLV,MWC,11,New Mexico,0,52,0,0
+UNLV,MWC,12,San Jose State,0,88,0,0
+UNLV,MWC,13,Nevada,1,90,0,0
+UTEP,MWC,1,Oklahoma,0,0,0,0
+UTEP,MWC,2,Texas Southern,1,95,1,0
+UTEP,MWC,3,Michigan,0,0,0,0
+UTEP,MWC,4,Oregon State,1,19,0,0
+UTEP,MWC,5,New Mexico,0,5,0,0
+UTEP,MWC,6,Nevada,1,33,0,0
+UTEP,MWC,7,San Jose State,1,43,0,0
+UTEP,MWC,9,North Dakota State,0,5,0,0
+UTEP,MWC,10,Hawaii,1,15,0,0
+UTEP,MWC,11,Wyoming,1,27,0,0
+UTEP,MWC,12,Air Force,0,6,0,0
+UTEP,MWC,13,Northern Illinois,0,36,0,0
+Wyoming,MWC,1,Colorado State,0,39,0,0
+Wyoming,MWC,2,Northern Colorado,1,99,1,0
+Wyoming,MWC,3,Central Michigan,0,51,0,0
+Wyoming,MWC,4,Hawaii,1,41,0,0
+Wyoming,MWC,5,North Dakota State,0,21,0,0
+Wyoming,MWC,6,San Jose State,0,60,0,0
+Wyoming,MWC,7,Northern Illinois,1,79,0,0
+Wyoming,MWC,8,Air Force,1,36,0,0
+Wyoming,MWC,10,UNLV,0,13,0,0
+Wyoming,MWC,11,UTEP,0,73,0,0
+Wyoming,MWC,12,New Mexico,1,31,0,0
+Wyoming,MWC,13,UConn,1,62,0,0
+Arkansas,Pac12,1,North Alabama,1,100,1,0
+Arkansas,Pac12,2,Utah,0,24,0,0
+Arkansas,Pac12,3,Georgia,1,9,0,0
+Arkansas,Pac12,4,Tulsa,1,87,0,0
+Arkansas,Pac12,5,Texas A&M,0,9,0,0
+Arkansas,Pac12,6,Tennessee,1,26,0,0
+Arkansas,Pac12,7,Vanderbilt,0,29,0,0
+Arkansas,Pac12,9,Missouri,1,29,0,0
+Arkansas,Pac12,10,Auburn,0,26,0,0
+Arkansas,Pac12,11,South Carolina,1,37,0,0
+Arkansas,Pac12,12,Texas,0,6,0,0
+Arkansas,Pac12,13,LSU,1,17,0,0
+Boise State,Pac12,1,Oregon,0,4,0,0
+Boise State,Pac12,2,Memphis,1,78,0,0
+Boise State,Pac12,3,South Dakota,1,100,1,0
+Boise State,Pac12,4,Western Michigan,0,80,0,0
+Boise State,Pac12,5,Utah State,1,90,0,0
+Boise State,Pac12,6,Fresno State,0,69,0,0
+Boise State,Pac12,8,Washington State,0,76,0,0
+Boise State,Pac12,9,Texas State,1,87,0,0
+Boise State,Pac12,10,Colorado State,0,82,0,0
+Boise State,Pac12,11,Oregon State,1,88,0,0
+Boise State,Pac12,12,San Diego State,1,78,0,0
+Colorado State,Pac12,1,Wyoming,1,61,0,0
+Colorado State,Pac12,2,Southern Utah,1,99,1,0
+Colorado State,Pac12,3,BYU,1,6,0,0
+Colorado State,Pac12,4,UTSA,0,25,0,0
+Colorado State,Pac12,5,Oregon State,1,51,0,0
+Colorado State,Pac12,7,Texas State,0,36,0,0
+Colorado State,Pac12,8,San Diego State,1,37,0,0
+Colorado State,Pac12,9,Utah State,0,41,0,0
+Colorado State,Pac12,10,Boise State,1,18,0,0
+Colorado State,Pac12,11,Washington State,0,34,0,0
+Colorado State,Pac12,12,Fresno State,0,26,0,0
+Colorado State,Pac12,13,TBD,1,99,1,0
+Fresno State,Pac12,1,USC,0,5,0,0
+Fresno State,Pac12,2,Sacramento State,1,96,0,0
+Fresno State,Pac12,3,San Jose State,0,79,0,0
+Fresno State,Pac12,4,Rice,1,87,0,0
+Fresno State,Pac12,5,Washington State,0,51,0,0
+Fresno State,Pac12,6,Boise State,1,31,0,0
+Fresno State,Pac12,7,San Diego State,0,40,0,0
+Fresno State,Pac12,9,Oregon State,1,68,0,0
+Fresno State,Pac12,10,Utah State,0,59,0,0
+Fresno State,Pac12,11,Texas State,0,53,0,0
+Fresno State,Pac12,12,Colorado State,1,74,0,0
+Fresno State,Pac12,13,TBD,1,100,1,0
+Michigan State,Pac12,1,Toledo,1,86,0,0
+Michigan State,Pac12,2,Eastern Michigan,1,91,0,0
+Michigan State,Pac12,3,Notre Dame,0,2,0,0
+Michigan State,Pac12,4,Nebraska,1,36,0,0
+Michigan State,Pac12,5,Wisconsin,0,39,0,0
+Michigan State,Pac12,6,Illinois,1,32,0,0
+Michigan State,Pac12,7,Northwestern,1,45,0,0
+Michigan State,Pac12,8,UCLA,0,30,0,0
+Michigan State,Pac12,10,Michigan,0,9,0,0
+Michigan State,Pac12,11,Washington,1,20,0,0
+Michigan State,Pac12,12,Oregon,1,3,0,0
+Michigan State,Pac12,13,Rutgers,0,39,0,0
+Oklahoma State,Pac12,1,Tulsa,0,82,0,0
+Oklahoma State,Pac12,2,Oregon,1,8,0,0
+Oklahoma State,Pac12,3,Murray State,1,100,1,0
+Oklahoma State,Pac12,4,West Virginia,0,61,0,0
+Oklahoma State,Pac12,6,UCF,1,71,0,0
+Oklahoma State,Pac12,7,Houston,0,39,0,0
+Oklahoma State,Pac12,8,Colorado,1,74,0,0
+Oklahoma State,Pac12,9,Iowa State,0,61,0,0
+Oklahoma State,Pac12,10,Kansas State,0,33,0,0
+Oklahoma State,Pac12,11,Texas Tech,1,16,0,0
+Oklahoma State,Pac12,12,Arizona State,0,45,0,0
+Oklahoma State,Pac12,13,Kansas,1,67,0,0
+Oregon State,Pac12,1,Houston,0,10,0,0
+Oregon State,Pac12,2,Texas Tech,1,2,0,0
+Oregon State,Pac12,3,Montana,1,100,1,0
+Oregon State,Pac12,4,UTEP,0,81,0,0
+Oregon State,Pac12,5,Colorado State,0,49,0,0
+Oregon State,Pac12,6,San Diego State,1,43,0,0
+Oregon State,Pac12,7,Washington State,1,54,0,0
+Oregon State,Pac12,9,Fresno State,0,32,0,0
+Oregon State,Pac12,10,Texas State,1,56,0,0
+Oregon State,Pac12,11,Boise State,0,12,0,0
+Oregon State,Pac12,12,Utah State,1,61,0,0
+Purdue,Pac12,1,Indiana State,1,100,1,0
+Purdue,Pac12,2,Wake Forest,1,38,0,0
+Purdue,Pac12,3,UCLA,0,22,0,0
+Purdue,Pac12,4,Notre Dame,1,3,0,0
+Purdue,Pac12,5,Illinois,0,14,0,0
+Purdue,Pac12,6,Minnesota,1,34,0,0
+Purdue,Pac12,7,Washington,1,13,0,0
+Purdue,Pac12,9,Penn State,0,6,0,0
+Purdue,Pac12,10,Maryland,1,38,0,0
+Purdue,Pac12,11,Iowa,0,8,0,0
+Purdue,Pac12,12,Wisconsin,1,44,0,0
+Purdue,Pac12,13,Indiana,0,1,0,0
+San Diego State,Pac12,1,Portland State,1,100,1,0
+San Diego State,Pac12,2,UCLA,0,25,0,0
+San Diego State,Pac12,3,James Madison,1,60,0,0
+San Diego State,Pac12,4,Toledo,0,72,0,0
+San Diego State,Pac12,5,Texas State,1,70,0,0
+San Diego State,Pac12,6,Oregon State,0,57,0,0
+San Diego State,Pac12,7,Fresno State,1,60,0,0
+San Diego State,Pac12,8,Colorado State,0,63,0,0
+San Diego State,Pac12,9,Washington State,1,68,0,0
+San Diego State,Pac12,11,Utah State,1,75,0,0
+San Diego State,Pac12,12,Boise State,0,22,0,0
+Texas State,Pac12,1,Texas,0,1,0,0
+Texas State,Pac12,2,UTSA,1,44,0,0
+Texas State,Pac12,3,North Texas,1,73,0,0
+Texas State,Pac12,4,Incarnate Word,1,100,1,0
+Texas State,Pac12,5,San Diego State,0,30,0,0
+Texas State,Pac12,7,Colorado State,1,64,0,0
+Texas State,Pac12,8,Utah State,1,62,0,0
+Texas State,Pac12,9,Boise State,0,13,0,0
+Texas State,Pac12,10,Oregon State,0,44,0,0
+Texas State,Pac12,11,Fresno State,1,47,0,0
+Texas State,Pac12,12,Washington State,1,56,0,0
+Utah State,Pac12,1,Idaho State,1,100,1,0
+Utah State,Pac12,2,Washington,0,3,0,0
+Utah State,Pac12,3,Utah,0,5,0,0
+Utah State,Pac12,4,Troy,1,52,0,0
+Utah State,Pac12,5,Boise State,0,10,0,0
+Utah State,Pac12,6,Washington State,1,50,0,0
+Utah State,Pac12,8,Texas State,0,38,0,0
+Utah State,Pac12,9,Colorado State,1,59,0,0
+Utah State,Pac12,10,Fresno State,1,41,0,0
+Utah State,Pac12,11,San Diego State,0,25,0,0
+Utah State,Pac12,12,Oregon State,0,39,0,0
+Utah State,Pac12,13,TBD,1,100,1,0
+Washington State,Pac12,1,Washington,0,5,0,0
+Washington State,Pac12,2,Kansas State,0,9,0,0
+Washington State,Pac12,3,Duquesne,1,100,1,0
+Washington State,Pac12,4,Arizona,1,17,0,0
+Washington State,Pac12,5,Fresno State,1,49,0,0
+Washington State,Pac12,6,Utah State,0,50,0,0
+Washington State,Pac12,7,Oregon State,0,46,0,0
+Washington State,Pac12,8,Boise State,1,24,0,0
+Washington State,Pac12,9,San Diego State,0,32,0,0
+Washington State,Pac12,11,Colorado State,1,66,0,0
+Washington State,Pac12,12,Texas State,0,44,0,0
+Washington State,Pac12,13,TBD,1,100,1,0
+Alabama,SEC,1,East Carolina,1,95,0,0
+Alabama,SEC,2,Kentucky,0,81,0,0
+Alabama,SEC,3,Florida State,1,81,0,0
+Alabama,SEC,4,South Carolina,1,74,0,0
+Alabama,SEC,5,Mississippi State,0,81,0,0
+Alabama,SEC,6,Georgia,1,36,0,0
+Alabama,SEC,7,Tennessee,0,49,0,0
+Alabama,SEC,8,Texas A&M,1,51,0,0
+Alabama,SEC,10,LSU,0,37,0,0
+Alabama,SEC,11,Vanderbilt,0,66,0,0
+Alabama,SEC,12,Chattanooga,1,100,1,0
+Alabama,SEC,13,Auburn,1,76,0,0
+Auburn,SEC,1,Baylor,1,75,0,0
+Auburn,SEC,2,Southern Miss,1,100,0,0
+Auburn,SEC,3,Florida,1,46,0,0
+Auburn,SEC,4,Vanderbilt,1,61,0,0
+Auburn,SEC,5,Tennessee,0,29,0,0
+Auburn,SEC,7,Georgia,0,11,0,0
+Auburn,SEC,8,LSU,1,32,0,0
+Auburn,SEC,9,Ole Miss,0,30,0,0
+Auburn,SEC,10,Arkansas,1,74,0,0
+Auburn,SEC,11,Mississippi State,0,64,0,0
+Auburn,SEC,12,Samford,1,100,1,0
+Auburn,SEC,13,Alabama,0,24,0,0
+Florida,SEC,1,Florida Atlantic,1,97,0,0
+Florida,SEC,2,Campbell,1,100,1,0
+Florida,SEC,3,Auburn,0,54,0,0
+Florida,SEC,4,Ole Miss,1,54,0,0
+Florida,SEC,5,Missouri,0,43,0,0
+Florida,SEC,6,South Carolina,1,65,0,0
+Florida,SEC,7,Texas,0,20,0,0
+Florida,SEC,9,Georgia,0,17,0,0
+Florida,SEC,10,Oklahoma,1,51,0,0
+Florida,SEC,11,Kentucky,0,74,0,0
+Florida,SEC,12,Vanderbilt,1,71,0,0
+Florida,SEC,13,Florida State,0,61,0,0
+Georgia,SEC,1,Tennessee State,1,100,1,0
+Georgia,SEC,2,Western Kentucky,1,99,0,0
+Georgia,SEC,3,Arkansas,0,91,0,0
+Georgia,SEC,4,Oklahoma,1,79,0,0
+Georgia,SEC,5,Vanderbilt,1,91,0,0
+Georgia,SEC,6,Alabama,0,64,0,0
+Georgia,SEC,7,Auburn,1,89,0,0
+Georgia,SEC,9,Florida,1,83,0,0
+Georgia,SEC,10,Ole Miss,0,70,0,0
+Georgia,SEC,11,Missouri,1,84,0,0
+Georgia,SEC,12,South Carolina,0,79,0,0
+Georgia,SEC,13,Georgia Tech,1,95,0,0
+Kentucky,SEC,1,Youngstown State,1,100,1,0
+Kentucky,SEC,2,Alabama,1,19,0,0
+Kentucky,SEC,3,Texas A&M,0,8,0,0
+Kentucky,SEC,4,South Alabama,1,93,0,0
+Kentucky,SEC,5,South Carolina,0,21,0,0
+Kentucky,SEC,6,LSU,1,15,0,0
+Kentucky,SEC,7,Oklahoma,0,12,0,0
+Kentucky,SEC,8,Vanderbilt,1,39,0,0
+Kentucky,SEC,10,Tennessee,0,14,0,0
+Kentucky,SEC,11,Florida,1,26,0,0
+Kentucky,SEC,12,Missouri,0,16,0,0
+Kentucky,SEC,13,Louisville,1,36,0,0
+LSU,SEC,1,Clemson,1,77,0,0
+LSU,SEC,2,Louisiana Tech,1,99,0,0
+LSU,SEC,3,Ole Miss,0,55,0,0
+LSU,SEC,4,Texas A&M,1,57,0,0
+LSU,SEC,5,McNeese,1,100,1,0
+LSU,SEC,6,Kentucky,0,85,0,0
+LSU,SEC,7,Mississippi State,1,92,0,0
+LSU,SEC,8,Auburn,0,68,0,0
+LSU,SEC,10,Alabama,1,63,0,0
+LSU,SEC,11,Texas,1,47,0,0
+LSU,SEC,12,Tennessee,0,55,0,0
+LSU,SEC,13,Arkansas,0,83,0,0
+Mississippi State,SEC,1,ULM,1,99,0,0
+Mississippi State,SEC,2,Minnesota,0,39,0,0
+Mississippi State,SEC,3,South Carolina,0,21,0,0
+Mississippi State,SEC,4,Missouri,1,27,0,0
+Mississippi State,SEC,5,Alabama,1,19,0,0
+Mississippi State,SEC,7,LSU,0,8,0,0
+Mississippi State,SEC,8,Oklahoma,1,21,0,0
+Mississippi State,SEC,9,Texas,0,5,0,0
+Mississippi State,SEC,10,Vanderbilt,1,39,0,0
+Mississippi State,SEC,11,Auburn,1,36,0,0
+Mississippi State,SEC,12,Tennessee Tech,1,100,1,0
+Mississippi State,SEC,13,Ole Miss,0,14,0,0
+Missouri,SEC,1,Arkansas-Pine Bluff,1,100,1,0
+Missouri,SEC,2,Kansas,0,74,0,0
+Missouri,SEC,3,Troy,1,96,0,0
+Missouri,SEC,4,Mississippi State,0,73,0,0
+Missouri,SEC,5,Florida,1,57,0,0
+Missouri,SEC,6,Texas A&M,1,41,0,0
+Missouri,SEC,7,Ole Miss,0,39,0,0
+Missouri,SEC,9,Arkansas,0,71,0,0
+Missouri,SEC,10,Texas,1,32,0,0
+Missouri,SEC,11,Georgia,0,16,0,0
+Missouri,SEC,12,Kentucky,1,84,0,0
+Missouri,SEC,13,Oklahoma,1,50,0,0
+Oklahoma,SEC,1,UTEP,1,100,0,0
+Oklahoma,SEC,2,Michigan,0,46,0,0
+Oklahoma,SEC,3,New Mexico,1,93,0,0
+Oklahoma,SEC,4,Georgia,0,21,0,0
+Oklahoma,SEC,6,Texas,1,38,0,0
+Oklahoma,SEC,7,Kentucky,1,88,0,0
+Oklahoma,SEC,8,Mississippi State,0,79,0,0
+Oklahoma,SEC,9,South Carolina,1,71,0,0
+Oklahoma,SEC,10,Florida,0,49,0,0
+Oklahoma,SEC,11,Ole Miss,1,61,0,0
+Oklahoma,SEC,12,Texas A&M,1,48,0,0
+Oklahoma,SEC,13,Missouri,0,50,0,0
+Ole Miss,SEC,1,Louisville,1,71,0,0
+Ole Miss,SEC,2,Charlotte,1,100,0,0
+Ole Miss,SEC,3,LSU,1,45,0,0
+Ole Miss,SEC,4,Florida,0,46,0,0
+Ole Miss,SEC,6,Vanderbilt,0,60,0,0
+Ole Miss,SEC,7,Missouri,1,61,0,0
+Ole Miss,SEC,8,Texas,0,22,0,0
+Ole Miss,SEC,9,Auburn,1,70,0,0
+Ole Miss,SEC,10,Georgia,1,30,0,0
+Ole Miss,SEC,11,Oklahoma,0,39,0,0
+Ole Miss,SEC,12,Wofford,1,100,1,0
+Ole Miss,SEC,13,Mississippi State,1,86,0,0
+South Carolina,SEC,1,Kent State,1,99,0,0
+South Carolina,SEC,2,Towson,1,100,1,0
+South Carolina,SEC,3,Mississippi State,1,79,0,0
+South Carolina,SEC,4,Alabama,0,26,0,0
+South Carolina,SEC,5,Kentucky,1,79,0,0
+South Carolina,SEC,6,Florida,0,35,0,0
+South Carolina,SEC,8,Tennessee,1,46,0,0
+South Carolina,SEC,9,Oklahoma,0,29,0,0
+South Carolina,SEC,10,Texas A&M,1,34,0,0
+South Carolina,SEC,11,Arkansas,0,63,0,0
+South Carolina,SEC,12,Georgia,1,21,0,0
+South Carolina,SEC,13,Clemson,0,41,0,0
+Tennessee,SEC,1,Furman,1,100,1,0
+Tennessee,SEC,2,Georgia Tech,0,71,0,0
+Tennessee,SEC,3,Kennesaw State,1,98,0,0
+Tennessee,SEC,4,Texas,1,35,0,0
+Tennessee,SEC,5,Auburn,1,71,0,0
+Tennessee,SEC,6,Arkansas,0,74,0,0
+Tennessee,SEC,7,Alabama,1,51,0,0
+Tennessee,SEC,8,South Carolina,0,54,0,0
+Tennessee,SEC,10,Kentucky,1,86,0,0
+Tennessee,SEC,11,Texas A&M,0,31,0,0
+Tennessee,SEC,12,LSU,1,45,0,0
+Tennessee,SEC,13,Vanderbilt,0,60,0,0
+Texas,SEC,1,Texas State,1,99,0,0
+Texas,SEC,2,Ohio State,1,34,0,0
+Texas,SEC,3,UTSA,1,98,0,0
+Texas,SEC,4,Tennessee,0,65,0,0
+Texas,SEC,6,Oklahoma,0,62,0,0
+Texas,SEC,7,Florida,1,80,0,0
+Texas,SEC,8,Ole Miss,1,78,0,0
+Texas,SEC,9,Mississippi State,1,95,0,0
+Texas,SEC,10,Missouri,0,68,0,0
+Texas,SEC,11,LSU,0,53,0,0
+Texas,SEC,12,Arkansas,1,94,0,0
+Texas,SEC,13,Texas A&M,0,53,0,0
+Texas A&M,SEC,1,Missouri State,1,100,0,0
+Texas A&M,SEC,2,Arizona State,1,89,0,0
+Texas A&M,SEC,3,Kentucky,1,92,0,0
+Texas A&M,SEC,4,LSU,0,43,0,0
+Texas A&M,SEC,5,Arkansas,1,91,0,0
+Texas A&M,SEC,6,Missouri,0,59,0,0
+Texas A&M,SEC,7,The Citadel,1,100,1,0
+Texas A&M,SEC,8,Alabama,0,49,0,0
+Texas A&M,SEC,10,South Carolina,0,66,0,0
+Texas A&M,SEC,11,Tennessee,1,69,0,0
+Texas A&M,SEC,12,Oklahoma,0,52,0,0
+Texas A&M,SEC,13,Texas,1,47,0,0
+Vanderbilt,SEC,1,Austin Peay,1,100,1,0
+Vanderbilt,SEC,2,Delaware,1,97,0,0
+Vanderbilt,SEC,3,NC State,1,71,0,0
+Vanderbilt,SEC,4,Auburn,0,39,0,0
+Vanderbilt,SEC,5,Georgia,0,9,0,0
+Vanderbilt,SEC,6,Ole Miss,1,40,0,0
+Vanderbilt,SEC,7,Arkansas,1,71,0,0
+Vanderbilt,SEC,8,Kentucky,0,61,0,0
+Vanderbilt,SEC,10,Mississippi State,0,61,0,0
+Vanderbilt,SEC,11,Alabama,1,34,0,0
+Vanderbilt,SEC,12,Florida,0,29,0,0
+Vanderbilt,SEC,13,Tennessee,1,40,0,0
+Appalachian State,Sun Belt,1,Maine,1,99,1,0
+Appalachian State,Sun Belt,2,East Carolina,0,18,0,0
+Appalachian State,Sun Belt,3,Charlotte,1,95,0,0
+Appalachian State,Sun Belt,4,NC State,0,7,0,0
+Appalachian State,Sun Belt,6,Old Dominion,1,39,0,0
+Appalachian State,Sun Belt,7,Coastal Carolina,0,48,0,0
+Appalachian State,Sun Belt,8,James Madison,1,29,0,0
+Appalachian State,Sun Belt,9,Georgia Southern,0,34,0,0
+Appalachian State,Sun Belt,10,Georgia State,1,87,0,0
+Appalachian State,Sun Belt,11,Marshall,0,27,0,0
+Appalachian State,Sun Belt,12,ULM,1,86,0,0
+Appalachian State,Sun Belt,13,South Alabama,0,46,0,0
+Arkansas State,Sun Belt,1,Memphis,0,23,0,0
+Arkansas State,Sun Belt,2,West Georgia,1,99,1,0
+Arkansas State,Sun Belt,3,TCU,0,7,0,0
+Arkansas State,Sun Belt,4,Kennesaw State,1,60,0,0
+Arkansas State,Sun Belt,5,Louisiana,0,44,0,0
+Arkansas State,Sun Belt,6,South Alabama,1,71,0,0
+Arkansas State,Sun Belt,7,Southern Miss,0,82,0,0
+Arkansas State,Sun Belt,8,Georgia State,1,92,0,0
+Arkansas State,Sun Belt,10,ULM,1,91,0,0
+Arkansas State,Sun Belt,11,Coastal Carolina,0,58,0,0
+Arkansas State,Sun Belt,12,Louisiana Tech,0,42,0,0
+Arkansas State,Sun Belt,13,Troy,1,50,0,0
+Coastal Carolina,Sun Belt,1,West Virginia,0,10,0,0
+Coastal Carolina,Sun Belt,2,Fordham,1,98,1,0
+Coastal Carolina,Sun Belt,3,Delaware,0,40,0,0
+Coastal Carolina,Sun Belt,4,Liberty,1,36,0,0
+Coastal Carolina,Sun Belt,5,Georgia Southern,1,43,0,0
+Coastal Carolina,Sun Belt,6,Marshall,0,23,0,0
+Coastal Carolina,Sun Belt,7,Appalachian State,1,52,0,0
+Coastal Carolina,Sun Belt,9,Georgia State,0,74,0,0
+Coastal Carolina,Sun Belt,10,Old Dominion,1,34,0,0
+Coastal Carolina,Sun Belt,11,Arkansas State,1,42,0,0
+Coastal Carolina,Sun Belt,12,Louisiana,0,30,0,0
+Coastal Carolina,Sun Belt,13,James Madison,0,15,0,0
+Georgia Southern,Sun Belt,1,Charleston Southern,1,99,1,0
+Georgia Southern,Sun Belt,2,Clemson,0,4,0,0
+Georgia Southern,Sun Belt,3,Jacksonville State,0,39,0,0
+Georgia Southern,Sun Belt,4,Houston,1,14,0,0
+Georgia Southern,Sun Belt,5,Coastal Carolina,0,57,0,0
+Georgia Southern,Sun Belt,6,James Madison,1,38,0,0
+Georgia Southern,Sun Belt,7,Old Dominion,0,34,0,0
+Georgia Southern,Sun Belt,9,Appalachian State,1,66,0,0
+Georgia Southern,Sun Belt,10,Marshall,1,50,0,0
+Georgia Southern,Sun Belt,11,Georgia State,0,84,0,0
+Georgia Southern,Sun Belt,12,Troy,0,34,0,0
+Georgia Southern,Sun Belt,13,Louisiana Tech,1,56,0,0
+Georgia State,Sun Belt,1,North Carolina A&T,1,90,1,0
+Georgia State,Sun Belt,2,Kennesaw State,0,9,0,0
+Georgia State,Sun Belt,3,UCF,0,1,0,0
+Georgia State,Sun Belt,4,Northern Illinois,1,37,0,0
+Georgia State,Sun Belt,5,Old Dominion,1,11,0,0
+Georgia State,Sun Belt,7,James Madison,0,3,0,0
+Georgia State,Sun Belt,8,Arkansas State,0,8,0,0
+Georgia State,Sun Belt,9,Coastal Carolina,1,26,0,0
+Georgia State,Sun Belt,10,Appalachian State,0,13,0,0
+Georgia State,Sun Belt,11,Georgia Southern,1,16,0,0
+Georgia State,Sun Belt,12,Marshall,0,6,0,0
+Georgia State,Sun Belt,13,Louisiana,1,16,0,0
+James Madison,Sun Belt,1,Liberty,1,69,0,0
+James Madison,Sun Belt,2,Wagner,1,100,1,0
+James Madison,Sun Belt,3,San Diego State,0,40,0,0
+James Madison,Sun Belt,4,Old Dominion,0,54,0,0
+James Madison,Sun Belt,5,Marshall,1,69,0,0
+James Madison,Sun Belt,6,Georgia Southern,0,62,0,0
+James Madison,Sun Belt,7,Georgia State,1,97,0,0
+James Madison,Sun Belt,8,Appalachian State,0,71,0,0
+James Madison,Sun Belt,9,Troy,1,68,0,0
+James Madison,Sun Belt,10,Southern Miss,0,92,0,0
+James Madison,Sun Belt,11,UConn,0,69,0,0
+James Madison,Sun Belt,13,Coastal Carolina,1,85,0,0
+Louisiana,Sun Belt,1,Lamar,1,99,1,0
+Louisiana,Sun Belt,2,USC,0,2,0,0
+Louisiana,Sun Belt,3,UAB,1,80,0,0
+Louisiana,Sun Belt,4,Charlotte,0,94,0,0
+Louisiana,Sun Belt,5,Arkansas State,1,56,0,0
+Louisiana,Sun Belt,6,Louisiana Tech,0,40,0,0
+Louisiana,Sun Belt,7,Troy,1,48,0,0
+Louisiana,Sun Belt,8,Southern Miss,0,81,0,0
+Louisiana,Sun Belt,10,South Alabama,1,69,0,0
+Louisiana,Sun Belt,11,ULM,0,83,0,0
+Louisiana,Sun Belt,12,Coastal Carolina,1,70,0,0
+Louisiana,Sun Belt,13,Georgia State,0,84,0,0
+Louisiana Tech,Sun Belt,1,Northwestern State,1,99,1,0
+Louisiana Tech,Sun Belt,2,LSU,0,1,0,0
+Louisiana Tech,Sun Belt,3,Baylor,0,13,0,0
+Louisiana Tech,Sun Belt,5,Army,1,42,0,0
+Louisiana Tech,Sun Belt,6,Louisiana,1,60,0,0
+Louisiana Tech,Sun Belt,7,ULM,0,84,0,0
+Louisiana Tech,Sun Belt,8,Old Dominion,1,50,0,0
+Louisiana Tech,Sun Belt,9,South Alabama,0,57,0,0
+Louisiana Tech,Sun Belt,10,Troy,0,36,0,0
+Louisiana Tech,Sun Belt,11,Southern Miss,1,90,0,0
+Louisiana Tech,Sun Belt,12,Arkansas State,1,58,0,0
+Louisiana Tech,Sun Belt,13,Georgia Southern,0,44,0,0
+Marshall,Sun Belt,1,Penn State,0,3,0,0
+Marshall,Sun Belt,2,Middle Tennessee,1,95,0,0
+Marshall,Sun Belt,3,Missouri State,0,77,0,0
+Marshall,Sun Belt,4,Gardner-Webb,1,100,1,0
+Marshall,Sun Belt,5,James Madison,0,31,0,0
+Marshall,Sun Belt,6,Coastal Carolina,1,77,0,0
+Marshall,Sun Belt,8,South Alabama,1,76,0,0
+Marshall,Sun Belt,9,Old Dominion,0,41,0,0
+Marshall,Sun Belt,10,Georgia Southern,0,50,0,0
+Marshall,Sun Belt,11,Appalachian State,1,73,0,0
+Marshall,Sun Belt,12,Georgia State,1,94,0,0
+Marshall,Sun Belt,13,ULM,0,87,0,0
+Old Dominion,Sun Belt,1,Norfolk State,1,100,1,0
+Old Dominion,Sun Belt,2,Virginia Tech,0,9,0,0
+Old Dominion,Sun Belt,3,East Carolina,1,46,0,0
+Old Dominion,Sun Belt,4,James Madison,1,46,0,0
+Old Dominion,Sun Belt,5,Georgia State,0,89,0,0
+Old Dominion,Sun Belt,6,Appalachian State,0,61,0,0
+Old Dominion,Sun Belt,7,Georgia Southern,1,66,0,0
+Old Dominion,Sun Belt,8,Louisiana Tech,0,50,0,0
+Old Dominion,Sun Belt,9,Marshall,1,59,0,0
+Old Dominion,Sun Belt,10,Coastal Carolina,0,66,0,0
+Old Dominion,Sun Belt,12,UConn,0,59,0,0
+Old Dominion,Sun Belt,13,Southern Miss,1,93,0,0
+South Alabama,Sun Belt,1,SE Louisiana,1,98,1,0
+South Alabama,Sun Belt,2,Tulane,0,22,0,0
+South Alabama,Sun Belt,3,Ohio,1,58,0,0
+South Alabama,Sun Belt,4,Kentucky,0,7,0,0
+South Alabama,Sun Belt,5,ULM,1,84,0,0
+South Alabama,Sun Belt,6,Arkansas State,0,29,0,0
+South Alabama,Sun Belt,8,Marshall,0,24,0,0
+South Alabama,Sun Belt,9,Louisiana Tech,1,43,0,0
+South Alabama,Sun Belt,10,Louisiana,0,31,0,0
+South Alabama,Sun Belt,11,Troy,1,36,0,0
+South Alabama,Sun Belt,12,Southern Miss,0,71,0,0
+South Alabama,Sun Belt,13,Appalachian State,1,54,0,0
+Southern Miss,Sun Belt,1,Alcorn State,1,92,1,0
+Southern Miss,Sun Belt,2,Auburn,0,0,0,0
+Southern Miss,Sun Belt,3,UConn,1,24,0,0
+Southern Miss,Sun Belt,4,Tulane,0,7,0,0
+Southern Miss,Sun Belt,6,Troy,0,7,0,0
+Southern Miss,Sun Belt,7,Arkansas State,1,18,0,0
+Southern Miss,Sun Belt,8,Louisiana,1,19,0,0
+Southern Miss,Sun Belt,9,ULM,0,46,0,0
+Southern Miss,Sun Belt,10,James Madison,1,8,0,0
+Southern Miss,Sun Belt,11,Louisiana Tech,0,10,0,0
+Southern Miss,Sun Belt,12,South Alabama,1,29,0,0
+Southern Miss,Sun Belt,13,Old Dominion,0,7,0,0
+Troy,Sun Belt,1,Sam Houston,1,95,0,0
+Troy,Sun Belt,2,Alabama State,1,100,1,0
+Troy,Sun Belt,3,Missouri,0,4,0,0
+Troy,Sun Belt,4,Utah State,0,48,0,0
+Troy,Sun Belt,6,Southern Miss,1,93,0,0
+Troy,Sun Belt,7,Louisiana,0,52,0,0
+Troy,Sun Belt,8,ULM,1,94,0,0
+Troy,Sun Belt,9,James Madison,0,32,0,0
+Troy,Sun Belt,10,Louisiana Tech,1,64,0,0
+Troy,Sun Belt,11,South Alabama,0,64,0,0
+Troy,Sun Belt,12,Georgia Southern,1,66,0,0
+Troy,Sun Belt,13,Arkansas State,0,50,0,0
+ULM,Sun Belt,1,Mississippi State,0,1,0,0
+ULM,Sun Belt,2,UAB,0,26,0,0
+ULM,Sun Belt,3,SE Louisiana,1,91,1,0
+ULM,Sun Belt,4,Florida Atlantic,1,14,0,0
+ULM,Sun Belt,5,South Alabama,0,16,0,0
+ULM,Sun Belt,7,Louisiana Tech,1,16,0,0
+ULM,Sun Belt,8,Troy,0,6,0,0
+ULM,Sun Belt,9,Southern Miss,1,54,0,0
+ULM,Sun Belt,10,Arkansas State,0,9,0,0
+ULM,Sun Belt,11,Louisiana,1,17,0,0
+ULM,Sun Belt,12,Appalachian State,0,14,0,0
+ULM,Sun Belt,13,Marshall,1,13,0,0
