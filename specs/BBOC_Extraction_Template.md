@@ -86,9 +86,10 @@ Teams in a conference do NOT all play each other (partial round-robins in SEC/B1
 
 1. Read the full transcript (store to disk/var; slice past display limits).
 2. For each team, fill every field above. `—` = pod didn't say / not applicable (never invent).
-3. Reassigned P4 teams: their BBOC notes come from their REAL-conference pod, not the bucket pod — mark `[BBOC pending — covered in X pod]` and keep edge-data reads only.
-4. Distill schedule commentary to `sched_tag` + `key_avoids`; keep the narrative in Notes.
-5. Write `bboc_YYYY_CONF.json` (with `field_contract`) + render the `.md`.
+3. **OBJECTIVE — capture pod-cited lines (`mkt_pod` / `sp_pod`).** As you read each team, note the win total AND any SP+ the hosts quote on-air. If it differs from our Layer A snapshot, record it in `mkt_pod` / `sp_pod` and note the delta direction in `bboc_notes` (see "Pod-cited lines" above). NEVER overwrite Layer A with it. This is mandatory every extraction — a moved line is signal, and dropping it loses the edge.
+4. Reassigned P4 teams: their BBOC notes come from their REAL-conference pod, not the bucket pod — mark `[BBOC pending — covered in X pod]` and keep edge-data reads only.
+5. Distill schedule commentary to `sched_tag` + `key_avoids`; keep the narrative in Notes.
+6. Write `bboc_YYYY_CONF.json` (with `field_contract`) + render the `.md`.
 
 ## Upside signals (structured — feed the Upside flag, not prose-scraped)
 Add an `upside_signals` object per team so the Low/Med/High Upside flag scores fields, not free text:

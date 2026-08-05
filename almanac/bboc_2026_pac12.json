@@ -1,8 +1,8 @@
 {
  "conf": "Pac12",
  "year": 2026,
- "source": "BBOC 2026 Pac-12 preview (Mike Calabrese / Collin Wilson / Josh 'Duck' Nunn) \u2014 full transcript",
- "section_note": "8 REAL members (Boise St, Colorado St, Fresno St, San Diego St, Utah St, Texas St, Washington St, Oregon St). Non-con wks 1-4; 7-game round-robin wks 5-12 (4 home / 3 road, home sites known up front); title game after Wk12; Wk13 = home-and-home FLEX, NOT league-sanctioned (does not affect standings) and books split on whether win totals resolve on 11 or 12 games \u2014 Collin/Duck stress betting unders at 11-game books, overs at 12-game books. Full round-robin = NO in-conference 'avoids.' QB detail extracted faithfully from the real pod transcript.",
+ "source": "BBOC 2026 Pac-12 preview (Mike Calabrese / Collin Wilson / Josh 'Duck' Nunn) — full transcript",
+ "section_note": "8 REAL members (Boise St, Colorado St, Fresno St, San Diego St, Utah St, Texas St, Washington St, Oregon St). Non-con wks 1-4; 7-game round-robin wks 5-12 (4 home / 3 road, home sites known up front); title game after Wk12; Wk13 = home-and-home FLEX, NOT league-sanctioned (does not affect standings) and books split on whether win totals resolve on 11 or 12 games — Collin/Duck stress betting unders at 11-game books, overs at 12-game books. Full round-robin = NO in-conference 'avoids.' QB detail extracted faithfully from the real pod transcript.",
  "field_contract": "team,pool_conf,real_conf,adj_conf,games,mkt_win_total,sp_mar,sp_rank,sp_pod,ret_prod,net_tarp,off_tarp,def_tarp,collin_proj,proj_minus_mkt,six_win_pct,new_hc,new_oc,new_dc,qb_status,host_lean,dark_horse,fade,host_split,variance,sched_tag,key_avoids,sos_rank,miles,key_injury,bboc_notes",
  "teams": [
   {
@@ -25,55 +25,19 @@
    "new_hc": null,
    "new_oc": "Zach Hill",
    "new_dc": "Terrence Brown",
-   "qb_status": "Returning \u2014 Maddox Madsen (incumbent, no battle). Flagged hard: 35 turnover-worthy plays career, upside-down TD:INT decision-making; when tied-or-trailing 54% comp / 7 INT. 'If you stop the running game, he folds.' Leans on play-action + tight ends.",
+   "qb_status": "Returning — Maddox Madsen (incumbent, no battle). Flagged hard: 35 turnover-worthy plays career, upside-down TD:INT decision-making; when tied-or-trailing 54% comp / 7 INT. 'If you stop the running game, he folds.' Leans on play-action + tight ends.",
    "host_lean": "Lean Under",
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin (plays all 7 other members) \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Utah State (may not count). Non-con: @ Oregon, Memphis, @ W. Michigan, South Dakota (FCS).",
+   "key_avoids": "Full round-robin (plays all 7 other members) — no in-conf avoids. Wk13 FLEX (projected): vs Utah State (may not count). Non-con: @ Oregon, Memphis, @ W. Michigan, South Dakota (FCS).",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "Priced favorite to win the league (+170). Book win total 8 (SBD 7.5) \u2014 Collin notes that's likely an 11-game number; he 'can't take the under' because the run game (Dylan Riley + Sire Gaines, both ~4.2 yds after contact) is the best in the league and no Pac-12 front stops it; sees 7 wins. Two new coordinators (OC Zach Hill, DC Terrence Brown). Green secondary replacing 4 starters (Roman Tillman in from South Dakota). Hosts Texas State on Halloween \u2014 pivotal. Most vulnerable Boise in memory but still deserved favorite.",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "@ Oregon, Memphis, @ W",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 6,
-    "road": 5,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 7,
-    "short_weeks": 0,
-    "sos_proxy": 6.2,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk1 @ Oregon(10.5)",
-     "wk2 vs Memphis(7.5)",
-     "wk4 @ Western Michigan(7.5)"
-    ],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 7,
-   "anchor_on_anchor": [
-    "wk1 @ Oregon(10.5)",
-    "wk2 vs Memphis(7.5)",
-    "wk4 @ Western Michigan(7.5)"
-   ]
+   "bboc_notes": "Priced favorite to win the league (+170). Book win total 8 (SBD 7.5) — Collin notes that's likely an 11-game number; he 'can't take the under' because the run game (Dylan Riley + Sire Gaines, both ~4.2 yds after contact) is the best in the league and no Pac-12 front stops it; sees 7 wins. Two new coordinators (OC Zach Hill, DC Terrence Brown). Green secondary replacing 4 starters (Roman Tillman in from South Dakota). Hosts Texas State on Halloween — pivotal. Most vulnerable Boise in memory but still deserved favorite.",
+   "mkt_pod": 8
   },
   {
    "team": "Colorado State",
@@ -95,53 +59,19 @@
    "new_hc": "Jim Mora Jr.",
    "new_oc": "Price Tracy",
    "new_dc": null,
-   "qb_status": "Battle \u2014 Haas Haney (4-star HS, 4.45/40 track speed; recruited to TCU, transferred to Oklahoma State, now CSU) vs Darius Curry. Lead: Duck expects Haney to win the job. Mobile dual-threat; Mora wants to structure designed-QB-run offense around him (Brett Hundley archetype).",
+   "qb_status": "Battle — Haas Haney (4-star HS, 4.45/40 track speed; recruited to TCU, transferred to Oklahoma State, now CSU) vs Darius Curry. Lead: Duck expects Haney to win the job. Mobile dual-threat; Mora wants to structure designed-QB-run offense around him (Brett Hundley archetype).",
    "host_lean": "Hard Under",
    "dark_horse": false,
    "fade": true,
    "host_split": false,
    "variance": true,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Texas State (may not count). Non-con: Wyoming, Southern Utah, BYU, @ UTSA.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs Texas State (may not count). Non-con: Wyoming, Southern Utah, BYU, @ UTSA.",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "New HC Jim Mora Jr. (back-to-back 9-win seasons at UConn; 9-5 first yr at UCLA) \u2014 Collin rates the hire highly, calls it 'ground zero' with 40+ transfers. DC Tyson Summers retained; OC Price Tracy (ex-QB coach, first time full-time play-caller). Collin projects 2.8, ceiling 5, first six games a 'soul search'; hard under (SBD 3.5, book 4). Juice Vereen (TE, 22 rec/5 TD from UConn) a red-zone weapon. High variance from staff/QB/roster reset.",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "Wyoming, Southern Utah, BYU, @ UTSA",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 7,
-    "road": 5,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 3,
-    "bye_week": 6,
-    "short_weeks": 0,
-    "sos_proxy": 6.2,
-    "cupcakes": 2,
-    "anchor_on_anchor": [
-     "wk4 @ UTSA(7.5)",
-     "wk10 vs Boise State(7.5)"
-    ],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 6,
-   "anchor_on_anchor": [
-    "wk4 @ UTSA(7.5)",
-    "wk10 vs Boise State(7.5)"
-   ]
+   "bboc_notes": "New HC Jim Mora Jr. (back-to-back 9-win seasons at UConn; 9-5 first yr at UCLA) — Collin rates the hire highly, calls it 'ground zero' with 40+ transfers. DC Tyson Summers retained; OC Price Tracy (ex-QB coach, first time full-time play-caller). Collin projects 2.8, ceiling 5, first six games a 'soul search'; hard under (SBD 3.5, book 4). Juice Vereen (TE, 22 rec/5 TD from UConn) a red-zone weapon. High variance from staff/QB/roster reset.",
+   "mkt_pod": 4
   },
   {
    "team": "Fresno State",
@@ -163,51 +93,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": null,
-   "qb_status": "Transfer \u2014 Christian Martin (from Maryland, where he pushed the starter deep into fall camp). Replaces EJ Warner. Duck: dual-threat element greater than Warner gave; Collin: unproven, 'who's throwing/catching?'",
+   "qb_status": "Transfer — Christian Martin (from Maryland, where he pushed the starter deep into fall camp). Replaces EJ Warner. Duck: dual-threat element greater than Warner gave; Collin: unproven, 'who's throwing/catching?'",
    "host_lean": "Hard Under",
    "dark_horse": false,
    "fade": true,
    "host_split": true,
    "variance": false,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs San Diego State (may not count). Non-con: @ USC (Fri opener), Sacramento St, @ San Jose St, Rice.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs San Diego State (may not count). Non-con: @ USC (Fri opener), Sacramento St, @ San Jose St, Rice.",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "HC Matt Entz returns (yr 2, 2x FCS national champ); both coordinators retained \u2014 NOT a staff change. HOST SPLIT: Collin hard under (took only 4 pts off the power rating for lost experience and still lands at 4.5 wins \u2014 'something's not adding up'; SBD 6.5, book 7.5, market was bet up from 5.5\u21927.5). Duck bullish: power run game (Rayshawn Luke/Bryson Donaldson + Tarik Thomas from Bucknell), elite OL culture, borderline-elite secondary under rising-star DC Nick Benedetto (20 INT last yr \u2014 may regress). Fade per Collin.",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "@ USC (Fri opener), Sacramento St, @ San Jose St, Rice",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 6,
-    "road": 6,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 8,
-    "short_weeks": 0,
-    "sos_proxy": 5.3,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk6 vs Boise State(7.5)"
-    ],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 8,
-   "anchor_on_anchor": [
-    "wk6 vs Boise State(7.5)"
-   ]
+   "bboc_notes": "HC Matt Entz returns (yr 2, 2x FCS national champ); both coordinators retained — NOT a staff change. HOST SPLIT: Collin hard under (took only 4 pts off the power rating for lost experience and still lands at 4.5 wins — 'something's not adding up'; SBD 6.5, book 7.5, market was bet up from 5.5→7.5). Duck bullish: power run game (Rayshawn Luke/Bryson Donaldson + Tarik Thomas from Bucknell), elite OL culture, borderline-elite secondary under rising-star DC Nick Benedetto (20 INT last yr — may regress). Fade per Collin.",
+   "mkt_pod": 7.5
   },
   {
    "team": "San Diego State",
@@ -229,55 +127,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": "Demetrius Sumler (promoted)",
-   "qb_status": "Returning \u2014 Jayden Denegal (incumbent, ex-Michigan; deep-ball arm on a surgically repaired shoulder \u2014 throws more 20+-yard attempts than short; efficiency collapses vs cover 2/cover 3. Remove the Nevada & Colorado State games and he was 55% / 5 TD / 8 INT). Health is the swing variable; Manu Berta-Manuel a QB\u2192WR convert to watch.",
+   "qb_status": "Returning — Jayden Denegal (incumbent, ex-Michigan; deep-ball arm on a surgically repaired shoulder — throws more 20+-yard attempts than short; efficiency collapses vs cover 2/cover 3. Remove the Nevada & Colorado State games and he was 55% / 5 TD / 8 INT). Health is the swing variable; Manu Berta-Manuel a QB→WR convert to watch.",
    "host_lean": "Lean Over",
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Fresno State (may not count). Non-con: Portland St, @ UCLA, James Madison, @ Toledo.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs Fresno State (may not count). Non-con: Portland St, @ UCLA, James Madison, @ Toledo.",
    "sos_rank": null,
    "miles": null,
-   "key_injury": "Denegal \u2014 surgically repaired throwing shoulder (season swing variable)",
-   "bboc_notes": "Sean Lewis yr 3 (3-9 \u2192 9-4, a few plays from 11-2). New DC Demetrius Sumler promoted from within. Defense is a full reset (lost all edge rushers/havoc creators) \u2014 100th returning production on D, 1st on O. Collin/Duck deliverable: BET OVERS every week \u2014 'this offense scores in bombs, this defense is horrific,' 40-41 point games coming. OL could be top-3 in league (Joseph Borjon 6-8/338; Isaac Lucas from Ball State). Lucky Sudden RB (~1300 all-purpose). Book 7 / SBD 6.5. Lewis covered 10 games last yr \u2014 persistent market resistance he keeps beating.",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "Portland St, @ UCLA, James Madison, @ Toledo",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 6,
-    "road": 5,
-    "neutral": 0,
-    "max_road_streak": 1,
-    "max_home_streak": 2,
-    "bye_week": 10,
-    "short_weeks": 0,
-    "sos_proxy": 6.0,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk3 vs James Madison(8.5)",
-     "wk4 @ Toledo(7.5)",
-     "wk12 @ Boise State(7.5)"
-    ],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 10,
-   "anchor_on_anchor": [
-    "wk3 vs James Madison(8.5)",
-    "wk4 @ Toledo(7.5)",
-    "wk12 @ Boise State(7.5)"
-   ]
+   "key_injury": "Denegal — surgically repaired throwing shoulder (season swing variable)",
+   "bboc_notes": "Sean Lewis yr 3 (3-9 → 9-4, a few plays from 11-2). New DC Demetrius Sumler promoted from within. Defense is a full reset (lost all edge rushers/havoc creators) — 100th returning production on D, 1st on O. Collin/Duck deliverable: BET OVERS every week — 'this offense scores in bombs, this defense is horrific,' 40-41 point games coming. OL could be top-3 in league (Joseph Borjon 6-8/338; Isaac Lucas from Ball State). Lucky Sudden RB (~1300 all-purpose). Book 7 / SBD 6.5. Lewis covered 10 games last yr — persistent market resistance he keeps beating.",
+   "mkt_pod": 7
   },
   {
    "team": "Utah State",
@@ -299,51 +161,19 @@
    "new_hc": null,
    "new_oc": "Robert Anae",
    "new_dc": "Nick Howell",
-   "qb_status": "Battle \u2014 McKay Hillstead (returning; played sparingly at USU two years ago, transferred to BYU, came back \u2014 very limited FBS snaps) vs Grady Brosterhous. Lean: Hillstead to start. 2024 engine Bryson Barnes (masked a garbage OL \u2014 42 sacks / 88 TFL allowed) departed.",
+   "qb_status": "Battle — McKay Hillstead (returning; played sparingly at USU two years ago, transferred to BYU, came back — very limited FBS snaps) vs Grady Brosterhous. Lean: Hillstead to start. 2024 engine Bryson Barnes (masked a garbage OL — 42 sacks / 88 TFL allowed) departed.",
    "host_lean": "Lean Under",
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": true,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Boise State (may not count). Non-con: Idaho St, @ Washington, @ Utah, Troy.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs Boise State (may not count). Non-con: Idaho St, @ Washington, @ Utah, Troy.",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
    "bboc_notes": "HC Bronco Mendenhall returns (yr 2; went 10-3 ATS in a tough first year). NEW OC Robert Anae ('polarizing' play-caller) + DC Nick Howell. 110th in returning offensive production; receiver room gutted (leading returner Anthony Garcia is a converted QB; transfers Jevon Robinson/Eli Wood unproven). Went hard in portal on D (17 P4 additions, 5th-rated G6 class) but D faded badly late (allowed 170+ rush yds 8x; 122nd in explosive-plays-allowed). Brutal road slate (@ Washington, @ Utah, @ Boise, @ Texas State). Duck bets under 5.5 at 11-game books; Collin makes it exactly 4.5 = no play (SBD 4.5, book 5). High variance.",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "Idaho St, @ Washington, @ Utah, Troy",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 6,
-    "road": 6,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 7,
-    "short_weeks": 0,
-    "sos_proxy": 6.2,
-    "cupcakes": 2,
-    "anchor_on_anchor": [
-     "wk5 @ Boise State(7.5)"
-    ],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 7,
-   "anchor_on_anchor": [
-    "wk5 @ Boise State(7.5)"
-   ]
+   "mkt_pod": 5
   },
   {
    "team": "Texas State",
@@ -365,54 +195,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": "Will Windham (co-DC)",
-   "qb_status": "Returning \u2014 Brad Jackson (incumbent; pod's 'best G6 quarterback'). 38 all-purpose TDs; 869 rush yds with ~60% on DESIGNED runs (not scrambles); runs GJ Kinne's 10-personnel spread. Command of the offense grew all last year.",
+   "qb_status": "Returning — Brad Jackson (incumbent; pod's 'best G6 quarterback'). 38 all-purpose TDs; 869 rush yds with ~60% on DESIGNED runs (not scrambles); runs GJ Kinne's 10-personnel spread. Command of the offense grew all last year.",
    "host_lean": "Lean Over",
    "dark_horse": true,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": "Brutal",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Colorado State (may not count). Non-con gauntlet: @ Texas, UTSA, North Texas, Incarnate Word.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs Colorado State (may not count). Non-con gauntlet: @ Texas, UTSA, North Texas, Incarnate Word.",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "CORRECTION vs prior data: QB is Brad Jackson (returning), NOT Malik Murphy \u2014 Murphy is Oregon State. HC GJ Kinne returns; new co-DC Will Windham (+ Caleb James from Arkansas on the edge, Philip Bradford from McNeese). Elite skill: Bo Sparks + Chris Dawn Jr. (both 1,000-yd, 2.8 yds/route). OL is the risk \u2014 87th sack rate, only ~30% returns (William Boone 6-6/350 in from PVAMU/UNC). Collin's ~7.5 is on an 11-GAME schedule; prefers over 6.5 (+130) or Pac-12 title-game (+200) over the messy tiebreakers (SBD 6.5). Defense (113th quality drives, 115th tackling) must improve marginally. Dark-horse to reach the title game; brutal early slate (@ Texas, UTSA, @ SDSU, @ Boise).",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "gauntlet: @ Texas, UTSA, North Texas, Incarnate Word",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 7,
-    "road": 4,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 3,
-    "bye_week": 6,
-    "short_weeks": 0,
-    "sos_proxy": 6.0,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk1 @ Texas(9.5)",
-     "wk2 vs UTSA(7.5)",
-     "wk9 @ Boise State(7.5)"
-    ]
-   },
-   "bye_week": 6,
-   "anchor_on_anchor": [
-    "wk1 @ Texas(9.5)",
-    "wk2 vs UTSA(7.5)",
-    "wk9 @ Boise State(7.5)"
-   ]
+   "bboc_notes": "CORRECTION vs prior data: QB is Brad Jackson (returning), NOT Malik Murphy — Murphy is Oregon State. HC GJ Kinne returns; new co-DC Will Windham (+ Caleb James from Arkansas on the edge, Philip Bradford from McNeese). Elite skill: Bo Sparks + Chris Dawn Jr. (both 1,000-yd, 2.8 yds/route). OL is the risk — 87th sack rate, only ~30% returns (William Boone 6-6/350 in from PVAMU/UNC). Collin's ~7.5 is on an 11-GAME schedule; prefers over 6.5 (+130) or Pac-12 title-game (+200) over the messy tiebreakers (SBD 6.5). Defense (113th quality drives, 115th tackling) must improve marginally. Dark-horse to reach the title game; brutal early slate (@ Texas, UTSA, @ SDSU, @ Boise).",
+   "mkt_pod": null
   },
   {
    "team": "Washington State",
@@ -434,47 +229,19 @@
    "new_hc": "Kirby Moore",
    "new_oc": null,
    "new_dc": "Trent Bray",
-   "qb_status": "Transfer \u2014 Kayden Pinnock (from UC Davis; 2025 Big Sky Freshman of the Year; ~185 lbs, 'buck-eighty-five soaking wet' \u2014 durability risk). Mobile: ~475+ rush yds (mostly scrambles), 3,000+ pass yds / 32 TD / 10 INT in the Big Sky. Pod: 'right-handed Micah Alii-hado,' plays above his size, low mistake rate.",
+   "qb_status": "Transfer — Kayden Pinnock (from UC Davis; 2025 Big Sky Freshman of the Year; ~185 lbs, 'buck-eighty-five soaking wet' — durability risk). Mobile: ~475+ rush yds (mostly scrambles), 3,000+ pass yds / 32 TD / 10 INT in the Big Sky. Pod: 'right-handed Micah Alii-hado,' plays above his size, low mistake rate.",
    "host_lean": "Lean Over",
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": true,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Oregon State (may not count). Non-con: @ Washington (Apple Cup), @ Kansas St, Duquesne, Arizona.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs Oregon State (may not count). Non-con: @ Washington (Apple Cup), @ Kansas St, Duquesne, Arizona.",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "New HC Kirby Moore (ex-Missouri OC; built the Fresno & Missouri offenses) after Jimmy Rogers left for Iowa State. NEW DC Trent Bray (fired as Oregon State HC \u2014 pod likes him far better as a DC play-caller; runs his 4-2-5). 5 HCs in 7 years; realignment orphan. Year-zero build but improves week to week \u2014 Collin projects ~5.1 on 11 games, likes the alt-over 5.5 (SBD 4.5, book 5). Brutal open (@ Washington Apple Cup, @ Kansas State, Arizona) then a play-on team down the stretch. Portal-populated two-deep; hard to grade.",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "@ Washington (Apple Cup), @ Kansas St, Duquesne, Arizona",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 6,
-    "road": 6,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 3,
-    "bye_week": 10,
-    "short_weeks": 0,
-    "sos_proxy": 6.3,
-    "cupcakes": 2,
-    "anchor_on_anchor": [],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 10,
-   "anchor_on_anchor": []
+   "bboc_notes": "New HC Kirby Moore (ex-Missouri OC; built the Fresno & Missouri offenses) after Jimmy Rogers left for Iowa State. NEW DC Trent Bray (fired as Oregon State HC — pod likes him far better as a DC play-caller; runs his 4-2-5). 5 HCs in 7 years; realignment orphan. Year-zero build but improves week to week — Collin projects ~5.1 on 11 games, likes the alt-over 5.5 (SBD 4.5, book 5). Brutal open (@ Washington Apple Cup, @ Kansas State, Arizona) then a play-on team down the stretch. Portal-populated two-deep; hard to grade.",
+   "mkt_pod": 5
   },
   {
    "team": "Oregon State",
@@ -496,53 +263,19 @@
    "new_hc": "JaMarcus Shepherd",
    "new_oc": null,
    "new_dc": "Mike McIntyre",
-   "qb_status": "Battle (staff kept it open into August) \u2014 Malik Murphy (incumbent; immobile, inaccurate, checkdown merchant; atrocious turnover-worthy-play rate \u2014 both hosts down on him) vs Braden Atkinson (Mercer transfer, 2024 Jerry Rice Award = top FCS freshman: 35 total TD / 3,600 pass yds; accurate rhythm thrower, nice deep ball, but blown out by Auburn and lost an FCS playoff 47-0 \u2014 needs time). Pod wants the switch to Atkinson.",
+   "qb_status": "Battle (staff kept it open into August) — Malik Murphy (incumbent; immobile, inaccurate, checkdown merchant; atrocious turnover-worthy-play rate — both hosts down on him) vs Braden Atkinson (Mercer transfer, 2024 Jerry Rice Award = top FCS freshman: 35 total TD / 3,600 pass yds; accurate rhythm thrower, nice deep ball, but blown out by Auburn and lost an FCS playoff 47-0 — needs time). Pod wants the switch to Atkinson.",
    "host_lean": "Lean Under",
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": "Neutral",
-   "key_avoids": "Full round-robin \u2014 no in-conf avoids. Wk13 FLEX (projected): vs Washington State (may not count). Non-con: @ Houston, Texas Tech, Montana (FCS semifinalist), @ UTEP.",
+   "key_avoids": "Full round-robin — no in-conf avoids. Wk13 FLEX (projected): vs Washington State (may not count). Non-con: @ Houston, Texas Tech, Montana (FCS semifinalist), @ UTEP.",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
    "bboc_notes": "New HC JaMarcus Shepherd (Kalen DeBoer tree) + new DC Mike McIntyre (ex-FIU; Collin likes the hire even though McIntyre's aggressive nickel gives up scores). Likely worst trenches in the league (both sides); 90th in returning OL experience, two new tackles. 5 starters back on D but returned only their top-12 tacklers and were dead-last in passing-downs explosives allowed. Collin projects 3.8 (Juice at 3.5). Brutal open (@ Houston, Texas Tech, Montana top-5 FCS). Only edge is the weird 'red wine & flannel' Corvallis home vibe vs 3 back-to-back-travel visitors (Wazoo, Texas State, Utah State). Under (SBD 4.5).",
-   "upside_signals": {
-    "game_count": 13,
-    "game_count_note": "12 + Wk13 flex (book-dependent 11/12-game total)",
-    "non_con": "@ Houston, Texas Tech, Montana (FCS semifinalist), @ UTEP",
-    "rest_edge": "[gap \u2014 source bye/rest from official schedule]",
-    "home_away": null,
-    "conf_draw": "full round-robin (no avoids)",
-    "sched_gap": null
-   },
-   "game_count": 13,
-   "game_delta": "+1",
-   "game_note": "Wk13 flex \u2014 book-dependent (11 or 12-game total)",
-   "sched_facts": {
-    "game_count": 13,
-    "game_delta": "+1",
-    "home": 6,
-    "road": 5,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 8,
-    "short_weeks": 0,
-    "sos_proxy": 6.2,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk2 vs Texas Tech(10.5)",
-     "wk11 @ Boise State(7.5)"
-    ],
-    "game_count_note": "REAL Pac-12/MW = 13 (12 + Wk13 flex); ESPN mid-population, corrected to known 13"
-   },
-   "bye_week": 8,
-   "anchor_on_anchor": [
-    "wk2 vs Texas Tech(10.5)",
-    "wk11 @ Boise State(7.5)"
-   ]
+   "mkt_pod": null
   },
   {
    "team": "Oklahoma State",
@@ -564,52 +297,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": null,
-   "qb_status": "\u2014 [covered in Big 12 pod, not Pac-12]",
+   "qb_status": "— [covered in Big 12 pod, not Pac-12]",
    "host_lean": null,
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": null,
-   "key_avoids": "\u2014 [from Big 12 pod]",
+   "key_avoids": "— [from Big 12 pod]",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "[BBOC pending \u2014 covered in Big 12 pod, not Pac-12.] Edge read: SP+ #38 and Net TARP +10.0 (highest in bucket) grade out well \u2014 possible pool value if drafters underrate as weak real-conf self.",
-   "upside_signals": {
-    "game_count": 12,
-    "game_count_note": "12",
-    "non_con": null,
-    "rest_edge": null,
-    "home_away": null,
-    "conf_draw": null,
-    "sched_gap": "REASSIGNED: plays real Big 12 schedule \u2014 schedule/non-con/avoids NOT in Pac-12 pod; source from real Big 12 pod + official schedule"
-   },
-   "game_count": 12,
-   "game_delta": "0",
-   "game_note": "",
-   "sched_facts": {
-    "game_count": 12,
-    "game_delta": "0",
-    "home": 6,
-    "road": 6,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 5,
-    "short_weeks": 0,
-    "sos_proxy": 6.9,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk2 vs Oregon(10.5)",
-     "wk11 vs Texas Tech(10.5)"
-    ]
-   },
-   "bye_week": 5,
-   "anchor_on_anchor": [
-    "wk2 vs Oregon(10.5)",
-    "wk11 vs Texas Tech(10.5)"
-   ]
+   "bboc_notes": "[BBOC pending — covered in Big 12 pod, not Pac-12.] Edge read: SP+ #38 and Net TARP +10.0 (highest in bucket) grade out well — possible pool value if drafters underrate as weak real-conf self.",
+   "mkt_pod": null
   },
   {
    "team": "Arkansas",
@@ -631,56 +331,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": null,
-   "qb_status": "\u2014 [covered in SEC pod, not Pac-12]",
+   "qb_status": "— [covered in SEC pod, not Pac-12]",
    "host_lean": null,
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": null,
-   "key_avoids": "\u2014 [from SEC pod]",
+   "key_avoids": "— [from SEC pod]",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "[BBOC pending \u2014 covered in SEC pod, not Pac-12.] Edge read: SP+ #47, TARP +6.5 \u2014 grades better than its 4.5 market; possible value if underrated as its real-conf self.",
-   "upside_signals": {
-    "game_count": 12,
-    "game_count_note": "12",
-    "non_con": null,
-    "rest_edge": null,
-    "home_away": null,
-    "conf_draw": null,
-    "sched_gap": "REASSIGNED: plays real SEC schedule \u2014 schedule/non-con/avoids NOT in Pac-12 pod; source from real SEC pod + official schedule"
-   },
-   "game_count": 12,
-   "game_delta": "0",
-   "game_note": "",
-   "sched_facts": {
-    "game_count": 12,
-    "game_delta": "0",
-    "home": 7,
-    "road": 5,
-    "neutral": 0,
-    "max_road_streak": 1,
-    "max_home_streak": 2,
-    "bye_week": 8,
-    "short_weeks": 0,
-    "sos_proxy": 7.5,
-    "cupcakes": 1,
-    "anchor_on_anchor": [
-     "wk3 vs Georgia(9.5)",
-     "wk5 @ Texas A&M(8.5)",
-     "wk12 @ Texas(9.5)",
-     "wk13 vs LSU(8.5)"
-    ]
-   },
-   "bye_week": 8,
-   "anchor_on_anchor": [
-    "wk3 vs Georgia(9.5)",
-    "wk5 @ Texas A&M(8.5)",
-    "wk12 @ Texas(9.5)",
-    "wk13 vs LSU(8.5)"
-   ]
+   "bboc_notes": "[BBOC pending — covered in SEC pod, not Pac-12.] Edge read: SP+ #47, TARP +6.5 — grades better than its 4.5 market; possible value if underrated as its real-conf self.",
+   "mkt_pod": null
   },
   {
    "team": "Michigan State",
@@ -702,54 +365,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": null,
-   "qb_status": "\u2014 [covered in Big Ten pod]",
+   "qb_status": "— [covered in Big Ten pod]",
    "host_lean": null,
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": null,
-   "key_avoids": "\u2014 [from Big Ten pod]",
+   "key_avoids": "— [from Big Ten pod]",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "[BBOC pending \u2014 covered in Big Ten pod, not Pac-12.] Edge read: SP+ #67, low ret prod 46%, TARP -3.5.",
-   "upside_signals": {
-    "game_count": 12,
-    "game_count_note": "12",
-    "non_con": null,
-    "rest_edge": null,
-    "home_away": null,
-    "conf_draw": null,
-    "sched_gap": "REASSIGNED: plays real Big Ten schedule \u2014 schedule/non-con/avoids NOT in Pac-12 pod; source from real Big Ten pod + official schedule"
-   },
-   "game_count": 12,
-   "game_delta": "0",
-   "game_note": "",
-   "sched_facts": {
-    "game_count": 12,
-    "game_delta": "0",
-    "home": 7,
-    "road": 5,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 9,
-    "short_weeks": 0,
-    "sos_proxy": 7.3,
-    "cupcakes": 0,
-    "anchor_on_anchor": [
-     "wk1 vs Toledo(7.5)",
-     "wk3 @ Notre Dame(11.5)",
-     "wk12 vs Oregon(10.5)"
-    ]
-   },
-   "bye_week": 9,
-   "anchor_on_anchor": [
-    "wk1 vs Toledo(7.5)",
-    "wk3 @ Notre Dame(11.5)",
-    "wk12 vs Oregon(10.5)"
-   ]
+   "bboc_notes": "[BBOC pending — covered in Big Ten pod, not Pac-12.] Edge read: SP+ #67, low ret prod 46%, TARP -3.5.",
+   "mkt_pod": null
   },
   {
    "team": "Purdue",
@@ -771,52 +399,19 @@
    "new_hc": null,
    "new_oc": null,
    "new_dc": null,
-   "qb_status": "\u2014 [covered in Big Ten pod]",
+   "qb_status": "— [covered in Big Ten pod]",
    "host_lean": null,
    "dark_horse": false,
    "fade": false,
    "host_split": false,
    "variance": false,
    "sched_tag": null,
-   "key_avoids": "\u2014 [from Big Ten pod]",
+   "key_avoids": "— [from Big Ten pod]",
    "sos_rank": null,
    "miles": null,
    "key_injury": null,
-   "bboc_notes": "[BBOC pending \u2014 covered in Big Ten pod, not Pac-12.] Edge read: market lowest (3.5) but ret prod 58%, TARP +3.0, SP+ #82.",
-   "upside_signals": {
-    "game_count": 12,
-    "game_count_note": "12",
-    "non_con": null,
-    "rest_edge": null,
-    "home_away": null,
-    "conf_draw": null,
-    "sched_gap": "REASSIGNED: plays real Big Ten schedule \u2014 schedule/non-con/avoids NOT in Pac-12 pod; source from real Big Ten pod + official schedule"
-   },
-   "game_count": 12,
-   "game_delta": "0",
-   "game_note": "",
-   "sched_facts": {
-    "game_count": 12,
-    "game_delta": "0",
-    "home": 6,
-    "road": 6,
-    "neutral": 0,
-    "max_road_streak": 2,
-    "max_home_streak": 2,
-    "bye_week": 8,
-    "short_weeks": 0,
-    "sos_proxy": 7.5,
-    "cupcakes": 0,
-    "anchor_on_anchor": [
-     "wk4 vs Notre Dame(11.5)",
-     "wk13 @ Indiana(10.5)"
-    ]
-   },
-   "bye_week": 8,
-   "anchor_on_anchor": [
-    "wk4 vs Notre Dame(11.5)",
-    "wk13 @ Indiana(10.5)"
-   ]
+   "bboc_notes": "[BBOC pending — covered in Big Ten pod, not Pac-12.] Edge read: market lowest (3.5) but ret prod 58%, TARP +3.0, SP+ #82.",
+   "mkt_pod": null
   }
  ]
 }
