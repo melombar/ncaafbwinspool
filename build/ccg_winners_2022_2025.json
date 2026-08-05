@@ -1,0 +1,314 @@
+{
+ "2022": [
+  {
+   "conf": "Conference USA",
+   "winner": "UTSA",
+   "loser": "North Texas",
+   "score": "48-27",
+   "week": 14,
+   "notes": "Conference USA Championship"
+  },
+  {
+   "conf": "Pac-12",
+   "winner": "Utah",
+   "loser": "USC",
+   "score": "24-47",
+   "week": 14,
+   "notes": "Pac-12 Championship Game"
+  },
+  {
+   "conf": "Mid-American",
+   "winner": "Toledo",
+   "loser": "Ohio",
+   "score": "7-17",
+   "week": 14,
+   "notes": "MAC Championship"
+  },
+  {
+   "conf": "Big 12",
+   "winner": "Kansas State",
+   "loser": "TCU",
+   "score": "28-31",
+   "week": 14,
+   "notes": "Dr Pepper Big 12 Championship"
+  },
+  {
+   "conf": "Sun Belt",
+   "winner": "Troy",
+   "loser": "Coastal Carolina",
+   "score": "45-26",
+   "week": 14,
+   "notes": "Sun Belt Championship"
+  },
+  {
+   "conf": "American Athletic",
+   "winner": "Tulane",
+   "loser": "UCF",
+   "score": "45-28",
+   "week": 14,
+   "notes": "American Athletic Championship"
+  },
+  {
+   "conf": "Mountain West",
+   "winner": "Fresno State",
+   "loser": "Boise State",
+   "score": "16-28",
+   "week": 14,
+   "notes": "Mountain West Championship Game"
+  },
+  {
+   "conf": "SEC",
+   "winner": "Georgia",
+   "loser": "LSU",
+   "score": "50-30",
+   "week": 14,
+   "notes": "SEC Championship Game"
+  },
+  {
+   "conf": "ACC",
+   "winner": "Clemson",
+   "loser": "North Carolina",
+   "score": "10-39",
+   "week": 14,
+   "notes": "Subway ACC Championship"
+  },
+  {
+   "conf": "Big Ten",
+   "winner": "Michigan",
+   "loser": "Purdue",
+   "score": "43-22",
+   "week": 14,
+   "notes": "Big Ten Championship Game"
+  }
+ ],
+ "2023": [
+  {
+   "conf": "Conference USA",
+   "winner": "Liberty",
+   "loser": "New Mexico State",
+   "score": "49-35",
+   "week": 14,
+   "notes": "Conference USA Championship"
+  },
+  {
+   "conf": "Pac-12",
+   "winner": "Washington",
+   "loser": "Oregon",
+   "score": "34-31",
+   "week": 14,
+   "notes": "Pac-12 Championship"
+  },
+  {
+   "conf": "Mid-American",
+   "winner": "Miami (OH)",
+   "loser": "Toledo",
+   "score": "14-23",
+   "week": 14,
+   "notes": "MAC Championship"
+  },
+  {
+   "conf": "Big 12",
+   "winner": "Texas",
+   "loser": "Oklahoma State",
+   "score": "49-21",
+   "week": 14,
+   "notes": "Dr Pepper Big 12 Championship"
+  },
+  {
+   "conf": "Mountain West",
+   "winner": "Boise State",
+   "loser": "UNLV",
+   "score": "20-44",
+   "week": 14,
+   "notes": "Mountain West Championship"
+  },
+  {
+   "conf": "SEC",
+   "winner": "Alabama",
+   "loser": "Georgia",
+   "score": "27-24",
+   "week": 14,
+   "notes": "SEC Championship"
+  },
+  {
+   "conf": "American Athletic",
+   "winner": "SMU",
+   "loser": "Tulane",
+   "score": "14-26",
+   "week": 14,
+   "notes": "American Athletic Championship"
+  },
+  {
+   "conf": "Sun Belt",
+   "winner": "Troy",
+   "loser": "App State",
+   "score": "49-23",
+   "week": 14,
+   "notes": "Sun Belt Championship"
+  },
+  {
+   "conf": "Big Ten",
+   "winner": "Michigan",
+   "loser": "Iowa",
+   "score": "0-26",
+   "week": 14,
+   "notes": "Big Ten Championship"
+  },
+  {
+   "conf": "ACC",
+   "winner": "Florida State",
+   "loser": "Louisville",
+   "score": "16-6",
+   "week": 14,
+   "notes": "ACC Championship"
+  }
+ ],
+ "2024": [
+  {
+   "conf": "Conference USA",
+   "winner": "Jacksonville State",
+   "loser": "Western Kentucky",
+   "score": "52-12",
+   "week": 15,
+   "notes": "Conference USA Championship"
+  },
+  {
+   "conf": "American Athletic",
+   "winner": "Army",
+   "loser": "Tulane",
+   "score": "35-14",
+   "week": 15,
+   "notes": "American Athletic Championship"
+  },
+  {
+   "conf": "Mountain West",
+   "winner": "Boise State",
+   "loser": "UNLV",
+   "score": "21-7",
+   "week": 15,
+   "notes": "Mountain West Championship"
+  },
+  {
+   "conf": "Mid-American",
+   "winner": "Ohio",
+   "loser": "Miami (OH)",
+   "score": "3-38",
+   "week": 15,
+   "notes": "MAC Championship"
+  },
+  {
+   "conf": "Big 12",
+   "winner": "Arizona State",
+   "loser": "Iowa State",
+   "score": "45-19",
+   "week": 15,
+   "notes": "Dr Pepper Big 12 Championship"
+  },
+  {
+   "conf": "SEC",
+   "winner": "Georgia",
+   "loser": "Texas",
+   "score": "19-22",
+   "week": 15,
+   "notes": "SEC Championship"
+  },
+  {
+   "conf": "Sun Belt",
+   "winner": "Marshall",
+   "loser": "Louisiana",
+   "score": "3-31",
+   "week": 15,
+   "notes": "Sun Belt Championship"
+  },
+  {
+   "conf": "Big Ten",
+   "winner": "Oregon",
+   "loser": "Penn State",
+   "score": "45-37",
+   "week": 15,
+   "notes": "Big Ten Championship"
+  },
+  {
+   "conf": "ACC",
+   "winner": "Clemson",
+   "loser": "SMU",
+   "score": "31-34",
+   "week": 15,
+   "notes": "ACC Championship"
+  }
+ ],
+ "2025": [
+  {
+   "conf": "Conference USA",
+   "winner": "Kennesaw State",
+   "loser": "Jacksonville State",
+   "score": "15-19",
+   "week": 15,
+   "notes": "Conference USA Championship"
+  },
+  {
+   "conf": "Sun Belt",
+   "winner": "James Madison",
+   "loser": "Troy",
+   "score": "31-14",
+   "week": 15,
+   "notes": "Sun Belt Championship"
+  },
+  {
+   "conf": "Mountain West",
+   "winner": "Boise State",
+   "loser": "UNLV",
+   "score": "38-21",
+   "week": 15,
+   "notes": "Mountain West Championship"
+  },
+  {
+   "conf": "American Athletic",
+   "winner": "Tulane",
+   "loser": "North Texas",
+   "score": "34-21",
+   "week": 15,
+   "notes": "American Championship"
+  },
+  {
+   "conf": "Big 12",
+   "winner": "Texas Tech",
+   "loser": "BYU",
+   "score": "34-7",
+   "week": 15,
+   "notes": "Big 12 Championship"
+  },
+  {
+   "conf": "Mid-American",
+   "winner": "Western Michigan",
+   "loser": "Miami (OH)",
+   "score": "23-13",
+   "week": 15,
+   "notes": "MAC Championship"
+  },
+  {
+   "conf": "SEC",
+   "winner": "Georgia",
+   "loser": "Alabama",
+   "score": "7-28",
+   "week": 15,
+   "notes": "SEC Championship"
+  },
+  {
+   "conf": "Big Ten",
+   "winner": "Indiana",
+   "loser": "Ohio State",
+   "score": "10-13",
+   "week": 15,
+   "notes": "Big Ten Championship"
+  },
+  {
+   "conf": "ACC",
+   "winner": "Duke",
+   "loser": "Virginia",
+   "score": "20-27",
+   "week": 15,
+   "notes": "ACC Championship"
+  }
+ ]
+}

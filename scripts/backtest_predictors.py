@@ -65,25 +65,63 @@ def cfbd_get(path, params):
     with urllib.request.urlopen(req, timeout=60, context=SSL_CTX) as r:
         return json.load(r)
 
+def _f(g, *names, default=None):
+    """CFBD returns camelCase (homeTeam) with occasional snake_case; try both."""
+    for n in names:
+        if n in g and g[n] is not None:
+            return g[n]
+    return default
+
+# FBS conferences that stage a championship game (Independents have none).
+# Pac-12 played a CCG through 2023 only. Names match CFBD's conference strings.
+FBS_CCG_CONFS = {"SEC", "Big Ten", "Big 12", "ACC", "Pac-12", "American Athletic",
+                 "American", "Conference USA", "Mid-American", "Mountain West", "Sun Belt"}
+
+# Manual override if a real CCG is ever missed (empty by default). {year: {records_team_winner}}
+CCG_OVERRIDE = {}
+
 def ccg_winners_for(year):
-    """Detect conference-championship-game winners = postseason games whose two
-    teams share a conference. Returns {records_team_name: 1}. Prints each for audit."""
-    games = cfbd_get("/games", {"year": year, "seasonType": "postseason"})
+    """Conference-championship-game winners. CFBD files CCGs in the REGULAR season
+    (that is why /records regularSeason.wins includes them). A CCG here = an
+    intra-conference game in an FBS championship-playing conference whose `notes`
+    contain 'championship' (regular games have empty notes; this cleanly excludes
+    D2/D3 leakage, Army-Navy, neutral kickoff games, and temp-stadium 'neutral' games).
+    Prints detected CCGs and an audit of same-conference FBS games it did NOT flag,
+    so misses are visible. Returns {records_team: 1}."""
+    games = cfbd_get("/games", {"year": year, "seasonType": "regular", "classification": "fbs"})
     time.sleep(1)
-    winners = {}
-    detected = []
+    winners, detected, audit = {}, [], []
+    seen = set()
     for g in games:
-        hc, ac = g.get("home_conference"), g.get("away_conference")
-        ht, at = g.get("home_team"), g.get("away_team")
-        hp, ap = g.get("home_points"), g.get("away_points")
-        if hc and ac and hc == ac and hp is not None and ap is not None:
+        gid = _f(g, "id")
+        if gid in seen: continue
+        seen.add(gid)
+        hc, ac = _f(g, "homeConference", "home_conference"), _f(g, "awayConference", "away_conference")
+        ht, at = _f(g, "homeTeam", "home_team"), _f(g, "awayTeam", "away_team")
+        hp, ap = _f(g, "homePoints", "home_points"), _f(g, "awayPoints", "away_points")
+        notes = (_f(g, "notes", default="") or "").strip()
+        wk = _f(g, "week", default=0) or 0
+        if not (hc and ac and hc == ac and hp is not None and ap is not None):
+            continue
+        if hc not in FBS_CCG_CONFS:
+            continue
+        if "championship" in notes.lower():
             win = ht if hp > ap else at
             winners[win] = 1
             detected.append({"conf": hc, "winner": win, "loser": at if win == ht else ht,
-                             "score": f"{hp}-{ap}", "week": g.get("week")})
-    print(f"  {year}: detected {len(detected)} CCGs:")
+                             "score": f"{hp}-{ap}", "week": wk, "notes": notes})
+        elif wk >= 13:  # FBS same-conf late game not flagged — surface for miss-check
+            audit.append({"conf": hc, "teams": f"{ht} vs {at}", "week": wk,
+                          "notes": notes or "(none)"})
+    for w in CCG_OVERRIDE.get(year, []):
+        winners[w] = 1
+    print(f"  {year}: detected {len(detected)} FBS CCGs:")
     for d in sorted(detected, key=lambda x: x["conf"]):
-        print(f"     {d['conf']:<20} {d['winner']}  (beat {d['loser']} {d['score']})")
+        print(f"     {d['conf']:<18} {d['winner']}  (beat {d['loser']} {d['score']}, wk{d['week']}, '{d['notes']}')")
+    if audit:
+        print(f"     [audit] {len(audit)} FBS same-conf wk>=13 games NOT flagged as CCG (verify none are real CCGs):")
+        for u in sorted(audit, key=lambda x: (x['conf'], x['week']))[:40]:
+            print(f"        {u['conf']:<18} {u['teams']} wk{u['week']} notes={u['notes']}")
     return winners, detected
 
 # ---- load repo predictors + base wins ---------------------------------------

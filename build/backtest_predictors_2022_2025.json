@@ -1,0 +1,227 @@
+{
+ "meta": {
+  "objective": "MAE/RMSE of each preseason predictor vs actual regular-season wins (CCG stripped)",
+  "ground_truth": "CFBD regularSeason.wins minus conference-championship-game win",
+  "offline_ccg_not_stripped": false,
+  "seasons": [
+   2022,
+   2023,
+   2024,
+   2025
+  ],
+  "coverage_note": "market 2023/24 P4-heavy (~69 teams); Collin/TARP 2025 only; 2022/23 TARP unrecoverable (excluded)."
+ },
+ "market": {
+  "per_year": {
+   "2022": {
+    "n": 80,
+    "mae": 1.7,
+    "rmse": 2.101,
+    "bias": 0.062
+   },
+   "2023": {
+    "n": 69,
+    "mae": 1.442,
+    "rmse": 1.778,
+    "bias": 0.051
+   },
+   "2024": {
+    "n": 69,
+    "mae": 1.877,
+    "rmse": 2.459,
+    "bias": 0.051
+   },
+   "2025": {
+    "n": 133,
+    "mae": 1.898,
+    "rmse": 2.332,
+    "bias": -0.094
+   }
+  },
+  "note": "raw market total as the prediction (blind forecast, no fit)",
+  "pooled": {
+   "n": 351,
+   "mae": 1.759,
+   "rmse": 2.208,
+   "bias": -0.001
+  }
+ },
+ "sp_plus_loyo": {
+  "label": "SP+ rating -> wins, leave-one-year-out OLS (empirical slope, NOT a fixed curve)",
+  "per_year": {
+   "2022": {
+    "n": 131,
+    "mae": 1.663,
+    "rmse": 2.084,
+    "bias": 0.147,
+    "beta": [
+     6.4293,
+     0.0978
+    ]
+   },
+   "2023": {
+    "n": 133,
+    "mae": 1.845,
+    "rmse": 2.256,
+    "bias": -0.044,
+    "beta": [
+     6.3822,
+     0.0983
+    ]
+   },
+   "2024": {
+    "n": 134,
+    "mae": 1.892,
+    "rmse": 2.304,
+    "bias": -0.013,
+    "beta": [
+     6.3889,
+     0.1045
+    ]
+   },
+   "2025": {
+    "n": 136,
+    "mae": 2.017,
+    "rmse": 2.441,
+    "bias": -0.092,
+    "beta": [
+     6.3693,
+     0.1016
+    ]
+   }
+  },
+  "pooled": {
+   "n": 534,
+   "mae": 1.856,
+   "rmse": 2.277,
+   "bias": -0.001
+  }
+ },
+ "market_fit_loyo": {
+  "label": "actual ~ market (LOYO)",
+  "per_year": {
+   "2022": {
+    "n": 80,
+    "mae": 1.653,
+    "rmse": 2.015,
+    "bias": -0.021,
+    "beta": [
+     1.6318,
+     0.7588
+    ]
+   },
+   "2023": {
+    "n": 69,
+    "mae": 1.559,
+    "rmse": 1.859,
+    "bias": -0.007,
+    "beta": [
+     2.1233,
+     0.6868
+    ]
+   },
+   "2024": {
+    "n": 69,
+    "mae": 1.789,
+    "rmse": 2.324,
+    "bias": 0.016,
+    "beta": [
+     1.3333,
+     0.804
+    ]
+   },
+   "2025": {
+    "n": 133,
+    "mae": 1.884,
+    "rmse": 2.3,
+    "bias": 0.034,
+    "beta": [
+     1.9392,
+     0.716
+    ]
+   }
+  },
+  "pooled": {
+   "n": 351,
+   "mae": 1.749,
+   "rmse": 2.161,
+   "bias": 0.01
+  }
+ },
+ "market_plus_sp_loyo": {
+  "label": "actual ~ market + SP+ (LOYO)",
+  "per_year": {
+   "2022": {
+    "n": 80,
+    "mae": 1.647,
+    "rmse": 2.008,
+    "bias": -0.011,
+    "beta": [
+     1.875,
+     0.7162,
+     0.0084
+    ]
+   },
+   "2023": {
+    "n": 69,
+    "mae": 1.584,
+    "rmse": 1.877,
+    "bias": 0.087,
+    "beta": [
+     2.7566,
+     0.5776,
+     0.0221
+    ]
+   },
+   "2024": {
+    "n": 69,
+    "mae": 1.789,
+    "rmse": 2.319,
+    "bias": 0.064,
+    "beta": [
+     1.6985,
+     0.7409,
+     0.0127
+    ]
+   },
+   "2025": {
+    "n": 133,
+    "mae": 1.899,
+    "rmse": 2.298,
+    "bias": -0.108,
+    "beta": [
+     2.3733,
+     0.6266,
+     0.0209
+    ]
+   }
+  },
+  "pooled": {
+   "n": 351,
+   "mae": 1.758,
+   "rmse": 2.161,
+   "bias": -0.014
+  }
+ },
+ "collin_2025": {
+  "collin_alone": {
+   "n": 73,
+   "mae": 2.427,
+   "rmse": 3.115,
+   "bias": 0.068
+  },
+  "market_same_teams": {
+   "n": 73,
+   "mae": 2.007,
+   "rmse": 2.495,
+   "bias": 0.048
+  },
+  "corr_collin_vs_market_residual": -0.242,
+  "note": "single year (2025) -> high variance, not multi-year evidence (decay + year-partition)."
+ },
+ "tarp_2025": {
+  "corr_net_tarp_vs_market_residual": -0.009,
+  "n": 125,
+  "note": "net_tarp is a +/- adjustment, not a wins forecast; a ~0 corr = adds nothing to market. Single year."
+ }
+}
