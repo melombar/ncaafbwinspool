@@ -1,0 +1,1239 @@
+{
+ "year": 2026,
+ "layer": "A \u2014 raw data (TARP extract)",
+ "metric": "TARP = Transfer Activity + Returning Production (Collin Wilson / Project Three Straight)",
+ "scale": "PR Adjustments sheet: Off ~\u00b16, Def ~\u00b15, Net = Off + Def",
+ "benchmark_2026": {
+  "off_returned_pct": 63,
+  "def_returned_pct": 56
+ },
+ "source": "projectthreestraight.com/2026-tarp-transfer-activity-returning-production/ (published Google Sheets, JS-rendered, browser-captured 2026-08-04). Underlying: PFF 2025 stats + 247Sports portal.",
+ "provenance_doc": "specs/TARP_source_2026.md",
+ "note": "Extracted from data/data_2026.json (Layer A canonical). Values = PR Adjustments (net/off/def). 136 FBS teams carrying TARP.",
+ "teams": [
+  {
+   "team": "Ohio State",
+   "net_tarp": 10.5,
+   "off_tarp": 6.0,
+   "def_tarp": 4.5,
+   "ret_prod": 60,
+   "ret_off": 71,
+   "ret_def": 50
+  },
+  {
+   "team": "Oregon",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 66,
+   "ret_off": 65,
+   "ret_def": 66
+  },
+  {
+   "team": "Notre Dame",
+   "net_tarp": 5.5,
+   "off_tarp": 0.5,
+   "def_tarp": 5.0,
+   "ret_prod": 72,
+   "ret_off": 67,
+   "ret_def": 77
+  },
+  {
+   "team": "Georgia",
+   "net_tarp": 8.0,
+   "off_tarp": 3.0,
+   "def_tarp": 5.0,
+   "ret_prod": 68,
+   "ret_off": 63,
+   "ret_def": 72
+  },
+  {
+   "team": "Indiana",
+   "net_tarp": 7.5,
+   "off_tarp": 5.0,
+   "def_tarp": 2.5,
+   "ret_prod": 56,
+   "ret_off": 54,
+   "ret_def": 58
+  },
+  {
+   "team": "Texas",
+   "net_tarp": 10.5,
+   "off_tarp": 6.0,
+   "def_tarp": 4.5,
+   "ret_prod": 68,
+   "ret_off": 73,
+   "ret_def": 63
+  },
+  {
+   "team": "Texas Tech",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 65,
+   "ret_off": 67,
+   "ret_def": 64
+  },
+  {
+   "team": "Miami FL",
+   "net_tarp": 4.5,
+   "off_tarp": 3.0,
+   "def_tarp": 1.5,
+   "ret_prod": 49,
+   "ret_off": 48,
+   "ret_def": 51
+  },
+  {
+   "team": "Texas A&M",
+   "net_tarp": 8.5,
+   "off_tarp": 3.5,
+   "def_tarp": 5.0,
+   "ret_prod": 65,
+   "ret_off": 67,
+   "ret_def": 63
+  },
+  {
+   "team": "LSU",
+   "net_tarp": 10.5,
+   "off_tarp": 6.0,
+   "def_tarp": 4.5,
+   "ret_prod": 61,
+   "ret_off": 61,
+   "ret_def": 60
+  },
+  {
+   "team": "Alabama",
+   "net_tarp": -2.0,
+   "off_tarp": -4.0,
+   "def_tarp": 2.0,
+   "ret_prod": 48,
+   "ret_off": 35,
+   "ret_def": 61
+  },
+  {
+   "team": "Oklahoma",
+   "net_tarp": 8.0,
+   "off_tarp": 6.0,
+   "def_tarp": 2.0,
+   "ret_prod": 65,
+   "ret_off": 75,
+   "ret_def": 55
+  },
+  {
+   "team": "USC",
+   "net_tarp": 6.5,
+   "off_tarp": 2.5,
+   "def_tarp": 4.0,
+   "ret_prod": 65,
+   "ret_off": 67,
+   "ret_def": 64
+  },
+  {
+   "team": "Michigan",
+   "net_tarp": 4.5,
+   "off_tarp": 6.0,
+   "def_tarp": -1.5,
+   "ret_prod": 63,
+   "ret_off": 72,
+   "ret_def": 55
+  },
+  {
+   "team": "Tennessee",
+   "net_tarp": 5.0,
+   "off_tarp": 0.0,
+   "def_tarp": 5.0,
+   "ret_prod": 62,
+   "ret_off": 58,
+   "ret_def": 65
+  },
+  {
+   "team": "Ole Miss",
+   "net_tarp": 4.5,
+   "off_tarp": -0.5,
+   "def_tarp": 5.0,
+   "ret_prod": 61,
+   "ret_off": 61,
+   "ret_def": 62
+  },
+  {
+   "team": "Penn State",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 52,
+   "ret_off": 50,
+   "ret_def": 53
+  },
+  {
+   "team": "BYU",
+   "net_tarp": 8.5,
+   "off_tarp": 4.0,
+   "def_tarp": 4.5,
+   "ret_prod": 64,
+   "ret_off": 59,
+   "ret_def": 69
+  },
+  {
+   "team": "Florida",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 66,
+   "ret_off": 55,
+   "ret_def": 77
+  },
+  {
+   "team": "Missouri",
+   "net_tarp": -1.0,
+   "off_tarp": 0.0,
+   "def_tarp": -1.0,
+   "ret_prod": 49,
+   "ret_off": 59,
+   "ret_def": 40
+  },
+  {
+   "team": "Washington",
+   "net_tarp": 3.5,
+   "off_tarp": 3.0,
+   "def_tarp": 0.5,
+   "ret_prod": 65,
+   "ret_off": 69,
+   "ret_def": 61
+  },
+  {
+   "team": "Iowa",
+   "net_tarp": -3.0,
+   "off_tarp": -2.0,
+   "def_tarp": -1.0,
+   "ret_prod": 44,
+   "ret_off": 48,
+   "ret_def": 40
+  },
+  {
+   "team": "Clemson",
+   "net_tarp": 0.0,
+   "off_tarp": -1.5,
+   "def_tarp": 1.5,
+   "ret_prod": 53,
+   "ret_off": 46,
+   "ret_def": 61
+  },
+  {
+   "team": "South Carolina",
+   "net_tarp": 9.5,
+   "off_tarp": 6.0,
+   "def_tarp": 3.5,
+   "ret_prod": 68,
+   "ret_off": 76,
+   "ret_def": 61
+  },
+  {
+   "team": "Utah",
+   "net_tarp": 3.0,
+   "off_tarp": 2.0,
+   "def_tarp": 1.0,
+   "ret_prod": 55,
+   "ret_off": 55,
+   "ret_def": 55
+  },
+  {
+   "team": "Auburn",
+   "net_tarp": 7.0,
+   "off_tarp": 6.0,
+   "def_tarp": 1.0,
+   "ret_prod": 57,
+   "ret_off": 56,
+   "ret_def": 58
+  },
+  {
+   "team": "Louisville",
+   "net_tarp": 0.5,
+   "off_tarp": -0.5,
+   "def_tarp": 1.0,
+   "ret_prod": 53,
+   "ret_off": 52,
+   "ret_def": 55
+  },
+  {
+   "team": "SMU",
+   "net_tarp": 6.0,
+   "off_tarp": 4.5,
+   "def_tarp": 1.5,
+   "ret_prod": 62,
+   "ret_off": 66,
+   "ret_def": 58
+  },
+  {
+   "team": "Kansas State",
+   "net_tarp": 5.5,
+   "off_tarp": 3.0,
+   "def_tarp": 2.5,
+   "ret_prod": 58,
+   "ret_off": 65,
+   "ret_def": 51
+  },
+  {
+   "team": "Arizona",
+   "net_tarp": -0.5,
+   "off_tarp": -0.5,
+   "def_tarp": 0.0,
+   "ret_prod": 60,
+   "ret_off": 66,
+   "ret_def": 55
+  },
+  {
+   "team": "Vanderbilt",
+   "net_tarp": -3.0,
+   "off_tarp": -2.0,
+   "def_tarp": -1.0,
+   "ret_prod": 44,
+   "ret_off": 38,
+   "ret_def": 49
+  },
+  {
+   "team": "Virginia Tech",
+   "net_tarp": 10.0,
+   "off_tarp": 6.0,
+   "def_tarp": 4.0,
+   "ret_prod": 69,
+   "ret_off": 71,
+   "ret_def": 67
+  },
+  {
+   "team": "Illinois",
+   "net_tarp": 3.0,
+   "off_tarp": 4.0,
+   "def_tarp": -1.0,
+   "ret_prod": 50,
+   "ret_off": 52,
+   "ret_def": 47
+  },
+  {
+   "team": "TCU",
+   "net_tarp": -4.0,
+   "off_tarp": -3.0,
+   "def_tarp": -1.0,
+   "ret_prod": 51,
+   "ret_off": 44,
+   "ret_def": 58
+  },
+  {
+   "team": "Florida State",
+   "net_tarp": 6.0,
+   "off_tarp": 3.0,
+   "def_tarp": 3.0,
+   "ret_prod": 57,
+   "ret_off": 57,
+   "ret_def": 57
+  },
+  {
+   "team": "Houston",
+   "net_tarp": 7.0,
+   "off_tarp": 6.0,
+   "def_tarp": 1.0,
+   "ret_prod": 65,
+   "ret_off": 71,
+   "ret_def": 58
+  },
+  {
+   "team": "Nebraska",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 69,
+   "ret_off": 69,
+   "ret_def": 69
+  },
+  {
+   "team": "Oklahoma State",
+   "net_tarp": 10.0,
+   "off_tarp": 6.0,
+   "def_tarp": 4.0,
+   "ret_prod": 58,
+   "ret_off": 62,
+   "ret_def": 53
+  },
+  {
+   "team": "Boise State",
+   "net_tarp": -0.5,
+   "off_tarp": 0.0,
+   "def_tarp": -0.5,
+   "ret_prod": 57,
+   "ret_off": 60,
+   "ret_def": 55
+  },
+  {
+   "team": "Virginia",
+   "net_tarp": 0.5,
+   "off_tarp": -1.5,
+   "def_tarp": 2.0,
+   "ret_prod": 59,
+   "ret_off": 55,
+   "ret_def": 62
+  },
+  {
+   "team": "Pittsburgh",
+   "net_tarp": -1.0,
+   "off_tarp": -1.0,
+   "def_tarp": 0.0,
+   "ret_prod": 58,
+   "ret_off": 60,
+   "ret_def": 56
+  },
+  {
+   "team": "Arizona State",
+   "net_tarp": 2.0,
+   "off_tarp": 2.0,
+   "def_tarp": 0.0,
+   "ret_prod": 51,
+   "ret_off": 53,
+   "ret_def": 49
+  },
+  {
+   "team": "Georgia Tech",
+   "net_tarp": 0.5,
+   "off_tarp": -4.0,
+   "def_tarp": 4.5,
+   "ret_prod": 49,
+   "ret_off": 37,
+   "ret_def": 61
+  },
+  {
+   "team": "Duke",
+   "net_tarp": -3.0,
+   "off_tarp": -3.0,
+   "def_tarp": 0.0,
+   "ret_prod": 49,
+   "ret_off": 48,
+   "ret_def": 51
+  },
+  {
+   "team": "Minnesota",
+   "net_tarp": 8.0,
+   "off_tarp": 3.5,
+   "def_tarp": 4.5,
+   "ret_prod": 68,
+   "ret_off": 71,
+   "ret_def": 65
+  },
+  {
+   "team": "UCLA",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 67,
+   "ret_off": 73,
+   "ret_def": 61
+  },
+  {
+   "team": "Arkansas",
+   "net_tarp": 6.5,
+   "off_tarp": 3.0,
+   "def_tarp": 3.5,
+   "ret_prod": 55,
+   "ret_off": 55,
+   "ret_def": 55
+  },
+  {
+   "team": "NC State",
+   "net_tarp": 2.5,
+   "off_tarp": 3.5,
+   "def_tarp": -1.0,
+   "ret_prod": 54,
+   "ret_off": 62,
+   "ret_def": 46
+  },
+  {
+   "team": "Northwestern",
+   "net_tarp": 3.5,
+   "off_tarp": 2.0,
+   "def_tarp": 1.5,
+   "ret_prod": 57,
+   "ret_off": 57,
+   "ret_def": 58
+  },
+  {
+   "team": "Cincinnati",
+   "net_tarp": 2.5,
+   "off_tarp": 1.0,
+   "def_tarp": 1.5,
+   "ret_prod": 57,
+   "ret_off": 57,
+   "ret_def": 56
+  },
+  {
+   "team": "Baylor",
+   "net_tarp": 1.5,
+   "off_tarp": -0.5,
+   "def_tarp": 2.0,
+   "ret_prod": 53,
+   "ret_off": 44,
+   "ret_def": 62
+  },
+  {
+   "team": "Mississippi State",
+   "net_tarp": 1.0,
+   "off_tarp": 1.5,
+   "def_tarp": -0.5,
+   "ret_prod": 48,
+   "ret_off": 44,
+   "ret_def": 52
+  },
+  {
+   "team": "Kentucky",
+   "net_tarp": -0.5,
+   "off_tarp": -1.0,
+   "def_tarp": 0.5,
+   "ret_prod": 46,
+   "ret_off": 40,
+   "ret_def": 52
+  },
+  {
+   "team": "North Carolina",
+   "net_tarp": -4.0,
+   "off_tarp": -3.0,
+   "def_tarp": -1.0,
+   "ret_prod": 44,
+   "ret_off": 47,
+   "ret_def": 42
+  },
+  {
+   "team": "Maryland",
+   "net_tarp": 10.0,
+   "off_tarp": 5.0,
+   "def_tarp": 5.0,
+   "ret_prod": 71,
+   "ret_off": 68,
+   "ret_def": 74
+  },
+  {
+   "team": "California",
+   "net_tarp": 4.0,
+   "off_tarp": 6.0,
+   "def_tarp": -2.0,
+   "ret_prod": 58,
+   "ret_off": 70,
+   "ret_def": 45
+  },
+  {
+   "team": "Kansas",
+   "net_tarp": 3.5,
+   "off_tarp": -0.5,
+   "def_tarp": 4.0,
+   "ret_prod": 58,
+   "ret_off": 49,
+   "ret_def": 67
+  },
+  {
+   "team": "Wake Forest",
+   "net_tarp": -0.5,
+   "off_tarp": -0.5,
+   "def_tarp": 0.0,
+   "ret_prod": 53,
+   "ret_off": 45,
+   "ret_def": 61
+  },
+  {
+   "team": "UNLV",
+   "net_tarp": -5.0,
+   "off_tarp": -3.5,
+   "def_tarp": -1.5,
+   "ret_prod": 40,
+   "ret_off": 40,
+   "ret_def": 40
+  },
+  {
+   "team": "UCF",
+   "net_tarp": 7.0,
+   "off_tarp": 6.0,
+   "def_tarp": 1.0,
+   "ret_prod": 61,
+   "ret_off": 61,
+   "ret_def": 60
+  },
+  {
+   "team": "Wisconsin",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 59,
+   "ret_off": 61,
+   "ret_def": 57
+  },
+  {
+   "team": "Rutgers",
+   "net_tarp": -5.5,
+   "off_tarp": -3.0,
+   "def_tarp": -2.5,
+   "ret_prod": 47,
+   "ret_off": 49,
+   "ret_def": 46
+  },
+  {
+   "team": "Navy",
+   "net_tarp": -2.0,
+   "off_tarp": -3.5,
+   "def_tarp": 1.5,
+   "ret_prod": 47,
+   "ret_off": 33,
+   "ret_def": 61
+  },
+  {
+   "team": "Iowa State",
+   "net_tarp": -7.0,
+   "off_tarp": -6.0,
+   "def_tarp": -1.0,
+   "ret_prod": 45,
+   "ret_off": 44,
+   "ret_def": 46
+  },
+  {
+   "team": "Colorado",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 55,
+   "ret_off": 57,
+   "ret_def": 53
+  },
+  {
+   "team": "West Virginia",
+   "net_tarp": 3.0,
+   "off_tarp": 6.0,
+   "def_tarp": -3.0,
+   "ret_prod": 52,
+   "ret_off": 57,
+   "ret_def": 46
+  },
+  {
+   "team": "Michigan State",
+   "net_tarp": -3.5,
+   "off_tarp": -1.5,
+   "def_tarp": -2.0,
+   "ret_prod": 46,
+   "ret_off": 48,
+   "ret_def": 45
+  },
+  {
+   "team": "New Mexico",
+   "net_tarp": -1.5,
+   "off_tarp": 0.0,
+   "def_tarp": -1.5,
+   "ret_prod": 63,
+   "ret_off": 68,
+   "ret_def": 58
+  },
+  {
+   "team": "Syracuse",
+   "net_tarp": 11.0,
+   "off_tarp": 6.0,
+   "def_tarp": 5.0,
+   "ret_prod": 62,
+   "ret_off": 56,
+   "ret_def": 67
+  },
+  {
+   "team": "Memphis",
+   "net_tarp": -6.0,
+   "off_tarp": -6.0,
+   "def_tarp": 0.0,
+   "ret_prod": 42,
+   "ret_off": 44,
+   "ret_def": 39
+  },
+  {
+   "team": "San Diego State",
+   "net_tarp": 0.0,
+   "off_tarp": 2.5,
+   "def_tarp": -2.5,
+   "ret_prod": 59,
+   "ret_off": 76,
+   "ret_def": 43
+  },
+  {
+   "team": "UTSA",
+   "net_tarp": 3.0,
+   "off_tarp": 3.0,
+   "def_tarp": 0.0,
+   "ret_prod": 54,
+   "ret_off": 64,
+   "ret_def": 44
+  },
+  {
+   "team": "Boston College",
+   "net_tarp": -0.5,
+   "off_tarp": -3.0,
+   "def_tarp": 2.5,
+   "ret_prod": 50,
+   "ret_off": 44,
+   "ret_def": 57
+  },
+  {
+   "team": "Stanford",
+   "net_tarp": -3.5,
+   "off_tarp": -2.0,
+   "def_tarp": -1.5,
+   "ret_prod": 60,
+   "ret_off": 58,
+   "ret_def": 62
+  },
+  {
+   "team": "East Carolina",
+   "net_tarp": -8.0,
+   "off_tarp": -6.0,
+   "def_tarp": -2.0,
+   "ret_prod": 42,
+   "ret_off": 33,
+   "ret_def": 50
+  },
+  {
+   "team": "James Madison",
+   "net_tarp": -10.0,
+   "off_tarp": -6.0,
+   "def_tarp": -4.0,
+   "ret_prod": 30,
+   "ret_off": 27,
+   "ret_def": 32
+  },
+  {
+   "team": "Fresno State",
+   "net_tarp": -3.0,
+   "off_tarp": -2.0,
+   "def_tarp": -1.0,
+   "ret_prod": 53,
+   "ret_off": 52,
+   "ret_def": 54
+  },
+  {
+   "team": "Air Force",
+   "net_tarp": 3.0,
+   "off_tarp": -1.5,
+   "def_tarp": 4.5,
+   "ret_prod": 59,
+   "ret_off": 42,
+   "ret_def": 75
+  },
+  {
+   "team": "South Florida",
+   "net_tarp": -9.0,
+   "off_tarp": -6.0,
+   "def_tarp": -3.0,
+   "ret_prod": 41,
+   "ret_off": 47,
+   "ret_def": 36
+  },
+  {
+   "team": "Miami OH",
+   "net_tarp": -1.5,
+   "off_tarp": -1.0,
+   "def_tarp": -0.5,
+   "ret_prod": 49,
+   "ret_off": 45,
+   "ret_def": 52
+  },
+  {
+   "team": "Purdue",
+   "net_tarp": 3.0,
+   "off_tarp": 3.0,
+   "def_tarp": 0.0,
+   "ret_prod": 58,
+   "ret_off": 61,
+   "ret_def": 55
+  },
+  {
+   "team": "Army",
+   "net_tarp": -1.0,
+   "off_tarp": 2.0,
+   "def_tarp": -3.0,
+   "ret_prod": 50,
+   "ret_off": 67,
+   "ret_def": 33
+  },
+  {
+   "team": "Hawaii",
+   "net_tarp": -3.0,
+   "off_tarp": 0.0,
+   "def_tarp": -3.0,
+   "ret_prod": 45,
+   "ret_off": 54,
+   "ret_def": 37
+  },
+  {
+   "team": "Washington State",
+   "net_tarp": -4.0,
+   "off_tarp": -1.5,
+   "def_tarp": -2.5,
+   "ret_prod": 42,
+   "ret_off": 48,
+   "ret_def": 36
+  },
+  {
+   "team": "Western Kentucky",
+   "net_tarp": -5.0,
+   "off_tarp": -1.5,
+   "def_tarp": -3.5,
+   "ret_prod": 32,
+   "ret_off": 37,
+   "ret_def": 26
+  },
+  {
+   "team": "Tulane",
+   "net_tarp": -4.5,
+   "off_tarp": -4.0,
+   "def_tarp": -0.5,
+   "ret_prod": 40,
+   "ret_off": 28,
+   "ret_def": 52
+  },
+  {
+   "team": "Old Dominion",
+   "net_tarp": -3.5,
+   "off_tarp": -6.0,
+   "def_tarp": 2.5,
+   "ret_prod": 40,
+   "ret_off": 23,
+   "ret_def": 58
+  },
+  {
+   "team": "Texas State",
+   "net_tarp": 2.0,
+   "off_tarp": 2.5,
+   "def_tarp": -0.5,
+   "ret_prod": 56,
+   "ret_off": 70,
+   "ret_def": 43
+  },
+  {
+   "team": "Troy",
+   "net_tarp": -4.0,
+   "off_tarp": -0.5,
+   "def_tarp": -3.5,
+   "ret_prod": 39,
+   "ret_off": 47,
+   "ret_def": 32
+  },
+  {
+   "team": "Oregon State",
+   "net_tarp": -1.0,
+   "off_tarp": -2.0,
+   "def_tarp": 1.0,
+   "ret_prod": 47,
+   "ret_off": 49,
+   "ret_def": 44
+  },
+  {
+   "team": "Marshall",
+   "net_tarp": -0.5,
+   "off_tarp": 1.5,
+   "def_tarp": -2.0,
+   "ret_prod": 48,
+   "ret_off": 61,
+   "ret_def": 36
+  },
+  {
+   "team": "Liberty",
+   "net_tarp": 1.0,
+   "off_tarp": 1.0,
+   "def_tarp": 0.0,
+   "ret_prod": 57,
+   "ret_off": 64,
+   "ret_def": 50
+  },
+  {
+   "team": "Florida Atlantic",
+   "net_tarp": 6.0,
+   "off_tarp": 3.0,
+   "def_tarp": 3.0,
+   "ret_prod": 64,
+   "ret_off": 62,
+   "ret_def": 65
+  },
+  {
+   "team": "Western Michigan",
+   "net_tarp": -1.5,
+   "off_tarp": 1.0,
+   "def_tarp": -2.5,
+   "ret_prod": 51,
+   "ret_off": 60,
+   "ret_def": 42
+  },
+  {
+   "team": "Tulsa",
+   "net_tarp": 2.5,
+   "off_tarp": 0.5,
+   "def_tarp": 2.0,
+   "ret_prod": 62,
+   "ret_off": 64,
+   "ret_def": 60
+  },
+  {
+   "team": "Utah State",
+   "net_tarp": -3.5,
+   "off_tarp": -3.0,
+   "def_tarp": -0.5,
+   "ret_prod": 48,
+   "ret_off": 40,
+   "ret_def": 55
+  },
+  {
+   "team": "Jacksonville State",
+   "net_tarp": 3.0,
+   "off_tarp": 1.5,
+   "def_tarp": 1.5,
+   "ret_prod": 57,
+   "ret_off": 60,
+   "ret_def": 54
+  },
+  {
+   "team": "Colorado State",
+   "net_tarp": 3.5,
+   "off_tarp": 3.5,
+   "def_tarp": 0.0,
+   "ret_prod": 46,
+   "ret_off": 38,
+   "ret_def": 54
+  },
+  {
+   "team": "Louisiana Tech",
+   "net_tarp": 6.0,
+   "off_tarp": 4.5,
+   "def_tarp": 1.5,
+   "ret_prod": 56,
+   "ret_off": 64,
+   "ret_def": 48
+  },
+  {
+   "team": "Arkansas State",
+   "net_tarp": 1.5,
+   "off_tarp": 3.5,
+   "def_tarp": -2.0,
+   "ret_prod": 49,
+   "ret_off": 52,
+   "ret_def": 45
+  },
+  {
+   "team": "Temple",
+   "net_tarp": -1.0,
+   "off_tarp": -0.5,
+   "def_tarp": -0.5,
+   "ret_prod": 53,
+   "ret_off": 62,
+   "ret_def": 43
+  },
+  {
+   "team": "Georgia Southern",
+   "net_tarp": -4.5,
+   "off_tarp": -5.5,
+   "def_tarp": 1.0,
+   "ret_prod": 43,
+   "ret_off": 23,
+   "ret_def": 62
+  },
+  {
+   "team": "Louisiana",
+   "net_tarp": 1.5,
+   "off_tarp": 3.5,
+   "def_tarp": -2.0,
+   "ret_prod": 49,
+   "ret_off": 63,
+   "ret_def": 35
+  },
+  {
+   "team": "Kennesaw State",
+   "net_tarp": -4.0,
+   "off_tarp": -3.0,
+   "def_tarp": -1.0,
+   "ret_prod": 49,
+   "ret_off": 42,
+   "ret_def": 55
+  },
+  {
+   "team": "Wyoming",
+   "net_tarp": -3.0,
+   "off_tarp": 0.0,
+   "def_tarp": -3.0,
+   "ret_prod": 40,
+   "ret_off": 43,
+   "ret_def": 36
+  },
+  {
+   "team": "UConn",
+   "net_tarp": -9.5,
+   "off_tarp": -6.0,
+   "def_tarp": -3.5,
+   "ret_prod": 31,
+   "ret_off": 25,
+   "ret_def": 37
+  },
+  {
+   "team": "Toledo",
+   "net_tarp": -9.0,
+   "off_tarp": -4.5,
+   "def_tarp": -4.5,
+   "ret_prod": 33,
+   "ret_off": 42,
+   "ret_def": 25
+  },
+  {
+   "team": "North Texas",
+   "net_tarp": -8.0,
+   "off_tarp": -5.0,
+   "def_tarp": -3.0,
+   "ret_prod": 32,
+   "ret_off": 28,
+   "ret_def": 35
+  },
+  {
+   "team": "Buffalo",
+   "net_tarp": -7.5,
+   "off_tarp": -6.0,
+   "def_tarp": -1.5,
+   "ret_prod": 30,
+   "ret_off": 26,
+   "ret_def": 33
+  },
+  {
+   "team": "Appalachian State",
+   "net_tarp": -3.0,
+   "off_tarp": -3.0,
+   "def_tarp": 0.0,
+   "ret_prod": 34,
+   "ret_off": 30,
+   "ret_def": 39
+  },
+  {
+   "team": "Nevada",
+   "net_tarp": -3.0,
+   "off_tarp": -3.0,
+   "def_tarp": 0.0,
+   "ret_prod": 48,
+   "ret_off": 57,
+   "ret_def": 39
+  },
+  {
+   "team": "Central Michigan",
+   "net_tarp": 0.5,
+   "off_tarp": 3.0,
+   "def_tarp": -2.5,
+   "ret_prod": 46,
+   "ret_off": 62,
+   "ret_def": 29
+  },
+  {
+   "team": "Delaware",
+   "net_tarp": -0.5,
+   "off_tarp": 0.5,
+   "def_tarp": -1.0,
+   "ret_prod": 62,
+   "ret_off": 62,
+   "ret_def": 62
+  },
+  {
+   "team": "Bowling Green",
+   "net_tarp": -5.5,
+   "off_tarp": -4.5,
+   "def_tarp": -1.0,
+   "ret_prod": 35,
+   "ret_off": 32,
+   "ret_def": 38
+  },
+  {
+   "team": "South Alabama",
+   "net_tarp": 1.0,
+   "off_tarp": 1.0,
+   "def_tarp": 0.0,
+   "ret_prod": 44,
+   "ret_off": 51,
+   "ret_def": 37
+  },
+  {
+   "team": "Ohio",
+   "net_tarp": -2.5,
+   "off_tarp": -4.5,
+   "def_tarp": 2.0,
+   "ret_prod": 33,
+   "ret_off": 18,
+   "ret_def": 48
+  },
+  {
+   "team": "FIU",
+   "net_tarp": 4.0,
+   "off_tarp": 2.0,
+   "def_tarp": 2.0,
+   "ret_prod": 47,
+   "ret_off": 43,
+   "ret_def": 50
+  },
+  {
+   "team": "Coastal Carolina",
+   "net_tarp": 0.5,
+   "off_tarp": 1.5,
+   "def_tarp": -1.0,
+   "ret_prod": 42,
+   "ret_off": 39,
+   "ret_def": 44
+  },
+  {
+   "team": "Rice",
+   "net_tarp": 2.5,
+   "off_tarp": 3.5,
+   "def_tarp": -1.0,
+   "ret_prod": 39,
+   "ret_off": 40,
+   "ret_def": 38
+  },
+  {
+   "team": "Eastern Michigan",
+   "net_tarp": -6.0,
+   "off_tarp": -4.5,
+   "def_tarp": -1.5,
+   "ret_prod": 62,
+   "ret_off": 59,
+   "ret_def": 64
+  },
+  {
+   "team": "San Jose State",
+   "net_tarp": -8.5,
+   "off_tarp": -5.0,
+   "def_tarp": -3.5,
+   "ret_prod": 24,
+   "ret_off": 24,
+   "ret_def": 23
+  },
+  {
+   "team": "New Mexico State",
+   "net_tarp": -2.0,
+   "off_tarp": -3.5,
+   "def_tarp": 1.5,
+   "ret_prod": 51,
+   "ret_off": 46,
+   "ret_def": 55
+  },
+  {
+   "team": "UAB",
+   "net_tarp": -3.5,
+   "off_tarp": -3.0,
+   "def_tarp": -0.5,
+   "ret_prod": 35,
+   "ret_off": 32,
+   "ret_def": 38
+  },
+  {
+   "team": "Northern Illinois",
+   "net_tarp": 2.5,
+   "off_tarp": 5.0,
+   "def_tarp": -2.5,
+   "ret_prod": 48,
+   "ret_off": 68,
+   "ret_def": 28
+  },
+  {
+   "team": "Missouri State",
+   "net_tarp": -3.0,
+   "off_tarp": -2.0,
+   "def_tarp": -1.0,
+   "ret_prod": 34,
+   "ret_off": 25,
+   "ret_def": 44
+  },
+  {
+   "team": "Akron",
+   "net_tarp": -0.5,
+   "off_tarp": -3.0,
+   "def_tarp": 2.5,
+   "ret_prod": 40,
+   "ret_off": 44,
+   "ret_def": 37
+  },
+  {
+   "team": "Kent State",
+   "net_tarp": 7.5,
+   "off_tarp": 3.5,
+   "def_tarp": 4.0,
+   "ret_prod": 48,
+   "ret_off": 57,
+   "ret_def": 39
+  },
+  {
+   "team": "UTEP",
+   "net_tarp": -2.0,
+   "off_tarp": -1.0,
+   "def_tarp": -1.0,
+   "ret_prod": 35,
+   "ret_off": 27,
+   "ret_def": 43
+  },
+  {
+   "team": "Southern Miss",
+   "net_tarp": -6.5,
+   "off_tarp": -5.5,
+   "def_tarp": -1.0,
+   "ret_prod": 22,
+   "ret_off": 23,
+   "ret_def": 20
+  },
+  {
+   "team": "ULM",
+   "net_tarp": 3.0,
+   "off_tarp": 4.0,
+   "def_tarp": -1.0,
+   "ret_prod": 51,
+   "ret_off": 63,
+   "ret_def": 40
+  },
+  {
+   "team": "Georgia State",
+   "net_tarp": 1.5,
+   "off_tarp": 0.0,
+   "def_tarp": 1.5,
+   "ret_prod": 38,
+   "ret_off": 48,
+   "ret_def": 27
+  },
+  {
+   "team": "Ball State",
+   "net_tarp": -3.5,
+   "off_tarp": -2.5,
+   "def_tarp": -1.0,
+   "ret_prod": 36,
+   "ret_off": 47,
+   "ret_def": 24
+  },
+  {
+   "team": "Middle Tennessee",
+   "net_tarp": -3.5,
+   "off_tarp": -3.0,
+   "def_tarp": -0.5,
+   "ret_prod": 36,
+   "ret_off": 34,
+   "ret_def": 37
+  },
+  {
+   "team": "Sam Houston",
+   "net_tarp": -1.5,
+   "off_tarp": -0.5,
+   "def_tarp": -1.0,
+   "ret_prod": 49,
+   "ret_off": 52,
+   "ret_def": 46
+  },
+  {
+   "team": "UMass",
+   "net_tarp": 0.5,
+   "off_tarp": 0.5,
+   "def_tarp": 0.0,
+   "ret_prod": 46,
+   "ret_off": 49,
+   "ret_def": 43
+  },
+  {
+   "team": "Charlotte",
+   "net_tarp": -1.0,
+   "off_tarp": 0.0,
+   "def_tarp": -1.0,
+   "ret_prod": 43,
+   "ret_off": 52,
+   "ret_def": 34
+  }
+ ]
+}

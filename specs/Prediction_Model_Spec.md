@@ -21,6 +21,24 @@ Source used is LOGGED per game (line-grounded vs SP+-shaped vs default) so confi
 - **Poisson-binomial** distribution over the per-game probabilities (exact for summing unequal independent probs) → full win distribution → **P(≥8), P(≥6), expected wins, floor (P10) / ceiling (P90) shape.**
 - **Independence caveat** (stated, not hidden): games treated as independent; real correlation (injuries, momentum) slightly overstates the tails. Variance calibrated against historical total-vs-actual spread (`sbd_preseason_2018_2025.json` + workbook actuals) absorbs some of this.
 
+## The a+b synthesis (theoretical shape × empirical bands)
+
+The model reports two layers per team. Neither alone is honest: **(a)** the per-game Poisson-binomial is internally exact but assumes independence, so its tails are too tight; **(b)** the empirical spread bands measure how far real teams actually deviate from their market total but say nothing about *this* team's schedule. The synthesis fuses them — (a) supplies the schedule-driven shape, (b) supplies the real-world width and the tier-directional asymmetry.
+
+**a — per-game model (theoretical).** Everything above this section: hierarchy → sum-to-market → Poisson-binomial → `expected_wins`, `P_ge_8/6/10`, and *theoretical* `floor_p10`/`ceiling_p90`. These theoretical bands are known too tight (the independence caveat) and are kept only as the internal, pre-widening reference.
+
+**b — empirical widening + tier bands** (from `build/spread_bands.json`, 343 team-seasons 2022–2025; see `Spread_Bands_Spec.md`). Two corrections:
+- **Variance widening.** A season-level common factor (`season_sigma = 0.85`) is applied across a team's per-game probs before the roll-up, inflating the total-win SD from the independence-only theoretical value up to the empirical **sd 2.27**. This produces `floor_p10_widened`/`ceiling_p90_widened` — the schedule-driven bands, now realistically wide. This is the direct fix for the independence caveat: correlation (a good/bad season moves all games together) is injected as a shared factor rather than left implicit.
+- **Empirical tier bands.** `floor_empirical`/`ceiling_empirical` = market total + the tier's measured floor/ceiling residual (≤4.5: −1.8/+4.3; 5–6.5: −3.5/+3.5; 7–8.5: −3.2/+2.0; 9+: −3.0/+2.5). Market-anchored, not schedule-derived — the honest "how far do teams in this price tier actually swing" band for the draft room.
+
+**Tier tilt — shapes uncertainty, NOT expected value.** `tier_tilt` (≤4.5 +1.0 · 5–6.5 +0.33 · 7–8.5 −0.51 · 9+ −0.17, the tiers' mean residuals) is carried per team and used to skew the band asymmetry (fat upside tail for cheap teams, capped ceiling for the 7–8.5 trap). It is deliberately **not** added to expected wins: backtest #22 says the market total is the unbeatable level, so moving E[wins] off the market would be a market-beating claim. `expected_wins_widened` stays centered on the market total; only the *shape* around it tilts. This is what "honest vs market efficiency" means in the synthesis note.
+
+**Fields produced (per team):** `expected_wins` (a) vs `expected_wins_widened` (a+b); `floor_p10`/`ceiling_p90` (a, theoretical) vs `floor_p10_widened`/`ceiling_p90_widened` (a+b, schedule bands) vs `floor_empirical`/`ceiling_empirical` (b, market-tier bands); `tier_tilt`. `meta.synthesis` records `season_sigma`, the `tier_tilt` map, and the method note.
+
+**Draft-room read:** use the model's `P_ge_8` and per-game shape for *within-tier* ranking (a); use `floor_empirical`/`ceiling_empirical` + `tier_tilt` for the honest floor/ceiling and upside-asymmetry call (b). Never present the tilt as added expected value.
+
+> **Implementation note:** step (a) is `scripts/build_predictions.py`. Step (b) is currently applied as a post-process that writes the widened/empirical/tilt fields and `meta.synthesis` onto `predictions_2026.json`; that post-processor is **not yet committed to `scripts/`** — commit it (e.g. `scripts/apply_synthesis.py`) before the next rebuild so the a+b layer is reproducible, not hand-applied.
+
 ## Schedule-cost decomposition
 Split expected wins into: baseline (market total) vs what the schedule STRUCTURE adds/subtracts vs a neutral slate. This is what lets the backtest validate the Layer A/B schedule signals specifically — not just "was the total right" but "did tough-road teams underperform as predicted."
 

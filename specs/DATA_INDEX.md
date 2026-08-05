@@ -10,7 +10,7 @@
 | Game lines (2026) | 2026 wk1-4 | data/lines/cbs_lines_2026.txt | CBS moneylines |
 | Actual wins (clean, incl FCS) | 2022-2025 | data/records/cfbd_records.csv | CFBD /records — USE THIS not game-derived |
 | Preseason win totals | 2018,19,21-25 | data/market_totals/sbd_preseason_2018_2025.json | P4-heavy pre-2025 |
-| 6-Win% | 2022, 2025 | data/edge/edge2025.json (2025) | 2022 = sixwin2022.json (NOT yet committed) |
-| TARP | 2022,2023,2026 | NOT YET COMMITTED | re-add from Drive |
+| 6-Win% | 2025 | data/edge/edge2025.json (2025) | 2022 (`sixwin2022.json`) NOT recoverable — not in Drive or project as of 2026-08-05; was ephemeral. Re-capture from ESPN if needed. |
+| TARP | 2026 | data/tarp/tarp_2026.json (net/off/def, 136 FBS) | 2026 committed 2026-08-05 (extracted from data_2026.json; provenance in specs/TARP_source_2026.md). 2022/2023 raw NOT recoverable — not in Drive or project; re-capture from Project Three Straight archives if needed. |
 | Schedule facts | 2026 | data/schedule/schedule_facts_2026.json | full 138-team grid |
 | Actual results/standings | 2015-2025 | workbooks/ | pool spreadsheets |
