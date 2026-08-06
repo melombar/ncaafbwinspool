@@ -242,7 +242,7 @@
       <table id="board">
         <thead><tr>
           <th data-s="team">Team</th><th data-s="conf">Conf</th><th title="Overall grade — max of banking vs overperform value; hover the pill for the verdict">Grade</th>
-          <th data-s="mkt" class="num">O/U</th><th class="num" title="Floor–Ceiling — bold = empirical (market+tier band, the one you draft on); dim = widened per-game model">F–C</th><th data-s="sp_rank" class="num">SP+#</th>
+          <th data-s="mkt" class="num">O/U</th><th class="num" title="Floor–Ceiling from the actual per-game win distribution (85→15% percentiles), not a generic ±band. Dim line = near-certain wins (≥85%) — the banked floor.">F–C</th><th data-s="sp_rank" class="num">SP+#</th>
           <th data-s="ret" class="num">Ret%</th><th data-s="net_tarp" class="num">TARP</th>
           <th data-s="qb">QB</th><th>Coaching</th><th data-s="sched">Sched</th>
           <th data-s="lean">Lean</th><th>Flags</th><th>Notes</th><th></th>
@@ -473,9 +473,20 @@ function ouCell(t){
   return t.mkt!=null?String(t.mkt):'—';
 }
 const WIDENED={"Air Force":[4,10],"Akron":[2,8],"Alabama":[5,11],"Appalachian State":[3,9],"Arizona":[4,10],"Arizona State":[3,10],"Arkansas":[2,8],"Arkansas State":[3,9],"Army":[4,11],"Auburn":[3,10],"BYU":[5,11],"Ball State":[1,6],"Baylor":[3,10],"Boise State":[4,10],"Boston College":[1,7],"Bowling Green":[2,7],"Buffalo":[3,9],"California":[3,10],"Central Michigan":[3,9],"Charlotte":[1,5],"Cincinnati":[2,9],"Clemson":[4,10],"Coastal Carolina":[2,8],"Colorado":[2,8],"Colorado State":[1,6],"Delaware":[3,9],"Duke":[2,9],"East Carolina":[4,10],"EMU":[2,9],"Florida Intl":[3,10],"Florida":[4,10],"Florida Atlantic":[3,9],"Florida State":[3,10],"Fresno State":[3,9],"Georgia":[6,12],"Georgia Southern":[2,8],"Georgia State":[2,8],"Georgia Tech":[3,10],"Hawaii":[4,10],"Houston":[5,11],"Illinois":[4,10],"Indiana":[8,12],"Iowa":[4,10],"Iowa State":[2,8],"Jacksonville State":[4,10],"James Madison":[5,11],"Kansas":[3,9],"Kansas State":[5,11],"Kennesaw State":[3,9],"Kent State":[1,6],"Kentucky":[2,8],"LSU":[5,11],"Liberty":[5,11],"UL Lafayette":[4,10],"Louisiana Tech":[3,9],"Louisville":[5,11],"Marshall":[4,10],"Maryland":[2,9],"Memphis":[4,10],"Miami":[8,12],"Miami-OH":[4,10],"Michigan":[6,11],"Michigan State":[2,8],"Middle Tennessee":[1,7],"Minnesota":[3,9],"Mississippi State":[2,8],"Missouri":[3,10],"Missouri State":[2,8],"NC State":[4,10],"Navy":[4,10],"Nebraska":[4,9],"Nevada":[2,8],"New Mexico":[4,10],"New Mexico State":[2,8],"North Carolina":[2,8],"North Dakota State":[5,11],"North Texas":[3,8],"Northern Illinois":[1,6],"Northwestern":[3,8],"Notre Dame":[10,12],"Ohio":[3,9],"Ohio State":[6,12],"Oklahoma":[4,10],"Oklahoma State":[3,10],"Old Dominion":[4,10],"Ole Miss":[4,10],"Oregon":[8,12],"Oregon State":[2,7],"Penn State":[5,11],"Pittsburgh":[4,10],"Purdue":[1,7],"Rice":[1,7],"Rutgers":[2,8],"SMU":[5,11],"Sacramento State":[2,8],"Sam Houston":[1,7],"San Diego State":[3,9],"San José State":[2,8],"South Alabama":[3,9],"South Carolina":[3,10],"South Florida":[5,11],"Southern Mississippi":[1,7],"Stanford":[1,7],"Syracuse":[2,8],"TCU":[3,10],"Temple":[3,8],"Tennessee":[4,10],"Texas":[7,12],"Texas A&M":[5,11],"Texas State":[4,9],"Texas Tech":[8,12],"Toledo":[4,10],"Troy":[3,9],"Tulane":[4,10],"Tulsa":[3,8],"UAB":[1,6],"UCF":[3,9],"UCLA":[3,9],"UConn":[3,9],"UL Monroe":[1,7],"UMASS":[1,5],"UNLV":[4,10],"USC":[6,11],"UTEP":[1,6],"UTSA":[4,10],"Utah":[5,11],"Utah State":[2,8],"Vanderbilt":[3,9],"Virginia":[4,10],"Virginia Tech":[3,10],"Wake Forest":[3,9],"Washington":[4,10],"Washington State":[2,8],"West Virginia":[3,9],"Western Kentucky":[3,9],"Western Michigan":[4,10],"Wisconsin":[3,9],"Wyoming":[2,9]};
-function empBands(m){ if(m==null)return null; let fo,co;
+function empBands(m){ if(m==null)return null; let fo,co;   // LEGACY generic band (market ±) — fallback only when a team has no schedule
   if(m<=4.5){fo=-2.5;co=3.5} else if(m<=6.5){fo=-2.5;co=2.5} else if(m<=8.5){fo=-3.5;co=2.5} else {fo=-2.5;co=2.5}
   return [Math.max(0,Math.round(m+fo)), Math.min(12,Math.round(m+co))]; }
+// Distribution-based floor–ceiling: from the ACTUAL per-game win-prob distribution (Poisson-binomial),
+// NOT a generic ±band. Certain wins anchor the floor; the coinflip cluster sets the spread — team-specific.
+const CERTAIN=0.85;   // win-prob bar for a near-certain "banked" win — tunable
+function certainWins(team){ return (SCHED[team]||[]).filter(g=>g.wp!=null && g.wp/100>=CERTAIN).length; }
+function distBands(team, mkt){
+  const d=winDist(team);
+  if(!d.n) return mkt!=null?empBands(mkt):null;         // fallback to generic band if no schedule rows
+  let fl=0, ce=0;
+  for(let k=0;k<=d.n;k++){ if(d.Pge(k)>=0.85) fl=k; if(d.Pge(k)>=0.15) ce=k; }  // ~85% floor, ~15% ceiling
+  return [fl, ce];
+}
 function renderBoard(){
   const q=byId('search').value.toLowerCase(), fc=byId('fconf').value,
         hp=byId('hidepicked').checked, ou=byId('onlyusable').checked;
@@ -503,7 +514,7 @@ function renderBoard(){
       <td><span class="conf-badge">${t.conf}</span></td>
       <td>${(()=>{const g=computeGrade(t);return g?`<span class="gradepill ${gradeCls(g.letter)}" title="${esc(g.verdict)}">${g.letter}</span> <span class="gr-tag">${esc(g.tag)}</span>`:'<span class="dimd">—</span>';})()}</td>
       <td class="num">${ouCell(t)}</td>
-      <td class="num fc">${(()=>{const e=empBands(t.mkt),w=WIDENED[t.team];return e?`<b>${e[0]}\u2013${e[1]}</b>`+(w?`<br><span style="color:var(--faint);font-size:10px">${w[0]}\u2013${w[1]}</span>`:''):'\u2014';})()}</td>
+      <td class="num fc">${(()=>{const e=distBands(t.team,t.mkt); if(!e)return '\u2014'; const cw=certainWins(t.team),d=winDist(t.team); const src=d.n?`model distribution: ${cw} near-certain win(s) \u2265${Math.round(CERTAIN*100)}%, exp ${d.exp.toFixed(1)}, band = 85\u2192015% percentiles`:'no schedule \u2014 generic market band'; return `<b title="${src}">${e[0]}\u2013${e[1]}</b>`+(d.n?`<br><span style="color:var(--faint);font-size:10px" title="near-certain wins (\u2265${Math.round(CERTAIN*100)}%)">${cw} lock${cw===1?'':'s'}</span>`:'');})()}</td>
       <td class="num">${t.sp_rank??'—'}</td>
       <td class="num">${t.ret??'—'}</td>
       <td class="num">${t.net_tarp??'—'}</td>
@@ -580,7 +591,7 @@ function renderNeedStrip(){
     if(isF){filled++;
       const team=(Object.entries(picks).find(([tm,p])=>p===myname&&(DATA.find(d=>d.team===tm)||{}).conf===c)||[])[0];
       const rec=DATA.find(d=>d.team===team);
-      if(rec&&rec.mkt!=null){proj+=rec.mkt; const b=empBands(rec.mkt); if(b)bestcase+=b[1];}
+      if(rec&&rec.mkt!=null){proj+=rec.mkt; const b=distBands(rec.team,rec.mkt); if(b)bestcase+=b[1];}
       html+=`<span class="chip filled" title="${c} — ${team} (O/U ${rec?rec.mkt:'?'})">${c}<span class="t">${esc(team).split(' ')[0]}</span></span>`;
     } else {
       html+=`<span class="chip needed" title="${c} — needed">${c}</span>`;
@@ -861,7 +872,7 @@ function renderSchedule(){
     const byW={}; (SCHED[t]||[]).forEach(g=>byW[g.wk]=g);
     const rec=DATA.find(d=>d.team===t);
     const mkt=rec?(rec.mkt_pod!=null?rec.mkt_pod:rec.mkt):null;
-    const bands=empBands(mkt);
+    const bands=distBands(t,mkt);
     const spExp=(SCHED[t]||[]).reduce((s,g)=>s+(g.wp!=null?g.wp/100:0),0);
     const grd=rec?computeGrade(rec):null;
     const grPill=grd?`<span class="gradepill sm ${gradeCls(grd.letter)}" title="${esc(grd.verdict)}">${grd.letter}</span> `:'';
@@ -906,7 +917,7 @@ function renderRosters(){
     const teams=(byPlayer[pl]||[]).map(tm=>DATA.find(d=>d.team===tm)).filter(Boolean)
                  .sort((a,b)=>(b.mkt||0)-(a.mkt||0));
     let mkt=0,bc=0;
-    const rows=teams.map(t=>{ const m=t.mkt; if(m!=null){mkt+=m; const b=empBands(m); if(b)bc+=b[1];}
+    const rows=teams.map(t=>{ const m=t.mkt; if(m!=null){mkt+=m; const b=distBands(t.team,m); if(b)bc+=b[1];}
       return `<div class="ros-team"><span>${esc(t.team)} <span class="cf">${esc(t.conf)}</span></span><span class="num">${m!=null?m:'—'}</span></div>`;
     }).join('');
     const isMe = pl===myname;
