@@ -148,7 +148,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "Miami FL",
+   "team": "Miami",
    "mkt_win_total": 10.5,
    "sp_rank": 8,
    "sp_mar": 21.0,
@@ -1316,7 +1316,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "Miami OH",
+   "team": "Miami-OH",
    "mkt_win_total": 7.5,
    "sp_rank": 81,
    "sp_mar": -2.9,
@@ -1684,7 +1684,7 @@
    "proj_minus_mkt": -0.3
   },
   {
-   "team": "Louisiana",
+   "team": "UL Lafayette",
    "mkt_win_total": 7.5,
    "sp_rank": 104,
    "sp_mar": -9.1,
@@ -1908,7 +1908,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "FIU",
+   "team": "Florida Intl",
    "mkt_win_total": 6.5,
    "sp_rank": 118,
    "sp_mar": -13.7,
@@ -1956,7 +1956,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "Eastern Michigan",
+   "team": "EMU",
    "mkt_win_total": 5.5,
    "sp_rank": 121,
    "sp_mar": -15.0,
@@ -1972,7 +1972,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "San Jose State",
+   "team": "San José State",
    "mkt_win_total": 4.5,
    "sp_rank": 122,
    "sp_mar": -15.5,
@@ -2116,7 +2116,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "Southern Miss",
+   "team": "Southern Mississippi",
    "mkt_win_total": 3.5,
    "sp_rank": 131,
    "sp_mar": -23.3,
@@ -2132,7 +2132,7 @@
    "proj_minus_mkt": -0.5
   },
   {
-   "team": "ULM",
+   "team": "UL Monroe",
    "mkt_win_total": 3.5,
    "sp_rank": 132,
    "sp_mar": -24.3,
@@ -2212,7 +2212,7 @@
    "proj_minus_mkt": null
   },
   {
-   "team": "UMass",
+   "team": "UMASS",
    "mkt_win_total": 2.5,
    "sp_rank": 137,
    "sp_mar": -30.9,

@@ -3,7 +3,7 @@
  "generated": "2026-08-04",
  "provenance": "ESPN site.api teams/{id}/schedule?season=2026&seasontype=2, opponent matched by ESPN team ID against 138-team pool",
  "caveats": [
-  "Pac-12 rebuild (8 real MW/Pac-2 teams) game_count PROVISIONAL \u2014 ESPN posting in progress; some showed 11 then 12 across calls. Pod says 12 + Wk13 flex. Firm up before draft.",
+  "Pac-12 rebuild (8 real MW/Pac-2 teams) game_count PROVISIONAL — ESPN posting in progress; some showed 11 then 12 across calls. Pod says 12 + Wk13 flex. Firm up before draft.",
   "bye_week from week-number gap in the posted schedule",
   "anchor = pool team with mkt>=7.0 AND within 1.0 win of its conference ceiling",
   "game_delta: +1 (13 games, extra win chance), -1 (11 games, fewer), 0 (standard 12)"
@@ -30,7 +30,7 @@
    "b": "Notre Dame"
   },
   {
-   "a": "Miami FL",
+   "a": "Miami",
    "b": "Notre Dame"
   },
   {
@@ -82,7 +82,7 @@
    "b": "Texas A&M"
   },
   {
-   "a": "Louisiana",
+   "a": "UL Lafayette",
    "b": "USC"
   },
   {
@@ -175,7 +175,7 @@
   },
   {
    "a": "Clemson",
-   "b": "Miami FL"
+   "b": "Miami"
   },
   {
    "a": "Notre Dame",
@@ -210,11 +210,11 @@
    "b": "Western Michigan"
   },
   {
-   "a": "Miami OH",
+   "a": "Miami-OH",
    "b": "Pittsburgh"
   },
   {
-   "a": "Miami FL",
+   "a": "Miami",
    "b": "Pittsburgh"
   },
   {
@@ -314,7 +314,7 @@
    "b": "Tulane"
   },
   {
-   "a": "Miami OH",
+   "a": "Miami-OH",
    "b": "Western Michigan"
   },
   {
@@ -388,7 +388,7 @@
    "week0": false,
    "anchor_on_anchor": [
     "wk9 @ Navy(7.5)",
-    "wk10 vs Miami FL(10.5)"
+    "wk10 vs Miami(10.5)"
    ]
   },
   "Georgia": {
@@ -457,23 +457,6 @@
    "max_home_streak": 2,
    "cupcakes": 1,
    "sos_proxy": 6.0,
-   "week0": false
-  },
-  "Miami FL": {
-   "conf": "ACC",
-   "mkt": 10.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    6
-   ],
-   "home": 7,
-   "road": 5,
-   "max_road_streak": 2,
-   "max_home_streak": 3,
-   "cupcakes": 1,
-   "sos_proxy": 6.2,
    "week0": false
   },
   "Texas A&M": {
@@ -1637,7 +1620,7 @@
    "week0": false,
    "anchor_on_anchor": [
     "wk11 @ Notre Dame(11.5)",
-    "wk13 @ Miami FL(10.5)"
+    "wk13 @ Miami(10.5)"
    ]
   },
   "Stanford": {
@@ -1749,23 +1732,6 @@
    "max_home_streak": 2,
    "cupcakes": 1,
    "sos_proxy": 6.0,
-   "week0": false
-  },
-  "Miami OH": {
-   "conf": "MAC",
-   "mkt": 7.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    9
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 1,
-   "sos_proxy": 5.4,
    "week0": false
   },
   "Purdue": {
@@ -2175,23 +2141,6 @@
    "sos_proxy": 6.7,
    "week0": false
   },
-  "Louisiana": {
-   "conf": "Sun Belt",
-   "mkt": 7.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    9
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 1,
-   "max_home_streak": 1,
-   "cupcakes": 1,
-   "sos_proxy": 5.0,
-   "week0": false
-  },
   "Kennesaw State": {
    "conf": "CUSA",
    "mkt": 6.5,
@@ -2243,7 +2192,7 @@
    "sos_proxy": 5.7,
    "week0": false,
    "anchor_on_anchor": [
-    "wk4 @ Miami OH(7.5)",
+    "wk4 @ Miami-OH(7.5)",
     "wk9 @ Air Force(7.5)",
     "wk11 vs James Madison(8.5)",
     "wk12 vs Old Dominion(7.5)"
@@ -2402,23 +2351,6 @@
    "sos_proxy": 5.7,
    "week0": false
   },
-  "FIU": {
-   "conf": "CUSA",
-   "mkt": 6.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    5
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 1,
-   "sos_proxy": 5.9,
-   "week0": false
-  },
   "Coastal Carolina": {
    "conf": "Sun Belt",
    "mkt": 4.5,
@@ -2452,41 +2384,6 @@
    "cupcakes": 1,
    "sos_proxy": 7.0,
    "week0": false
-  },
-  "Eastern Michigan": {
-   "conf": "MAC",
-   "mkt": 5.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 2,
-   "byes": [
-    9,
-    11
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 1,
-   "sos_proxy": 5.3,
-   "week0": true
-  },
-  "San Jose State": {
-   "conf": "MWC",
-   "mkt": 4.5,
-   "game_count": 13,
-   "game_delta": "+1",
-   "bye_count": 1,
-   "byes": [
-    4
-   ],
-   "home": 7,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 1,
-   "sos_proxy": 6.1,
-   "week0": true
   },
   "New Mexico State": {
    "conf": "CUSA",
@@ -2626,40 +2523,6 @@
    "sos_proxy": 5.4,
    "week0": true
   },
-  "Southern Miss": {
-   "conf": "Sun Belt",
-   "mkt": 3.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    5
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 1,
-   "sos_proxy": 6.4,
-   "week0": false
-  },
-  "ULM": {
-   "conf": "Sun Belt",
-   "mkt": 3.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    6
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 1,
-   "sos_proxy": 5.6,
-   "week0": false
-  },
   "Georgia State": {
    "conf": "Sun Belt",
    "mkt": 4.5,
@@ -2728,23 +2591,6 @@
    "sos_proxy": 6.4,
    "week0": false
   },
-  "UMass": {
-   "conf": "MAC",
-   "mkt": 2.5,
-   "game_count": 12,
-   "game_delta": "0",
-   "bye_count": 1,
-   "byes": [
-    9
-   ],
-   "home": 6,
-   "road": 6,
-   "max_road_streak": 2,
-   "max_home_streak": 2,
-   "cupcakes": 2,
-   "sos_proxy": 5.3,
-   "week0": false
-  },
   "Charlotte": {
    "conf": "AAC",
    "mkt": 2.5,
@@ -2778,6 +2624,160 @@
    "cupcakes": 1,
    "sos_proxy": 6.0,
    "week0": false
+  },
+  "EMU": {
+   "conf": "MAC",
+   "mkt": 5.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 2,
+   "byes": [
+    9,
+    11
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 1,
+   "sos_proxy": 5.3,
+   "week0": true
+  },
+  "Florida Intl": {
+   "conf": "CUSA",
+   "mkt": 6.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    5
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 1,
+   "sos_proxy": 5.9,
+   "week0": false
+  },
+  "Miami": {
+   "conf": "ACC",
+   "mkt": 10.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    6
+   ],
+   "home": 7,
+   "road": 5,
+   "max_road_streak": 2,
+   "max_home_streak": 3,
+   "cupcakes": 1,
+   "sos_proxy": 6.2,
+   "week0": false
+  },
+  "Miami-OH": {
+   "conf": "MAC",
+   "mkt": 7.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    9
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 1,
+   "sos_proxy": 5.4,
+   "week0": false
+  },
+  "San José State": {
+   "conf": "MWC",
+   "mkt": 4.5,
+   "game_count": 13,
+   "game_delta": "+1",
+   "bye_count": 1,
+   "byes": [
+    4
+   ],
+   "home": 7,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 1,
+   "sos_proxy": 6.1,
+   "week0": true
+  },
+  "Southern Mississippi": {
+   "conf": "Sun Belt",
+   "mkt": 3.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    5
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 1,
+   "sos_proxy": 6.4,
+   "week0": false
+  },
+  "UL Lafayette": {
+   "conf": "Sun Belt",
+   "mkt": 7.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    9
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 1,
+   "max_home_streak": 1,
+   "cupcakes": 1,
+   "sos_proxy": 5.0,
+   "week0": false
+  },
+  "UL Monroe": {
+   "conf": "Sun Belt",
+   "mkt": 3.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    6
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 1,
+   "sos_proxy": 5.6,
+   "week0": false
+  },
+  "UMASS": {
+   "conf": "MAC",
+   "mkt": 2.5,
+   "game_count": 12,
+   "game_delta": "0",
+   "bye_count": 1,
+   "byes": [
+    9
+   ],
+   "home": 6,
+   "road": 6,
+   "max_road_streak": 2,
+   "max_home_streak": 2,
+   "cupcakes": 2,
+   "sos_proxy": 5.3,
+   "week0": false
   }
  },
  "profile_schema": {
@@ -2791,11 +2791,11 @@
   "anchor_on_anchor": "games vs pool anchors = caps"
  },
  "profile_caveats": [
-  "SCHEDULE IS MULTI-DIMENSIONAL \u2014 anchor-on-anchor caps are ONE signal; also weigh: rest (bye placement, short weeks), road/home structure (road-heavy stretch = disadvantage), non-con cupcakes (win padding), and schedule strength.",
+  "SCHEDULE IS MULTI-DIMENSIONAL — anchor-on-anchor caps are ONE signal; also weigh: rest (bye placement, short weeks), road/home structure (road-heavy stretch = disadvantage), non-con cupcakes (win padding), and schedule strength.",
   "SOS proxy is PARTLY redundant with the market line (the O/U already prices who you play). The EDGE is schedule STRUCTURE not raw SOS: when the hard games cluster, the home/road split of the hard games, and non-con specifically (memory #18).",
   "short_weeks uses strict <=5-day threshold (Louisville, SMU, Sacramento State only). Loose thresholds inflate it.",
-  "Raw 'Miles Traveled' is a DEAD metric (memory #19) \u2014 NOT reintroduced. Travel = road-structure (road count, max road streak) only, pending user call on whether to revive raw distance.",
-  "13-GAME TEAMS (two mechanisms): (1) Pac-12 Week 13 FLEX \u2014 the 8 pool Pac-12 flex members [Boise St, Colorado St, Fresno St, Oregon St, San Diego St, Texas St, Utah St, Washington St] play 12 + flex = 13 (user-authoritative list). (2) HAWAII RULE \u2014 San Jose State plays Hawai'i so gets a 13th-game exemption (real Mountain West, NOT a pool flex member). The 4 reassigned P4 teams (Okla St, Arkansas, Mich St, Purdue) play 12 (real P4 schedules)."
+  "Raw 'Miles Traveled' is a DEAD metric (memory #19) — NOT reintroduced. Travel = road-structure (road count, max road streak) only, pending user call on whether to revive raw distance.",
+  "13-GAME TEAMS (two mechanisms): (1) Pac-12 Week 13 FLEX — the 8 pool Pac-12 flex members [Boise St, Colorado St, Fresno St, Oregon St, San Diego St, Texas St, Utah St, Washington St] play 12 + flex = 13 (user-authoritative list). (2) HAWAII RULE — San José State plays Hawai'i so gets a 13th-game exemption (real Mountain West, NOT a pool flex member). The 4 reassigned P4 teams (Okla St, Arkansas, Mich St, Purdue) play 12 (real P4 schedules)."
  ],
  "coverage_note": "138/138 full recomputed profiles. Week-0 split applied: 17 teams have 2 byes (16 Week-0 + Army/Navy via Wk15). Flex-8 game_count=13.",
  "refreshed": "2026-08-04 RECOMPUTED from corrected Week-0-split 0-15 grid (byes/road/streaks all fresh, not amended)"
