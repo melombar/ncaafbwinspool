@@ -189,10 +189,9 @@
   <nav>
     <button data-v="board" class="on">Enriched Board</button>
     <button data-v="hm1">Anchor Availability</button>
+    <button data-v="hm3">Pool Needs</button>
     <button data-v="overperform">Overperform Targets</button>
     <button data-v="schedule">Schedule Win%</button>
-    <button data-v="rosters">Rosters &amp; Needs</button>
-    <button data-v="hm3">Pool Needs</button>
     <button data-v="setup">Setup &amp; Picks</button>
   </nav>
 
@@ -235,13 +234,6 @@
   </section>
 
   <!-- HEATMAP 2 -->
-  <section class="view" id="v-rosters">
-      <h2>Rosters &amp; Conferences Needed</h2>
-      <p class="note">Live from picks: each player's drafted anchors with market O/U, plus their running market total and best-case (ceiling) sum. Below, the live <i>Conferences_Needed</i> tab from the sheet.</p>
-      <div id="rosters-box"></div>
-      <h3 style="margin:22px 0 6px;font-size:13px;color:var(--ink)">Conferences Needed — live from the sheet</h3>
-      <div id="confneeded-box" style="overflow-x:auto"></div>
-  </section>
   <!-- HEATMAP 3 -->
   <section class="view" id="v-hm3">
     <div class="panel">
@@ -306,7 +298,7 @@
 </div>
 
 <script>
-const PROXY="https://script.google.com/macros/s/AKfycbwUzpnthgqiX890nXK1C-eUqsbqSngbebTR0Q2pz83NLMjZIIXoowMq100O0OfFudbd/exec";
+const PROXY="https://script.google.com/macros/s/AKfycbw0pt96oEnLUAa-8teNIgP-oY7RGH0CIuk3v03_QbmTqFDAMlXvM8IBezB9Hpds2m12/exec";
 const REAL={"Notre Dame":"Independent","UConn":"Independent","Boston College":"ACC","Syracuse":"ACC","Michigan State":"Big Ten","Purdue":"Big Ten","Oklahoma State":"Big 12","Arkansas":"SEC"};
 const num=v=>{if(v==null||v==="")return null;if(typeof v==="number")return v;const n=parseFloat(String(v).replace(/[^0-9.\-]/g,""));return isNaN(n)?null:n;};
 const str=v=>{if(v==null)return null;const s=String(v).trim();return(s===""||s==="None")?null:s;};
@@ -329,17 +321,18 @@ async function loadData(){
       const conf=str(d["Pool Conf"])||"?";
       return {
         team:d.Team, conf:conf, real_conf:str(d["Real Conf"])||REAL[d.Team]||conf,
-        mkt:num(d["Mkt"]), sp_rank:num(d["SP+ Rk"]), sp:num(d["SP+ Rtg"]),
+        mkt:num(d["Mkt O/U"]), sp_rank:num(d["SP+ Rk"]), sp:num(d["SP+ Rtg"]),
         ret:num(d["RetProd%"]), net_tarp:num(d["TARP net"]), off_tarp:num(a["TARP off"]), def_tarp:num(a["TARP def"]),
-        collin:num(d["Collin"]), proj_minus_mkt:num(d["Proj−Mkt"]), mkt_pod:num(b["mkt_pod"]),
-        qb:str(d["QB status"]), lean:str(d["Host Lean"]), sched:str(d["Sched"]),
-        avoids:str(d["Key Avoids/Draws"]), notes:str(d["Notes"]),
+        collin:num(d["Collin Proj"]), proj_minus_mkt:num(d["Proj−Mkt"]), mkt_pod:num(b["mkt_pod"]),
+        qb:str(d["QB status"]), lean:str(d["Host Lean"]), sched:str(d["Sched Tag"]),
+        avoids:str(d["Key Avoids/Draws"]), notes:str(d["BBOC Notes"]),
         hc:str(b["New HC"]), oc:str(b["New OC"]), dc:str(b["New DC"]),
-        coaching:str(d["Coaching"]),
-        dark_horse:(b["Dark Horse"]==="Y")||/DH/.test(d["Flags"]||""),
-        fade:(b["Fade"]==="Y")||/FADE/.test(d["Flags"]||""),
-        split:(b["Split"]==="Y")||/SPLIT/.test(d["Flags"]||""),
-        variance:(b["Variance"]==="Y")||/VAR/.test(d["Flags"]||""),
+        // Coaching + Flags are composed in JS from RAW Layer B columns (identical-header rule: no renamed/composed join columns)
+        coaching:[b["New HC"]&&("HC "+b["New HC"]),b["New OC"]&&("OC "+b["New OC"]),b["New DC"]&&("DC "+b["New DC"])].filter(Boolean).join(" | "),
+        dark_horse:(b["Dark Horse"]==="Y"),
+        fade:(b["Fade"]==="Y"),
+        split:(b["Split"]==="Y"),
+        variance:(b["Variance"]==="Y"),
         injury:str(b["Key Injury"]),
         // schedule facts (Layer A — from schedule extraction pipeline)
         game_count:num(a["game_count"]), game_delta:str(a["game_delta"]),
@@ -365,7 +358,6 @@ async function loadData(){
       (SCHED[t]=SCHED[t]||[]).push(g); });
     SCHWEEKS=[...wkset].sort((a,b)=>a-b);
     renderSchedControls();
-    CONFNEEDED = j.confNeeded || {header:[],rows:[]};
     const rr=(j.roster&&j.roster.rows)||[];
     const names=[];
     rr.forEach(row=>{
@@ -384,8 +376,7 @@ async function loadData(){
 }
 const CONFS = ["AAC","ACC","Big 12","Big Ten","CUSA","MAC","MWC","Pac12","SEC","Sun Belt"];
 const USABLE = 6.0;
-const WIN_TARGET = 80;      // median 1st-place ACTUAL total, 2015-2025 (the finish line, after overperformance)
-const MARKET_TARGET = 68;   // champion DRAFT-DAY market sum (10 anchors × ~6.8 mean projected); ~80 = +~12 eruption
+const WIN_TARGET = 80;  // median/most-common 1st-place total, 2015-2025 (mean 78.3)
 let picks = {};      // team -> player
 let roster = ["","","","","","","","","","","",""];
 let myname = "Mike";
@@ -525,30 +516,34 @@ function renderHM1(){
 function renderNeedStrip(){
   const box=byId('needstrip'); if(!box)return;
   const mine=playerConfs(myname);
-  let filled=0, proj=0, bestcase=0, html='<span class="lbl">My needs</span>';
+  let filled=0, proj=0, html='<span class="lbl">My needs</span>';
   for(const c of CONFS){
     const isF=mine.has(c);
     if(isF){filled++;
       const team=(Object.entries(picks).find(([tm,p])=>p===myname&&(DATA.find(d=>d.team===tm)||{}).conf===c)||[])[0];
       const rec=DATA.find(d=>d.team===team);
-      if(rec&&rec.mkt!=null){ proj+=rec.mkt; const b=empBands(rec.mkt); if(b)bestcase+=b[1]; }
+      if(rec&&rec.mkt!=null)proj+=rec.mkt;
       html+=`<span class="chip filled" title="${c} — ${team} (O/U ${rec?rec.mkt:'?'})">${c}<span class="t">${esc(team).split(' ')[0]}</span></span>`;
     } else {
       html+=`<span class="chip needed" title="${c} — needed">${c}</span>`;
     }
   }
-  // Benchmark against the champion DRAFT-DAY market sum (~68), not the 80 finish line.
-  // Winners project ~68 market (10 × ~6.8) then erupt +~12 to the ~80 actual. Ceiling sum = the path to 80.
-  const expNow = MARKET_TARGET*filled/10;
+  // pace: expected total at 80 pace given filled picks = 80*filled/10; are we ahead/behind?
+  const expectedNow = WIN_TARGET*filled/10;
   const remaining = 10-filled;
-  let paceCls='on';
-  if(filled>0){ if(proj>expNow+1.5)paceCls='ahead'; else if(proj<expNow-1.5)paceCls='behind'; }
-  const perPick = remaining>0 ? (MARKET_TARGET-proj)/remaining : 0;
-  const sub = filled===0 ? 'draft to ~68 mkt' :
-              filled<10 ? `${filled}/10 · ${perPick.toFixed(1)}/pick to ~68` :
-              (proj>=MARKET_TARGET?'at champ draft pace':`${(MARKET_TARGET-proj).toFixed(1)} under champ pace`);
-  html+=`<span class="pace ${paceCls}" title="MARKET = sum of your anchors' market win totals vs ~68 (the champion DRAFT-DAY market sum: 10 anchors × ~6.8). BEST-CASE = sum of empirical ceilings — the realistic path to the ~80 that actually wins (champions overperform market by ~+12).">`
-      + `<b>${proj.toFixed(1)}</b><span class="pacesub">/~68 mkt</span> · <b style="color:var(--gold)">${bestcase.toFixed(0)}</b><span class="pacesub"> best-case → win@~80 · ${sub}</span></span>`;
+  const needPerRemaining = filled<10 ? (WIN_TARGET-proj)/Math.max(remaining,1) : 0;
+  let paceCls='on', paceTxt='';
+  if(filled>0){
+    if(proj>expectedNow+1.5)paceCls='ahead';
+    else if(proj<expectedNow-1.5)paceCls='behind';
+    paceTxt = filled<10
+      ? `need ${needPerRemaining.toFixed(1)}/pick on the last ${remaining}`
+      : (proj>=WIN_TARGET?'target hit':`${(WIN_TARGET-proj).toFixed(1)} short`);
+  } else {
+    paceTxt='target '+WIN_TARGET;
+  }
+  html+=`<span class="pace ${paceCls}" title="Sum of your anchors' market win totals vs the ${WIN_TARGET}-win target (median 1st place, 2015-2025)">`
+      + `<b>${proj.toFixed(1)}</b>/${WIN_TARGET}<span class="pacesub"> · ${filled}/10 · ${paceTxt}</span></span>`;
   box.innerHTML=html;
 }
 
@@ -572,66 +567,9 @@ function renderHM3(){
 }
 
 // ---------- setup ----------
-// ---------- Rosters & Conferences Needed ----------
-let CONFNEEDED={header:[],rows:[]};
-function renderRosters(){
-  const box=byId('rosters-box'); if(!box)return;
-  const players=[...new Set([...roster.filter(Boolean), ...Object.values(picks)])];
-  if(!players.length){ box.innerHTML='<span class="faint">No players/picks yet — set the roster in Setup &amp; Picks and import Brad’s tracker.</span>'; return; }
-  let html='<div style="display:flex;flex-wrap:wrap;gap:14px">';
-  for(const pl of players){
-    const teams=Object.entries(picks).filter(([tm,p])=>p===pl).map(([tm])=>DATA.find(d=>d.team===tm)||{team:tm}).sort((a,b)=>(b.mkt??-1)-(a.mkt??-1));
-    let mkt=0,bc=0;
-    const trs=teams.map(t=>{ const m=t.mkt; if(m!=null){mkt+=m; const b=empBands(m); if(b)bc+=b[1];}
-      return `<tr><td style="padding:1px 8px 1px 0">${esc(t.team)}</td><td class="num" style="color:var(--dim)">${esc(t.conf||'')}</td><td class="num">${m==null?'—':m}</td></tr>`; }).join('');
-    const meBorder = pl===myname?'border:1px solid #2a6b45':'';
-    html+=`<div class="panel" style="${meBorder}"><div style="font-weight:700;margin-bottom:4px">${esc(pl)}${pl===myname?' <span class="faint">(you)</span>':''} <span class="faint">${teams.length}/10</span></div>`
-      +`<table style="font-size:12px"><thead><tr><th style="text-align:left">Team</th><th>Conf</th><th>O/U</th></tr></thead><tbody>${trs||'<tr><td class="faint">—</td></tr>'}</tbody></table>`
-      +`<div style="margin-top:5px;font-family:var(--mono);font-size:11px">mkt <b>${mkt.toFixed(1)}</b> · best-case <b style="color:var(--gold)">${bc.toFixed(0)}</b></div></div>`;
-  }
-  box.innerHTML=html+'</div>';
-}
-function renderConfNeeded(){
-  const box=byId('confneeded-box'); if(!box)return;
-  const h=CONFNEEDED.header||[], rows=CONFNEEDED.rows||[];
-  if(!rows.length){ box.innerHTML='<span class="faint">Conferences_Needed not loaded — add <code>confNeeded: tab(‘Conferences_Needed’)</code> to the proxy + redeploy, and confirm the tab name.</span>'; return; }
-  let html='<table style="font-size:12px"><thead><tr>'+h.map(x=>`<th style="text-align:left;padding:2px 12px 4px 0">${esc(x)}</th>`).join('')+'</tr></thead><tbody>';
-  for(const r of rows){ html+='<tr>'+h.map(k=>`<td style="padding:2px 12px 2px 0">${esc(r[k]==null?'':r[k])}</td>`).join('')+'</tr>'; }
-  box.innerHTML=html+'</tbody></table>';
-}
 // ---------- Overperform Tally (transparent count of pre-draftable reasons; NOT a prediction) ----------
 // Governed by Pre_Pick_Doctrine: excludes aggregate edge signals (SP+/TARP/RetProd) which DON'T predict beats.
 // Counts only team-specific structural + pod reasons. See Overperform_Tally_Spec.md.
-// Coaching continuity (everyone returns = best; all-new = worst; HC matters most; internal promo more stable than an outside hire).
-function coachSignal(t){
-  const H=!!t.hc, O=!!t.oc, D=!!t.dc;
-  const promoted=/promot|interim|in-house|within/i.test(t.hc||'');
-  if(!H&&!O&&!D) return {up:1,k:'staff intact',why:'HC + both coordinators return'};
-  if(H&&O&&D)    return {dn:1,k:'all-new staff',why:'HC + OC + DC all new'};
-  if(H&&promoted) return null;                       // internal HC promotion = stable → no tag
-  if(H)          return {dn:1,k:'new HC',why:'new head coach: '+t.hc};
-  if(O&&D)       return {dn:1,k:'new coordinators',why:'both coordinators new'};
-  return null;                                        // single coordinator change = neutral
-}
-// QB experience (returning starter best; proven transfer positive; unproven transfer / freshman / unsettled battle negative; returning-but-unproven = middle).
-function qbSignal(t){
-  const q=t.qb||''; if(!q) return null;
-  const en=(q.match(/^\s*([A-Za-z]+)/)||[])[1]||'';
-  const proven=/start(ed|er|s)\b|multi-?year|veteran|incumbent|held the job|thousand|\d,\d{3}|passed for|threw for|\d+\s*(rush|pass|total|rushing|passing)|carries|TD\b|Freshman of the Year|Award|all-?conf|put up/i.test(q);
-  const unproven=/first year|limited snaps|waited|sparingly|couldn'?t get|pushed the starter|\bbackup\b|never (really )?(played|started)|no (real )?starts|hasn'?t played|deer in|converted|didn'?t play/i.test(q);
-  if(/^Returning/i.test(en)){
-    if(unproven && !/incumbent|held the job|returning starter/i.test(q)) return null;
-    return {up:1,k:'QB: returning starter',why:'pod: '+q};
-  }
-  if(/^Transfer/i.test(en)){
-    if(unproven && !proven) return {dn:1,k:'QB: unproven transfer',why:'pod: '+q};
-    if(proven) return {up:1,k:'QB: proven transfer',why:'pod: '+q};
-    return null;
-  }
-  if(/^Freshman/i.test(en)) return {dn:1,k:'QB: freshman',why:'pod: '+q};
-  if(/^(Battle|Unsettled)/i.test(en)) return {dn:1,k:'QB: unsettled',why:'pod: '+q};
-  return null;
-}
 function computeTally(t){
   const up=[], dn=[];
   // --- schedule tailwinds ---
@@ -654,8 +592,8 @@ function computeTally(t){
   const podLoaded = t.pod_status==='pod-loaded' || (t.sched && t.sched!=='');
   if(podLoaded){
     if(/favorab/i.test(t.sched||'')) up.push({k:'favorable draw', why:'pod: '+t.sched});
-    const cs=coachSignal(t); if(cs) (cs.up?up:dn).push({k:cs.k, why:cs.why});   // coaching continuity
-    const qs=qbSignal(t);    if(qs) (qs.up?up:dn).push({k:qs.k, why:qs.why});   // QB experience (replaces old crude QB pair)
+    if(/upgrade|returning|veteran|proven/i.test(t.qb||'')) up.push({k:'QB tailwind', why:'pod: '+t.qb});
+    if(/downgrade|lost|unproven|new starter|question/i.test(t.qb||'')) dn.push({k:'QB headwind', why:'pod: '+t.qb});
     if(t.dark_horse) up.push({k:'dark horse', why:'pod flag'});
     if(t.fade) dn.push({k:'fade', why:'pod flag'});
   }
@@ -810,7 +748,7 @@ function refresh(){
   byId('npicks').textContent=Object.keys(picks).length;
   byId('myfilled').textContent=playerConfs(myname).size;
   renderBoard(); renderHM1(); renderHM3(); renderNeedStrip(); renderHMupside(); renderOverperform();
-  renderSchedule(); renderRosters(); renderConfNeeded();
+  renderSchedule();
 }
 
 // ---------- init ----------

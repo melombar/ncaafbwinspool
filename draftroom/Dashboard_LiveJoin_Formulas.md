@@ -1,133 +1,102 @@
-# Dashboard (A+B) — LIVE JOIN rebuild for Google Sheets
+# Dashboard (A+B join) — rebuild spec (raw columns · identical headers · VLOOKUP+MATCH)
 
-The pasted Dashboard came in as STATIC VALUES (no formulas), so it never updated from Layer A/B. This rebuilds it as a true live join: edit Layer A or Layer B → Dashboard updates automatically. No fill-down needed (ARRAYFORMULA spills down the whole column).
+Supersedes the ARRAYFORMULA / positional-reference versions. The join now (1) surfaces **raw**
+Layer A and Layer B columns with **byte-identical header names** to their source tabs — no renamed
+or composed join columns — so a mismatch can't hide, and (2) uses per-row **VLOOKUP + MATCH** keyed
+on team name, so row order never matters. Conference truth comes from `Master_Lookup`.
 
-## Setup (once)
+## Why (the failure this fixes)
+Positional refs (`='Layer A'!B4`) + renamed headers (`Mkt` vs `Mkt O/U`) let Notre Dame render as
+AAC and swap its win total with South Florida — invisibly. Rule now: **join header == source header**,
+lookup by **name**, conference from a **sourced** master table.
 
-1. Open the **Dashboard (A+B join)** tab.
-
-2. Select row 2 down to the bottom (row 2:1000) across columns A:Q and **delete** — clears the stale static values. Keep row 1 (headers).
-
-3. Use **Option 1** (recommended) or Option 2 below.
-
-
----
-
-## Option 1 — 17 column formulas (recommended: easy to debug)
-
-Paste each formula into the listed **row-2 cell**. Each fills its whole column automatically.
-
-> Paste **B2 first** (it's the team spine everything else references).
-
-
-**B2 — Team (spine)**
+## Universal formula (the only pattern used)
+Per row, filled down. NO ARRAYFORMULA. `X$1` is the join column's own header, which equals the
+source header, so `MATCH` finds the right column dynamically even if the source is reordered:
 ```
-=ARRAYFORMULA(IF('Layer A — raw data (SOURCED)'!$A2:$A="","",'Layer A — raw data (SOURCED)'!$A2:$A))
+=VLOOKUP($A2, <SOURCE>!$A:$Z, MATCH(X$1, <SOURCE>!$1:$1, 0), 0)
 ```
+Fill each column's row-2 formula down to the last team. When teams are added, extend the fill range
+(there is no ARRAYFORMULA auto-spill — accepted trade-off). `_LASTROW` = last populated team row.
 
-**A2 — Pool Conf**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$O,15,FALSE),"")))
-```
+## Column layout — 24 columns, each header identical to its source
 
-**C2 — Real Conf**
-```
-=ARRAYFORMULA(IF($B2:$B="","",SWITCH($B2:$B,"Notre Dame","Independent","UConn","Independent","Boston College","ACC","Syracuse","ACC","Michigan State","Big Ten","Purdue","Big Ten","Oklahoma State","Big 12","Arkansas","SEC",A2:A)))
-```
+| Col | Header (VERBATIM) | Source tab | Notes |
+|---|---|---|---|
+| A | `Team` | Layer A | spine (see A2 below) |
+| B | `Pool Conf` | Layer A col O | Layer A sources it from `Master_Lookup` |
+| C | `Real Conf` | `Master_Lookup` | replaces the retired SWITCH |
+| D | `Mkt O/U` | Layer A | |
+| E | `SP+ Rk` | Layer A | |
+| F | `SP+ Rtg` | Layer A | |
+| G | `RetProd%` | Layer A | |
+| H | `TARP net` | Layer A | |
+| I | `Collin Proj` | Layer A | |
+| J | `Proj−Mkt` | Layer A | `−` is U+2212, not a hyphen |
+| K | `QB status` | Layer B | |
+| L | `New HC` | Layer B | raw — HTML composes "Coaching" |
+| M | `New OC` | Layer B | raw |
+| N | `New DC` | Layer B | raw |
+| O | `Host Lean` | Layer B | |
+| P | `Dark Horse` | Layer B | raw Y/blank — HTML composes "Flags" |
+| Q | `Fade` | Layer B | raw Y/blank |
+| R | `Split` | Layer B | raw Y/blank |
+| S | `Variance` | Layer B | raw Y/blank |
+| T | `Sched Tag` | Layer B | |
+| U | `Key Avoids/Draws` | Layer B | |
+| V | `Key Injury` | Layer B | |
+| W | `BBOC Notes` | Layer B | |
+| X | `mkt_pod` | Layer B | pod-cited line; delta vs `Mkt O/U` is the signal |
 
-**D2 — Mkt**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$B,2,FALSE),"")))
-```
+Row 1 = these exact headers. Then:
 
-**E2 — SP+ Rk**
+**A2 — Team spine** (paste first; fill down)
 ```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$C,3,FALSE),"")))
+=IF('Layer A — raw data (SOURCED)'!A2="","",'Layer A — raw data (SOURCED)'!A2)
 ```
+**B2 — Pool Conf** (Layer A, which itself pulls Master)
+```
+=IF($A2="","",VLOOKUP($A2,'Layer A — raw data (SOURCED)'!$A:$Z,MATCH(B$1,'Layer A — raw data (SOURCED)'!$1:$1,0),0))
+```
+**C2 — Real Conf** (Master_Lookup)
+```
+=IF($A2="","",VLOOKUP($A2,Master_Lookup!$A:$C,MATCH(C$1,Master_Lookup!$A$1:$C$1,0),0))
+```
+**D2:J2 — Layer A columns** (same formula, copy across; MATCH auto-targets by header)
+```
+=IF($A2="","",VLOOKUP($A2,'Layer A — raw data (SOURCED)'!$A:$Z,MATCH(D$1,'Layer A — raw data (SOURCED)'!$1:$1,0),0))
+```
+**K2:X2 — Layer B columns** (same formula, copy across)
+```
+=IF($A2="","",VLOOKUP($A2,'Layer B — pod writeups'!$A:$Z,MATCH(K$1,'Layer B — pod writeups'!$1:$1,0),0))
+```
+Because `MATCH` reads each column's own header (`D$1`, `E$1`, … `X$1`), you paste ONE Layer A
+formula in D2 and drag right through J2, and ONE Layer B formula in K2 and drag right through X2.
+Then select D2:X2 and fill down to `_LASTROW`.
 
-**F2 — SP+ Rtg**
+## Layer A — Pool Conf is a lookup (not hand-entered)
+Layer A col O (`Pool Conf`), cell **O2**, filled down:
 ```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$D,4,FALSE),"")))
+=VLOOKUP($A2,Master_Lookup!$A:$C,MATCH(O$1,Master_Lookup!$A$1:$C$1,0),0)
 ```
+`O1` must read exactly `Pool Conf`. (Optionally add a `Real Conf` column to Layer A the same way; the
+join pulls Real Conf straight from Master either way.)
 
-**G2 — RetProd%**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$E,5,FALSE),"")))
-```
+## Critical: team-name spelling is the join key
+Every tab that the join or the draftroom keys by team — **Layer A, Layer B, Master_Lookup, Import_*,
+Import_BradTracker (picks), Draft_Order (roster)** — must use **Brad-canonical** spelling
+(`EMU`, `Florida Intl`, `Miami`, `Miami-OH`, `San José State`, `Southern Mississippi`, `UL Lafayette`,
+`UL Monroe`, `UMASS`) and the **system conf token** `Big Ten` (not `Big 10`). A single mismatch →
+that column returns blank for that team. The repo's `data_2026.json` + schedule files were normalized
+2026-08 for exactly this reason.
 
-**H2 — TARP net**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$H,8,FALSE),"")))
-```
+## Verify after building
+- Notre Dame: Pool Conf `CUSA`, Real Conf `Independent`, `Mkt O/U` `11.5`.
+- South Florida: `Mkt O/U` `8.5`.
+- Edit any Layer B cell → the join row changes (confirms live, name-keyed, not static).
+- `#N/A` in a column → the header text in row 1 doesn't byte-match the source header (check `−` vs `-`, `%`, spacing).
 
-**I2 — Collin**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$K,11,FALSE),"")))
-```
-
-**J2 — Proj−Mkt**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer A — raw data (SOURCED)'!$A:$L,12,FALSE),"")))
-```
-
-**K2 — QB status**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$B,2,FALSE),"")))
-```
-
-**L2 — Coaching**
-```
-=ARRAYFORMULA(IF($B2:$B="","",TRIM(IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$C,3,FALSE),"")="","","HC "&VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$C,3,FALSE)&" ")&IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$D,4,FALSE),"")="","","OC "&VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$D,4,FALSE)&" ")&IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$E,5,FALSE),"")="","","DC "&VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$E,5,FALSE)))))
-```
-
-**M2 — Host Lean**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$F,6,FALSE),"")))
-```
-
-**N2 — Sched**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$K,11,FALSE),"")))
-```
-
-**O2 — Flags**
-```
-=ARRAYFORMULA(IF($B2:$B="","",TRIM(IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$G,7,FALSE),"")="Y","DH ","")&IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$H,8,FALSE),"")="Y","FADE ","")&IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$I,9,FALSE),"")="Y","SPLIT ","")&IF(IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$J,10,FALSE),"")="Y","VAR",""))))
-```
-
-**P2 — Key Avoids/Draws**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$L,12,FALSE),"")))
-```
-
-**Q2 — Notes**
-```
-=ARRAYFORMULA(IF($B2:$B="","",IFERROR(VLOOKUP($B2:$B,'Layer B — pod writeups'!$A:$N,14,FALSE),"")))
-```
-
----
-
-## Option 2 — single cell (elegant, harder to debug)
-
-Delete A2:Q1000, then paste this ONE formula into **A2**. The entire join spills from it.
-
-```
-=ARRAYFORMULA(IF('Layer A — raw data (SOURCED)'!$A2:$A="","",{IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$O,15,0),""), 'Layer A — raw data (SOURCED)'!$A2:$A, SWITCH('Layer A — raw data (SOURCED)'!$A2:$A,"Notre Dame","Independent","UConn","Independent","Boston College","ACC","Syracuse","ACC","Michigan State","Big Ten","Purdue","Big Ten","Oklahoma State","Big 12","Arkansas","SEC",IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$O,15,0),"")), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$B,2,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$C,3,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$D,4,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$E,5,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$H,8,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$K,11,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer A — raw data (SOURCED)'!$A:$L,12,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$B,2,0),""), TRIM(IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$C,3,0),"")="","","HC "&IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$C,3,0),"")&" ")&IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$D,4,0),"")="","","OC "&IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$D,4,0),"")&" ")&IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$E,5,0),"")="","","DC "&IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$E,5,0),""))), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$F,6,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$K,11,0),""), TRIM(IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$G,7,0),"")="Y","DH ","")&IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$H,8,0),"")="Y","FADE ","")&IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$I,9,0),"")="Y","SPLIT ","")&IF(IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$J,10,0),"")="Y","VAR","")), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$L,12,0),""), IFERROR(VLOOKUP('Layer A — raw data (SOURCED)'!$A2:$A,'Layer B — pod writeups'!$A:$N,14,0),"")}))
-```
-
----
-
-## After pasting
-
-- **Test the join:** edit any Layer B cell (e.g. a QB note) → the Dashboard row should change immediately. That confirms it's live, not static.
-
-- **Your workflow now works:** paste a new row into Layer B → the Dashboard picks it up by VLOOKUP with no extra steps.
-
-- **If a formula errors** (`#REF!` / `#N/A`): the tab name reference is off. The formulas assume the tabs are named exactly:
-
-  - `Layer A — raw data (SOURCED)`
-  - `Layer B — pod writeups`
-
-  If yours differ (especially the — em-dash), find/replace the tab name inside the formula. Tell me the exact names and I'll regenerate.
-
-- **Column assumptions** (if you reordered columns, tell me): Layer A has Pool Conf in col O; Layer B is Team,QB,HC,OC,DC,Lean,DH,Fade,Split,Var,Sched,Avoids,Injury,Notes (A–N).
+## HTML contract (draftroom)
+The draftroom reads these exact Dashboard headers; Layer B fields are read from the `Layer B` tab by
+the same names. `Coaching` and `Flags` no longer exist as join columns — the HTML composes them from
+`New HC`/`New OC`/`New DC` and `Dark Horse`/`Fade`/`Split`/`Variance`.
