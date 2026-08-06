@@ -36,6 +36,11 @@
   .sch-row{display:flex;align-items:center;gap:4px;margin:4px 0;width:max-content}
   .sch-team{width:150px;flex:none;font-size:12px;font-weight:600;color:var(--ink)}
   .sch-wk{width:38px;flex:none;text-align:center;font-size:10px;color:var(--faint)}
+  .sch-tot{width:74px;flex:none;text-align:center;font-size:12px;line-height:1.25;color:var(--dim);border-right:1px solid var(--line);padding-right:6px;margin-right:2px}
+  .sch-tot-h{font-size:10px;color:var(--faint);font-weight:600}
+  .sch-tot .tot-w{color:#d68a5c}
+  .sch-tot .tot-m{color:var(--ink)}
+  .sch-tot .tot-b{color:#7bd67b}
   .sch-cell{width:38px;height:38px;flex:none;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#0d1520}
   .sch-home{border-radius:50%}
   .sch-away{border-radius:5px}
@@ -745,10 +750,17 @@ function renderSchedule(){
   const st=byId('sch-stat'); if(st)st.textContent=`${show.length} team(s) · ○ home · □ away · gold outline = real line`;
   if(!show.length){ box.innerHTML='<span class="faint">no schedule rows — is the Schedule Probs tab populated + the proxy redeployed?</span>'; return; }
   const weeks=SCHWEEKS.length?SCHWEEKS:[...Array(14).keys()];
-  let html=`<div class="sch-row"><div class="sch-team"></div>`+weeks.map(w=>`<div class="sch-wk">W${w}</div>`).join('')+`</div>`;
+  let html=`<div class="sch-row"><div class="sch-team"></div><div class="sch-tot sch-tot-h" title="worst – market – best (empirical spread bands off the market line); SP+ = expected wins summed from weekly win%">worst·mkt·best<br><span class="faint">SP+ exp</span></div>`+weeks.map(w=>`<div class="sch-wk">W${w}</div>`).join('')+`</div>`;
   for(const t of show){
     const byW={}; (SCHED[t]||[]).forEach(g=>byW[g.wk]=g);
-    html+=`<div class="sch-row"><div class="sch-team">${esc(t)}</div>`;
+    const rec=DATA.find(d=>d.team===t);
+    const mkt=rec?(rec.mkt_pod!=null?rec.mkt_pod:rec.mkt):null;
+    const bands=empBands(mkt);
+    const spExp=(SCHED[t]||[]).reduce((s,g)=>s+(g.wp!=null?g.wp/100:0),0);
+    const totCell = bands
+      ? `<div class="sch-tot" title="worst ${bands[0]} · market ${mkt} · best ${bands[1]} — SP+ expected ${spExp.toFixed(1)}"><span class="tot-w">${bands[0]}</span>·<b class="tot-m">${mkt}</b>·<span class="tot-b">${bands[1]}</span><br><span class="faint">${spExp.toFixed(1)}</span></div>`
+      : `<div class="sch-tot faint">—<br><span class="faint">${spExp?spExp.toFixed(1):'—'}</span></div>`;
+    html+=`<div class="sch-row"><div class="sch-team">${esc(t)}</div>${totCell}`;
     for(const w of weeks){ const g=byW[w];
       if(!g){ html+=`<div class="sch-bye" title="bye"></div>`; continue; }
       const shape=g.home?'sch-home':'sch-away', real=g.real?' sch-real':'';
