@@ -29,6 +29,31 @@
   nav button.on{background:var(--panel2);color:var(--ink);border-color:var(--accent)}
   nav button:hover{color:var(--ink)}
   .view{display:none} .view.on{display:block}
+  .ros-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+  .ros-card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+  .ros-card.me{border-color:#c79a3a;box-shadow:0 0 0 1px #c79a3a55}
+  .ros-hd{display:flex;align-items:center;font-weight:700;font-size:12.5px;color:var(--ink);padding-bottom:5px;border-bottom:1px solid var(--line);margin-bottom:4px}
+  .ros-hd .mytag{background:#c79a3a;color:#1a1206;font-size:8.5px;font-weight:700;padding:0 5px;border-radius:3px;margin-left:5px;text-transform:uppercase}
+  .ros-hd .ros-cnt{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--dim);font-weight:600}
+  .ros-team{display:flex;justify-content:space-between;font-size:11.5px;padding:2px 0;color:var(--dim)}
+  .ros-team .num{font-family:var(--mono);color:var(--ink)}
+  .ros-sum{border-top:1px solid var(--line);margin-top:5px;padding-top:4px;font-size:11px;color:var(--dim);font-family:var(--mono)}
+  .cn-tbl{border-collapse:collapse;font-size:11.5px} .cn-tbl th,.cn-tbl td{border:1px solid var(--line);padding:3px 8px;text-align:center}
+  .cn-tbl th{color:var(--faint);font-weight:600;background:var(--panel)} .cn-first{text-align:left!important;font-weight:600;color:var(--ink)}
+  .cn-need{background:#3a1720;color:#f0868b;font-weight:700} .cn-have{background:#153726;color:#6ede9a}
+  .gradepill{display:inline-block;min-width:15px;text-align:center;font-weight:800;font-size:11px;padding:1px 5px;border-radius:4px;cursor:help}
+  .gradepill.sm{font-size:9.5px;padding:0 4px;min-width:12px}
+  .gr-a{background:#12492a;color:#7be0a0;border:1px solid #2f7d4f}
+  .gr-b{background:#153f4a;color:#6fd0e0;border:1px solid #2f6f7d}
+  .gr-c{background:#4a3d15;color:#e6c860;border:1px solid #7d6a2f}
+  .gr-d{background:#4a2f15;color:#e6a660;border:1px solid #7d552f}
+  .gr-f{background:#4a1720;color:#f0868b;border:1px solid #7a2c3a}
+  .gr-tag{font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.03em}
+  .gradeline{margin-top:3px;font-size:10.5px}
+  .dec-tbl{border-collapse:collapse;font-size:12px}
+  .dec-tbl th,.dec-tbl td{border:1px solid var(--line);padding:5px 10px;text-align:left;vertical-align:top}
+  .dec-tbl th{color:var(--ink);font-weight:700;background:var(--panel);white-space:nowrap}
+  .dec-ax{color:var(--faint);font-weight:600;font-size:10.5px;white-space:nowrap;background:var(--panel)}
   .sch-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
   .sch-chip{padding:3px 9px;border:1px solid #33404f;border-radius:12px;cursor:pointer;font-size:12px;color:var(--dim);user-select:none}
   .sch-chip.sel{background:#2d6cdf;color:#fff;border-color:#2d6cdf}
@@ -196,9 +221,11 @@
   <nav>
     <button data-v="board" class="on">Enriched Board</button>
     <button data-v="hm1">Anchor Availability</button>
-    <button data-v="hm3">Pool Needs</button>
     <button data-v="overperform">Overperform Targets</button>
     <button data-v="schedule">Schedule Win%</button>
+    <button data-v="decision">Decision Factory</button>
+    <button data-v="rosters">Rosters &amp; Needs</button>
+    <button data-v="hm3">Pool Needs</button>
     <button data-v="setup">Setup &amp; Picks</button>
   </nav>
 
@@ -214,7 +241,7 @@
       </div>
       <table id="board">
         <thead><tr>
-          <th data-s="team">Team</th><th data-s="conf">Conf</th>
+          <th data-s="team">Team</th><th data-s="conf">Conf</th><th title="Overall grade — max of banking vs overperform value; hover the pill for the verdict">Grade</th>
           <th data-s="mkt" class="num">O/U</th><th class="num" title="Floor–Ceiling — bold = empirical (market+tier band, the one you draft on); dim = widened per-game model">F–C</th><th data-s="sp_rank" class="num">SP+#</th>
           <th data-s="ret" class="num">Ret%</th><th data-s="net_tarp" class="num">TARP</th>
           <th data-s="qb">QB</th><th>Coaching</th><th data-s="sched">Sched</th>
@@ -280,6 +307,26 @@
         <span id="sch-stat" class="faint"></span>
       </div>
       <div id="sch-grid" class="sch-grid"></div>
+  </section>
+  <!-- DECISION FACTORY -->
+  <section class="view" id="v-decision">
+    <h2>Decision Factory — compare the axes</h2>
+    <p class="note">Pick the teams you're weighing (⌘/Ctrl-click for multiple). Every grade axis laid out side by side so you can see <i>why</i> the letter is what it is — banking level vs overperform path, floor/ceiling, model-vs-pod, variance. The grade is the <b>max of the banking and overperform paths</b>; reliability and edge are modifiers, fade caps at C.</p>
+    <div class="controls" style="align-items:flex-start">
+      <label style="color:var(--dim)">Conferences<br><select id="dec-conf" multiple size="4" style="min-width:120px"></select></label>
+      <label style="color:var(--dim)">Teams<br><select id="dec-team" multiple size="8" style="min-width:180px"></select></label>
+      <button id="dec-clear" class="ghost">clear</button>
+    </div>
+    <div id="dec-grid" style="overflow-x:auto"></div>
+  </section>
+  <!-- ROSTERS & CONFERENCES NEEDED -->
+  <section class="view" id="v-rosters">
+    <h2>Rosters &amp; Conferences Needed</h2>
+    <p class="note">Each player's drafted anchors with market O/U and best-case-ceiling sums, plus the live <b>Conferences_Needed</b> matrix from the sheet. Your card is outlined.</p>
+    <h3 style="margin:14px 0 6px;font-size:13px;color:var(--ink)">Drafted teams by player</h3>
+    <div id="rosters-grid" class="ros-grid"></div>
+    <h3 style="margin:22px 0 6px;font-size:13px;color:var(--ink)">Conferences_Needed (live)</h3>
+    <div id="confneeded-grid"></div>
   </section>
   <section class="view" id="v-setup">
     <div class="panel">
@@ -349,6 +396,7 @@ async function loadData(){
         anchor_on_anchor:str(a["anchor_on_anchor"]), pod_status:str(a["pod_upside_status"])
       };
     });
+    CONFNEEDED = (j.confNeeded&&j.confNeeded.rows) ? j.confNeeded : {header:[],rows:[]};
     // picks: Import_BradTracker rows (team -> player)
     picks={};
     ((j.picks&&j.picks.rows)||[]).forEach(p=>{
@@ -364,7 +412,7 @@ async function loadData(){
       if(g.wk!=null)wkset.add(g.wk);
       (SCHED[t]=SCHED[t]||[]).push(g); });
     SCHWEEKS=[...wkset].sort((a,b)=>a-b);
-    renderSchedControls();
+    renderSchedControls(); renderDecControls();
     const rr=(j.roster&&j.roster.rows)||[];
     const names=[];
     rr.forEach(row=>{
@@ -383,7 +431,9 @@ async function loadData(){
 }
 const CONFS = ["AAC","ACC","Big 12","Big Ten","CUSA","MAC","MWC","Pac12","SEC","Sun Belt"];
 const USABLE = 6.0;
-const WIN_TARGET = 80;  // median/most-common 1st-place total, 2015-2025 (mean 78.3)
+const WIN_TARGET = 80;     // median/most-common 1st-place total, 2015-2025 (mean 78.3) — the WINNING total
+const MARKET_TARGET = 68;  // ~market wins that 1st-3rd place draft to immediately post-draft (before overperformance)
+let CONFNEEDED = {header:[],rows:[]};   // Conferences_Needed tab payload
 let picks = {};      // team -> player
 let roster = ["","","","","","","","","","","",""];
 let myname = "Mike";
@@ -451,6 +501,7 @@ function renderBoard(){
     tr.innerHTML=`
       <td><span class="team">${t.team}</span>${real}</td>
       <td><span class="conf-badge">${t.conf}</span></td>
+      <td>${(()=>{const g=computeGrade(t);return g?`<span class="gradepill ${gradeCls(g.letter)}" title="${esc(g.verdict)}">${g.letter}</span> <span class="gr-tag">${esc(g.tag)}</span>`:'<span class="dimd">—</span>';})()}</td>
       <td class="num">${ouCell(t)}</td>
       <td class="num fc">${(()=>{const e=empBands(t.mkt),w=WIDENED[t.team];return e?`<b>${e[0]}\u2013${e[1]}</b>`+(w?`<br><span style="color:var(--faint);font-size:10px">${w[0]}\u2013${w[1]}</span>`:''):'\u2014';})()}</td>
       <td class="num">${t.sp_rank??'—'}</td>
@@ -523,34 +574,26 @@ function renderHM1(){
 function renderNeedStrip(){
   const box=byId('needstrip'); if(!box)return;
   const mine=playerConfs(myname);
-  let filled=0, proj=0, html='<span class="lbl">My needs</span>';
+  let filled=0, proj=0, bestcase=0, html='<span class="lbl">My needs</span>';
   for(const c of CONFS){
     const isF=mine.has(c);
     if(isF){filled++;
       const team=(Object.entries(picks).find(([tm,p])=>p===myname&&(DATA.find(d=>d.team===tm)||{}).conf===c)||[])[0];
       const rec=DATA.find(d=>d.team===team);
-      if(rec&&rec.mkt!=null)proj+=rec.mkt;
+      if(rec&&rec.mkt!=null){proj+=rec.mkt; const b=empBands(rec.mkt); if(b)bestcase+=b[1];}
       html+=`<span class="chip filled" title="${c} — ${team} (O/U ${rec?rec.mkt:'?'})">${c}<span class="t">${esc(team).split(' ')[0]}</span></span>`;
     } else {
       html+=`<span class="chip needed" title="${c} — needed">${c}</span>`;
     }
   }
-  // pace: expected total at 80 pace given filled picks = 80*filled/10; are we ahead/behind?
-  const expectedNow = WIN_TARGET*filled/10;
-  const remaining = 10-filled;
-  const needPerRemaining = filled<10 ? (WIN_TARGET-proj)/Math.max(remaining,1) : 0;
-  let paceCls='on', paceTxt='';
-  if(filled>0){
-    if(proj>expectedNow+1.5)paceCls='ahead';
-    else if(proj<expectedNow-1.5)paceCls='behind';
-    paceTxt = filled<10
-      ? `need ${needPerRemaining.toFixed(1)}/pick on the last ${remaining}`
-      : (proj>=WIN_TARGET?'target hit':`${(WIN_TARGET-proj).toFixed(1)} short`);
-  } else {
-    paceTxt='target '+WIN_TARGET;
-  }
-  html+=`<span class="pace ${paceCls}" title="Sum of your anchors' market win totals vs the ${WIN_TARGET}-win target (median 1st place, 2015-2025)">`
-      + `<b>${proj.toFixed(1)}</b>/${WIN_TARGET}<span class="pacesub"> · ${filled}/10 · ${paceTxt}</span></span>`;
+  // Reframe: champions draft to ~68 MARKET wins, then overperform ~+12 to the ~80 winning total.
+  // Show market proj vs ~68 alongside best-case (empirical ceilings) → win@~80.
+  const expectedNow = MARKET_TARGET*filled/10;
+  let paceCls='on';
+  if(filled>0){ if(proj>expectedNow+1.2)paceCls='ahead'; else if(proj<expectedNow-1.2)paceCls='behind'; }
+  html+=`<span class="pace ${paceCls}" title="Left: your anchors' market O/U sum vs ~${MARKET_TARGET} — the market total 1st-3rd place typically draft to. Right: best-case = sum of empirical ceilings, the path toward the ~${WIN_TARGET} winning total (median 1st place 2015-2025). You don't draft to 80; you draft ~68 market and overperform ~+12.">`
+      + `<b>${proj.toFixed(1)}</b>/~${MARKET_TARGET} mkt<span class="pacesub"> · </span>`
+      + `<b style="color:#e6c060">${bestcase.toFixed(1)}</b><span class="pacesub"> best-case → win@~${WIN_TARGET} · ${filled}/10</span></span>`;
   box.innerHTML=html;
 }
 
@@ -627,6 +670,13 @@ function computeTally(t){
     const cs=coachSignal(t); if(cs) (cs.up?up:dn).push({k:cs.k, why:cs.why});
     const qs=qbSignal(t);    if(qs) (qs.up?up:dn).push({k:qs.k, why:qs.why});
     if(t.dark_horse) up.push({k:'dark horse', why:'pod flag'});
+    // host_lean is a GRADED directional read (distinct from the hard-fade override): a soft ±1.
+    // Lean Under ≠ fade — a mild directional lean, so it counts here; the fade boolean stays a badge only.
+    const lean=(t.lean||'').toLowerCase();
+    if(/hard over/.test(lean))       up.push({k:'pod hard-over',  why:'host lean: '+t.lean});
+    else if(/lean over/.test(lean))  up.push({k:'pod lean-over',  why:'host lean: '+t.lean});
+    else if(/hard under/.test(lean)) dn.push({k:'pod hard-under', why:'host lean: '+t.lean});
+    else if(/lean under/.test(lean)) dn.push({k:'pod lean-under', why:'host lean: '+t.lean});
     // fade is DELIBERATELY not counted here — it's a pod bet-against OVERRIDE, surfaced as a
     // separate POD FADE badge + why line in renderOverperform so net stays a clean STRUCTURAL measure.
   }
@@ -637,6 +687,60 @@ function computeTally(t){
 // Governed by #24/#25: urgency = scarcity of remaining STRONG upside supply FILTERED by what I still need.
 const UPSIDE_STRONG = 2; // net >= +2 = strong lean → drives URGENCY (fewer qualify, real scarcity pressure)
 const UPSIDE_SOFT   = 1; // net >= +1 = soft lean → still SHOWN (not discarded), tagged distinctly
+// ---------- Win distribution + overall grade ----------
+function winDist(team){
+  const probs=(SCHED[team]||[]).filter(g=>g.wp!=null).map(g=>g.wp/100);
+  let dist=[1]; for(const p of probs){ const nd=new Array(dist.length+1).fill(0);
+    for(let k=0;k<dist.length;k++){ nd[k]+=dist[k]*(1-p); nd[k+1]+=dist[k]*p; } dist=nd; }
+  const exp=probs.reduce((a,b)=>a+b,0);
+  const sd=Math.sqrt(probs.reduce((a,p)=>a+p*(1-p),0));
+  const Pge=n=>{ n=Math.max(0,Math.ceil(n)); return dist.slice(n).reduce((a,b)=>a+b,0); };
+  const swing=probs.filter(p=>p>=0.4&&p<=0.6).length;
+  return {n:probs.length, exp, sd, Pge, dist, swing};
+}
+// Dual-path pool value: a team earns its grade via the BETTER of (bank high level) or (overperform).
+// Reliability + model/pod edge are MODIFIERS, not drivers. Fade caps. Weights/cuts are tunable below.
+const GRADE_CUTS={A:0.72,B:0.56,C:0.42,D:0.30};
+function computeGrade(t){
+  const mkt=(t.mkt_pod!=null?t.mkt_pod:t.mkt);
+  const d=winDist(t.team);
+  if(!d.n || mkt==null) return null;
+  const line=Math.floor(mkt);
+  const overP=d.Pge(line+1);                 // P(over the line)
+  const floorHit=d.Pge(line);                // P(reach the line's floor)
+  let floorW=0, ceilW=0; for(let k=0;k<=d.n;k++){ if(d.Pge(k)>=0.85)floorW=k; if(d.Pge(k)>=0.20)ceilW=k; }
+  const net=computeTally(t).net;
+  const edge=d.exp-mkt;
+  const modelLean = edge>0.4?'over':(edge<-0.4?'under':'fair');
+  const pod=(t.lean||'').toLowerCase();
+  const podLean = /over/.test(pod)?'over':(/under/.test(pod)?'under':'—');
+  const split   = modelLean!=='fair' && podLean!=='—' && modelLean!==podLean;
+  const aligned = modelLean!=='fair' && modelLean===podLean;
+  const varTag  = d.sd<1.2?'low variance':(d.sd>1.9?'boom-bust':'moderate variance');
+  const cl=(x)=>Math.max(0,Math.min(1,x));
+  // component 0..1
+  const LEVEL = cl((mkt-3)/8);                        // banking level: 3→0, 11→1
+  const RELI  = cl(floorHit);                          // firm floor
+  const OVER  = cl((net+2)/6);                         // structural overperform (net −2..+4)
+  const CEIL  = cl(d.Pge(Math.round(mkt)+2)/0.30);     // real +2 upside odds
+  const bank  = 0.72*LEVEL + 0.28*RELI;
+  const over  = 0.60*OVER + 0.40*CEIL;
+  let edgeAdj = aligned?0.05 : split?0 : modelLean==='over'?0.03 : modelLean==='under'?-0.04 : 0;
+  let score = 0.75*Math.max(bank,over) + 0.25*((bank+over)/2) + edgeAdj;
+  if(t.fade) score=Math.min(score, GRADE_CUTS.C);      // hard fade can't exceed a C
+  score=cl(score);
+  const letter = score>=GRADE_CUTS.A?'A':score>=GRADE_CUTS.B?'B':score>=GRADE_CUTS.C?'C':score>=GRADE_CUTS.D?'D':'F';
+  const path = over>bank+0.03?'overperform':bank>over+0.03?'banking':'balanced';
+  const bankOver = net>=2?'an overperform target':net<=-1?'an underperform risk':(t.fade?'a pod fade':'a fair-value filler');
+  const ceilRead = CEIL>=0.5?'live ceiling':'capped ceiling';
+  const edgeRead = split?'model/pod split':aligned?('model+pod '+modelLean):modelLean==='fair'?'fair value':('model '+modelLean+(podLean!=='—'?', pod '+podLean:''));
+  const verdict = `${letter} — ${mkt} line, likely ${floorW}–${ceilW}, ${ceilRead}, ${edgeRead}, ${varTag}; ${bankOver}`;
+  const tag = t.fade?'fade':net>=2?'overperform':net<=-1?'underperform':path==='banking'?'banking':'fair value';
+  return {letter, verdict, tag, path, mkt, exp:d.exp, sd:d.sd, swing:d.swing, overP, floorHit, floorW, ceilW,
+          edge, modelLean, podLean, split, aligned, varTag, net, ceilP:d.Pge(Math.round(mkt)+2),
+          sub:{LEVEL,RELI,OVER,CEIL,bank,over,score}};
+}
+function gradeCls(l){ return 'gr-'+(l||'').toLowerCase(); }
 function tallyNet(t){ return computeTally(t).net; }
 function isStrongUpside(t){ return tallyNet(t)>=UPSIDE_STRONG; }
 function isSoftUpside(t){ return tallyNet(t)>=UPSIDE_SOFT; }
@@ -708,8 +812,10 @@ function renderOverperform(){
     const why=[]; if(under)why.push(`structural tally ${r.net} — headwinds outweigh tailwinds`);
     if(t.fade)why.push('pod hard-fade (bet-against) — overrides regardless of tally');
     const whyLine=why.length?`<div class="whyline">${esc(why.join(' · '))}</div>`:'';
+    const g=computeGrade(t);
+    const gradeLine=g?`<div class="gradeline"><span class="gradepill ${gradeCls(g.letter)}">${g.letter}</span> <span style="color:var(--dim)">${esc(g.verdict.replace(/^[A-F] — /,''))}</span></div>`:'';
     tr.innerHTML=`
-      <td><span style="color:#8aa0b4;font-size:11px">${rank}.</span> <span class="team" style="${teamStyle}">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span>${under?' <span style="color:#e06b6b" title="underperform target — structural headwinds outweigh tailwinds">▼</span>':''}${fadeBadge} ${pend}${whyLine}</td>
+      <td><span style="color:#8aa0b4;font-size:11px">${rank}.</span> <span class="team" style="${teamStyle}">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span>${under?' <span style="color:#e06b6b" title="underperform target — structural headwinds outweigh tailwinds">▼</span>':''}${fadeBadge} ${pend}${gradeLine}${whyLine}</td>
       <td class="num">${ouCell(t)}</td>
       <td class="num ${netCls}">${r.net>0?'+':''}${r.net}</td>
       <td class="twcell">${upHtml}</td>
@@ -757,9 +863,11 @@ function renderSchedule(){
     const mkt=rec?(rec.mkt_pod!=null?rec.mkt_pod:rec.mkt):null;
     const bands=empBands(mkt);
     const spExp=(SCHED[t]||[]).reduce((s,g)=>s+(g.wp!=null?g.wp/100:0),0);
+    const grd=rec?computeGrade(rec):null;
+    const grPill=grd?`<span class="gradepill sm ${gradeCls(grd.letter)}" title="${esc(grd.verdict)}">${grd.letter}</span> `:'';
     const totCell = bands
-      ? `<div class="sch-tot" title="worst ${bands[0]} · market ${mkt} · best ${bands[1]} — SP+ expected ${spExp.toFixed(1)}"><span class="tot-w">${bands[0]}</span>·<b class="tot-m">${mkt}</b>·<span class="tot-b">${bands[1]}</span><br><span class="faint">${spExp.toFixed(1)}</span></div>`
-      : `<div class="sch-tot faint">—<br><span class="faint">${spExp?spExp.toFixed(1):'—'}</span></div>`;
+      ? `<div class="sch-tot" title="worst ${bands[0]} · market ${mkt} · best ${bands[1]} — SP+ expected ${spExp.toFixed(1)}">${grPill}<span class="tot-w">${bands[0]}</span>·<b class="tot-m">${mkt}</b>·<span class="tot-b">${bands[1]}</span><br><span class="faint">${spExp.toFixed(1)}</span></div>`
+      : `<div class="sch-tot faint">${grPill}—<br><span class="faint">${spExp?spExp.toFixed(1):'—'}</span></div>`;
     html+=`<div class="sch-row"><div class="sch-team">${esc(t)}</div>${totCell}`;
     for(const w of weeks){ const g=byW[w];
       if(!g){ html+=`<div class="sch-bye" title="bye"></div>`; continue; }
@@ -787,12 +895,87 @@ function syncClock(){
 }
 
 // ---------- refresh all ----------
+// ---------- Rosters & Conferences Needed tab ----------
+function renderRosters(){
+  const box=byId('rosters-grid'); if(!box)return;
+  const byPlayer={};
+  Object.entries(picks).forEach(([tm,pl])=>{ (byPlayer[pl]=byPlayer[pl]||[]).push(tm); });
+  const order = roster.filter(Boolean).length ? roster.filter(Boolean) : Object.keys(byPlayer);
+  let html='';
+  for(const pl of order){
+    const teams=(byPlayer[pl]||[]).map(tm=>DATA.find(d=>d.team===tm)).filter(Boolean)
+                 .sort((a,b)=>(b.mkt||0)-(a.mkt||0));
+    let mkt=0,bc=0;
+    const rows=teams.map(t=>{ const m=t.mkt; if(m!=null){mkt+=m; const b=empBands(m); if(b)bc+=b[1];}
+      return `<div class="ros-team"><span>${esc(t.team)} <span class="cf">${esc(t.conf)}</span></span><span class="num">${m!=null?m:'—'}</span></div>`;
+    }).join('');
+    const isMe = pl===myname;
+    html+=`<div class="ros-card${isMe?' me':''}"><div class="ros-hd">${esc(pl)}${isMe?' <span class="mytag">you</span>':''}<span class="ros-cnt">${teams.length}/10</span></div>`
+        + (rows||'<div class="faint" style="padding:6px 4px">no picks yet</div>')
+        + `<div class="ros-sum">mkt <b>${mkt.toFixed(1)}</b> · best-case <b style="color:#e6c060">${bc.toFixed(1)}</b></div></div>`;
+  }
+  box.innerHTML=html||'<span class="faint">no picks yet — enter picks on Setup &amp; Picks.</span>';
+}
+function renderConfNeeded(){
+  const box=byId('confneeded-grid'); if(!box)return;
+  const cn=CONFNEEDED;
+  if(!cn||!cn.rows||!cn.rows.length){ box.innerHTML='<span class="faint">No Conferences_Needed rows in the proxy payload — confirm the tab exists and the proxy sends <code>confNeeded</code>.</span>'; return; }
+  const hdr=(cn.header&&cn.header.length)?cn.header:Object.keys(cn.rows[0]);
+  let html='<table class="cn-tbl"><thead><tr>'+hdr.map(h=>`<th>${esc(h)}</th>`).join('')+'</tr></thead><tbody>';
+  for(const r of cn.rows){
+    html+='<tr>'+hdr.map((h,i)=>{ const v=str(r[h]);
+      const cls=i===0?'cn-first':(/^(y|need|1|●|x|✓)$/i.test(v.trim())?'cn-need':(v.trim()?'cn-have':''));
+      return `<td class="${cls}">${esc(v)}</td>`; }).join('')+'</tr>';
+  }
+  box.innerHTML=html+'</tbody></table>';
+}
+// ---------- Decision Factory ----------
+function fillDecTeamOptions(){
+  const tt=byId('dec-team'); if(!tt)return;
+  const confs=selVals('dec-conf'), keep=new Set(selVals('dec-team'));
+  const teams=DATA.map(d=>d.team).filter(t=>{ if(!confs.length)return true; const r=DATA.find(d=>d.team===t); return r&&confs.includes(r.conf); }).sort();
+  tt.innerHTML=teams.map(t=>`<option value="${esc(t)}"${keep.has(t)?' selected':''}>${esc(t)}</option>`).join('');
+}
+function renderDecControls(){
+  const cc=byId('dec-conf');
+  if(cc && cc.options.length===0){ CONFS.forEach(c=>cc.innerHTML+=`<option value="${c}">${c}</option>`); cc.onchange=()=>{ fillDecTeamOptions(); renderDecision(); }; }
+  const tt=byId('dec-team'); if(tt) tt.onchange=renderDecision;
+  const cl=byId('dec-clear'); if(cl) cl.onclick=()=>{ if(cc)[...cc.options].forEach(o=>o.selected=false); const t=byId('dec-team'); if(t)[...t.options].forEach(o=>o.selected=false); renderDecision(); };
+  fillDecTeamOptions();
+}
+function renderDecision(){
+  const box=byId('dec-grid'); if(!box)return;
+  const sel=selVals('dec-team');
+  if(!sel.length){ box.innerHTML='<span class="faint">Pick one or more teams above to compare their grade axes.</span>'; return; }
+  const cols=sel.map(nm=>({nm, t:DATA.find(d=>d.team===nm)})).filter(x=>x.t).map(x=>({nm:x.nm, g:computeGrade(x.t), t:x.t}));
+  const pct=v=>v==null?'—':(v*100).toFixed(0)+'%';
+  const AX=[
+    ['Grade', g=>g?`<span class="gradepill ${gradeCls(g.letter)}">${g.letter}</span>`:'—'],
+    ['Verdict', g=>g?`<span style="font-size:10.5px;color:var(--dim)">${esc(g.verdict)}</span>`:'—'],
+    ['Market O/U', g=>g?g.mkt:'—'],
+    ['SP+ expected wins', g=>g?g.exp.toFixed(1):'—'],
+    ['P(over the line)', g=>g?pct(g.overP):'—'],
+    ['Likely range (85→20%)', g=>g?`${g.floorW}–${g.ceilW}`:'—'],
+    ['+2 ceiling odds', g=>g?pct(g.ceilP):'—'],
+    ['Variance (sd)', g=>g?`${g.sd.toFixed(2)} · ${g.varTag}`:'—'],
+    ['Model lean', g=>g?`${g.modelLean} (${g.edge>0?'+':''}${g.edge.toFixed(1)})`:'—'],
+    ['Pod lean', g=>g?g.podLean:'—'],
+    ['Model vs pod', g=>g?(g.split?'<b style="color:#e0a24a">SPLIT</b>':g.aligned?'<span style="color:#6ede9a">aligned</span>':'—'):'—'],
+    ['Overperform net', g=>g?`${g.net>0?'+':''}${g.net}`:'—'],
+    ['Best path', g=>g?g.path:'—'],
+  ];
+  let html='<table class="dec-tbl"><thead><tr><th class="dec-ax">axis</th>'+cols.map(c=>`<th>${esc(c.nm)}<br><span class="cf">${esc(c.t.conf)}</span></th>`).join('')+'</tr></thead><tbody>';
+  for(const [lbl,fn] of AX){
+    html+=`<tr><td class="dec-ax">${lbl}</td>`+cols.map(c=>`<td>${fn(c.g)}</td>`).join('')+'</tr>';
+  }
+  box.innerHTML=html+'</tbody></table>';
+}
 function refresh(){
   myname=byId('myname').value||'Mike';
   byId('npicks').textContent=Object.keys(picks).length;
   byId('myfilled').textContent=playerConfs(myname).size;
   renderBoard(); renderHM1(); renderHM3(); renderNeedStrip(); renderHMupside(); renderOverperform();
-  renderSchedule();
+  renderSchedule(); renderRosters(); renderConfNeeded(); renderDecision();
 }
 
 // ---------- init ----------
