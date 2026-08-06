@@ -1,3 +1,11 @@
+> **⚙ REQUIRED HEADER (retrofit to `specs/PREFLIGHT.md` standard).**
+>
+> **Session:** repo `/Users/mike/Downloads/ncaafbwinspool`; docs read per the plan below.
+> **Foundations IN EFFECT:** **Universal Meta Game Principles** (1 asset-list-is-trigger · 2 availability-across-window-dominant · 3 evidence-degrades-state-weight · 4 most-recent-first · 5 weakness-on-primary-demand-near-DQ · 6 pre-commit-DQ-criteria · 7 external-pressure-tests-not-generates · 8 track-best-performers · 9 steps-need-visible-output · 10 process-failure-is-analyst's); **PRIMARY ANCHOR** (cross-conf replacement value); **S1–S5 × A1–A10** (anchor premium = A-rating × S-depth); **Pre-Pick Doctrine** (TRIAD scarcity∧floor∧upside-availability; objective = expected TOTAL wins; no heuristic promoted to a rule).
+> **0–15 checklist:** applied for this task (see body); REPO-CHECK, NO-FABRICATION (`—`/gap-flag, never guess), YEAR-PARTITION, ANTI-FLATTENING, AUTO-PUSH all binding.
+> ****KILL CRITERION:** any name-keyed join column that returns blank/mismatched for a team → reject the join; reconcile to 138 teams, 0 unmatched before shipping.**
+> **Weights/caveats:** stated inline (P3/P10).
+
 # PREFLIGHT — Brad-Sourced Conference + Identical-Header Rebuild
 
 Standing checklist for the rebuild that removes hand-entered / positionally-pasted source data

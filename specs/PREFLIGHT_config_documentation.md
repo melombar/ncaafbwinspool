@@ -1,3 +1,11 @@
+> **⚙ REQUIRED HEADER (retrofit to `specs/PREFLIGHT.md` standard).**
+>
+> **Session:** repo `/Users/mike/Downloads/ncaafbwinspool`; docs read per the plan below.
+> **Foundations IN EFFECT:** **Universal Meta Game Principles** (1 asset-list-is-trigger · 2 availability-across-window-dominant · 3 evidence-degrades-state-weight · 4 most-recent-first · 5 weakness-on-primary-demand-near-DQ · 6 pre-commit-DQ-criteria · 7 external-pressure-tests-not-generates · 8 track-best-performers · 9 steps-need-visible-output · 10 process-failure-is-analyst's); **PRIMARY ANCHOR** (cross-conf replacement value); **S1–S5 × A1–A10** (anchor premium = A-rating × S-depth); **Pre-Pick Doctrine** (TRIAD scarcity∧floor∧upside-availability; objective = expected TOTAL wins; no heuristic promoted to a rule).
+> **0–15 checklist:** applied for this task (see body); REPO-CHECK, NO-FABRICATION (`—`/gap-flag, never guess), YEAR-PARTITION, ANTI-FLATTENING, AUTO-PUSH all binding.
+> ****KILL CRITERION:** the final repo re-audit must return 0 *real* name/token residuals (benign-doc allowlist excepted) or the pass is incomplete.**
+> **Weights/caveats:** stated inline (P3/P10).
+
 # PREFLIGHT — Complete the Config Documentation + Name-Key Normalization
 
 Closes out the 2026 conference/header rebuild: normalize every name-keyed file the rebuild missed,

@@ -25,6 +25,24 @@ The standing operating checklist. Load and apply this at the top of any analysis
 
 ---
 
+## Task-preflight REQUIRED HEADER (every `PREFLIGHT_<task>.md` must open with this)
+A task preflight is non-compliant unless it reproduces ALL of the following, in order, before the plan:
+
+1. **Session confirmation** — repo path + which MD files / sheets / data were actually read this session.
+2. **Foundations reloaded and IN EFFECT** (name each, don't just reference):
+   - **Universal Meta Game Principles** — enumerate the 10 one-line titles; they bind in parallel.
+   - **PRIMARY ANCHOR** — cross-conference replacement value (drop-off to the next usable anchor).
+   - **S1–S5 × A1–A10** — anchor premium = A-rating (projected wins) × S-depth (conference scarcity).
+   - **Pre-Pick Doctrine** — the TRIAD (scarcity ∧ floor ∧ upside-availability); objective = expected TOTAL wins; no conditional heuristic promoted to a rule.
+3. **The 0–15 checklist above, ANSWERED for this task** (one concrete line each; blank/generic = STOP).
+4. **Pre-committed KILL CRITERION** — the observable that falsifies the build (ties to steps 8 + P5/P6/P9).
+5. **Stated weights/caveats** — recency decay, match-rate gaps, known residuals (P3, P10).
+
+A preflight that only *references* the principles, or skips a foundation, or doesn't walk 0–15, is
+incomplete — reproduce them. Reference implementation: `specs/PREFLIGHT_draft_history.md`.
+
+---
+
 ### Extraction-specific reminders (BBOC pod → Layer B)
 
 - Pod writeup = **Layer B** (supplemental). Numeric fields (market/SP+/RetProd/TARP/Collin) **join from Layer A** (`data_YYYY.json`) — do NOT re-key them from the pod (step 0).
