@@ -18,15 +18,15 @@ CONF_G={r['Team']:r['Conf'] for r in grid}
 def norm(s): return s.lower().replace("'","").replace('.','').replace('-',' ').replace('(fla)','').replace('  ',' ').strip()
 POOL_N={norm(t):t for t in POOL}
 # manual CBS->pool aliases
-ALIAS={'san jose st':'San Jose State','n dakota st':'North Dakota State','e michigan':'Eastern Michigan',
+ALIAS={'san jose st':'San José State','n dakota st':'North Dakota State','e michigan':'EMU',
 'new mexico st':'New Mexico State','jacksonville st':'Jacksonville State','sacramento st':'Sacramento State',
-'miami (fla)':'Miami FL','miami fla':'Miami FL','miami oh':'Miami OH','so miss':'Southern Miss',
+'miami (fla)':'Miami','miami fla':'Miami','miami oh':'Miami-OH','so miss':'Southern Mississippi',
 'app st':'Appalachian State','ga southern':'Georgia Southern','c carolina':'Coastal Carolina',
 'w kentucky':'Western Kentucky','w michigan':'Western Michigan','n illinois':'Northern Illinois',
 'c michigan':'Central Michigan','fresno st':'Fresno State','boise st':'Boise State','texas st':'Texas State',
 'oregon st':'Oregon State','washington st':'Washington State','colorado st':'Colorado State','utah st':'Utah State',
 'arkansas st':'Arkansas State','georgia st':'Georgia State','kennesaw st':'Kennesaw State','middle tenn':'Middle Tennessee',
-'ul monroe':'ULM','fau':'Florida Atlantic','fiu':'FIU','uconn':'UConn','miss state':'Mississippi State',
+'ul monroe':'UL Monroe','fau':'Florida Atlantic','fiu':'Florida Intl','eastern michigan':'EMU','umass':'UMASS','louisiana':'UL Lafayette','so mississippi':'Southern Mississippi','uconn':'UConn','miss state':'Mississippi State',
 'louisiana tech':'Louisiana Tech','s dakota st':'South Dakota State'}
 def to_pool(cbs):
     n=norm(cbs)

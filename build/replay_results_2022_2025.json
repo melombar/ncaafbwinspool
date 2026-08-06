@@ -1,0 +1,170 @@
+[
+ {
+  "year": 2022,
+  "us": "Janice/Mike",
+  "n_players": 14,
+  "n_slots": 10,
+  "model_picks": 7,
+  "our_total": 71,
+  "model_total": 49,
+  "winner_total": 74,
+  "our_rank": 2,
+  "model_rank": 13,
+  "model_roster": [
+   "Oklahoma",
+   "Michigan",
+   "Air Force",
+   "SMU",
+   "Arizona State",
+   "Boston College",
+   "Ole Miss"
+  ],
+  "our_roster": [
+   "Air Force",
+   "UAB",
+   "Georgia State",
+   "TCU",
+   "EMU",
+   "Florida State",
+   "Ole Miss",
+   "Maryland",
+   "Arizona",
+   "Temple"
+  ],
+  "model_beats_us": false,
+  "delta": -22,
+  "coverage": {
+   "model_unscored": [],
+   "our_unscored": [],
+   "candidates": 80,
+   "slots_filled": "7/10"
+  },
+  "fair": false
+ },
+ {
+  "year": 2023,
+  "us": "Janice/Mike",
+  "n_players": 14,
+  "n_slots": 10,
+  "model_picks": 5,
+  "our_total": 68,
+  "model_total": 47,
+  "winner_total": 76,
+  "our_rank": 5,
+  "model_rank": 13,
+  "model_roster": [
+   "Alabama",
+   "Kansas State",
+   "Washington",
+   "Miami",
+   "Maryland"
+  ],
+  "our_roster": [
+   "Liberty",
+   "Memphis",
+   "UCLA",
+   "Marshall",
+   "Northern Illinois",
+   "Minnesota",
+   "Colorado State",
+   "BYU",
+   "Auburn",
+   "Virginia Tech"
+  ],
+  "model_beats_us": false,
+  "delta": -21,
+  "coverage": {
+   "model_unscored": [],
+   "our_unscored": [],
+   "candidates": 69,
+   "slots_filled": "5/10"
+  },
+  "fair": false
+ },
+ {
+  "year": 2024,
+  "us": "Mike",
+  "n_players": 14,
+  "n_slots": 10,
+  "model_picks": 6,
+  "our_total": 64,
+  "model_total": 50,
+  "winner_total": 82,
+  "our_rank": 7,
+  "model_rank": 12,
+  "model_roster": [
+   "Notre Dame",
+   "Washington State",
+   "Clemson",
+   "Arizona",
+   "Iowa",
+   "South Carolina"
+  ],
+  "our_roster": [
+   "Liberty",
+   "Clemson",
+   "Miami",
+   "Wyoming",
+   "Rice",
+   "Northern Illinois",
+   "Indiana",
+   "Arkansas",
+   "Southern Mississippi",
+   "Houston"
+  ],
+  "model_beats_us": false,
+  "delta": -14,
+  "coverage": {
+   "model_unscored": [],
+   "our_unscored": [],
+   "candidates": 69,
+   "slots_filled": "6/10"
+  },
+  "fair": false
+ },
+ {
+  "year": 2025,
+  "us": "Mike",
+  "n_players": 13,
+  "n_slots": 10,
+  "model_picks": 10,
+  "our_total": 61,
+  "model_total": 66,
+  "winner_total": 85,
+  "our_rank": 10,
+  "model_rank": 6,
+  "model_roster": [
+   "UConn",
+   "Oregon State",
+   "Memphis",
+   "San Jos\u00e9 State",
+   "Miami-OH",
+   "Minnesota",
+   "Texas A&M",
+   "South Alabama",
+   "Pittsburgh",
+   "Cincinnati"
+  ],
+  "our_roster": [
+   "Memphis",
+   "San Jos\u00e9 State",
+   "South Alabama",
+   "Miami-OH",
+   "Texas A&M",
+   "Minnesota",
+   "Cincinnati",
+   "UTEP",
+   "Pittsburgh",
+   "Wisconsin"
+  ],
+  "model_beats_us": true,
+  "delta": 5,
+  "coverage": {
+   "model_unscored": [],
+   "our_unscored": [],
+   "candidates": 129,
+   "slots_filled": "10/10"
+  },
+  "fair": true
+ }
+]

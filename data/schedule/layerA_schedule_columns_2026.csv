@@ -13,7 +13,7 @@ BYU,12,0,1,4,7,5,2,1,6.5,,pending-pod
 Ball State,12,0,1,9,5,7,2,1,5.9,,pending-pod
 Baylor,12,0,1,6,6,6,2,1,6.6,,pending-pod
 Boise State,13,+1,1,7,6,5,2,1,6.2,wk1 @ Oregon(10.5); wk2 vs Memphis(7.5); wk4 @ Western Michigan(7.5),pod-loaded
-Boston College,12,0,1,6,6,6,2,1,7.0,wk11 @ Notre Dame(11.5); wk13 @ Miami FL(10.5),pending-pod
+Boston College,12,0,1,6,6,6,2,1,7.0,wk11 @ Notre Dame(11.5); wk13 @ Miami(10.5),pending-pod
 Bowling Green,12,0,1,10,6,6,2,1,5.6,,pending-pod
 Buffalo,12,0,1,9,6,6,2,2,5.9,,pending-pod
 California,12,0,1,10,7,5,3,1,6.6,,pending-pod
@@ -27,8 +27,8 @@ Colorado State,13,+1,1,6,7,5,2,2,6.2,wk4 @ UTSA(7.5); wk10 vs Boise State(7.5),p
 Delaware,12,0,1,6,6,6,2,1,6.0,,pending-pod
 Duke,12,0,1,5,6,6,2,1,6.5,,pending-pod
 East Carolina,12,0,1,5,6,6,2,1,6.0,,pending-pod
-Eastern Michigan,12,0,2,9&11,6,6,2,1,5.3,,pending-pod
-FIU,12,0,1,5,6,6,2,1,5.9,,pending-pod
+EMU,12,0,2,9&11,6,6,2,1,5.3,,pending-pod
+Florida Intl,12,0,1,5,6,6,2,1,5.9,,pending-pod
 Florida,12,0,1,8,6,6,2,1,6.9,,pending-pod
 Florida Atlantic,12,0,1,6,6,6,1,1,6.4,,pending-pod
 Florida State,12,0,2,2&8,7,5,2,1,7.4,,pending-pod
@@ -52,14 +52,14 @@ Kent State,12,0,1,10,5,7,2,1,6.2,,pending-pod
 Kentucky,12,0,1,9,7,5,1,1,7.3,,pending-pod
 LSU,12,0,1,9,7,5,2,1,6.8,,pending-pod
 Liberty,12,0,1,7,6,6,2,1,5.3,,pending-pod
-Louisiana,12,0,1,9,6,6,1,1,5.0,,pod-loaded
+UL Lafayette,12,0,1,9,6,6,1,1,5.0,,pod-loaded
 Louisiana Tech,12,0,1,4,6,6,2,1,6.1,,pod-loaded
 Louisville,12,0,1,8,6,6,2,1,6.0,,pending-pod
 Marshall,12,0,1,7,6,6,2,1,5.5,wk5 @ James Madison(8.5); wk9 @ Old Dominion(7.5),pod-loaded
 Maryland,12,0,1,8,7,5,2,1,6.7,,pending-pod
 Memphis,12,0,2,4&10,6,6,2,1,6.5,,pending-pod
-Miami FL,12,0,1,6,7,5,2,1,6.2,,pending-pod
-Miami OH,12,0,1,9,6,6,2,1,5.4,,pending-pod
+Miami,12,0,1,6,7,5,2,1,6.2,,pending-pod
+Miami-OH,12,0,1,9,6,6,2,1,5.4,,pending-pod
 Michigan,12,0,1,6,8,4,1,0,7.3,,pending-pod
 Michigan State,12,0,1,9,7,5,2,0,7.3,wk1 vs Toledo(7.5); wk3 @ Notre Dame(11.5); wk12 vs Oregon(10.5),pod-loaded
 Middle Tennessee,12,0,1,6,6,6,2,1,6.1,,pending-pod
@@ -78,7 +78,7 @@ North Dakota State,12,0,2,4&10,6,6,2,1,5.8,,pending-pod
 North Texas,12,0,1,7,6,6,2,1,6.1,,pending-pod
 Northern Illinois,12,0,1,5,5,7,2,1,6.0,,pending-pod
 Northwestern,12,0,1,2,7,5,2,1,7.0,,pending-pod
-Notre Dame,12,0,1,8,7,5,2,0,5.8,wk9 @ Navy(7.5); wk10 vs Miami FL(10.5),pending-pod
+Notre Dame,12,0,1,8,7,5,2,0,5.8,wk9 @ Navy(7.5); wk10 vs Miami(10.5),pending-pod
 Ohio,12,0,1,9,6,6,2,1,5.7,,pending-pod
 Ohio State,12,0,1,8,7,5,2,0,7.3,,pending-pod
 Oklahoma,12,0,1,5,7,5,1,0,7.0,,pending-pod
@@ -96,11 +96,11 @@ SMU,12,0,1,6,7,5,2,1,6.2,,pending-pod
 Sacramento State,12,0,2,5&12,6,6,2,1,5.4,,pending-pod
 Sam Houston,12,0,1,5,6,6,2,1,6.4,,pending-pod
 San Diego State,13,+1,1,10,6,5,1,1,6.0,wk3 vs James Madison(8.5); wk4 @ Toledo(7.5); wk12 @ Boise State(7.5),pod-loaded
-San Jose State,13,+1,1,4,7,6,2,1,6.1,,pending-pod
+San José State,13,+1,1,4,7,6,2,1,6.1,,pending-pod
 South Alabama,12,0,1,7,6,6,2,1,5.9,,pod-loaded
 South Carolina,12,0,1,7,7,5,1,1,6.7,,pending-pod
 South Florida,12,0,1,8,7,5,1,1,6.0,,pending-pod
-Southern Miss,12,0,1,5,6,6,2,1,6.4,,pod-loaded
+Southern Mississippi,12,0,1,5,6,6,2,1,6.4,,pod-loaded
 Stanford,12,0,2,2&10,6,6,3,1,7.7,,pending-pod
 Syracuse,12,0,1,4,6,6,3,1,7.1,wk13 vs Notre Dame(11.5),pending-pod
 TCU,12,0,2,1&6,8,4,1,1,7.0,,pending-pod
@@ -117,9 +117,9 @@ Tulsa,12,0,1,9,6,6,2,1,5.6,,pending-pod
 UAB,12,0,1,8,6,6,1,1,6.4,,pending-pod
 UCF,12,0,1,7,7,5,2,1,6.3,,pending-pod
 UCLA,12,0,1,5,7,5,2,0,6.6,,pending-pod
-UConn,12,0,1,7,7,5,2,1,5.7,wk4 @ Miami OH(7.5); wk9 @ Air Force(7.5); wk11 vs James Madison(8.5); wk12 vs Old Dominion(7.5),pending-pod
-ULM,12,0,1,6,6,6,2,1,5.6,,pod-loaded
-UMass,12,0,1,9,6,6,2,2,5.3,,pending-pod
+UConn,12,0,1,7,7,5,2,1,5.7,wk4 @ Miami-OH(7.5); wk9 @ Air Force(7.5); wk11 vs James Madison(8.5); wk12 vs Old Dominion(7.5),pending-pod
+UL Monroe,12,0,1,6,6,6,2,1,5.6,,pod-loaded
+UMASS,12,0,1,9,6,6,2,2,5.3,,pending-pod
 UNLV,12,0,2,3&8,6,6,3,0,5.9,,pending-pod
 USC,12,0,2,7&10,7,5,2,0,7.3,,pending-pod
 UTEP,12,0,1,8,6,6,2,1,6.1,,pending-pod

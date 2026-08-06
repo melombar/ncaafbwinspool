@@ -116,7 +116,7 @@
     },
     {
      "wk": "W11",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -200,7 +200,7 @@
     },
     {
      "wk": "W6",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -208,7 +208,7 @@
     },
     {
      "wk": "W7",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -240,7 +240,7 @@
     },
     {
      "wk": "W12",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -472,7 +472,7 @@
     },
     {
      "wk": "W12",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -888,7 +888,7 @@
     },
     {
      "wk": "W5",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -904,7 +904,7 @@
     },
     {
      "wk": "W7",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -920,7 +920,7 @@
     },
     {
      "wk": "W10",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -1096,7 +1096,7 @@
     },
     {
      "wk": "W2",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -1384,7 +1384,7 @@
     },
     {
      "wk": "W10",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -1748,7 +1748,7 @@
     },
     {
      "wk": "W13",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -1808,7 +1808,7 @@
     },
     {
      "wk": "W5",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -1864,7 +1864,7 @@
     },
     {
      "wk": "W13",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -1900,7 +1900,7 @@
     },
     {
      "wk": "W2",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -1940,7 +1940,7 @@
     },
     {
      "wk": "W7",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -1956,7 +1956,7 @@
     },
     {
      "wk": "W10",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -2148,7 +2148,7 @@
     },
     {
      "wk": "W4",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -2180,7 +2180,7 @@
     },
     {
      "wk": "W8",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -2188,7 +2188,7 @@
     },
     {
      "wk": "W10",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -2264,7 +2264,7 @@
     },
     {
      "wk": "W4",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -2372,7 +2372,7 @@
     },
     {
      "wk": "W3",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -2504,7 +2504,7 @@
     },
     {
      "wk": "W5",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -2668,7 +2668,7 @@
     },
     {
      "wk": "W12",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -3008,7 +3008,7 @@
     },
     {
      "wk": "W11",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -3124,7 +3124,7 @@
     },
     {
      "wk": "W11",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -3270,7 +3270,7 @@
    "ceiling_p90_widened": 10,
    "expected_wins_widened": 7.34
   },
-  "Eastern Michigan": {
+  "EMU": {
    "conf": "MAC",
    "market_total": 5.5,
    "sp_plus": -15.0,
@@ -3292,7 +3292,7 @@
     },
     {
      "wk": "W1",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": true,
      "conf_game": false,
      "src": "ml",
@@ -3324,7 +3324,7 @@
     },
     {
      "wk": "W5",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -3386,7 +3386,7 @@
    "ceiling_p90_widened": 9,
    "expected_wins_widened": 5.53
   },
-  "FIU": {
+  "Florida Intl": {
    "conf": "CUSA",
    "market_total": 6.5,
    "sp_plus": -13.7,
@@ -3648,7 +3648,7 @@
     },
     {
      "wk": "W3",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -3656,7 +3656,7 @@
     },
     {
      "wk": "W4",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -3796,7 +3796,7 @@
     },
     {
      "wk": "W7",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -3880,7 +3880,7 @@
     },
     {
      "wk": "W3",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -4300,7 +4300,7 @@
     },
     {
      "wk": "W13",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -4476,7 +4476,7 @@
     },
     {
      "wk": "W5",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -5188,7 +5188,7 @@
     },
     {
      "wk": "W7",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -5328,7 +5328,7 @@
     },
     {
      "wk": "W10",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -5684,7 +5684,7 @@
     },
     {
      "wk": "W12",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -5800,7 +5800,7 @@
     },
     {
      "wk": "W12",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -5808,7 +5808,7 @@
     },
     {
      "wk": "W13",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -6124,7 +6124,7 @@
     },
     {
      "wk": "W9",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -6170,7 +6170,7 @@
    "ceiling_p90_widened": 11,
    "expected_wins_widened": 8.29
   },
-  "Louisiana": {
+  "UL Lafayette": {
    "conf": "Sun Belt",
    "market_total": 7.5,
    "sp_plus": -9.1,
@@ -6240,7 +6240,7 @@
     },
     {
      "wk": "W8",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -6256,7 +6256,7 @@
     },
     {
      "wk": "W11",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -6332,7 +6332,7 @@
     },
     {
      "wk": "W6",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -6340,7 +6340,7 @@
     },
     {
      "wk": "W7",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -6372,7 +6372,7 @@
     },
     {
      "wk": "W11",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -6620,7 +6620,7 @@
     },
     {
      "wk": "W13",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -6866,7 +6866,7 @@
    "ceiling_p90_widened": 10,
    "expected_wins_widened": 7.39
   },
-  "Miami FL": {
+  "Miami": {
    "conf": "ACC",
    "market_total": 10.5,
    "sp_plus": 21.0,
@@ -6982,7 +6982,7 @@
    "ceiling_p90_widened": 12,
    "expected_wins_widened": 10.26
   },
-  "Miami OH": {
+  "Miami-OH": {
    "conf": "MAC",
    "market_total": 7.5,
    "sp_plus": -2.9,
@@ -7036,7 +7036,7 @@
     },
     {
      "wk": "W6",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -7236,7 +7236,7 @@
     },
     {
      "wk": "W2",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -7392,7 +7392,7 @@
     },
     {
      "wk": "W8",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -7576,7 +7576,7 @@
    "per_game": [
     {
      "wk": "W1",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": true,
      "conf_game": false,
      "src": "ml",
@@ -7872,7 +7872,7 @@
     },
     {
      "wk": "W10",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -8320,7 +8320,7 @@
     },
     {
      "wk": "W8",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -8444,7 +8444,7 @@
     },
     {
      "wk": "W9",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -8544,7 +8544,7 @@
     },
     {
      "wk": "W6",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -8676,7 +8676,7 @@
     },
     {
      "wk": "W9",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -8824,7 +8824,7 @@
     },
     {
      "wk": "W13",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -9032,7 +9032,7 @@
     },
     {
      "wk": "W10",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -9264,7 +9264,7 @@
     },
     {
      "wk": "W10",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -9372,7 +9372,7 @@
     },
     {
      "wk": "W8",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -9388,7 +9388,7 @@
     },
     {
      "wk": "W11",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -9868,7 +9868,7 @@
     },
     {
      "wk": "W13",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -10352,7 +10352,7 @@
    "per_game": [
     {
      "wk": "W1",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": true,
      "conf_game": false,
      "src": "ml",
@@ -10408,7 +10408,7 @@
     },
     {
      "wk": "W8",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -10700,7 +10700,7 @@
    "per_game": [
     {
      "wk": "W1",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": true,
      "conf_game": false,
      "src": "ml",
@@ -10932,7 +10932,7 @@
    "per_game": [
     {
      "wk": "W0",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": false,
      "conf_game": true,
      "src": "ml",
@@ -10964,7 +10964,7 @@
     },
     {
      "wk": "W4",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -11136,7 +11136,7 @@
     },
     {
      "wk": "W13",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -11258,7 +11258,7 @@
    "ceiling_p90_widened": 9,
    "expected_wins_widened": 6.4
   },
-  "San Jose State": {
+  "San José State": {
    "conf": "MWC",
    "market_total": 4.5,
    "sp_plus": -15.5,
@@ -11280,7 +11280,7 @@
     },
     {
      "wk": "W1",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": false,
      "conf_game": false,
      "src": "ml",
@@ -11428,7 +11428,7 @@
     },
     {
      "wk": "W5",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -11460,7 +11460,7 @@
     },
     {
      "wk": "W10",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -11476,7 +11476,7 @@
     },
     {
      "wk": "W12",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -11628,7 +11628,7 @@
    "per_game": [
     {
      "wk": "W1",
-     "opp": "FIU",
+     "opp": "Florida Intl",
      "home": true,
      "conf_game": false,
      "src": "ml",
@@ -11730,7 +11730,7 @@
    "ceiling_p90_widened": 11,
    "expected_wins_widened": 8.29
   },
-  "Southern Miss": {
+  "Southern Mississippi": {
    "conf": "Sun Belt",
    "market_total": 3.5,
    "sp_plus": -23.3,
@@ -11792,7 +11792,7 @@
     },
     {
      "wk": "W8",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -11800,7 +11800,7 @@
     },
     {
      "wk": "W9",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -11868,7 +11868,7 @@
     },
     {
      "wk": "W1",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -12944,7 +12944,7 @@
     },
     {
      "wk": "W7",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -12968,7 +12968,7 @@
     },
     {
      "wk": "W11",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -13044,7 +13044,7 @@
     },
     {
      "wk": "W6",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -13052,7 +13052,7 @@
     },
     {
      "wk": "W7",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -13060,7 +13060,7 @@
     },
     {
      "wk": "W8",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -13152,7 +13152,7 @@
     },
     {
      "wk": "W4",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -13368,7 +13368,7 @@
     },
     {
      "wk": "W2",
-     "opp": "ULM",
+     "opp": "UL Monroe",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -13376,7 +13376,7 @@
     },
     {
      "wk": "W3",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -13724,7 +13724,7 @@
     },
     {
      "wk": "W3",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -13732,7 +13732,7 @@
     },
     {
      "wk": "W4",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": false,
      "conf_game": false,
      "src": "sp+",
@@ -13756,7 +13756,7 @@
     },
     {
      "wk": "W8",
-     "opp": "UMass",
+     "opp": "UMASS",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -13810,7 +13810,7 @@
    "ceiling_p90_widened": 9,
    "expected_wins_widened": 5.6
   },
-  "ULM": {
+  "UL Monroe": {
    "conf": "Sun Belt",
    "market_total": 3.5,
    "sp_plus": -24.3,
@@ -13880,7 +13880,7 @@
     },
     {
      "wk": "W9",
-     "opp": "Southern Miss",
+     "opp": "Southern Mississippi",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -13896,7 +13896,7 @@
     },
     {
      "wk": "W11",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -13926,7 +13926,7 @@
    "ceiling_p90_widened": 7,
    "expected_wins_widened": 3.73
   },
-  "UMass": {
+  "UMASS": {
    "conf": "MAC",
    "market_total": 2.5,
    "sp_plus": -30.9,
@@ -13972,7 +13972,7 @@
     },
     {
      "wk": "W5",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -13980,7 +13980,7 @@
     },
     {
      "wk": "W6",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -14136,7 +14136,7 @@
     },
     {
      "wk": "W12",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -14172,7 +14172,7 @@
    "per_game": [
     {
      "wk": "W0",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": true,
      "conf_game": false,
      "src": "spread",
@@ -14188,7 +14188,7 @@
     },
     {
      "wk": "W2",
-     "opp": "Louisiana",
+     "opp": "UL Lafayette",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -14336,7 +14336,7 @@
     },
     {
      "wk": "W7",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -15064,7 +15064,7 @@
     },
     {
      "wk": "W12",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": false,
      "conf_game": true,
      "src": "sp+",
@@ -15116,7 +15116,7 @@
     },
     {
      "wk": "W3",
-     "opp": "Miami FL",
+     "opp": "Miami",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -15760,7 +15760,7 @@
     },
     {
      "wk": "W12",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -15768,7 +15768,7 @@
     },
     {
      "wk": "W13",
-     "opp": "Miami OH",
+     "opp": "Miami-OH",
      "home": true,
      "conf_game": true,
      "src": "sp+",
@@ -15812,7 +15812,7 @@
     },
     {
      "wk": "W3",
-     "opp": "Eastern Michigan",
+     "opp": "EMU",
      "home": true,
      "conf_game": false,
      "src": "sp+",
@@ -15952,7 +15952,7 @@
     },
     {
      "wk": "W6",
-     "opp": "San Jose State",
+     "opp": "San José State",
      "home": false,
      "conf_game": true,
      "src": "sp+",

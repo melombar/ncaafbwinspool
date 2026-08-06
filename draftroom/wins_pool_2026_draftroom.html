@@ -149,6 +149,8 @@
   .tw-up{display:inline-block;background:rgba(63,174,107,.16);color:#7fd3a0;border:1px solid rgba(63,174,107,.3);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:10.5px;cursor:help}
   .tw-dn{display:inline-block;background:rgba(217,116,74,.16);color:#e39b78;border:1px solid rgba(217,116,74,.3);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:10.5px;cursor:help}
   .pend{display:inline-block;background:rgba(150,150,150,.14);color:var(--dim);border-radius:4px;padding:0 6px;font-size:9.5px;margin-left:4px}
+  .podfade{display:inline-block;background:#3a1e1e;color:#f0a0a0;border:1px solid #6e3030;border-radius:4px;padding:1px 6px;font-size:9px;font-weight:700;letter-spacing:.04em;cursor:help}
+  .whyline{color:#c9a86b;font-size:10px;margin-top:3px;line-height:1.3}
   .twcell .faint{color:var(--faint)}
   #hmU .conf-row{display:grid;grid-template-columns:120px 40px 52px 1fr;gap:8px;align-items:center;margin-bottom:5px}
   #hmU .clabel{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
@@ -246,7 +248,7 @@
   <!-- SETUP -->
   <section class="view" id="v-overperform">
       <h2>Overperform Targets — pre-draftable tailwinds &amp; headwinds</h2>
-      <p class="note"><b>This is a COUNT of team-specific reasons, not a prediction and not a draft order.</b> Aggregate signals (SP+/TARP/RetProd) don't predict beating the number, so they're excluded — only structural + pod reasons you can see and overrule are counted. The market total stays the baseline; round, price, and scarcity still govern the pick. Hover a tag for the reason. Teams marked <span class="pend">pod pending</span> are schedule-only until their pod loads (Pac-12, Sun Belt &amp; Mountain West loaded). <b>The per-team tally is ordered by projected wins (the market line)</b> so it reads as a pecking order — scan down to count how many teams sit in front of a target. <b>Underperform targets</b> (headwinds outweigh tailwinds, or a fade) are flagged <span style="color:#e06b6b;font-weight:600">red ▼</span>. Where a pod cited a moved line, the O/U shows <span style="color:#3fae6b;font-weight:600">→X▲</span>.</p>
+      <p class="note"><b>This is a COUNT of team-specific reasons, not a prediction and not a draft order.</b> Aggregate signals (SP+/TARP/RetProd) don't predict beating the number, so they're excluded — only structural + pod reasons you can see and overrule are counted. The market total stays the baseline; round, price, and scarcity still govern the pick. Hover a tag for the reason. Teams marked <span class="pend">pod pending</span> are schedule-only until their pod loads (Pac-12, Sun Belt &amp; Mountain West loaded). <b>The per-team tally is ordered by projected wins (the market line)</b> so it reads as a pecking order — scan down to count how many teams sit in front of a target. <b>Underperform targets</b> (structural headwinds outweigh tailwinds) are flagged <span style="color:#e06b6b;font-weight:600">red ▼</span>. A pod bet-against is shown separately as a <span class="podfade">POD FADE</span> badge with a plain-language reason line — it's an override, independent of the net tally, so a team can be net-positive AND a pod fade. Where a pod cited a moved line, the O/U shows <span style="color:#3fae6b;font-weight:600">→X▲</span>.</p>
       <h3 style="margin:18px 0 4px;font-size:13px;color:var(--ink)">Upside Availability — urgency to land an upside team</h3>
       <p class="note">Parallel to Anchor Availability. <b>Count &amp; color</b> key on <b>strong (+2 or better)</b> upside teams still on the board per conference — those create real scarcity pressure. <b>Cells show every +1-or-better team</b>; soft (+1) ones are dimmed/italic so you don't lose them but can see where the strong leans sit. Color = <i>your</i> urgency: hot only for conferences you still need whose strong-upside supply is draining (filled and deep-refilling conferences stay cool). A thin strong-upside conference is also one rivals will target — so it doubles as a read on what others may grab.</p>
       <div class="hm heatgrid hm1" id="hmU"></div>
@@ -415,7 +417,7 @@ function ouCell(t){
   }
   return t.mkt!=null?String(t.mkt):'—';
 }
-const WIDENED={"Air Force":[4,10],"Akron":[2,8],"Alabama":[5,11],"Appalachian State":[3,9],"Arizona":[4,10],"Arizona State":[3,10],"Arkansas":[2,8],"Arkansas State":[3,9],"Army":[4,11],"Auburn":[3,10],"BYU":[5,11],"Ball State":[1,6],"Baylor":[3,10],"Boise State":[4,10],"Boston College":[1,7],"Bowling Green":[2,7],"Buffalo":[3,9],"California":[3,10],"Central Michigan":[3,9],"Charlotte":[1,5],"Cincinnati":[2,9],"Clemson":[4,10],"Coastal Carolina":[2,8],"Colorado":[2,8],"Colorado State":[1,6],"Delaware":[3,9],"Duke":[2,9],"East Carolina":[4,10],"Eastern Michigan":[2,9],"FIU":[3,10],"Florida":[4,10],"Florida Atlantic":[3,9],"Florida State":[3,10],"Fresno State":[3,9],"Georgia":[6,12],"Georgia Southern":[2,8],"Georgia State":[2,8],"Georgia Tech":[3,10],"Hawaii":[4,10],"Houston":[5,11],"Illinois":[4,10],"Indiana":[8,12],"Iowa":[4,10],"Iowa State":[2,8],"Jacksonville State":[4,10],"James Madison":[5,11],"Kansas":[3,9],"Kansas State":[5,11],"Kennesaw State":[3,9],"Kent State":[1,6],"Kentucky":[2,8],"LSU":[5,11],"Liberty":[5,11],"Louisiana":[4,10],"Louisiana Tech":[3,9],"Louisville":[5,11],"Marshall":[4,10],"Maryland":[2,9],"Memphis":[4,10],"Miami FL":[8,12],"Miami OH":[4,10],"Michigan":[6,11],"Michigan State":[2,8],"Middle Tennessee":[1,7],"Minnesota":[3,9],"Mississippi State":[2,8],"Missouri":[3,10],"Missouri State":[2,8],"NC State":[4,10],"Navy":[4,10],"Nebraska":[4,9],"Nevada":[2,8],"New Mexico":[4,10],"New Mexico State":[2,8],"North Carolina":[2,8],"North Dakota State":[5,11],"North Texas":[3,8],"Northern Illinois":[1,6],"Northwestern":[3,8],"Notre Dame":[10,12],"Ohio":[3,9],"Ohio State":[6,12],"Oklahoma":[4,10],"Oklahoma State":[3,10],"Old Dominion":[4,10],"Ole Miss":[4,10],"Oregon":[8,12],"Oregon State":[2,7],"Penn State":[5,11],"Pittsburgh":[4,10],"Purdue":[1,7],"Rice":[1,7],"Rutgers":[2,8],"SMU":[5,11],"Sacramento State":[2,8],"Sam Houston":[1,7],"San Diego State":[3,9],"San Jose State":[2,8],"South Alabama":[3,9],"South Carolina":[3,10],"South Florida":[5,11],"Southern Miss":[1,7],"Stanford":[1,7],"Syracuse":[2,8],"TCU":[3,10],"Temple":[3,8],"Tennessee":[4,10],"Texas":[7,12],"Texas A&M":[5,11],"Texas State":[4,9],"Texas Tech":[8,12],"Toledo":[4,10],"Troy":[3,9],"Tulane":[4,10],"Tulsa":[3,8],"UAB":[1,6],"UCF":[3,9],"UCLA":[3,9],"UConn":[3,9],"ULM":[1,7],"UMass":[1,5],"UNLV":[4,10],"USC":[6,11],"UTEP":[1,6],"UTSA":[4,10],"Utah":[5,11],"Utah State":[2,8],"Vanderbilt":[3,9],"Virginia":[4,10],"Virginia Tech":[3,10],"Wake Forest":[3,9],"Washington":[4,10],"Washington State":[2,8],"West Virginia":[3,9],"Western Kentucky":[3,9],"Western Michigan":[4,10],"Wisconsin":[3,9],"Wyoming":[2,9]};
+const WIDENED={"Air Force":[4,10],"Akron":[2,8],"Alabama":[5,11],"Appalachian State":[3,9],"Arizona":[4,10],"Arizona State":[3,10],"Arkansas":[2,8],"Arkansas State":[3,9],"Army":[4,11],"Auburn":[3,10],"BYU":[5,11],"Ball State":[1,6],"Baylor":[3,10],"Boise State":[4,10],"Boston College":[1,7],"Bowling Green":[2,7],"Buffalo":[3,9],"California":[3,10],"Central Michigan":[3,9],"Charlotte":[1,5],"Cincinnati":[2,9],"Clemson":[4,10],"Coastal Carolina":[2,8],"Colorado":[2,8],"Colorado State":[1,6],"Delaware":[3,9],"Duke":[2,9],"East Carolina":[4,10],"EMU":[2,9],"Florida Intl":[3,10],"Florida":[4,10],"Florida Atlantic":[3,9],"Florida State":[3,10],"Fresno State":[3,9],"Georgia":[6,12],"Georgia Southern":[2,8],"Georgia State":[2,8],"Georgia Tech":[3,10],"Hawaii":[4,10],"Houston":[5,11],"Illinois":[4,10],"Indiana":[8,12],"Iowa":[4,10],"Iowa State":[2,8],"Jacksonville State":[4,10],"James Madison":[5,11],"Kansas":[3,9],"Kansas State":[5,11],"Kennesaw State":[3,9],"Kent State":[1,6],"Kentucky":[2,8],"LSU":[5,11],"Liberty":[5,11],"UL Lafayette":[4,10],"Louisiana Tech":[3,9],"Louisville":[5,11],"Marshall":[4,10],"Maryland":[2,9],"Memphis":[4,10],"Miami":[8,12],"Miami-OH":[4,10],"Michigan":[6,11],"Michigan State":[2,8],"Middle Tennessee":[1,7],"Minnesota":[3,9],"Mississippi State":[2,8],"Missouri":[3,10],"Missouri State":[2,8],"NC State":[4,10],"Navy":[4,10],"Nebraska":[4,9],"Nevada":[2,8],"New Mexico":[4,10],"New Mexico State":[2,8],"North Carolina":[2,8],"North Dakota State":[5,11],"North Texas":[3,8],"Northern Illinois":[1,6],"Northwestern":[3,8],"Notre Dame":[10,12],"Ohio":[3,9],"Ohio State":[6,12],"Oklahoma":[4,10],"Oklahoma State":[3,10],"Old Dominion":[4,10],"Ole Miss":[4,10],"Oregon":[8,12],"Oregon State":[2,7],"Penn State":[5,11],"Pittsburgh":[4,10],"Purdue":[1,7],"Rice":[1,7],"Rutgers":[2,8],"SMU":[5,11],"Sacramento State":[2,8],"Sam Houston":[1,7],"San Diego State":[3,9],"San José State":[2,8],"South Alabama":[3,9],"South Carolina":[3,10],"South Florida":[5,11],"Southern Mississippi":[1,7],"Stanford":[1,7],"Syracuse":[2,8],"TCU":[3,10],"Temple":[3,8],"Tennessee":[4,10],"Texas":[7,12],"Texas A&M":[5,11],"Texas State":[4,9],"Texas Tech":[8,12],"Toledo":[4,10],"Troy":[3,9],"Tulane":[4,10],"Tulsa":[3,8],"UAB":[1,6],"UCF":[3,9],"UCLA":[3,9],"UConn":[3,9],"UL Monroe":[1,7],"UMASS":[1,5],"UNLV":[4,10],"USC":[6,11],"UTEP":[1,6],"UTSA":[4,10],"Utah":[5,11],"Utah State":[2,8],"Vanderbilt":[3,9],"Virginia":[4,10],"Virginia Tech":[3,10],"Wake Forest":[3,9],"Washington":[4,10],"Washington State":[2,8],"West Virginia":[3,9],"Western Kentucky":[3,9],"Western Michigan":[4,10],"Wisconsin":[3,9],"Wyoming":[2,9]};
 function empBands(m){ if(m==null)return null; let fo,co;
   if(m<=4.5){fo=-2.5;co=3.5} else if(m<=6.5){fo=-2.5;co=2.5} else if(m<=8.5){fo=-3.5;co=2.5} else {fo=-2.5;co=2.5}
   return [Math.max(0,Math.round(m+fo)), Math.min(12,Math.round(m+co))]; }
@@ -570,6 +572,31 @@ function renderHM3(){
 // ---------- Overperform Tally (transparent count of pre-draftable reasons; NOT a prediction) ----------
 // Governed by Pre_Pick_Doctrine: excludes aggregate edge signals (SP+/TARP/RetProd) which DON'T predict beats.
 // Counts only team-specific structural + pod reasons. See Overperform_Tally_Spec.md.
+// Coaching-continuity signal: everyone returns = best; all-new = worst; HC matters most;
+// a coordinator PROMOTED to HC is more stable than an outside hire; a lone new coordinator is NOT flagged.
+function coachSignal(t){
+  const H=!!t.hc, O=!!t.oc, D=!!t.dc;
+  const promoted=/promot|interim|in-house|within|internal|elevat/i.test(t.hc||'');
+  if(!H&&!O&&!D) return {up:1,k:'staff intact',why:'HC + both coordinators return'};
+  if(H&&O&&D)    return {dn:1,k:'all-new staff',why:'HC + OC + DC all new'};
+  if(H&&promoted) return null;
+  if(H)          return {dn:1,k:'new HC',why:'new head coach: '+t.hc};
+  if(O&&D)       return {dn:1,k:'new coordinators',why:'both coordinators new'};
+  return null;
+}
+// QB-experience signal: returning proven starter best; unproven transfer worse; transfer WITH starts positive;
+// freshman/unsettled battle = headwind. Reads the enriched pod qb_status enum + prose.
+function qbSignal(t){
+  const q=t.qb||''; if(!q) return null;
+  const en=(q.match(/^\s*([A-Za-z]+)/)||[])[1]||'';
+  const proven=/start(ed|er|s)\b|multi-?year|veteran|incumbent|held the job|thousand|\d,\d{3}|passed for|threw for|\d+\s*(rush|pass|total|rushing|passing)|carries|TD\b|Freshman of the Year|Award|all-?conf|put up/i.test(q);
+  const unproven=/first year|limited snaps|waited|sparingly|couldn'?t get|pushed the starter|\bbackup\b|never (really )?(played|started)|no (real )?starts|hasn'?t played|deer in|converted|didn'?t play/i.test(q);
+  if(/^Returning/i.test(en)){ if(unproven && !/incumbent|held the job|returning starter/i.test(q)) return null; return {up:1,k:'QB: returning starter',why:'pod: '+q}; }
+  if(/^Transfer/i.test(en)){ if(unproven && !proven) return {dn:1,k:'QB: unproven transfer',why:'pod: '+q}; if(proven) return {up:1,k:'QB: proven transfer',why:'pod: '+q}; return null; }
+  if(/^Freshman/i.test(en)) return {dn:1,k:'QB: freshman',why:'pod: '+q};
+  if(/^(Battle|Unsettled)/i.test(en)) return {dn:1,k:'QB: unsettled',why:'pod: '+q};
+  return null;
+}
 function computeTally(t){
   const up=[], dn=[];
   // --- schedule tailwinds ---
@@ -592,10 +619,11 @@ function computeTally(t){
   const podLoaded = t.pod_status==='pod-loaded' || (t.sched && t.sched!=='');
   if(podLoaded){
     if(/favorab/i.test(t.sched||'')) up.push({k:'favorable draw', why:'pod: '+t.sched});
-    if(/upgrade|returning|veteran|proven/i.test(t.qb||'')) up.push({k:'QB tailwind', why:'pod: '+t.qb});
-    if(/downgrade|lost|unproven|new starter|question/i.test(t.qb||'')) dn.push({k:'QB headwind', why:'pod: '+t.qb});
+    const cs=coachSignal(t); if(cs) (cs.up?up:dn).push({k:cs.k, why:cs.why});
+    const qs=qbSignal(t);    if(qs) (qs.up?up:dn).push({k:qs.k, why:qs.why});
     if(t.dark_horse) up.push({k:'dark horse', why:'pod flag'});
-    if(t.fade) dn.push({k:'fade', why:'pod flag'});
+    // fade is DELIBERATELY not counted here — it's a pod bet-against OVERRIDE, surfaced as a
+    // separate POD FADE badge + why line in renderOverperform so net stays a clean STRUCTURAL measure.
   }
   return {up, dn, net:up.length-dn.length, podLoaded};
 }
@@ -664,15 +692,19 @@ function renderOverperform(){
   const tb=byId('opbody'); if(!tb)return; tb.innerHTML='';
   let rank=0;
   for(const r of rows){
-    const t=r.t; const under=r.net<0||t.fade; rank++;
-    const tr=document.createElement('tr'); if(isPicked(t.team))tr.className='picked'; if(under)tr.style.borderLeft='2px solid #e06b6b';
+    const t=r.t; const under=r.net<0; rank++;              // ▼ = STRUCTURAL underperform only (fade is separate)
+    const tr=document.createElement('tr'); if(isPicked(t.team))tr.className='picked'; if(under||t.fade)tr.style.borderLeft='2px solid #e06b6b';
     const upHtml=r.up.map(x=>`<span class="tw-up" title="${esc(x.why)}">+${esc(x.k)}</span>`).join(' ')||'<span class="faint">—</span>';
     const dnHtml=r.dn.map(x=>`<span class="tw-dn" title="${esc(x.why)}">−${esc(x.k)}</span>`).join(' ')||'<span class="faint">—</span>';
     const netCls=r.net>0?'net-pos':(r.net<0?'net-neg':'net-zero');
     const pend=r.podLoaded?'':'<span class="pend" title="pod not yet loaded — schedule-only tally">pod pending</span>';
-    const teamStyle=under?'color:#e06b6b;font-weight:600':'';
+    const teamStyle=(under||t.fade)?'color:#e06b6b;font-weight:600':'';
+    const fadeBadge=t.fade?' <span class="podfade" title="hosts want to bet AGAINST this team (pod hard-fade / hard under). This is a pod OVERRIDE, independent of the structural net tally.">POD FADE</span>':'';
+    const why=[]; if(under)why.push(`structural tally ${r.net} — headwinds outweigh tailwinds`);
+    if(t.fade)why.push('pod hard-fade (bet-against) — overrides regardless of tally');
+    const whyLine=why.length?`<div class="whyline">${esc(why.join(' · '))}</div>`:'';
     tr.innerHTML=`
-      <td><span style="color:#8aa0b4;font-size:11px">${rank}.</span> <span class="team" style="${teamStyle}">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span>${under?' <span style="color:#e06b6b" title="underperform target — headwinds outweigh tailwinds / fade">▼</span>':''} ${pend}</td>
+      <td><span style="color:#8aa0b4;font-size:11px">${rank}.</span> <span class="team" style="${teamStyle}">${esc(t.team)}</span> <span class="cf">${esc(t.conf)}</span>${under?' <span style="color:#e06b6b" title="underperform target — structural headwinds outweigh tailwinds">▼</span>':''}${fadeBadge} ${pend}${whyLine}</td>
       <td class="num">${ouCell(t)}</td>
       <td class="num ${netCls}">${r.net>0?'+':''}${r.net}</td>
       <td class="twcell">${upHtml}</td>

@@ -74,13 +74,28 @@ Because `MATCH` reads each column's own header (`D$1`, `E$1`, … `X$1`), you pa
 formula in D2 and drag right through J2, and ONE Layer B formula in K2 and drag right through X2.
 Then select D2:X2 and fill down to `_LASTROW`.
 
-## Layer A — Pool Conf is a lookup (not hand-entered)
-Layer A col O (`Pool Conf`), cell **O2**, filled down:
+## Layer A — columns A–N pasted static; col O (Pool Conf) is the only formula
+**Layer A cols A–N are a STATIC paste** of the repo-generated, normalized `LayerA_AN_YYYY.tsv`
+(Team, Mkt O/U, SP+ Rk, SP+ Rtg, RetProd%, Ret Off%, Ret Def%, TARP net, TARP off, TARP def,
+Collin Proj, Proj−Mkt, 6-Win%, SOS Rk) — **no formulas** in A–N. The team names there MUST be
+Brad-canonical (`specs/Naming_Canon_2026.md`) or the col-O and join lookups miss (#N/A). Schedule
+columns P→ are pasted from `layerA_schedule_columns_YYYY.csv`.
+
+**Col O (`Pool Conf`) is the ONLY Layer A formula** — a per-row **VLOOKUP, filled down (NOT
+ARRAYFORMULA)**. Cell **O2**:
 ```
 =VLOOKUP($A2,Master_Lookup!$A:$C,MATCH(O$1,Master_Lookup!$A$1:$C$1,0),0)
 ```
-`O1` must read exactly `Pool Conf`. (Optionally add a `Real Conf` column to Layer A the same way; the
-join pulls Real Conf straight from Master either way.)
+`O1` must read exactly `Pool Conf`. (Real Conf is pulled straight from Master in the join; no need to
+add it to Layer A.)
+
+## Master_Lookup is a STATIC paste (decided 2026)
+`Master_Lookup` (Team · Pool Conf · Real Conf) is pasted **static** from the repo-generated
+`Master_Lookup_YYYY.tsv`. Normalization (spelling + `Big 10→Big Ten` + `zIndependents→Independent`)
+happens upstream in repo code, so the sheet holds already-canonical values and cannot drift mid-draft.
+A live-unpivot-from-the-Import-tabs version (FLATTEN/TOCOL/MAKEARRAY over the uneven conference grids)
+was attempted and **abandoned** — brittle array behavior across Sheets versions, and it reintroduces
+exactly the silent-drift risk this rebuild removed. Regenerate the TSV from the repo once a year.
 
 ## Critical: team-name spelling is the join key
 Every tab that the join or the draftroom keys by team — **Layer A, Layer B, Master_Lookup, Import_*,
