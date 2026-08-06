@@ -1198,7 +1198,7 @@ Colorado State,Pac12,9,Utah State,0,41,0,0
 Colorado State,Pac12,10,Boise State,1,18,0,0
 Colorado State,Pac12,11,Washington State,0,34,0,0
 Colorado State,Pac12,12,Fresno State,0,26,0,0
-Colorado State,Pac12,13,TBD,1,99,1,0
+Colorado State,Pac12,13,vs Pac-12 flex,1,39,0,0
 Fresno State,Pac12,1,USC,0,7,0,1
 Fresno State,Pac12,2,Sacramento State,1,96,0,0
 Fresno State,Pac12,3,San José State,0,79,0,0
@@ -1210,7 +1210,7 @@ Fresno State,Pac12,9,Oregon State,1,68,0,0
 Fresno State,Pac12,10,Utah State,0,59,0,0
 Fresno State,Pac12,11,Texas State,0,53,0,0
 Fresno State,Pac12,12,Colorado State,1,74,0,0
-Fresno State,Pac12,13,TBD,1,100,1,0
+Fresno State,Pac12,13,vs Pac-12 flex,1,55,0,0
 Michigan State,Pac12,1,Toledo,1,79,0,1
 Michigan State,Pac12,2,EMU,1,91,0,0
 Michigan State,Pac12,3,Notre Dame,0,2,0,0
@@ -1291,7 +1291,7 @@ Utah State,Pac12,9,Colorado State,1,59,0,0
 Utah State,Pac12,10,Fresno State,1,41,0,0
 Utah State,Pac12,11,San Diego State,0,25,0,0
 Utah State,Pac12,12,Oregon State,0,39,0,0
-Utah State,Pac12,13,TBD,1,100,1,0
+Utah State,Pac12,13,vs Pac-12 flex,1,41,0,0
 Washington State,Pac12,1,Washington,0,8,0,1
 Washington State,Pac12,2,Kansas State,0,9,0,0
 Washington State,Pac12,3,Duquesne,1,100,1,0
@@ -1303,7 +1303,7 @@ Washington State,Pac12,8,Boise State,1,24,0,0
 Washington State,Pac12,9,San Diego State,0,32,0,0
 Washington State,Pac12,11,Colorado State,1,66,0,0
 Washington State,Pac12,12,Texas State,0,44,0,0
-Washington State,Pac12,13,TBD,1,100,1,0
+Washington State,Pac12,13,vs Pac-12 flex,1,47,0,0
 Alabama,SEC,1,East Carolina,1,96,0,1
 Alabama,SEC,2,Kentucky,0,81,0,0
 Alabama,SEC,3,Florida State,1,83,0,1
@@ -1652,3 +1652,7 @@ UL Monroe,Sun Belt,10,Arkansas State,0,9,0,0
 UL Monroe,Sun Belt,11,UL Lafayette,1,17,0,0
 UL Monroe,Sun Belt,12,Appalachian State,0,14,0,0
 UL Monroe,Sun Belt,13,Marshall,1,13,0,0
+Boise State,Pac12,13,@ Pac-12 flex,0,77,0,0
+Oregon State,Pac12,13,@ Pac-12 flex,0,42,0,0
+San Diego State,Pac12,13,@ Pac-12 flex,0,56,0,0
+Texas State,Pac12,13,@ Pac-12 flex,0,43,0,0
