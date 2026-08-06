@@ -83,6 +83,38 @@ That's the target: **~4 files.** Everything below lives in Drive, not the active
 
 ---
 
+## ⭐ 2026 REBUILD — conference source-of-truth + identical-header join (SUPERSEDES the join/gotcha notes below)
+
+The 2026 cycle replaced hand-entered conferences and the positional/ARRAYFORMULA join after a
+draft-invalidating bug (Notre Dame rendered as AAC, swapped its win total with South Florida — hidden
+because the old join *renamed* columns). New model:
+
+- **Conference is SOURCED, not typed.** Brad imports two tabs — `Import_BradConference` (pool) and
+  `Import_ActualConferences` (actual, incl. `zIndependents`). They feed **`Master_Lookup`**
+  (Team · Pool Conf · Real Conf), pasted **static** from the repo-generated `data/Master_Lookup_YYYY.tsv`.
+  Layer A `Pool Conf` and the join `Real Conf` are `VLOOKUP`s into Master. **The SWITCH is retired.**
+- **The A+B join surfaces RAW columns with IDENTICAL headers** to the source tabs — no renamed or
+  composed join columns. Per-row **`VLOOKUP(A2, range, MATCH(header,…), 0)`**, filled down.
+  **No ARRAYFORMULA** in the join. `Coaching`/`Flags` no longer exist as join columns — the HTML
+  composes them from raw `New HC/New OC/New DC` and `Dark Horse/Fade/Split/Variance`.
+- **Layer A** is a static paste: A–N from `LayerA_AN_YYYY.tsv`, P→ schedule facts from
+  `layerA_schedule_columns_YYYY.csv`. Ship them as ONE aligned block (`LayerA_FULL_YYYY.tsv`) so A and
+  the schedule columns can't land in different row orders (that misalignment silently gives every team
+  the wrong schedule facts). Only formulas in Layer A: **O** (Pool Conf VLOOKUP) and **Z**
+  (`pod_upside_status` = live Layer-B coverage check).
+- **Naming is the join key** — governed by **`specs/Naming_Canon_2026.md`**: 9 canonical team spellings
+  (`EMU`, `Florida Intl`, `Miami`, `Miami-OH`, `San José State`, `Southern Mississippi`, `UL Lafayette`,
+  `UL Monroe`, `UMASS`; plus `Appalachian State` not `App State`) and conf token **`Big Ten`** (not
+  `Big 10`), `Independent` (not `zIndependents`). Normalization lives in **repo code** and is applied to
+  every name-keyed file BEFORE the sheet sees it. A single drift blanks a name-keyed row.
+- Formula set + column layout: **`draftroom/Dashboard_LiveJoin_Formulas.md`** (24 raw columns).
+  Change record: **`specs/PREFLIGHT_conf_rebuild.md`**. Completion audit: **`specs/PREFLIGHT_config_documentation.md`**.
+
+**Everything in "The Dashboard join (operating logic)", the GOTCHAS list, and the Dashboard column
+layout below is the OLD (pre-2026) design — kept for history but SUPERSEDED by this section.**
+
+---
+
 ## Data sources — the annual collection list
 
 Work down this list. "When" = when it becomes available/final.
@@ -119,7 +151,7 @@ Work down this list. "When" = when it becomes available/final.
 
 ## Build order (once per year)
 
-1. **Roster/canon** — lock the year's pool conferences + reassignments; set Brad-canonical names.
+1. **Roster/canon** — lock the year's pool conferences + reassignments; set Brad-canonical names. **(2026+)** Source conferences from Brad's two imports (`Import_BradConference` = pool, `Import_ActualConferences` = actual) → build `Master_Lookup` (normalize spelling per `Naming_Canon`, `Big 10→Big Ten`, `zIndependents→Independent`); reconcile to 138 teams, 0 unmatched. Don't hand-enter Pool Conf.
 2. **Layer A numerics (raw data)** — collect each source above as it's available; normalize names; assemble `data_YYYY.json`.
 3. **Layer B pods (supplemental)** — as each conference pod drops, extract to `bboc_YYYY_CONF.json` per the template.
 4. **Schedules** — capture official releases; populate key_avoids + games count.
@@ -161,7 +193,7 @@ Built as an `.xlsx` first (Claude generates it), then ported to Google Sheets. T
 **Column layouts (the join keys off these — confirm before regenerating formulas):**
 - **Layer A**: A=Team, B=Mkt O/U, C=SP+ Rk, D=SP+ Rtg, E=RetProd%, F=Ret Off%, G=Ret Def%, H=TARP net, I=TARP off, J=TARP def, K=Collin Proj, L=Proj−Mkt, M=6-Win%, N=SOS Rk, **O=Pool Conf**
 - **Layer B**: A=Team, B=QB status, C=New HC, D=New OC, E=New DC, F=Host Lean, G=Dark Horse, H=Fade, I=Split, J=Variance, K=Sched Tag, L=Key Avoids/Draws, M=Key Injury, N=BBOC Notes
-- **Dashboard**: A=Pool Conf, B=Team, C=Real Conf, D=Mkt, E=SP+ Rk, F=SP+ Rtg, G=RetProd%, H=TARP net, I=Collin, J=Proj−Mkt, K=QB status, L=Coaching, M=Host Lean, N=Sched, O=Flags, P=Key Avoids/Draws, Q=Notes
+- **Dashboard** *(⚠️ SUPERSEDED 2026 — the join is now 24 RAW columns with identical source headers; see the 2026 REBUILD section + `Dashboard_LiveJoin_Formulas.md`)*: ~~A=Pool Conf, B=Team, C=Real Conf, D=Mkt, E=SP+ Rk, F=SP+ Rtg, G=RetProd%, H=TARP net, I=Collin, J=Proj−Mkt, K=QB status, L=Coaching, M=Host Lean, N=Sched, O=Flags, P=Key Avoids/Draws, Q=Notes~~
 
 ## The Dashboard join (operating logic)
 
@@ -178,7 +210,7 @@ The full formula set lives in `Dashboard_LiveJoin_Formulas.md` (regenerate per y
 ### GOTCHAS (each cost real time — do not rediscover)
 
 1. **Paste flattens formulas to values.** Pasting an `.xlsx` (or paste-special values) into Google Sheets lands the *computed values*, NOT the formulas — so the "join" is a frozen snapshot that never updates. **Fix:** after porting, rebuild the Dashboard body as live formulas IN the sheet (delete row 2→bottom first, then paste the ARRAYFORMULAs). Symptom: "there are no lookups anywhere in A+B."
-2. **`SWITCH` is NOT array-aware inside `ARRAYFORMULA`.** It evaluates only the first row's branch; every other row falls through to the default. This silently broke Real Conf (all reassigned teams showed pool=real). **Fix:** use `VLOOKUP` into an inline array literal map instead — VLOOKUP *is* array-aware:
+2. *(⚠️ SUPERSEDED 2026 — the SWITCH is retired; Real Conf is now a VLOOKUP into `Master_Lookup`. This gotcha no longer applies.)* **`SWITCH` is NOT array-aware inside `ARRAYFORMULA`.** It evaluates only the first row's branch; every other row falls through to the default. This silently broke Real Conf (all reassigned teams showed pool=real). **Fix:** use `VLOOKUP` into an inline array literal map instead — VLOOKUP *is* array-aware:
    `=ARRAYFORMULA(IF(A2:A="","",IFERROR(VLOOKUP(A2:A,{"Notre Dame","Independent"; "UConn","Independent"; …},2,FALSE),<pool conf vlookup>)))`
 3. **`TEXTJOIN` didn't survive the paste** (blank Coaching/Flags) — same root as #1; rebuilding as live formulas fixes it.
 4. **"Array result was not expanded, would overwrite C3"** — leftover static values below the ARRAYFORMULA cell block the spill. **Fix:** clear the target column from row 3 to ~1000 first, then the row-2 formula expands.
@@ -240,7 +272,9 @@ Operationalizes structural-scarcity-vs-actual-demand (the whole strategy). Lives
 ## Validation checklist (run after rebuild)
 
 - [ ] Dashboard = 138 rows, 0 formula errors, edits to Layer A/B propagate live
-- [ ] Reassigned teams show correct Real Conf (Notre Dame→Independent, Oklahoma State→Big 12, etc. — the SWITCH gotcha)
+- [ ] Reassigned teams show correct Real Conf (Notre Dame→Independent, Oklahoma State→Big 12, etc. — now sourced from `Master_Lookup`, not the retired SWITCH)
+- [ ] `Master_Lookup` + Layer A reconcile to 138 teams, 0 unmatched; all 9 canonical spellings + `Big Ten` token clean (grep the repo — see `PREFLIGHT_config_documentation.md`)
+- [ ] Layer A A–N and P→ pasted from ONE aligned `LayerA_FULL` block (no A-vs-schedule row misalignment); spot-check James Madison shows its 3 anchor-on-anchor games
 - [ ] Coaching + Flags populate (not blank — the paste/TEXTJOIN gotcha)
 - [ ] Proxy `/exec` returns `ok:true`, all 5 tabs, correct row counts
 - [ ] Layer A carries the 12 schedule columns (game_count … pod_upside_status); flex-8 = 13 games, Week-0 teams = 2 byes (spot-check USC bye_count 2, Boise game_count 13)

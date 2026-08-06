@@ -2,6 +2,8 @@
 
 > **Governed by `Pre_Pick_Doctrine.md`.** This is the OBJECTIVE schedule layer (facts, not pod opinion). Pairs with the pod's qualitative layer per the division of labor in BBOC_Extraction_Template.md.
 
+> **Naming (2026):** every emitted file (`schedule_facts`, `pool_schedule_grid`, `schedule_probs`, `layerA_schedule_columns`) must use **Brad-canonical** team names in both the Team column AND opponent references (`Naming_Canon_2026.md`) — the schedule tab and Overperform tally key on Team, so a drift (e.g. `App State`, `Miami FL`) silently blanks that team. Ship Layer A A–N + P→ as ONE aligned `LayerA_FULL_YYYY.tsv` so schedule facts can't misalign with the team column.
+
 ## Why this is a data requirement (not optional)
 The schedule is MULTI-DIMENSIONAL — assess each team's full PATH to wins, not just caps. Anchor-on-anchor is ONE signal among several. The full profile per team:
 - **Rest** — bye placement (before a tough game = edge), short weeks (<=5-day turnaround; strict — only ~3 teams league-wide).
