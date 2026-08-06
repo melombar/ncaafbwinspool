@@ -90,7 +90,7 @@ def scorer(kind):
     return f
 FN={k:scorer(k) for k in['field','rookie','elite','scarcity','upside','balanced','defer_deep','almanac']}
 
-def draft(our_policy,our_slot,rng):
+def draft(our_policy,our_slot,rng,rec=None):
     pol=['field']*12; others=[i for i in range(12) if i!=our_slot]; pol[rng.choice(others)]='rookie'; pol[our_slot]=our_policy
     rosters=[dict() for _ in range(12)]; taken=set(); uavail=dict(USABLE_TOT)
     for rnd in range(10):
@@ -107,6 +107,7 @@ def draft(our_policy,our_slot,rng):
             if not cand: continue
             f=FN[pol[p]]; best=max(cand,key=lambda tu:f(tu[0],tu[1],rnd,rng))[0]
             myc[TEAM[best]['conf']]=best; taken.add(best)
+            if rec is not None and p==our_slot: rec.append((rnd,TEAM[best]['conf'],best))
             if TEAM[best]['m']>=USABLE: uavail[TEAM[best]['conf']]-=1
     return rosters
 
@@ -124,22 +125,42 @@ if __name__=='__main__':
     # simpler: report supply depth (validated ordering already); skip re-timing
     print("\nGATE2 usable depth per conf (thin=few):",{c:USABLE_TOT[c] for c in sorted(CONFS,key=lambda c:USABLE_TOT[c])})
     # GATE 3+4 tournament
-    rngS=np.random.default_rng(2026); M=8000; WARR=sample_seasons(M,rngS)
-    print("\nLayer-B pods scored:",LBN,"teams | tilt sensitivity: does Layer-B-aware drafting win IF Layer-B predicts beats?")
-    def run(kind,N,seed,beta):
-        rng=random.Random(seed); f=t3=0; tot=[]
+    rngS=np.random.default_rng(2026); M=7000; WARR=sample_seasons(M,rngS)
+    from collections import Counter
+    N=5000; BETA=0.25
+    PATHS={'almanac':'Almanac Upside','defer_deep':'Defer-Deep Banking','elite':'Market Banking',
+           'scarcity':'Scarcity-Secured','balanced':'Hybrid Adaptive'}
+    def run(kind,N,seed,beta,track=False):
+        rng=random.Random(seed); f=t3=0; tot=[]; bs=defaultdict(lambda:[0,0])
         delta={t:beta*TEAM[t]['lb'] for t in teams}
-        def total(r,j): return sum(WARR[t][j]+delta[t] for t in r.values())
+        seq=defaultdict(list); picks=defaultdict(Counter)
         for i in range(N):
-            slot=rng.randrange(12); ros=draft(kind,slot,rng); j=rng.randrange(M)
-            T=[total(r,j) for r in ros]; mine=T[slot]; rank=1+sum(1 for x in T if x>mine)
+            slot=rng.randrange(12); rec=[] if track else None
+            ros=draft(kind,slot,rng,rec); j=rng.randrange(M)
+            T=[sum(WARR[t][j]+delta[t] for t in r.values()) for r in ros]
+            mine=T[slot]; rank=1+sum(1 for x in T if x>mine)
             f+=rank==1; t3+=rank<=3; tot.append(mine)
-        return f/N,t3/N,float(np.mean(tot))
-    N=4500; POLS=['elite','defer_deep','almanac','upside']
-    for beta in (0.0,0.30):
-        print(f"\n  β={beta}  (Layer-B beat-tilt: +{beta}/upside-point):")
-        rowsb=[]
-        for k in POLS:
-            p1,p3,mt=run(k,N,(hash(k)^int(beta*100))&0xffff,beta); rowsb.append((k,p1,p3,mt))
-            print(f"    {k:11} P1st {p1:5.1%} Ptop3 {p3:5.1%} meanTot {mt:4.1f}")
-        rowsb.sort(key=lambda x:-x[1]); print(f"    WINNER: {rowsb[0][0]}  (baseline 8.3%)")
+            b='early' if slot<4 else 'mid' if slot<8 else 'late'; bs[b][0]+=rank==1; bs[b][1]+=1
+            if track:
+                for rnd,conf,team in rec: seq[conf].append(rnd+1); picks[conf][team]+=1
+        out={'p1':f/N,'p3':t3/N,'mt':float(np.mean(tot)),
+             'byslot':{k:bs[k][0]/max(1,bs[k][1]) for k in('early','mid','late')}}
+        if track:
+            out['board']={c:{'avg_round':round(float(np.mean(seq[c])),1),
+                             'top':[{'team':t,'pct':round(100*n/N)} for t,n in picks[c].most_common(3)]} for c in CONFS if seq[c]}
+        return out
+    report={'meta':{'N':N,'beta_default':BETA,'layerB_pods_teams':LBN,'baseline':round(1/12,3)},
+            'cliff':{c:USABLE_TOT[c] for c in CONFS},'paths':{},'sensitivity':{}}
+    # sensitivity across beta for each path
+    for beta in (0.0,0.15,0.30):
+        report['sensitivity'][beta]={k:round(run(k,2200,(hash(k)^int(beta*100))&0xffff,beta)['p1'],3) for k in PATHS}
+    # full detail at default beta (with board for almanac)
+    for k in PATHS:
+        r=run(k,N,hash(k)&0xffff,BETA,track=(k=='almanac'))
+        report['paths'][k]={'name':PATHS[k],'p1':round(r['p1'],3),'p3':round(r['p3'],3),'mean_total':round(r['mt'],1),'byslot':{b:round(v,3) for b,v in r['byslot'].items()}}
+        if 'board' in r: report['paths'][k]['board']=r['board']
+    import os; os.makedirs('build',exist_ok=True)
+    json.dump(report,open('build/mc_paths_2026.json','w'),indent=1)
+    print("DUMPED build/mc_paths_2026.json | paths:",list(PATHS.values()))
+    print("sensitivity P1st by beta:")
+    for b,d in report['sensitivity'].items(): print(f"  b={b}: "+", ".join(f"{PATHS[k][:8]} {v:.0%}" for k,v in d.items()))

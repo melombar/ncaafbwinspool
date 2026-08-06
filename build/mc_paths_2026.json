@@ -1,0 +1,272 @@
+{
+ "meta": {
+  "N": 5000,
+  "beta_default": 0.25,
+  "layerB_pods_teams": 36,
+  "baseline": 0.083
+ },
+ "cliff": {
+  "AAC": 7,
+  "ACC": 11,
+  "Big Ten": 13,
+  "Big 12": 9,
+  "CUSA": 7,
+  "MAC": 5,
+  "MWC": 4,
+  "Pac12": 5,
+  "SEC": 12,
+  "Sun Belt": 6
+ },
+ "paths": {
+  "almanac": {
+   "name": "Almanac Upside",
+   "p1": 0.178,
+   "p3": 0.43,
+   "mean_total": 68.0,
+   "byslot": {
+    "early": 0.172,
+    "mid": 0.201,
+    "late": 0.16
+   },
+   "board": {
+    "AAC": {
+     "avg_round": 6.0,
+     "top": [
+      {
+       "team": "Florida Atlantic",
+       "pct": 10
+      },
+      {
+       "team": "UTSA",
+       "pct": 10
+      },
+      {
+       "team": "East Carolina",
+       "pct": 10
+      }
+     ]
+    },
+    "ACC": {
+     "avg_round": 7.2,
+     "top": [
+      {
+       "team": "Florida State",
+       "pct": 14
+      },
+      {
+       "team": "Georgia Tech",
+       "pct": 12
+      },
+      {
+       "team": "California",
+       "pct": 12
+      }
+     ]
+    },
+    "Big Ten": {
+     "avg_round": 6.7,
+     "top": [
+      {
+       "team": "UCLA",
+       "pct": 15
+      },
+      {
+       "team": "Nebraska",
+       "pct": 14
+      },
+      {
+       "team": "Minnesota",
+       "pct": 13
+      }
+     ]
+    },
+    "Big 12": {
+     "avg_round": 4.8,
+     "top": [
+      {
+       "team": "Arizona",
+       "pct": 15
+      },
+      {
+       "team": "Arizona State",
+       "pct": 11
+      },
+      {
+       "team": "TCU",
+       "pct": 10
+      }
+     ]
+    },
+    "CUSA": {
+     "avg_round": 7.3,
+     "top": [
+      {
+       "team": "Middle Tennessee",
+       "pct": 16
+      },
+      {
+       "team": "Sam Houston",
+       "pct": 16
+      },
+      {
+       "team": "UConn",
+       "pct": 8
+      }
+     ]
+    },
+    "MAC": {
+     "avg_round": 6.6,
+     "top": [
+      {
+       "team": "Kent State",
+       "pct": 14
+      },
+      {
+       "team": "Ball State",
+       "pct": 13
+      },
+      {
+       "team": "Buffalo",
+       "pct": 9
+      }
+     ]
+    },
+    "MWC": {
+     "avg_round": 1.6,
+     "top": [
+      {
+       "team": "Air Force",
+       "pct": 80
+      },
+      {
+       "team": "Nevada",
+       "pct": 8
+      },
+      {
+       "team": "Wyoming",
+       "pct": 6
+      }
+     ]
+    },
+    "Pac12": {
+     "avg_round": 6.1,
+     "top": [
+      {
+       "team": "San Diego State",
+       "pct": 45
+      },
+      {
+       "team": "Texas State",
+       "pct": 21
+      },
+      {
+       "team": "Arkansas",
+       "pct": 9
+      }
+     ]
+    },
+    "SEC": {
+     "avg_round": 6.6,
+     "top": [
+      {
+       "team": "Missouri",
+       "pct": 17
+      },
+      {
+       "team": "Auburn",
+       "pct": 17
+      },
+      {
+       "team": "South Carolina",
+       "pct": 16
+      }
+     ]
+    },
+    "Sun Belt": {
+     "avg_round": 2.1,
+     "top": [
+      {
+       "team": "UL Lafayette",
+       "pct": 97
+      },
+      {
+       "team": "Marshall",
+       "pct": 1
+      },
+      {
+       "team": "Arkansas State",
+       "pct": 0
+      }
+     ]
+    }
+   }
+  },
+  "defer_deep": {
+   "name": "Defer-Deep Banking",
+   "p1": 0.115,
+   "p3": 0.319,
+   "mean_total": 66.4,
+   "byslot": {
+    "early": 0.116,
+    "mid": 0.139,
+    "late": 0.09
+   }
+  },
+  "elite": {
+   "name": "Market Banking",
+   "p1": 0.092,
+   "p3": 0.266,
+   "mean_total": 65.7,
+   "byslot": {
+    "early": 0.097,
+    "mid": 0.11,
+    "late": 0.07
+   }
+  },
+  "scarcity": {
+   "name": "Scarcity-Secured",
+   "p1": 0.078,
+   "p3": 0.256,
+   "mean_total": 65.4,
+   "byslot": {
+    "early": 0.077,
+    "mid": 0.084,
+    "late": 0.073
+   }
+  },
+  "balanced": {
+   "name": "Hybrid Adaptive",
+   "p1": 0.08,
+   "p3": 0.239,
+   "mean_total": 65.1,
+   "byslot": {
+    "early": 0.093,
+    "mid": 0.09,
+    "late": 0.055
+   }
+  }
+ },
+ "sensitivity": {
+  "0.0": {
+   "almanac": 0.095,
+   "defer_deep": 0.114,
+   "elite": 0.118,
+   "scarcity": 0.08,
+   "balanced": 0.084
+  },
+  "0.15": {
+   "almanac": 0.148,
+   "defer_deep": 0.098,
+   "elite": 0.094,
+   "scarcity": 0.078,
+   "balanced": 0.072
+  },
+  "0.3": {
+   "almanac": 0.205,
+   "defer_deep": 0.117,
+   "elite": 0.081,
+   "scarcity": 0.078,
+   "balanced": 0.074
+  }
+ }
+}

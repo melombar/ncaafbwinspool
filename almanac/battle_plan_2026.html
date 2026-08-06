@@ -1,0 +1,86 @@
+<!doctype html><meta charset=utf-8><title>Wins Pool 2026 — Battle Plan</title>
+<style>
+body{background:#0d1520;color:#e8eef5;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:22px;max-width:1000px}
+h1{font-size:20px;margin:0 0 2px} h2{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:#9fb2c6;margin:26px 0 8px;border-bottom:1px solid #22303f;padding-bottom:5px}
+.sub{color:#9fb2c6;margin:0 0 4px} .verdict{background:#12212e;border:1px solid #294056;border-radius:8px;padding:12px 16px;margin:14px 0;font-size:15px}
+.verdict b{color:#7be0a0} table{border-collapse:collapse;width:100%;font-size:13px} th,td{border:1px solid #22303f;padding:6px 10px;text-align:left}
+th{color:#9fb2c6;font-weight:600;font-size:11px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin-top:8px}
+.card{background:#131e2b;border:1px solid #22303f;border-radius:8px;padding:12px} .card.win{border-color:#c79a3a;box-shadow:0 0 0 1px #c79a3a55}
+.pn{font-weight:700;font-size:14px;color:#cfe0f0} .p1{font-size:26px;font-weight:800;color:#7be0a0;margin:4px 0} .p1 .lbl{font-size:11px;font-weight:400;color:#9fb2c6}
+.card .meta{font-size:11px;color:#8aa0b4;font-family:monospace} .desc{font-size:12px;color:#c3d0dd;margin-top:6px}
+.pct{color:#7bd6ff;font-size:11px;font-weight:600} .bk{color:#8aa0b4;font-size:12px}
+.tag{font-size:10px;font-weight:700;padding:1px 7px;border-radius:3px} .tag.ge{background:#3a1e14;color:#f0a068} .tag.df{background:#12331f;color:#6ede9a} .tag.md{background:#2a2f3a;color:#c8b060}
+.foot{color:#6d8199;font-size:11px;margin-top:22px;border-top:1px solid #22303f;padding-top:10px}
+</style>
+<h1>Wins Pool 2026 — Battle Plan</h1>
+<p class="sub">Monte Carlo of the full pool (draft + season) across all 12 slots · 5,000 trials/policy · market-calibrated · 36 pod teams scored so far</p>
+
+<div class="verdict">The pool turns on one question: <b>does team-specific Layer-B knowledge (returning QB, soft non-con, favorable draw, avoid fades) actually tilt beats?</b> The champions' 78% beat-rate says yes. If it does, the <b>Almanac Upside</b> path nearly doubles your win odds. If it's noise, fall back to <b>Defer-Deep Banking</b>. Either way: <b>grab MWC & Sun Belt in rounds 1–2, defer Big Ten/SEC to the back third.</b></div>
+
+<h2>The 5 paths (win probability at β=0.25)</h2>
+<div class="grid"><div class="card win">
+  <div class="pn">Almanac Upside ★</div>
+  <div class="p1">18%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 43% · mean 68.0 · best slot mid (20%)</div>
+  <div class="desc">Bank market early, break same-price ties by Layer-B upside (returning QB, soft non-con, favorable draw, no fade). THE bet if you trust the pod read.</div></div><div class="card ">
+  <div class="pn">Defer-Deep Banking</div>
+  <div class="p1">12%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 32% · mean 66.4 · best slot mid (14%)</div>
+  <div class="desc">Take highest-market anchors; skip Big Ten/SEC early (bank their elites late). The robust floor that wins even if Layer-B is noise.</div></div><div class="card ">
+  <div class="pn">Market Banking</div>
+  <div class="p1">9%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 27% · mean 65.7 · best slot mid (11%)</div>
+  <div class="desc">Pure highest-market. Simple, banks wins, no upside read. Middle of the pack.</div></div><div class="card ">
+  <div class="pn">Scarcity-Secured</div>
+  <div class="p1">8%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 26% · mean 65.4 · best slot mid (8%)</div>
+  <div class="desc">Grab thin-conference elites in rounds 1-2 above all. Underperforms — scarcity timing alone is not the edge.</div></div><div class="card ">
+  <div class="pn">Hybrid Adaptive</div>
+  <div class="p1">8%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 24% · mean 65.1 · best slot early (9%)</div>
+  <div class="desc">Blend of everything. Jack of all trades, master of none here.</div></div></div>
+
+<h2>The number that decides it — β (does Layer-B predict beats?)</h2>
+<p class="sub">P(win) by path as the Layer-B beat-tilt grows. Crossover ≈ β 0.12: above it, Almanac wins; below, bank/defer. Champion beat-rate implies β&gt;0.</p>
+<table><tr><th>Path</th><th style="text-align:center">β=0.0</th><th style="text-align:center">β=0.15</th><th style="text-align:center">β=0.3</th></tr><tr><td>Almanac Upside</td><td style="text-align:center;">10%</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">15%</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">20%</td></tr><tr><td>Defer-Deep Banking</td><td style="text-align:center;">11%</td><td style="text-align:center;">10%</td><td style="text-align:center;">12%</td></tr><tr><td>Market Banking</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">12%</td><td style="text-align:center;">9%</td><td style="text-align:center;">8%</td></tr><tr><td>Scarcity-Secured</td><td style="text-align:center;">8%</td><td style="text-align:center;">8%</td><td style="text-align:center;">8%</td></tr><tr><td>Hybrid Adaptive</td><td style="text-align:center;">8%</td><td style="text-align:center;">7%</td><td style="text-align:center;">7%</td></tr></table>
+
+<h2>Ideal draft — the Almanac path, round by round</h2>
+<p class="sub">Average pick round + primary / backups per conference. Position-agnostic (holds across slots); on the night, take the primary if there, else a backup, honoring the grab-early tags.</p>
+<table><tr><th>#</th><th>Conf</th><th>Avg round</th><th>Primary</th><th>Backups</th><th>Timing</th></tr><tr><td style="text-align:center;color:#8aa0b4">1</td><td><b>MWC</b></td><td style="text-align:center">R1.6</td>
+  <td>Air Force <span class="pct">80%</span></td>
+  <td class="bk">Nevada, Wyoming</td>
+  <td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">2</td><td><b>Sun Belt</b></td><td style="text-align:center">R2.1</td>
+  <td>UL Lafayette <span class="pct">97%</span></td>
+  <td class="bk">Marshall, Arkansas State</td>
+  <td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">3</td><td><b>Big 12</b></td><td style="text-align:center">R4.8</td>
+  <td>Arizona <span class="pct">15%</span></td>
+  <td class="bk">Arizona State, TCU</td>
+  <td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">4</td><td><b>AAC</b></td><td style="text-align:center">R6.0</td>
+  <td>Florida Atlantic <span class="pct">10%</span></td>
+  <td class="bk">UTSA, East Carolina</td>
+  <td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">5</td><td><b>Pac12</b></td><td style="text-align:center">R6.1</td>
+  <td>San Diego State <span class="pct">45%</span></td>
+  <td class="bk">Texas State, Arkansas</td>
+  <td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">6</td><td><b>MAC</b></td><td style="text-align:center">R6.6</td>
+  <td>Kent State <span class="pct">14%</span></td>
+  <td class="bk">Ball State, Buffalo</td>
+  <td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">7</td><td><b>SEC</b></td><td style="text-align:center">R6.6</td>
+  <td>Missouri <span class="pct">17%</span></td>
+  <td class="bk">Auburn, South Carolina</td>
+  <td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">8</td><td><b>Big Ten</b></td><td style="text-align:center">R6.7</td>
+  <td>UCLA <span class="pct">15%</span></td>
+  <td class="bk">Nebraska, Minnesota</td>
+  <td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">9</td><td><b>ACC</b></td><td style="text-align:center">R7.2</td>
+  <td>Florida State <span class="pct">14%</span></td>
+  <td class="bk">Georgia Tech, California</td>
+  <td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">10</td><td><b>CUSA</b></td><td style="text-align:center">R7.3</td>
+  <td>Middle Tennessee <span class="pct">16%</span></td>
+  <td class="bk">Sam Houston, UConn</td>
+  <td><span class="tag md">mid</span></td></tr></table>
+
+<h2>Scarcity clock — usable anchors (≥6.0) per conference</h2>
+<p class="sub">Thin conferences dry up first (MWC cliffs ~round 2). This sets the grab-vs-defer order above.</p>
+<table><tr><th>Conf</th><th>Usable</th><th></th></tr><tr><td>MWC</td><td style="text-align:center">4</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0664d;height:12px;border-radius:3px;width:37px"></div></div> <span style="color:#e0664d;font-size:11px;font-weight:600">GRAB EARLY</span></td></tr><tr><td>MAC</td><td style="text-align:center">5</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0664d;height:12px;border-radius:3px;width:46px"></div></div> <span style="color:#e0664d;font-size:11px;font-weight:600">GRAB EARLY</span></td></tr><tr><td>Pac12</td><td style="text-align:center">5</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0664d;height:12px;border-radius:3px;width:46px"></div></div> <span style="color:#e0664d;font-size:11px;font-weight:600">GRAB EARLY</span></td></tr><tr><td>Sun Belt</td><td style="text-align:center">6</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0b24a;height:12px;border-radius:3px;width:55px"></div></div> <span style="color:#e0b24a;font-size:11px;font-weight:600">mid</span></td></tr><tr><td>AAC</td><td style="text-align:center">7</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0b24a;height:12px;border-radius:3px;width:65px"></div></div> <span style="color:#e0b24a;font-size:11px;font-weight:600">mid</span></td></tr><tr><td>CUSA</td><td style="text-align:center">7</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0b24a;height:12px;border-radius:3px;width:65px"></div></div> <span style="color:#e0b24a;font-size:11px;font-weight:600">mid</span></td></tr><tr><td>Big 12</td><td style="text-align:center">9</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#e0b24a;height:12px;border-radius:3px;width:83px"></div></div> <span style="color:#e0b24a;font-size:11px;font-weight:600">mid</span></td></tr><tr><td>ACC</td><td style="text-align:center">11</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#6ede9a;height:12px;border-radius:3px;width:102px"></div></div> <span style="color:#6ede9a;font-size:11px;font-weight:600">defer OK</span></td></tr><tr><td>SEC</td><td style="text-align:center">12</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#6ede9a;height:12px;border-radius:3px;width:111px"></div></div> <span style="color:#6ede9a;font-size:11px;font-weight:600">defer OK</span></td></tr><tr><td>Big Ten</td><td style="text-align:center">13</td><td><div style="background:#1a2735;border-radius:3px;width:120px;display:inline-block;vertical-align:middle"><div style="background:#6ede9a;height:12px;border-radius:3px;width:120px"></div></div> <span style="color:#6ede9a;font-size:11px;font-weight:600">defer OK</span></td></tr></table>
+
+<div class="foot">Reusable: re-run <code>scripts/monte_carlo_draft.py</code> as more BBOC pods load (only 36 teams scored now — non-pod conferences pick on market alone, so their primaries will sharpen). Caveats: opponents modeled as near-optimal scarcity-aware + one rookie; Pac-12 flex teams carry a ±1-game uncertainty (schedule locks post-draft); β is an assumed edge, not proven by the sim — the champion beat-rate is the external evidence for β&gt;0.</div>
