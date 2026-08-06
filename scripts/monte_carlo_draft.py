@@ -75,16 +75,16 @@ by_conf_sorted={c:sorted([t for t in teams if TEAM[t]['conf']==c],key=lambda t:-
 USABLE_TOT={c:sum(1 for t in by_conf_sorted[c] if TEAM[t]['m']>=USABLE) for c in CONFS}
 
 def scorer(kind):
-    def f(t,ur,rnd,rng):
+    def f(t,ur,istop,rnd,rng):
         s=TEAM[t]; m=s['m']; conf=s['conf']
-        scar=2.5 if ur<=2 else (1.0 if ur<=4 else 0.0); up=5*s['ceilP']; lb=s['lb']
-        if kind=='field':    return m+scar+rng.gauss(0,0.4)
-        if kind=='rookie':   return m+(0.5 if ur<=2 else 0)+rng.gauss(0,1.6)
+        scar=2.5 if ur<=2 else (1.0 if ur<=4 else 0.0); up=5*s['ceilP']; lb=s['lb']; top=0.8 if istop else 0.0
+        if kind=='field':    return m+top+rng.gauss(0,1.2)
+        if kind=='rookie':   return m+rng.gauss(0,2.6)
         if kind=='elite':    return m+0.3*scar+rng.gauss(0,0.3)
         if kind=='scarcity': return m+(4 if ur<=2 else 2 if ur<=4 else 0)+rng.gauss(0,0.3)
         if kind=='upside':   return m+up+scar+rng.gauss(0,0.3)
         if kind=='balanced': return m+scar+0.8*up+rng.gauss(0,0.3)
-        if kind=='almanac':  return m+scar+0.6*lb+rng.gauss(0,0.3)
+        if kind=='almanac':  return m+0.25*scar+0.6*lb+rng.gauss(0,0.3)  # scar tuned down (empirical: over-securing MWC cost ~2pts)
         if kind=='defer_deep':
             dp=3 if(conf in('Big Ten','SEC')and rnd<4)else 0; return m+scar-dp+rng.gauss(0,0.3)
     return f
@@ -102,10 +102,10 @@ def draft(our_policy,our_slot,rng,rec=None):
                 n=0
                 for t in by_conf_sorted[c]:
                     if t in taken: continue
-                    cand.append((t,uavail[c])); n+=1
+                    cand.append((t,uavail[c],n==0)); n+=1
                     if n>=3: break
             if not cand: continue
-            f=FN[pol[p]]; best=max(cand,key=lambda tu:f(tu[0],tu[1],rnd,rng))[0]
+            f=FN[pol[p]]; best=max(cand,key=lambda tu:f(tu[0],tu[1],tu[2],rnd,rng))[0]
             myc[TEAM[best]['conf']]=best; taken.add(best)
             if rec is not None and p==our_slot: rec.append((rnd,TEAM[best]['conf'],best))
             if TEAM[best]['m']>=USABLE: uavail[TEAM[best]['conf']]-=1

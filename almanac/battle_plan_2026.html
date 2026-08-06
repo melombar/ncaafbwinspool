@@ -9,7 +9,8 @@ th{color:#9fb2c6;font-weight:600;font-size:11px;text-transform:uppercase}
 .card{background:#131e2b;border:1px solid #22303f;border-radius:8px;padding:12px} .card.win{border-color:#c79a3a;box-shadow:0 0 0 1px #c79a3a55}
 .pn{font-weight:700;font-size:14px;color:#cfe0f0} .p1{font-size:26px;font-weight:800;color:#7be0a0;margin:4px 0} .p1 .lbl{font-size:11px;font-weight:400;color:#9fb2c6}
 .card .meta{font-size:11px;color:#8aa0b4;font-family:monospace} .desc{font-size:12px;color:#c3d0dd;margin-top:6px}
-.pct{color:#7bd6ff;font-size:11px;font-weight:600} .bk{color:#8aa0b4;font-size:12px}
+.pct{color:#7bd6ff;font-size:11px;font-weight:600} .bk{color:#8aa0b4;font-size:12px} .mk{color:#6d8199;font-size:10px}
+.thin{background:#3a1e14;color:#f0a068;font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;margin-left:5px;white-space:nowrap}
 .tag{font-size:10px;font-weight:700;padding:1px 7px;border-radius:3px} .tag.ge{background:#3a1e14;color:#f0a068} .tag.df{background:#12331f;color:#6ede9a} .tag.md{background:#2a2f3a;color:#c8b060}
 .foot{color:#6d8199;font-size:11px;margin-top:22px;border-top:1px solid #22303f;padding-top:10px}
 </style>
@@ -21,63 +22,33 @@ th{color:#9fb2c6;font-weight:600;font-size:11px;text-transform:uppercase}
 <h2>The 5 paths (win probability at β=0.25)</h2>
 <div class="grid"><div class="card win">
   <div class="pn">Almanac Upside ★</div>
-  <div class="p1">18%<span class="lbl"> P(win) @β=0.25</span></div>
-  <div class="meta">top-3 43% · mean 68.0 · best slot mid (20%)</div>
+  <div class="p1">26%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 55% · mean 69.3 · best slot early (32%)</div>
   <div class="desc">Bank market early, break same-price ties by Layer-B upside (returning QB, soft non-con, favorable draw, no fade). THE bet if you trust the pod read.</div></div><div class="card ">
   <div class="pn">Defer-Deep Banking</div>
-  <div class="p1">12%<span class="lbl"> P(win) @β=0.25</span></div>
-  <div class="meta">top-3 32% · mean 66.4 · best slot mid (14%)</div>
+  <div class="p1">19%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 44% · mean 68.2 · best slot early (22%)</div>
   <div class="desc">Take highest-market anchors; skip Big Ten/SEC early (bank their elites late). The robust floor that wins even if Layer-B is noise.</div></div><div class="card ">
   <div class="pn">Market Banking</div>
-  <div class="p1">9%<span class="lbl"> P(win) @β=0.25</span></div>
-  <div class="meta">top-3 27% · mean 65.7 · best slot mid (11%)</div>
+  <div class="p1">18%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 43% · mean 67.9 · best slot mid (20%)</div>
   <div class="desc">Pure highest-market. Simple, banks wins, no upside read. Middle of the pack.</div></div><div class="card ">
   <div class="pn">Scarcity-Secured</div>
-  <div class="p1">8%<span class="lbl"> P(win) @β=0.25</span></div>
-  <div class="meta">top-3 26% · mean 65.4 · best slot mid (8%)</div>
+  <div class="p1">19%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 46% · mean 68.2 · best slot early (25%)</div>
   <div class="desc">Grab thin-conference elites in rounds 1-2 above all. Underperforms — scarcity timing alone is not the edge.</div></div><div class="card ">
   <div class="pn">Hybrid Adaptive</div>
-  <div class="p1">8%<span class="lbl"> P(win) @β=0.25</span></div>
-  <div class="meta">top-3 24% · mean 65.1 · best slot early (9%)</div>
+  <div class="p1">16%<span class="lbl"> P(win) @β=0.25</span></div>
+  <div class="meta">top-3 40% · mean 67.5 · best slot early (18%)</div>
   <div class="desc">Blend of everything. Jack of all trades, master of none here.</div></div></div>
 
 <h2>The number that decides it — β (does Layer-B predict beats?)</h2>
 <p class="sub">P(win) by path as the Layer-B beat-tilt grows. Crossover ≈ β 0.12: above it, Almanac wins; below, bank/defer. Champion beat-rate implies β&gt;0.</p>
-<table><tr><th>Path</th><th style="text-align:center">β=0.0</th><th style="text-align:center">β=0.15</th><th style="text-align:center">β=0.3</th></tr><tr><td>Almanac Upside</td><td style="text-align:center;">10%</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">15%</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">20%</td></tr><tr><td>Defer-Deep Banking</td><td style="text-align:center;">11%</td><td style="text-align:center;">10%</td><td style="text-align:center;">12%</td></tr><tr><td>Market Banking</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">12%</td><td style="text-align:center;">9%</td><td style="text-align:center;">8%</td></tr><tr><td>Scarcity-Secured</td><td style="text-align:center;">8%</td><td style="text-align:center;">8%</td><td style="text-align:center;">8%</td></tr><tr><td>Hybrid Adaptive</td><td style="text-align:center;">8%</td><td style="text-align:center;">7%</td><td style="text-align:center;">7%</td></tr></table>
+<table><tr><th>Path</th><th style="text-align:center">β=0.0</th><th style="text-align:center">β=0.15</th><th style="text-align:center">β=0.3</th></tr><tr><td>Almanac Upside</td><td style="text-align:center;">16%</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">19%</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">27%</td></tr><tr><td>Defer-Deep Banking</td><td style="text-align:center;">18%</td><td style="text-align:center;">18%</td><td style="text-align:center;">19%</td></tr><tr><td>Market Banking</td><td style="text-align:center;background:#12492a;color:#7be0a0;font-weight:700">21%</td><td style="text-align:center;">17%</td><td style="text-align:center;">17%</td></tr><tr><td>Scarcity-Secured</td><td style="text-align:center;">17%</td><td style="text-align:center;">19%</td><td style="text-align:center;">19%</td></tr><tr><td>Hybrid Adaptive</td><td style="text-align:center;">17%</td><td style="text-align:center;">14%</td><td style="text-align:center;">14%</td></tr></table>
 
 <h2>Ideal draft — the Almanac path, round by round</h2>
 <p class="sub">Average pick round + primary / backups per conference. Position-agnostic (holds across slots); on the night, take the primary if there, else a backup, honoring the grab-early tags.</p>
-<table><tr><th>#</th><th>Conf</th><th>Avg round</th><th>Primary</th><th>Backups</th><th>Timing</th></tr><tr><td style="text-align:center;color:#8aa0b4">1</td><td><b>MWC</b></td><td style="text-align:center">R1.6</td>
-  <td>Air Force <span class="pct">80%</span></td>
-  <td class="bk">Nevada, Wyoming</td>
-  <td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">2</td><td><b>Sun Belt</b></td><td style="text-align:center">R2.1</td>
-  <td>UL Lafayette <span class="pct">97%</span></td>
-  <td class="bk">Marshall, Arkansas State</td>
-  <td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">3</td><td><b>Big 12</b></td><td style="text-align:center">R4.8</td>
-  <td>Arizona <span class="pct">15%</span></td>
-  <td class="bk">Arizona State, TCU</td>
-  <td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">4</td><td><b>AAC</b></td><td style="text-align:center">R6.0</td>
-  <td>Florida Atlantic <span class="pct">10%</span></td>
-  <td class="bk">UTSA, East Carolina</td>
-  <td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">5</td><td><b>Pac12</b></td><td style="text-align:center">R6.1</td>
-  <td>San Diego State <span class="pct">45%</span></td>
-  <td class="bk">Texas State, Arkansas</td>
-  <td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">6</td><td><b>MAC</b></td><td style="text-align:center">R6.6</td>
-  <td>Kent State <span class="pct">14%</span></td>
-  <td class="bk">Ball State, Buffalo</td>
-  <td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">7</td><td><b>SEC</b></td><td style="text-align:center">R6.6</td>
-  <td>Missouri <span class="pct">17%</span></td>
-  <td class="bk">Auburn, South Carolina</td>
-  <td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">8</td><td><b>Big Ten</b></td><td style="text-align:center">R6.7</td>
-  <td>UCLA <span class="pct">15%</span></td>
-  <td class="bk">Nebraska, Minnesota</td>
-  <td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">9</td><td><b>ACC</b></td><td style="text-align:center">R7.2</td>
-  <td>Florida State <span class="pct">14%</span></td>
-  <td class="bk">Georgia Tech, California</td>
-  <td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">10</td><td><b>CUSA</b></td><td style="text-align:center">R7.3</td>
-  <td>Middle Tennessee <span class="pct">16%</span></td>
-  <td class="bk">Sam Houston, UConn</td>
-  <td><span class="tag md">mid</span></td></tr></table>
+<table><tr><th>#</th><th>Conf</th><th>Avg round</th><th>Primary</th><th>Backups</th><th>Timing</th></tr><tr><td style="text-align:center;color:#8aa0b4">1</td><td><b>MWC</b>  <span class="thin" title="only 4 usable anchors in this conference">⚠ 4 usable — secure early</span></td><td style="text-align:center">R1.9</td><td>Air Force <span class='pct'>92%</span> <span class='mk'>(7.5)</span></td><td class="bk">UNLV (7.5), New Mexico (7.5)</td><td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">2</td><td><b>Sun Belt</b></td><td style="text-align:center">R2.6</td><td>UL Lafayette <span class='pct'>84%</span> <span class='mk'>(7.5)</span></td><td class="bk">Marshall (7.5), Arkansas State (6.5)</td><td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">3</td><td><b>Big Ten</b></td><td style="text-align:center">R4.9</td><td>Wisconsin <span class='pct'>14%</span> <span class='mk'>(6.5)</span></td><td class="bk">Minnesota (6.5), Oregon (10.5)</td><td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">4</td><td><b>Pac12</b>  <span class="thin" title="only 5 usable anchors in this conference">⚠ 5 usable — secure early</span></td><td style="text-align:center">R5.4</td><td>Texas State <span class='pct'>46%</span> <span class='mk'>(6.5)</span></td><td class="bk">San Diego State (6.5), Oklahoma State (6.5)</td><td><span class="tag ge">grab early</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">5</td><td><b>SEC</b></td><td style="text-align:center">R5.8</td><td>Missouri <span class='pct'>21%</span> <span class='mk'>(6.5)</span></td><td class="bk">Tennessee (7.5), Auburn (6.5)</td><td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">6</td><td><b>AAC</b></td><td style="text-align:center">R5.9</td><td>East Carolina <span class='pct'>24%</span> <span class='mk'>(7.5)</span></td><td class="bk">Navy (7.5), Memphis (7.5)</td><td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">7</td><td><b>Big 12</b></td><td style="text-align:center">R6.3</td><td>Baylor <span class='pct'>15%</span> <span class='mk'>(6.5)</span></td><td class="bk"><span style="color:#8aa0b4">— (only 1 usable drafted)</span></td><td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">8</td><td><b>ACC</b></td><td style="text-align:center">R6.4</td><td>Florida State <span class='pct'>26%</span> <span class='mk'>(6.5)</span></td><td class="bk">California (6.5), Georgia Tech (6.5)</td><td><span class="tag df">defer OK</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">9</td><td><b>CUSA</b></td><td style="text-align:center">R7.3</td><td>Notre Dame <span class='pct'>18%</span> <span class='mk'>(11.5)</span></td><td class="bk"><span style="color:#8aa0b4">— (only 1 usable drafted)</span></td><td><span class="tag md">mid</span></td></tr><tr><td style="text-align:center;color:#8aa0b4">10</td><td><b>MAC</b>  <span class="thin" title="only 5 usable anchors in this conference">⚠ 5 usable — secure early</span></td><td style="text-align:center">R8.5</td><td><span style="color:#e0664d">⚠ no usable anchor — often forced to a sub-floor fill</span></td><td class="bk"></td><td><span class="tag ge">grab early</span></td></tr></table>
 
 <h2>Scarcity clock — usable anchors (≥6.0) per conference</h2>
 <p class="sub">Thin conferences dry up first (MWC cliffs ~round 2). This sets the grab-vs-defer order above.</p>
